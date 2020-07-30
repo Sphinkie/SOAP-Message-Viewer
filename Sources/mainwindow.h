@@ -104,23 +104,24 @@ QString messageInfos =
     <p><b>SOAP Message Viewer</b> allows you to open a SOAP trace file (usually: <i>web_messages.svclog</i>) \
     and see the content of the recorded messages, in a fast and convenient way.</p> \
     <h3>Convert and Repair</h3> \
-    <p><b>Convert</b> and <b>Repair</b> are two similar functionalities. <br/> \
-       <b>Convert</b> will generate an XML with lesser tags, and faster to process. <br/> \
+    <p><b>Convert</b> and <b>Repair</b> are two similar functionalities: <br/><br/> \
+       <b>Convert</b> will generate an XML with lesser tags, and faster to process. <br/><br/> \
        <b>Repair</b> is a binary process that will attempt to produce an XML, compatible with usual standards, \
        by discarding truncated elements, removing i:nil and xsi:nil tags, and appending missing tag endings. <br/> \
     </p> \
     <h3>LF and CRLF</h3> \
       <p>The <b>svclog</b> file is supposed to contain 1 line, and eventualy LF [0x0A] byte, if a <b>LineFeed</b> is present. <br/>\
-      The <b>XML</b> files may contain CR-LF [0x0D 0x0A] bytes, which is the standard CarriageReturn-LineFeed sequence for Windows. \
+      The <b>XML</b> files may contain CR-LF [0x0D 0x0A] bytes, which is the standard CarriageReturn-LineFeed sequence for Windows.<br/> \
       Your file may not contain <b>both LF and CRLF</b> delimiters, otherwise the application will not be able to parse the XML messages sucessfully.</p>";
 
 QString messageAbout =
       "<h2>SOAP Message Viewer v" + version.toString() + "</h2>" +
-      "<p><b>SOAP Message Viewer</b> allows you to open a SOAP trace file (usually: <i>web_messages.svclog</i>) \
-      and see the content of the recorded messages, in a fast and convenient way.</p> \
+      "<p><b>SOAP Message Viewer</b> allows you to open a SOAP trace file <br/> \
+       (usually: <i>web_messages.svclog</i>) and to see the content of <br/> \
+       the recorded messages, in a fast and convenient way.</p> \
       <p> Written by David de Lorenzo (2020). </p> \
       <p> <a href='http://www.sgt.eu'>http://www.sgt.eu</a></p>  \
-      <p> This software uses Qt 5.15 (LGPL licence) and Expart library (MIT licence). </p>";
+      <p> This software uses Qt 5.15 (LGPL licence) <br/> and the Expat Library (MIT licence). </p>";
 
 
 };

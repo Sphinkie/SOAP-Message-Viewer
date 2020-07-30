@@ -18,31 +18,34 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    BodyPrintableParser.cpp \
-    BodyTableParser.cpp \
-    BodyTextParser.cpp \
-    BodyTreeParser.cpp \
-    Common.cpp \
-    FileConverter.cpp \
-    FileParser.cpp \
-    FileRepair.cpp \
-    FileSplitter.cpp \
-    main.cpp \
-    mainwindow.cpp \
-    messages.cpp
+    Sources/BodyPrintableParser.cpp \
+    Sources/BodyTableParser.cpp \
+    Sources/BodyTextParser.cpp \
+    Sources/BodyTreeParser.cpp \
+    Sources/Common.cpp \
+    Sources/FileConverter.cpp \
+    Sources/FileParser.cpp \
+    Sources/FileRepair.cpp \
+    Sources/FileSplitter.cpp \
+    Sources/BodyPrintableParser.cpp \
+    Sources/BodyTableParser.cpp \
+    Sources/main.cpp \
+    Sources/mainwindow.cpp \
+    Sources/messages.cpp
 
 HEADERS += \
-    BodyPrintableParser.h \
-    BodyTableParser.h \
-    BodyTextParser.h \
-    BodyTreeParser.h \
-    Common.h \
-    FileConverter.h \
-    FileParser.h \
-    FileRepair.h \
-    FileSplitter.h \
-    mainwindow.h \
-    messages.h
+    Sources/BodyPrintableParser.h \
+    Sources/BodyTableParser.h \
+    Sources/BodyTextParser.h \
+    Sources/BodyTreeParser.h \
+    Sources/Common.h \
+    Sources/FileConverter.h \
+    Sources/FileParser.h \
+    Sources/FileRepair.h \
+    Sources/FileSplitter.h \
+    Sources/BodyPrintableParser.h \
+    Sources/mainwindow.h \
+    Sources/messages.h
 
 FORMS += \
     mainwindow.ui

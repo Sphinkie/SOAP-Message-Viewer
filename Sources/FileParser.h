@@ -5,9 +5,9 @@
 #include <stdlib.h>     // pour strncpy_s
 #include <iostream>
 #include <fstream>
+#include <QMainWindow>
 #include <Expat/include/expat.h>
 #include "messages.h"
-#include "mainwindow.h"
 #include "Common.h"
 
 class FileParser
@@ -22,7 +22,7 @@ public:
     static void XMLCALL dataHandler(void *userData, const XML_Char *content, int length);
     static void processContentData(void *userData);
 
-    static const uint MAX_MESSAGES = 32000; // Qt ne peut afficher que 32762 messages dans la ListView
+    static const unsigned int MAX_MESSAGES = 32000; // Qt ne peut afficher que 32762 messages dans la ListView
 
 private:
     bool isReady=false;

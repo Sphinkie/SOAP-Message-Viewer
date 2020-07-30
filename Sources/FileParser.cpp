@@ -6,6 +6,7 @@
  * Elle gère les gros fichiers grace à un système de buffer.
  * **************************************************************************** */
 #include "FileParser.h"
+#include "mainwindow.h"
 using namespace std;
 
 // Initialisation des variables statiques
