@@ -12,7 +12,7 @@ L'outil habituel pour visualiser ces logs est *SvcTraceViewer.exe* (*Microsoft S
 
 Le présent outil **SOAP Message Viewer** se focalise sur l'essentiel: le contenu des messages échangés. Il est rapide, simple, et ne nécessite que le fichier **web_messages.svclog**.
 
-![Screenshot](resources\Capture.png)
+![Screenshot](resources/Capture.png)
 
 ## Le programme exécutable
 
@@ -38,7 +38,7 @@ Une méthode simple est de rajouter une étape "déploiement" dans QtStudio pour
 
 ### Présentation de la librairie Expat
 
-**Expat** est un  [parseur XML](http://Expat/documentation/reference.html) de type SAX, capable de traiter de gros fichiers rapidement.
+[**Expat**](https://libexpat.github.io/) est un  parseur XML de type SAX, capable de traiter de gros fichiers rapidement.
 Comme la méthode SAX permet de traiter les données du XML au fur et à mesure de leur lecture, la librairie peut extraire des informations utiles du fichier XML, même si celui est tronqué ou abimé à la fin.
 
 
