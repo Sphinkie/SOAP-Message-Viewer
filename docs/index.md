@@ -2,7 +2,7 @@
 
 ## Description
 
-When you want to trace the dialog between a SOAP server and a client, you usually activate the _diagnostics_ 
+When you want to trace the dialog between a SOAP server and a client, you usually activate the _diagnostics_
 in the `web.config` file. You get then these two files:
 * web_messages.svclog
 * web_trace.svclog
@@ -11,7 +11,7 @@ The usual utility to view and analyse this traces is *SvcTraceViewer.exe* (*Micr
 that can be slow, complex and needs that both files are synchronously timecoded.
 
 **SOAP Message Viewer** just focuses on the main thing: the content of the messages.
-Its fast, simple, and only needs the **web_messages.svclog** file.
+It is fast, simple, and only needs the **web_messages.svclog** file.
 
 ![Screenshot](images/Capture.png)
 
@@ -27,12 +27,11 @@ Its fast, simple, and only needs the **web_messages.svclog** file.
 
 ## Installation
 
-Get the latest release of the software by clicking on the **▼.ZIP** button, at the top of this page, 
-or [here: "latest release"](https://github.com/Sphinkie/SOAP-Message-Viewer/releases/latest).
+Get the latest release of the software by clicking on the **▼.ZIP** button, at the top of this page, or [here: "latest release"](https://github.com/Sphinkie/SOAP-Message-Viewer/releases/latest).
 
-Download the **SOAP-MessageViewer.Portable.zip** file, and unzip it in a folder on your computer. 
+Download the **SOAP-MessageViewer.Portable.zip** file, and unzip it in a folder on your computer.
 Then, just run the **SOAP-MessageViewer.exe** program.
 
 ## About me
 
-Find my other softwares at [GitHub](https://sphinkie.github.io)
+Find my other softwares at [GitHub](https://sphinkie.github.io).
