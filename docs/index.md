@@ -4,6 +4,7 @@
 
 **SOAP Message Viewer** is an utility that displays the content of the messages of a SOAP trace record (ie: of a *web_messages.svclog* file).
 
+![Screenshot](images/Capture.png)
 
 ## Why another SVCLOG viewer?
 
@@ -17,8 +18,6 @@ that can be slow, complex and needs that both files are synchronously timecoded.
 
 **SOAP Message Viewer** just focuses on the main thing: the content of the messages.
 It is fast, simple, and only needs the **web_messages.svclog** file.
-
-![Screenshot](images/Capture.png)
 
 ## Features
 
