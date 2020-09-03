@@ -12,6 +12,6 @@ L'outil habituel pour visualiser ces logs est *SvcTraceViewer.exe* (*Microsoft S
 
 Le présent outil **SOAP Message Viewer** se focalise sur l'essentiel: le contenu des messages échangés. Il est rapide, simple, et ne nécessite que le fichier **web_messages.svclog**.
 
-![Screenshot](../resources/Capture.png)
+![Screenshot](resources/Capture.png)
 
 

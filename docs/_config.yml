@@ -1,1 +1,4 @@
 theme: jekyll-theme-tactile
+title: "SOAP Message Viewer"
+description: "A SOAP log message viewer utility for Windows."
+show_downloads: "true"
