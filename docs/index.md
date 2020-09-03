@@ -1,33 +1,38 @@
 # SOAP Message Viewer for Windows
 
-## Présentation
+## Description
 
-Lorsque deux applicatifs communiquent au protocole SOAP, il est possible d'activer des traces dans le fichier *web.config*.
-On obtient alors deux fichiers XML:
+When you want to trace the dialog between a SOAP server and a client, you usually activate the _diagnostics_ 
+in the `web.config` file. You get then these two files:
+* web_messages.svclog
+* web_trace.svclog
 
-- web_messages.svclog
-- web_trace.svclog
+The usual utility to view and analyse this traces is *SvcTraceViewer.exe* (*Microsoft Service Trace Viewer*)
+that can be slow, complex and needs that both files are synchronously timecoded.
 
-L'outil habituel pour visualiser ces logs est *SvcTraceViewer.exe* (*Microsoft Service Trace Viewer*), qui présente l'inconvénient d'être lent, complexe, de nécessiter les deux fichiers avec des horaires concordants.
-
-Le présent outil **SOAP Message Viewer** se focalise sur l'essentiel: le contenu des messages échangés. Il est rapide, simple, et ne nécessite que le fichier **web_messages.svclog**.
+**SOAP Message Viewer** just focuses on the main thing: the content of the messages.
+Its fast, simple, and only needs the **web_messages.svclog** file.
 
 ![Screenshot](images/Capture.png)
 
 ## Features
 
 * Can open any `.svclog` file
-* Can repair damaged files
+* Can repair tuncated files
 * Syntax highliting
 * Search in messages
 * Filter messages by name
-* Find  correlated messages (requests → responses)
+* Find correlated messages (requests ↔ responses)
 * etc
 
 ## Installation
 
-Get the latest release of the software here:
+Get the latest release of the software by clicking on the **▼.ZIP** button, at the top of this page, 
+or [here: "latest release"](https://github.com/Sphinkie/SOAP-Message-Viewer/releases/latest).
 
-https://github.com/Sphinkie/SOAP-Message-Viewer/releases/latest
+Download the **SOAP-MessageViewer.Portable.zip** file, and unzip it in a folder on your computer. 
+Then, just run the **SOAP-MessageViewer.exe** program.
 
-Download the **SOAP-MessageViewer.Portable.zip** file, and unzip it in a folder on your computer. Then just run the **SOAP-MessageViewer.exe** program.
+## About me
+
+Find my other softwares at [GitHub](https://sphinkie.github.io)
