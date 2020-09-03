@@ -23,3 +23,11 @@ Le présent outil **SOAP Message Viewer** se focalise sur l'essentiel: le conten
 * Filter messages by name
 * Find  correlated messages (requests → responses)
 * etc
+
+## Installation
+
+Get the latest release of the software here:
+
+https://github.com/Sphinkie/SOAP-Message-Viewer/releases/latest
+
+Download the **SOAP-MessageViewer.Portable.zip** file, and unzip it in a folder on your computer. Then just run the **SOAP-MessageViewer.exe** program.
