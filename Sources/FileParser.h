@@ -10,6 +10,13 @@
 #include "messages.h"
 #include "Common.h"
 
+/** ****************************************************************************
+ * @brief La classe FileParser parse un fichier .SCVLOG et insère autant de lignes
+ *        dans la ListView de la fenêtre qu'il y a de messages SOAP dans le fichier.
+ * @details
+ *        La classe utilise le parser XML 'Expat' qui est open-source, très rapide, et SAX (parsing au fil de l'eau).
+ *        Elle gère les gros fichiers grace à un système de buffer.
+ * **************************************************************************** */
 class FileParser
 {
 public:
@@ -22,7 +29,7 @@ public:
     static void XMLCALL dataHandler(void *userData, const XML_Char *content, int length);
     static void processContentData(void *userData);
 
-    static const unsigned int MAX_MESSAGES = 32000; // Qt ne peut afficher que 32762 messages dans la ListView
+    static const unsigned int MAX_MESSAGES = 32000;   /** Qt ne peut afficher que 32762 messages dans la ListView */
 
 private:
     bool isReady=false;
@@ -44,8 +51,8 @@ private:
     static bool          insideBody;
     static std::string   contentData;
     static QMainWindow*  mainWindow;
-    static XML_Parser    parser;                // Parser Expat. On en a besoin dans les fonctions statiques pour repérer le début et la fin des Body
-    static const long    BUFFER_SIZE = 1024*8;  // Recommandation Expat: doit etre largement en dessous de INT_MAX soit 32.767.
+    static XML_Parser    parser;                /** Parser Expat. On en a besoin dans les fonctions statiques pour repérer le début et la fin des Body */
+    static const long    BUFFER_SIZE = 1024*8;  /** Recommandation Expat: doit etre largement en dessous de INT_MAX soit 32.767. */
 
 };
 

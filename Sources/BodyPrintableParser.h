@@ -1,9 +1,8 @@
-#ifndef BODYPRINTABLEPARSER_H
-#define BODYPRINTABLEPARSER_H
+#ifndef BODY_PRINTABLEPARSER_H
+#define BODY_PRINTABLEPARSER_H
 
 #include <fstream>
 #include <Expat/include/expat.h>
-
 
 
 class BodyPrintableParser
@@ -34,4 +33,4 @@ private:
 
 };
 
-#endif // BODYPRINTABLEPARSER_H
+#endif // BODY_PRINTABLEPARSER_H

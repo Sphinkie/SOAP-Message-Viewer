@@ -1,8 +1,11 @@
 #include "Common.h"
 
-/* ************************************************************************************************
- * Fonction globale endsWith case-sentitive.
- * Pas de blindage: str1 et str2 doivent etre plus longues que len.
+/** ***********************************************************************************************
+ * @brief Fonction globale endsWith case-sentitive.
+ * @attention Pas de blindage: str1 et str2 doivent être plus longues que len.
+ * @param str1 : Chaine de caractères
+ * @param str2 : Chaine de caractères
+ * @param len : Nombre de caractères finauxcomparés
  * ************************************************************************************************ */
 bool Common::endsWith(const char* str1, const char* str2, int len)
 {

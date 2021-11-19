@@ -27,11 +27,15 @@ void Messages::append()
     messageList.push_back(currentMessage);
 }
 
-/* ****************************************************************************
- * Attention, setAction change la string passée en paramètre pour ne laisser que le dernier item.
- * action est du type "http://www.sgt.eu/VEDA.SOA/Session.v1/Session/OpenOrReuse".
- *   On enregistre dans le message courant : "Session/OpenOrReuse".
- *   On retourne "OpenOrReuse".
+/** ***************************************************************************
+ * @brief
+ *    Cette méthode analyse la string fourni et extrait les deux derniers mots significatifs,
+ *    pour les enregister dans les champs "module" et "action".
+ *    Exemple "Session" -> "OpenOrReuse".
+ * @param action est une url du type "http://www.sgt.eu/VEDA.SOA/Session.v1/Session/OpenOrReuse".
+ * @attention
+ *     le paramètre action est modifié pour ne laisser que le dernier item de la string.
+ * @returns le dernier mot significatif. Exemple: "OpenOrReuse".
  * **************************************************************************** */
 void Messages::setAction(std::string* action)
 {

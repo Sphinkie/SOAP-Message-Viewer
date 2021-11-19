@@ -2,13 +2,6 @@
 #include "mainwindow.h"
 using namespace std;
 
-/** ****************************************************************************
- * @brief La classe FileParser parse un fichier .SCVLOG et insère autant de lignes
- * dans la ListView de la fenêtre qu'il y a de messages SOAP dans le fichier.
- *
- * Utilise le parser XML 'Expat' qui est open-source, très rapide, et SAX (parsing au fil de l'eau).
- * Elle gère les gros fichiers grace à un système de buffer.
- * **************************************************************************** */
 
 // Initialisation des variables statiques
 bool          FileParser::insideBody;
@@ -16,10 +9,10 @@ XML_Parser    FileParser::parser;
 std::string   FileParser::contentData;
 QMainWindow*  FileParser::mainWindow;
 
-/* ****************************************************************************
- * Ouvre un fichier SVCLOG.
- *   filename: le nom du fichier SVCLOG à parser.
- *   fenetre : pointeur sur la fenetre contenant la listView de Message List.
+/** ***************************************************************************
+ * @brief Ouvre un fichier SVCLOG.
+ * @param filename : le nom du fichier SVCLOG à parser.
+ * @param fenetre : pointeur sur la fenetre contenant la listView de Message List.
  * **************************************************************************** */
 void FileParser::open(std::string filename, const void* fenetre)
 {
@@ -41,7 +34,7 @@ void FileParser::open(std::string filename, const void* fenetre)
 /** ****************************************************************************
  * @brief Fonction principale pour déclencher le parsing par Expat.
  * @param useCRLF : TRUE si le fichier contient des Retour Chariot au format Windows (CRLF): typiquement des fichiers XML.
- *                 FALSE si le fichier contient des Retour Chariot au format LINUX (LF) ou 1 seule ligne. Typiquement des fichiers SVCLOG
+ *                  FALSE si le fichier contient des Retour Chariot au format LINUX (LF) ou 1 seule ligne. Typiquement des fichiers SVCLOG
  * @return Retourne un code d'erreur (0 si tout s'est bien passé).
  ******************************************************************************* */
 int FileParser::parse(bool useCRLF)
@@ -124,12 +117,14 @@ void XMLCALL FileParser::startElementHandler(void* userData, const XML_Char* nam
     }
     else if (!strcmp(name,"MessageLogTraceRecord"))
     {
-        Messages::setMessageTime(atts[1]);      // attribut: Time
-        Messages::setMessageSource(atts[3]);    // attribut: Source  // FIXME : ce n'est pas forcement le 3. Ca peut être le 2...
+        Messages::setMessageTime(atts[1]);      // attribut: [0]='Time'   [1]=value
+        Messages::setMessageSource(atts[3]);    // attribut: [2]='Source' [3]=value
     }
     else if (!strcmp(name,"Action"))
     {
+        // C'est une balise de type ACTION
         *pContentType=ACTION;
+        // On vide le contentData: il sera rempli par le prochain appel à dataHandler().
         FileParser::contentData.clear();
     }
     else if (!strcmp(name,"Host"))
@@ -164,15 +159,27 @@ void XMLCALL FileParser::startElementHandler(void* userData, const XML_Char* nam
         *pContentType=COMPUTER;
         FileParser::contentData.clear();
     }
+    else if (!strcmp(name,"HttpResponse"))
+    {
+        // Dans le cas des GetPlaylistOnairResponse de niveau interne, on n'a pas de balise <Action>...
+        // A la place, on a une balise <HttpResponse> sans contenu texte...
+        // On dit que c'est une balise de type ACTION
+        *pContentType=ACTION;
+        // Et on force le contentData
+        FileParser::contentData="http://www.sgt.eu/SOA.ONAIR/HttpResponse/StatusCode ";
+        // Note: dataHandler() va ajouter un "OK" à la fin...
+    }
 }
 
-/* ****************************************************************************
- * Ce Handler est appelé à chaque fois qu'il y a un Content.
- * Le ContentType a été positionné par le Handler StartElement.
- * Note: Content n'est pas NULL-terminated
- * Si le Content est à cheval sur 2 buffers, le dataHandler est appelé deux fois, et il faut concaténer.
- * Voir:
- * https://stackoverflow.com/questions/609376/geting-xml-data-using-xml-parser-expat#609736
+/** ***************************************************************************
+ * @brief Ce Handler est appelé à chaque fois qu'il y a un Content.
+ * @details
+ *        Le ContentType a été positionné par le Handler StartElement.
+ *        Si le Content est à cheval sur 2 buffers, le dataHandler est appelé deux fois, et il faut concaténer.
+ * @link https://stackoverflow.com/questions/609376/geting-xml-data-using-xml-parser-expat#609736
+ * @param userData : Non utilisé.
+ * @param content : le contenu texte de la section.
+ * @param length : Le Content n'est pas NULL-terminated: il faut utiliser length.
  * **************************************************************************** */
 void XMLCALL FileParser::dataHandler(void* userData, const XML_Char* content, int length)
 {
@@ -186,8 +193,11 @@ void XMLCALL FileParser::dataHandler(void* userData, const XML_Char* content, in
         contentData.append(content,length); // Sinon, on le complete
 }
 
-/* ****************************************************************************
- * Ce Handler est appelé à chaque balise fermante.
+/** ***************************************************************************
+ * @brief Ce Handler est appelé à chaque balise fermante.
+ *        On traite les informations stockées dans userData.
+ * @param userData : pointeur sur les données mémorisées lors de lors de l'ouverture des balises.
+ * @param name : le nom de la balise.
  * **************************************************************************** */
 void XMLCALL FileParser::endElementHandler(void *userData, const XML_Char *name)
 {
@@ -208,12 +218,14 @@ void XMLCALL FileParser::endElementHandler(void *userData, const XML_Char *name)
         }
     }
     else
-        // On traite le content.
+        // On traite la variable statique contentData.
         FileParser::processContentData(userData);
 }
 
-/* ****************************************************************************
- * Effectue la traitement de la variable statique contentData
+/** ***************************************************************************
+ * @brief Mémorise dans le message, les informations contenue dans la variable statique contentData,
+ *        en fonction du type mémorisé dans les userData.
+ * @param userData : pointeur sur les données mémorisées lors de lors de l'ouverture des balises.
  * **************************************************************************** */
 void FileParser::processContentData(void *userData)
 {
@@ -252,9 +264,9 @@ void FileParser::processContentData(void *userData)
     contentData.clear();
 }
 
-/* ****************************************************************************
- * Ferme le fichier une fois le parsing terminé
- * **************************************************************************** */
+/** ***************************************************************************
+ * @brief Ferme le fichier une fois le parsing terminé.
+ */
 void FileParser::close(void)
 {
     fichierSVC.close();

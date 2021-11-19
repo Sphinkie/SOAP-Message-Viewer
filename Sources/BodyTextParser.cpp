@@ -185,7 +185,7 @@ void XMLCALL BodyTextParser::endElementHandler(void *userData, const XML_Char *n
 /** ****************************************************************************
  * @brief Ce Handler est appelé à chaque fois qu'il y a un Content.
  * @param userData : Non utilisé.
- * @param XML_Char : Contenu textuel de la section XML.
+ * @param content : Contenu textuel de la section XML.
  * @param length : Le Content n'est pas NULL-terminated: il faut utiliser length.
  ******************************************************************************* */
 void XMLCALL BodyTextParser::dataHandler(void *userData, const XML_Char* content, int length)
