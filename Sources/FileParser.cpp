@@ -1,13 +1,14 @@
-/* ****************************************************************************
- * FileParser parse un fichier .SCVLOG et insère autant de lignes dans la ListView
- * de la fenêtre qu'il y a de messages SOAP dans le fichier.
+#include "FileParser.h"
+#include "mainwindow.h"
+using namespace std;
+
+/** ****************************************************************************
+ * @brief La classe FileParser parse un fichier .SCVLOG et insère autant de lignes
+ * dans la ListView de la fenêtre qu'il y a de messages SOAP dans le fichier.
  *
  * Utilise le parser XML 'Expat' qui est open-source, très rapide, et SAX (parsing au fil de l'eau).
  * Elle gère les gros fichiers grace à un système de buffer.
  * **************************************************************************** */
-#include "FileParser.h"
-#include "mainwindow.h"
-using namespace std;
 
 // Initialisation des variables statiques
 bool          FileParser::insideBody;
@@ -36,13 +37,13 @@ void FileParser::open(std::string filename, const void* fenetre)
     FileParser::mainWindow = (MainWindow*)fenetre;
 }
 
-/* ****************************************************************************
- * Fonction principale pour déclencher le parsing par Expat
- * Retourne un code d'erreur (0 si tout s'est bien passé)
- * paramètre useCRLF:
- * - Mettre TRUE si le fichier contient des Retour Chariot au format Windows (CRLF): typiquement des fichiers XML
- * - Mettre FALSE si le fichier contient des Retour Chariot au format LINUX (LF) ou 1 seule ligne. Typiquement des fichiers SVCLOG
- * **************************************************************************** */
+
+/** ****************************************************************************
+ * @brief Fonction principale pour déclencher le parsing par Expat.
+ * @param useCRLF : TRUE si le fichier contient des Retour Chariot au format Windows (CRLF): typiquement des fichiers XML.
+ *                 FALSE si le fichier contient des Retour Chariot au format LINUX (LF) ou 1 seule ligne. Typiquement des fichiers SVCLOG
+ * @return Retourne un code d'erreur (0 si tout s'est bien passé).
+ ******************************************************************************* */
 int FileParser::parse(bool useCRLF)
 {
     char buf[BUFFER_SIZE];
@@ -86,12 +87,16 @@ int FileParser::parse(bool useCRLF)
     return XML_ERROR_NONE;
 }
 
-/* ****************************************************************************
- * Handler (statique) appelé à chaque balise ouvrante
- *
- * La librairie Expat fournit une methode permettant de savoir à quel octet, on est dans le fichier XML:
- * XML_GetCurrentByteIndex(XML_Parser p)
- * **************************************************************************** */
+/** ****************************************************************************
+ * @brief Ce handler (statique) est appelé à chaque balise ouvrante.
+ *    Selon la balise, on cree un nouveau message, ou bien on stocke le body du message.
+ * @details
+ *      La librairie Expat fournit une methode permettant de savoir à quel octet, on est dans le fichier XML:
+ *      XML_GetCurrentByteIndex(XML_Parser p)
+ * @param userData : Structure pour les données à mémoriser.
+ * @param name : Nom de la balise.
+ * @param attrs : Eventuel tableau des attributs.
+ ******************************************************************************* */
 void XMLCALL FileParser::startElementHandler(void* userData, const XML_Char* name, const XML_Char **atts)
 {
     // A l'intérieur des Body: on ne fait rien.
@@ -106,7 +111,7 @@ void XMLCALL FileParser::startElementHandler(void* userData, const XML_Char* nam
 
     if (!strcmp(name,"E2ETraceEvent"))
     {
-        // On cree un message. Il sera renseigné au fur et a mesure des startElements.
+        // On cree un message. Il sera renseigné au fur et à mesure des startElements.
         Messages::append();
         // On se limite à 32.000 messages dans le fichier
         (*pMessageNb)++;
@@ -120,7 +125,7 @@ void XMLCALL FileParser::startElementHandler(void* userData, const XML_Char* nam
     else if (!strcmp(name,"MessageLogTraceRecord"))
     {
         Messages::setMessageTime(atts[1]);      // attribut: Time
-        Messages::setMessageSource(atts[3]);    // attribut: Source
+        Messages::setMessageSource(atts[3]);    // attribut: Source  // FIXME : ce n'est pas forcement le 3. Ca peut être le 2...
     }
     else if (!strcmp(name,"Action"))
     {

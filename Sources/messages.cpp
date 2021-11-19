@@ -1,6 +1,6 @@
 /* ****************************************************************************
  * Classe pour gérer la liste des messages SOAP échangés.
- * Tous les membres de la classe sont statiques: Pas besoin d'isntancier la classe.
+ * Tous les membres de la classe sont statiques: Pas besoin d'instancier la classe.
  * **************************************************************************** */
 #include "messages.h"
 using namespace std;
@@ -11,13 +11,13 @@ using namespace std;
 static std::vector <Messages::Message*> messageList;
 static Messages::Message* currentMessage;
 
-std::string        Messages::computerName;
-std::string        Messages::logDate;
-std::string        Messages::fileName;
+std::string Messages::computerName;
+std::string Messages::logDate;
+std::string Messages::fileName;
 
 
-/* ****************************************************************************
- * Ajout d'un nouveau message à la liste
+/** ***************************************************************************
+ * @brief Ajout d'un nouveau message à la liste.
  * **************************************************************************** */
 void Messages::append()
 {
@@ -42,20 +42,29 @@ void Messages::setAction(std::string* action)
     action->assign(action->substr(pos2+1));        // modifie la chaine en "OpenOrReuse"
 
 }
-/* ****************************************************************************
- * Contient généralement une adresse IP.
+
+
+/** ***************************************************************************
+ * @brief Memorise le nom de l'ordinateur émetteur ou destinataire du message.
+ * @param host : Contient généralement une adresse IP.
  * **************************************************************************** */
 void Messages::setHost(std::string host)
 {
     currentMessage->host = host;
 }
-/* ****************************************************************************
- * ActivityID est généralement un UUID du type "{dee19e7b-5fba-4adc-8197-2aee3c2e6557}"
+
+
+/** ***************************************************************************
+ * @brief Mémorise l'ID de l'activité. L'activité peut regrouper plusieurs messages,
+ *        par exemple une query et sa réponse.
+ * @param id : L'ActivityID est généralement un UUID du type "{dee19e7b-5fba-4adc-8197-2aee3c2e6557}"
  * **************************************************************************** */
 void Messages::setActivityID(std::string id)
 {
     currentMessage->activityId=id;
 }
+
+
 /* ****************************************************************************
  * Time est du type "2020-06-22T14:31:17.9755137+00:00". On ne garde que "14:31:17.975"
  * **************************************************************************** */
@@ -63,6 +72,8 @@ void Messages::setMessageTime(std::string messagetime)
 {
     currentMessage->messageTime=messagetime.substr(11,12);
 }
+
+
 /* ****************************************************************************
  * Source est du type "TransportReceive" ou "TransportSend"
  * ou "ServiceLevelReceiveRequest" ou "ServiceLevelSendReply"
@@ -76,6 +87,8 @@ void Messages::setMessageSource(std::string source)
     currentMessage->isServiceLevel=
             (source[0]=='S');        // = "ServiceLevelReceiveRequest" ou "ServiceLevelSendReply"
 }
+
+
 /* ****************************************************************************
  * WSDL est du type "http://00xdsvmam03200.paris.tv5monde.org/VEDA.SOA/Session.svc?wsdl"
  * Présent pour les messages de type REQUEST, uniquement
@@ -84,6 +97,8 @@ void Messages::setWsdl(std::string wsdl)
 {
     currentMessage->wsdl=wsdl;
 }
+
+
 /* ****************************************************************************
  * Pointeurs dans le fichier pour retrouver le contenu du Body.
  * (Byte index)
@@ -96,6 +111,8 @@ void Messages::setCurrentBodyEndPosition(long position)
 {
     currentMessage->bodyEndPosition=position;
 }
+
+
 /* ****************************************************************************
  * Retourne le numéro dans la liste du message courant.
  * **************************************************************************** */
@@ -103,6 +120,8 @@ std::string Messages::getCurrentMessageIndex()
 {
     return std::to_string(messageList.size());
 }
+
+
 /* ****************************************************************************
  * Retourne le message de la liste portant le numéro demandé.
  * **************************************************************************** */
@@ -115,6 +134,8 @@ Messages::Message* Messages::getMessage(long number)
 {
     return messageList[number];
 }
+
+
 /* ****************************************************************************
  * Cette fonction remplit le champ body dans la liste des messages.
  * **************************************************************************** */
@@ -150,6 +171,8 @@ void Messages::getMessageBody(long number)
         messageList[number]->body = buffer;
     }
 }
+
+
 /* ****************************************************************************
  * On regarde si le Body demandé contient la substring
  * **************************************************************************** */
@@ -182,16 +205,16 @@ bool Messages::isCurrentMessageRequest()
     return(currentMessage->isRequest);
 }
 
-/* ****************************************************************************
- * Renvoie True si le message courant est de type Transport
+/** ***************************************************************************
+ * @brief Renvoie True si le message courant est de type Transport
  * **************************************************************************** */
 bool Messages::isCurrentMessageServiceLevel()
 {
     return(currentMessage->isServiceLevel);
 }
 
-/* ****************************************************************************
- * Renvoie True si le message courant se termine par Fault ou fault
+/** ***************************************************************************
+ * @brief Renvoie True si le message courant se termine par Fault ou fault
  * **************************************************************************** */
 bool Messages::isCurrentMessageFaulty()
 {
@@ -203,18 +226,20 @@ bool Messages::isCurrentMessageFaulty()
     return false;
 }
 
-/* ****************************************************************************
- * Renvoie le MessageTime du message courant
+/** ***************************************************************************
+ * @brief Renvoie le MessageTime du message courant
  * **************************************************************************** */
 std::string Messages::getCurrentMessageTime()
 {
     return(currentMessage->messageTime);
 }
 
-/* ****************************************************************************
- * Renvoie l'index du prochain Message ayant cet ActivityId, ou -1 si pas trouvé.
- * on commence à startIndex (non-inclus): mettre -1 pour inclure la ligne 0.
- * on s'arrete à endingIndex (-1=last)
+/** ***************************************************************************
+ * @brief Renvoie l'index du prochain Message ayant cet ActivityId.
+ * @param startingIndex : Index (non-inclus) de début de la recherche. Mettre -1 pour inclure la ligne 0.
+ * @param id : ActivityId à rechercher.
+ * @param endingIndex : Index de fin de la recherche (-1=last).
+ * @returns Index du prochain Message ayant cet ActivityId, ou -1 si pas trouvé.
  * **************************************************************************** */
 int Messages::getNextCorrelatedMessageIndex(int startingIndex, std::string id, int endingIndex)
 {
@@ -233,9 +258,9 @@ int Messages::getNextCorrelatedMessageIndex(int startingIndex, std::string id, i
     return found? index : -1;
 }
 
-/* ****************************************************************************
- * Renvoie l'index d'un précédent Message ayant cet ActivityId,
- * ou -1 si pas trouvé.
+/** ***************************************************************************
+ * @brief Renvoie l'index d'un précédent Message ayant cet ActivityId,
+ *        ou -1 si pas trouvé.
  * **************************************************************************** */
 int Messages::getPreviousCorrelatedMessageIndex(int index, std::string id)
 {
@@ -251,8 +276,8 @@ int Messages::getPreviousCorrelatedMessageIndex(int index, std::string id)
 }
 
 
-/* ****************************************************************************
- * Initialise toutes les infos du parsing.
+/** ***************************************************************************
+ * @brief Initialise toutes les infos du parsing.
  * **************************************************************************** */
 void Messages::init(std::string filename)
 {

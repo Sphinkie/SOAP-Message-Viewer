@@ -49,9 +49,12 @@ bool        BodyTextParser::elementClosed;
 bool        BodyTextParser::keepNamespaces;
 
 
-/* ****************************************************************************
- * Effectue le parsing d'un XML sous forme de std::string
- * **************************************************************************** */
+/** ****************************************************************************
+ * @brief Cette méthode effectue le parsing d'un XML sous forme de std::string.
+ * @param blob Le flux XML du message à traiter.
+ * @param hideNamespaces Si True, on n'affichera pas les namespace.
+ * @return le code d'erreur rencontré (XML_ERROR_NONE si aucun).
+ **************************************************************************** */
 int BodyTextParser::parse(std::string blob, bool hideNamespaces)
 {
     int blobSize= blob.length()+1;
@@ -64,9 +67,13 @@ int BodyTextParser::parse(std::string blob, bool hideNamespaces)
     return errcode;
 }
 
-/* ****************************************************************************
- * Effectue le parsing d'un XML sous forme de char*
- * **************************************************************************** */
+
+/** ****************************************************************************
+ * @brief Cette méthode effectue le parsing d'un message XML sour forme de char*.
+ * @param buffer Buffer de N char contenant le Body XML à afficher.
+ * @param hideNamespaces Si True, on n'affichera pas les namespace.
+ * @return le code d'erreur rencontré (XML_ERROR_NONE si aucun).
+ **************************************************************************** */
 int BodyTextParser::parse(char* buffer, bool hideNamespaces)
 {
     int bufferSize= strlen(buffer)+1;
@@ -100,18 +107,25 @@ int BodyTextParser::parse(char* buffer, bool hideNamespaces)
     return errcode;
 }
 
-/* ****************************************************************************
- * Renvoie le XML qui a été formaté par le Parser.
- * C-a-d avec des balises html de coloration syntaxique.
- * **************************************************************************** */
+
+/** ****************************************************************************
+ * @brief Cette méthode retourne le flux XML formaté par le Parser
+ *        en ajoutant des balises html de coloration syntaxique.
+ * @return le flux XML avec les balises html de coloration syntaxique.
+ ******************************************************************************* */
 std::string BodyTextParser::getFormatedBlob()
 {
     return BodyTextParser::formatedBlob;
 }
 
-/* ****************************************************************************
- * Handler (static) appelé à chaque balise ouvrante
- * **************************************************************************** */
+
+/** ****************************************************************************
+ * @brief Ce handler statique est appelé à chaque balise ouvrante. On ajoute le
+ *      texte dans formatedBlob.
+ * @param userData : Non utilisé.
+ * @param name : Nom de la balise.
+ * @param attrs : Eventuel tableau des attributs.
+ ******************************************************************************* */
 void XMLCALL BodyTextParser::startElementHandler(void* userData, const XML_Char* name, const XML_Char **attrs)
 {
     (void)userData;
@@ -144,9 +158,13 @@ void XMLCALL BodyTextParser::startElementHandler(void* userData, const XML_Char*
     elementClosed=false;
 }
 
-/* ****************************************************************************
- * Ce Handler est appelé à chaque balise fermante.
- * **************************************************************************** */
+
+/** ****************************************************************************
+ * @brief Ce handler statique est appelé à chaque balise fermante. On ajoute le
+ *      texte dans formatedBlob.
+ * @param userData : Non utilisé.
+ * @param name : Nom de la balise.
+ ******************************************************************************* */
 void XMLCALL BodyTextParser::endElementHandler(void *userData, const XML_Char *name)
 {
     (void)userData; // pour enlever le warning....
@@ -164,10 +182,12 @@ void XMLCALL BodyTextParser::endElementHandler(void *userData, const XML_Char *n
 }
 
 
-/* ****************************************************************************
- * Ce Handler est appelé à chaque fois qu'il y a un Content.
- * Note: Content n'est pas NULL-terminated: il faut utiliser length.
- * **************************************************************************** */
+/** ****************************************************************************
+ * @brief Ce Handler est appelé à chaque fois qu'il y a un Content.
+ * @param userData : Non utilisé.
+ * @param XML_Char : Contenu textuel de la section XML.
+ * @param length : Le Content n'est pas NULL-terminated: il faut utiliser length.
+ ******************************************************************************* */
 void XMLCALL BodyTextParser::dataHandler(void *userData, const XML_Char* content, int length)
 {
     (void)userData; // pour enlever le warning....
@@ -177,9 +197,12 @@ void XMLCALL BodyTextParser::dataHandler(void *userData, const XML_Char* content
     formatedBlob.append("</b></span>");
 }
 
-/* ****************************************************************************
- * Ce Handler est appelé à chaque fois qu'il y a un Commentaire.
- * **************************************************************************** */
+
+/** ****************************************************************************
+ * @brief Ce Handler est appelé à chaque fois qu'il y a un Commentaire.
+ * @param userData : Non utilisé.
+ * @param XML_Char : Le texte du commentaire.
+ ******************************************************************************* */
 void XMLCALL BodyTextParser::commentHandler(void *userData, const XML_Char *data)
 {
     (void)userData; // pour enlever les warnings....

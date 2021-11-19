@@ -17,7 +17,7 @@ public:
 private:
     static void free();
 
-    static const long  MAX_BODY_SIZE = 1024*128;       /* 128kB : Taille max des Body (Le buffer de Expat est limité) */
+    static const long  MAX_BODY_SIZE = 1024*512;       /** 512kB : Taille max des Body (Le buffer de Expat est limité) */
     static QTreeWidget* treeWidget;
     static QTreeWidgetItem* currentItem;
     static std::stack<QTreeWidgetItem*> itemStack;
