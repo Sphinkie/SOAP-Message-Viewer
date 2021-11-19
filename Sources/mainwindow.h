@@ -30,7 +30,7 @@ public:
     ~MainWindow();
     void addListItem(std::string texte);
 
-    QVersionNumber version = QVersionNumber::fromString("1.2.0");   // A mettre aussi à jour dans le fichier .pro  /
+    QVersionNumber version = QVersionNumber::fromString("1.3.0");   // A mettre aussi à jour dans le fichier .pro  /
     const int NOT_FOUND = -1;
 
 
