@@ -62,7 +62,8 @@ win32: RC_ICONS += $$PWD/resources/soapOutlined.ico
 INCLUDEPATH += $$PWD/Expat/include
 DEPENDPATH += $$PWD/Expat/include
 
-DISTFILES +=
+DISTFILES += \
+    SOAP-Message-Viewer.qdocconf
 
 RESOURCES += \
     resources.qrc

@@ -1,0 +1,175 @@
+\hypertarget{class_body_text_parser}{}\doxysection{Body\+Text\+Parser Class Reference}
+\label{class_body_text_parser}\index{BodyTextParser@{BodyTextParser}}
+
+
+La classe \mbox{\hyperlink{class_body_text_parser}{Body\+Text\+Parser}} analyse le Body XML d\textquotesingle{}un message, pour l\textquotesingle{}afficher sous forme de texte simple dans l\textquotesingle{}onglet \char`\"{}\+Text view\char`\"{}.  
+
+
+
+
+{\ttfamily \#include $<$Body\+Text\+Parser.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_body_text_parser_adcc3530f9b32f59933a3acfd490fa34d}{parse}} (std\+::string blob, bool hide\+Namespaces)
+\begin{DoxyCompactList}\small\item\em Cette méthode effectue le parsing d\textquotesingle{}un XML sous forme de std\+::string. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_body_text_parser_a8092c8530c4714171324e8de0e60b996}{parse}} (char $\ast$buffer, bool hide\+Namespaces)
+\begin{DoxyCompactList}\small\item\em Cette méthode effectue le parsing d\textquotesingle{}un message XML sour forme de char$\ast$. \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{class_body_text_parser_a10975bc130653d6a9fe2fec5dd833506}{get\+Formated\+Blob}} ()
+\begin{DoxyCompactList}\small\item\em Cette méthode retourne le flux XML formaté par le Parser en ajoutant des balises html de coloration syntaxique. \end{DoxyCompactList}\item 
+static void XMLCALL \mbox{\hyperlink{class_body_text_parser_ab2bc5a80869e5b9f0d1f3e3b75047a88}{start\+Element\+Handler}} (void $\ast$user\+Data, const XML\+\_\+\+Char $\ast$name, const XML\+\_\+\+Char $\ast$$\ast$attrs)
+\begin{DoxyCompactList}\small\item\em Ce handler statique est appelé à chaque balise ouvrante. On ajoute le texte dans formated\+Blob. \end{DoxyCompactList}\item 
+static void XMLCALL \mbox{\hyperlink{class_body_text_parser_a0acf62929be64113a0edf1114eb72a6d}{end\+Element\+Handler}} (void $\ast$user\+Data, const XML\+\_\+\+Char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Ce handler statique est appelé à chaque balise fermante. On ajoute le texte dans formated\+Blob. \end{DoxyCompactList}\item 
+static void XMLCALL \mbox{\hyperlink{class_body_text_parser_a406806c5f550ecd1afc4e9b40c0fb83b}{comment\+Handler}} (void $\ast$user\+Data, const XML\+\_\+\+Char $\ast$data)
+\begin{DoxyCompactList}\small\item\em Ce Handler est appelé à chaque fois qu\textquotesingle{}il y a un Commentaire. \end{DoxyCompactList}\item 
+static void XMLCALL \mbox{\hyperlink{class_body_text_parser_ae7a0e46f2296302bfe68df3c0f7f8093}{data\+Handler}} (void $\ast$user\+Data, const XML\+\_\+\+Char $\ast$content, int length)
+\begin{DoxyCompactList}\small\item\em Ce Handler est appelé à chaque fois qu\textquotesingle{}il y a un Content. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+La classe \mbox{\hyperlink{class_body_text_parser}{Body\+Text\+Parser}} analyse le Body XML d\textquotesingle{}un message, pour l\textquotesingle{}afficher sous forme de texte simple dans l\textquotesingle{}onglet \char`\"{}\+Text view\char`\"{}. 
+
+\DoxyHorRuler{0}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_body_text_parser_a406806c5f550ecd1afc4e9b40c0fb83b}\label{class_body_text_parser_a406806c5f550ecd1afc4e9b40c0fb83b}} 
+\index{BodyTextParser@{BodyTextParser}!commentHandler@{commentHandler}}
+\index{commentHandler@{commentHandler}!BodyTextParser@{BodyTextParser}}
+\doxysubsubsection{\texorpdfstring{commentHandler()}{commentHandler()}}
+{\footnotesize\ttfamily void XMLCALL Body\+Text\+Parser\+::comment\+Handler (\begin{DoxyParamCaption}\item[{void $\ast$}]{user\+Data,  }\item[{const XML\+\_\+\+Char $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Ce Handler est appelé à chaque fois qu\textquotesingle{}il y a un Commentaire. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em user\+Data} & \+: Non utilisé. \\
+\hline
+{\em XML\+\_\+\+Char} & \+: Le texte du commentaire. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_body_text_parser_ae7a0e46f2296302bfe68df3c0f7f8093}\label{class_body_text_parser_ae7a0e46f2296302bfe68df3c0f7f8093}} 
+\index{BodyTextParser@{BodyTextParser}!dataHandler@{dataHandler}}
+\index{dataHandler@{dataHandler}!BodyTextParser@{BodyTextParser}}
+\doxysubsubsection{\texorpdfstring{dataHandler()}{dataHandler()}}
+{\footnotesize\ttfamily void XMLCALL Body\+Text\+Parser\+::data\+Handler (\begin{DoxyParamCaption}\item[{void $\ast$}]{user\+Data,  }\item[{const XML\+\_\+\+Char $\ast$}]{content,  }\item[{int}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Ce Handler est appelé à chaque fois qu\textquotesingle{}il y a un Content. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em user\+Data} & \+: Non utilisé. \\
+\hline
+{\em content} & \+: Contenu textuel de la section XML. \\
+\hline
+{\em length} & \+: Le Content n\textquotesingle{}est pas NULL-\/terminated\+: il faut utiliser length. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_body_text_parser_a0acf62929be64113a0edf1114eb72a6d}\label{class_body_text_parser_a0acf62929be64113a0edf1114eb72a6d}} 
+\index{BodyTextParser@{BodyTextParser}!endElementHandler@{endElementHandler}}
+\index{endElementHandler@{endElementHandler}!BodyTextParser@{BodyTextParser}}
+\doxysubsubsection{\texorpdfstring{endElementHandler()}{endElementHandler()}}
+{\footnotesize\ttfamily void XMLCALL Body\+Text\+Parser\+::end\+Element\+Handler (\begin{DoxyParamCaption}\item[{void $\ast$}]{user\+Data,  }\item[{const XML\+\_\+\+Char $\ast$}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Ce handler statique est appelé à chaque balise fermante. On ajoute le texte dans formated\+Blob. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em user\+Data} & \+: Non utilisé. \\
+\hline
+{\em name} & \+: Nom de la balise. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_body_text_parser_a10975bc130653d6a9fe2fec5dd833506}\label{class_body_text_parser_a10975bc130653d6a9fe2fec5dd833506}} 
+\index{BodyTextParser@{BodyTextParser}!getFormatedBlob@{getFormatedBlob}}
+\index{getFormatedBlob@{getFormatedBlob}!BodyTextParser@{BodyTextParser}}
+\doxysubsubsection{\texorpdfstring{getFormatedBlob()}{getFormatedBlob()}}
+{\footnotesize\ttfamily std\+::string Body\+Text\+Parser\+::get\+Formated\+Blob (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Cette méthode retourne le flux XML formaté par le Parser en ajoutant des balises html de coloration syntaxique. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+le flux XML avec les balises html de coloration syntaxique. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_body_text_parser_a8092c8530c4714171324e8de0e60b996}\label{class_body_text_parser_a8092c8530c4714171324e8de0e60b996}} 
+\index{BodyTextParser@{BodyTextParser}!parse@{parse}}
+\index{parse@{parse}!BodyTextParser@{BodyTextParser}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Body\+Text\+Parser\+::parse (\begin{DoxyParamCaption}\item[{char $\ast$}]{buffer,  }\item[{bool}]{hide\+Namespaces }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Cette méthode effectue le parsing d\textquotesingle{}un message XML sour forme de char$\ast$. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Buffer de N char contenant le Body XML à afficher. \\
+\hline
+{\em hide\+Namespaces} & Si True, on n\textquotesingle{}affichera pas les namespace. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+le code d\textquotesingle{}erreur rencontré (XML\+\_\+\+ERROR\+\_\+\+NONE si aucun). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_body_text_parser_adcc3530f9b32f59933a3acfd490fa34d}\label{class_body_text_parser_adcc3530f9b32f59933a3acfd490fa34d}} 
+\index{BodyTextParser@{BodyTextParser}!parse@{parse}}
+\index{parse@{parse}!BodyTextParser@{BodyTextParser}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Body\+Text\+Parser\+::parse (\begin{DoxyParamCaption}\item[{std\+::string}]{blob,  }\item[{bool}]{hide\+Namespaces }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Cette méthode effectue le parsing d\textquotesingle{}un XML sous forme de std\+::string. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em blob} & Le flux XML du message à traiter. \\
+\hline
+{\em hide\+Namespaces} & Si True, on n\textquotesingle{}affichera pas les namespace. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+le code d\textquotesingle{}erreur rencontré (XML\+\_\+\+ERROR\+\_\+\+NONE si aucun). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_body_text_parser_ab2bc5a80869e5b9f0d1f3e3b75047a88}\label{class_body_text_parser_ab2bc5a80869e5b9f0d1f3e3b75047a88}} 
+\index{BodyTextParser@{BodyTextParser}!startElementHandler@{startElementHandler}}
+\index{startElementHandler@{startElementHandler}!BodyTextParser@{BodyTextParser}}
+\doxysubsubsection{\texorpdfstring{startElementHandler()}{startElementHandler()}}
+{\footnotesize\ttfamily void XMLCALL Body\+Text\+Parser\+::start\+Element\+Handler (\begin{DoxyParamCaption}\item[{void $\ast$}]{user\+Data,  }\item[{const XML\+\_\+\+Char $\ast$}]{name,  }\item[{const XML\+\_\+\+Char $\ast$$\ast$}]{attrs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Ce handler statique est appelé à chaque balise ouvrante. On ajoute le texte dans formated\+Blob. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em user\+Data} & \+: Non utilisé. \\
+\hline
+{\em name} & \+: Nom de la balise. \\
+\hline
+{\em attrs} & \+: Eventuel tableau des attributs. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Sources/Body\+Text\+Parser.\+h\item 
+Sources/Body\+Text\+Parser.\+cpp\end{DoxyCompactItemize}

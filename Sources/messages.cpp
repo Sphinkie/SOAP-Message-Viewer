@@ -1,7 +1,9 @@
-/* ****************************************************************************
- * Classe pour gérer la liste des messages SOAP échangés.
- * Tous les membres de la classe sont statiques: Pas besoin d'instancier la classe.
- * **************************************************************************** */
+/**
+ * @class Messages
+ *        Cette classe gére la liste des messages SOAP échangés.
+ *        Tous les membres de la classe sont statiques: Pas besoin d'instancier la classe.
+ */
+/********************************************************************************/
 #include "messages.h"
 using namespace std;
 
@@ -16,9 +18,9 @@ std::string Messages::logDate;
 std::string Messages::fileName;
 
 
-/** ***************************************************************************
+/** ****************************************************************************************
  * @brief Ajout d'un nouveau message à la liste.
- * **************************************************************************** */
+ **************************************************************************************** */
 void Messages::append()
 {
     // On cree un nouveau message
@@ -27,16 +29,16 @@ void Messages::append()
     messageList.push_back(currentMessage);
 }
 
-/** ***************************************************************************
- * @brief
- *    Cette méthode analyse la string fourni et extrait les deux derniers mots significatifs,
- *    pour les enregister dans les champs "module" et "action".
- *    Exemple "Session" -> "OpenOrReuse".
- * @param action est une url du type "http://www.sgt.eu/VEDA.SOA/Session.v1/Session/OpenOrReuse".
+/** ****************************************************************************************
+ * @brief Cette méthode analyse la string fourni et extrait les deux derniers mots significatifs,
+ *        pour les enregister dans les champs \b Message.module et \b Message.action.
+ *        Exemple "Session" -> "OpenOrReuse".
  * @attention
- *     le paramètre action est modifié pour ne laisser que le dernier item de la string.
- * @returns le dernier mot significatif. Exemple: "OpenOrReuse".
- * **************************************************************************** */
+ *    le paramètre action est modifié pour ne laisser que le dernier item de la string.
+ *
+ * @param[in,out] action
+ *    Une url du type \c "http://www.sgt.eu/VEDA.SOA/Session.v1/Session/OpenOrReuse".
+ * *************************************************************************************** */
 void Messages::setAction(std::string* action)
 {
     size_t pos2 = action->rfind('/');              // position du dernier '/'
@@ -44,44 +46,49 @@ void Messages::setAction(std::string* action)
     currentMessage->module=action->substr(pos1+1,pos2-pos1-1); // mémorise "Session"
     currentMessage->action=action->substr(pos2+1);             // mémorise "OpenOrReuse"
     action->assign(action->substr(pos2+1));        // modifie la chaine en "OpenOrReuse"
-
 }
 
 
-/** ***************************************************************************
- * @brief Memorise le nom de l'ordinateur émetteur ou destinataire du message.
- * @param host : Contient généralement une adresse IP.
- * **************************************************************************** */
+/** ****************************************************************************************
+ * @brief Mémorise le nom de l'ordinateur émetteur du message.
+ *
+ * @param host
+ *      Contient un hostname ou une adresse IP.
+ **************************************************************************************** */
 void Messages::setHost(std::string host)
 {
     currentMessage->host = host;
 }
 
 
-/** ***************************************************************************
+/** ****************************************************************************************
  * @brief Mémorise l'ID de l'activité. L'activité peut regrouper plusieurs messages,
  *        par exemple une query et sa réponse.
- * @param id : L'ActivityID est généralement un UUID du type "{dee19e7b-5fba-4adc-8197-2aee3c2e6557}"
- * **************************************************************************** */
+ *
+ * @param id L'ActivityID est généralement un UUID du type \c "{dee19e7b-5fba-4adc-8197-2aee3c2e6557}"
+ **************************************************************************************** */
 void Messages::setActivityID(std::string id)
 {
     currentMessage->activityId=id;
 }
 
 
-/* ****************************************************************************
- * Time est du type "2020-06-22T14:31:17.9755137+00:00". On ne garde que "14:31:17.975"
- * **************************************************************************** */
+/** ****************************************************************************************
+* @brief Stocke l'heure du message au format \c "14:31:17.975".
+* @param messagetime Un timestamp au format \c "2020-06-22T14:31:17.9755137+00:00".
+**************************************************************************************** */
 void Messages::setMessageTime(std::string messagetime)
 {
     currentMessage->messageTime=messagetime.substr(11,12);
 }
 
 
-/* ****************************************************************************
- * Source est du type "TransportReceive" ou "TransportSend"
- * ou "ServiceLevelReceiveRequest" ou "ServiceLevelSendReply"
- * **************************************************************************** */
+/** ****************************************************************************************
+ * @brief Mémorise le sens du ciculation du message.
+ *
+ * @param source Les valeurs traitées sont \c TransportReceive ou \c TransportSend
+ *               ou \c ServiceLevelReceiveRequest ou \c ServiceLevelSendReply.
+ **************************************************************************************** */
 void Messages::setMessageSource(std::string source)
 {
     currentMessage->direction=source;
@@ -93,56 +100,70 @@ void Messages::setMessageSource(std::string source)
 }
 
 
-/* ****************************************************************************
- * WSDL est du type "http://00xdsvmam03200.paris.tv5monde.org/VEDA.SOA/Session.svc?wsdl"
- * Présent pour les messages de type REQUEST, uniquement
- * **************************************************************************** */
+/** ****************************************************************************************
+ * @brief Cette méthode mémorise le nom du WSDL.
+ *        (Présent pour les messages de type REQUEST, uniquement).
+ *
+ * @param wsdl : URL au format \c "http://00xdsvmam03200.paris.tv5monde.org/VEDA.SOA/Session.svc?wsdl"
+ **************************************************************************************** */
 void Messages::setWsdl(std::string wsdl)
 {
     currentMessage->wsdl=wsdl;
 }
 
 
-/* ****************************************************************************
- * Pointeurs dans le fichier pour retrouver le contenu du Body.
- * (Byte index)
- * **************************************************************************** */
+/** ****************************************************************************************
+ * @brief Mémorise la position du début du Body.
+ *
+ * @param position Byte index du début du Body.
+ **************************************************************************************** */
 void Messages::setCurrentBodyStartPosition(long position)
 {
     currentMessage->bodyStartPosition=position;
 }
+
+
+/** ****************************************************************************************
+ * @brief Mémorise la position de la fin du Body.
+ *
+ * @param position Byte index de la fin du Body.
+ **************************************************************************************** */
 void Messages::setCurrentBodyEndPosition(long position)
 {
     currentMessage->bodyEndPosition=position;
 }
 
 
-/* ****************************************************************************
- * Retourne le numéro dans la liste du message courant.
- * **************************************************************************** */
+/** ****************************************************************************************
+ * @brief Retourne le numéro du message courant dans la liste.
+ **************************************************************************************** */
 std::string Messages::getCurrentMessageIndex()
 {
     return std::to_string(messageList.size());
 }
 
 
-/* ****************************************************************************
- * Retourne le message de la liste portant le numéro demandé.
- * **************************************************************************** */
+/** ****************************************************************************************
+ * @brief Retourne le message de la liste portant le numéro demandé.
+ * **************************************************************************************** */
 Messages::Message* Messages::getMessage(std::string number)
 {
     size_t num = stoi(number);
     return messageList[num];
 }
+
+/** ****************************************************************************************
+ * @brief Retourne le message de la liste portant le numéro demandé.
+ * **************************************************************************************** */
 Messages::Message* Messages::getMessage(long number)
 {
     return messageList[number];
 }
 
 
-/* ****************************************************************************
- * Cette fonction remplit le champ body dans la liste des messages.
- * **************************************************************************** */
+/** ****************************************************************************************
+ * @brief Cette fonction remplit le champ body dans la liste des messages.
+ * **************************************************************************************** */
 void Messages::getMessageBody(long number)
 {
     // Si on n'a pas le Body en mémoire: on le lit dans le fichier:
@@ -177,9 +198,12 @@ void Messages::getMessageBody(long number)
 }
 
 
-/* ****************************************************************************
- * On regarde si le Body demandé contient la substring
- * **************************************************************************** */
+/** ****************************************************************************************
+ * @brief On regarde si le Body demandé contient la substring.
+ * @param index : Numéro du message.
+ * @param substring : La string à rechercher.
+ * @returns \c TRUE si le Body contient la substring.
+ * **************************************************************************************** */
 bool Messages::containsMessageBody(int index, string substring)
 {
     // On commence par lire le body dans le fichier SVCLOG
@@ -193,33 +217,33 @@ bool Messages::containsMessageBody(int index, string substring)
         return false;
 }
 
-/* ****************************************************************************
- * Renvoie True si le message courant est de type Session
- * **************************************************************************** */
+/** ****************************************************************************************
+ * @brief Renvoie \c True si le message courant est de type \b Session.
+ * **************************************************************************************** */
 bool Messages::isSession()
 {
     return(currentMessage->module=="Session");
 }
 
-/* ****************************************************************************
- * Renvoie True si le message courant est de type Request
- * **************************************************************************** */
+/** ****************************************************************************************
+ * @brief Renvoie \c True si le message courant est de type \b Request.
+ * **************************************************************************************** */
 bool Messages::isCurrentMessageRequest()
 {
     return(currentMessage->isRequest);
 }
 
-/** ***************************************************************************
- * @brief Renvoie True si le message courant est de type Transport
- * **************************************************************************** */
+/** ****************************************************************************************
+ * @brief Renvoie \c True si le message courant est de type \b Transport.
+ * **************************************************************************************** */
 bool Messages::isCurrentMessageServiceLevel()
 {
     return(currentMessage->isServiceLevel);
 }
 
 /** ***************************************************************************
- * @brief Renvoie True si le message courant se termine par Fault ou fault
- * **************************************************************************** */
+ * @brief Renvoie \c True si le message courant se termine par \c Fault ou \c fault.
+ * **************************************************************************************** */
 bool Messages::isCurrentMessageFaulty()
 {
     int offset = currentMessage->action.length()-5;
@@ -231,7 +255,7 @@ bool Messages::isCurrentMessageFaulty()
 }
 
 /** ***************************************************************************
- * @brief Renvoie le MessageTime du message courant
+ * @brief Renvoie le timestamp du message courant.
  * **************************************************************************** */
 std::string Messages::getCurrentMessageTime()
 {
@@ -282,6 +306,7 @@ int Messages::getPreviousCorrelatedMessageIndex(int index, std::string id)
 
 /** ***************************************************************************
  * @brief Initialise toutes les infos du parsing.
+ * @param filename : Le nom du fichier XML
  * **************************************************************************** */
 void Messages::init(std::string filename)
 {

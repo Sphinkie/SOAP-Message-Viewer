@@ -20,7 +20,7 @@ public:
 
 private:
     static std::ofstream fichierBody;
-    static const long  MAX_BODY_SIZE = 1024*512;  /** Le buffer de Expat v2.2 était limité à 32kB. Avec Expat v2.4, cela semble fonctionner avec 5128kB... */
+    static const long  MAX_BODY_SIZE = 1024*512;  /**< Le buffer de Expat v2.2 était limité à 32kB. Avec Expat v2.4, cela semble fonctionner avec 5128kB... */
 
     // userData qui sont passés aux Handlers
     struct UserData

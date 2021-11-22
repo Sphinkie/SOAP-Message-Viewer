@@ -1,0 +1,56 @@
+\hypertarget{_file_parser_8h_source}{}\doxysection{File\+Parser.\+h}
+\label{_file_parser_8h_source}\index{Sources/FileParser.h@{Sources/FileParser.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef FILEPARSER\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define FILEPARSER\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <stdlib.h>}     \textcolor{comment}{// pour strncpy\_s}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <QMainWindow>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <Expat/include/expat.h>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}messages.h"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}Common.h"{}}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{20 \textcolor{keyword}{class }\mbox{\hyperlink{class_file_parser}{FileParser}}}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{22 \textcolor{keyword}{public}:}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_parser_a0841789c9e75d720801c3c4d5a666468}{open}}(std::string filename, \textcolor{keyword}{const} \textcolor{keywordtype}{void}* fenetre);}
+\DoxyCodeLine{24     \textcolor{keywordtype}{int}  \mbox{\hyperlink{class_file_parser_a09bc46c3ba8e88b76bf697e6a2e42322}{parse}}(\textcolor{keywordtype}{bool} useCRLF);}
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_parser_afaeb2d28e432115ec845ebe4ff86d8f4}{close}}();}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{keyword}{static} \textcolor{keywordtype}{void} XMLCALL \mbox{\hyperlink{class_file_parser_a65c0fa51c157302c7c87a5ef99dfb8c8}{startElementHandler}}(\textcolor{keywordtype}{void} *userData, \textcolor{keyword}{const} XML\_Char *name, \textcolor{keyword}{const} XML\_Char **atts);}
+\DoxyCodeLine{28     \textcolor{keyword}{static} \textcolor{keywordtype}{void} XMLCALL \mbox{\hyperlink{class_file_parser_a196aa9b586af505b0921877b88946f09}{endElementHandler}}(\textcolor{keywordtype}{void} *userData, \textcolor{keyword}{const} XML\_Char *name);}
+\DoxyCodeLine{29     \textcolor{keyword}{static} \textcolor{keywordtype}{void} XMLCALL \mbox{\hyperlink{class_file_parser_a8287923cca0975333181d528c92d5c35}{dataHandler}}(\textcolor{keywordtype}{void} *userData, \textcolor{keyword}{const} XML\_Char *content, \textcolor{keywordtype}{int} length);}
+\DoxyCodeLine{30     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_parser_ac0dee4dc1b67b81a26652701754507d1}{processContentData}}(\textcolor{keywordtype}{void} *userData);}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} MAX\_MESSAGES = 32000;   }
+\DoxyCodeLine{34 \textcolor{keyword}{private}:}
+\DoxyCodeLine{35     \textcolor{keywordtype}{bool} isReady=\textcolor{keyword}{false};}
+\DoxyCodeLine{36     std::ifstream fichierSVC;}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{comment}{// userData qui sont passés aux Handlers}}
+\DoxyCodeLine{39     \textcolor{keyword}{enum} ContentType \{NONE, HOST, TO, ACTION, COMPUTER\};}
+\DoxyCodeLine{40     \textcolor{keyword}{struct }UserData}
+\DoxyCodeLine{41     \{}
+\DoxyCodeLine{42         ContentType  contentType = NONE;}
+\DoxyCodeLine{43         \textcolor{keywordtype}{bool}         isTimeKnown = \textcolor{keyword}{false};}
+\DoxyCodeLine{44         \textcolor{keywordtype}{bool}         isComputerKnown = \textcolor{keyword}{false};}
+\DoxyCodeLine{45         \textcolor{keywordtype}{bool}         containsCRLF = \textcolor{keyword}{false};}
+\DoxyCodeLine{46         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} messageNb = 0;}
+\DoxyCodeLine{47     \};}
+\DoxyCodeLine{48     UserData userData;}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50     \textcolor{comment}{// Variables statiques utilisées par les membres statiques}}
+\DoxyCodeLine{51     \textcolor{keyword}{static} \textcolor{keywordtype}{bool}          insideBody;}
+\DoxyCodeLine{52     \textcolor{keyword}{static} std::string   contentData;}
+\DoxyCodeLine{53     \textcolor{keyword}{static} QMainWindow*  mainWindow;}
+\DoxyCodeLine{54     \textcolor{keyword}{static} XML\_Parser    parser;                }
+\DoxyCodeLine{55     \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{long}    BUFFER\_SIZE = 1024*8;  }
+\DoxyCodeLine{57 \};}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// FILEPARSER\_H}}
+
+\end{DoxyCode}

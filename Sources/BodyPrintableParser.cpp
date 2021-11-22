@@ -2,9 +2,10 @@
 
 std::ofstream BodyPrintableParser::fichierBody;
 
-/* ****************************************************************************
- * Constructeur: ouvre le fichier XML
- * **************************************************************************** */
+/**
+ * Constructeur: ouvre le fichier XML demandé.
+ * @param filename : Le nom du fichier XML.
+ ** *****************************************************************************/
 BodyPrintableParser::BodyPrintableParser(std::string filename)
 {
     fichierBody.open(filename);
@@ -12,19 +13,20 @@ BodyPrintableParser::BodyPrintableParser(std::string filename)
 }
 
 
-/* ****************************************************************************
- * Destructeur: referme le fichier XML
- * **************************************************************************** */
+/**
+ * Destructeur: referme le fichier XML.
+ ** **************************************************************************** */
 BodyPrintableParser::~BodyPrintableParser()
 {
     fichierBody.close();
 }
 
 
-/* ****************************************************************************
- * Fonction principale pour déclencher le parsing par Expat
- * Retourne un code d'erreur (0 si tout s'est bien passé)
- * **************************************************************************** */
+/**
+ * Fonction principale pour déclencher le parsing par Expat.
+ * @param blob : le flux XML à parser.
+ * @return an error code (0 si tout s'est bien passé)
+ ** *************************************************************************** */
 int BodyPrintableParser::saveBody(std::string blob)
 {
     int bufferSize= blob.length()+1;
