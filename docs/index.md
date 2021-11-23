@@ -36,6 +36,10 @@ Get the latest release of the software by clicking on the **▼.ZIP** button, at
 Download the **SOAP-MessageViewer.Portable.zip** file, and unzip it in a folder on your computer.
 Then, just run the **SOAP-MessageViewer.exe** program.
 
+## Developper corner
+
+Developpers can access to doxygen documentation [here](https://sphinkie.github.io/SOAP-Message-Viewer/doxygen/html/index.html).
+
 ## About me
 
 Find my other softwares at [GitHub](https://sphinkie.github.io).
