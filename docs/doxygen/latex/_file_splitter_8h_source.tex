@@ -1,0 +1,43 @@
+\hypertarget{_file_splitter_8h_source}{}\doxysection{File\+Splitter.\+h}
+\label{_file_splitter_8h_source}\index{E:/source/repos/SOAP-\/Message-\/Viewer/Sources/FileSplitter.h@{E:/source/repos/SOAP-\/Message-\/Viewer/Sources/FileSplitter.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef FILESPLITTER\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define FILESPLITTER\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <QProgressDialog>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_file_splitter}{FileSplitter}}}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{public}:}
+\DoxyCodeLine{13     \textcolor{keywordtype}{void}  open(std::string filename);}
+\DoxyCodeLine{14     \textcolor{keywordtype}{void}  split();}
+\DoxyCodeLine{15     \textcolor{keywordtype}{void}  close();}
+\DoxyCodeLine{16     \textcolor{keywordtype}{bool}  good() \{\textcolor{keywordflow}{return} isGood;\};              \textcolor{comment}{// Appeler good() après les fonctions pour savoir si tout s'est bien passé}}
+\DoxyCodeLine{17     std::string getErrorMessage() \{\textcolor{keywordflow}{return} errorMessage;\};}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} MAX\_NB\_MESSAGES = 20000;       \textcolor{comment}{// Nb max de messages par fichier découpé (default: 20000)}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{private}:}
+\DoxyCodeLine{22     \textcolor{keywordtype}{bool} calculateScore(\textcolor{keywordtype}{char} lettre);}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} openNewSplittedFile();}
+\DoxyCodeLine{24     \textcolor{keywordtype}{void} cancel();}
+\DoxyCodeLine{25     std::ifstream fichierSVC;}
+\DoxyCodeLine{26     std::ofstream fichierSPLITTED;}
+\DoxyCodeLine{27     std::string   filenameSVC;}
+\DoxyCodeLine{28     std::string   errorMessage;}
+\DoxyCodeLine{29     \textcolor{keywordtype}{bool}          isGood     = \textcolor{keyword}{true};}
+\DoxyCodeLine{30     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  splitNumber= 0;}
+\DoxyCodeLine{31     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  score      = 0;}
+\DoxyCodeLine{32     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  nbMessages = 0;}
+\DoxyCodeLine{33     \textcolor{keyword}{const} \textcolor{keywordtype}{char}*   TERMINATOR = \textcolor{stringliteral}{"{}</E2ETraceEvent>"{}};}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// FILESPLITTER\_H}}
+
+\end{DoxyCode}

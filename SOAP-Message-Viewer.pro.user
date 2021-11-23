@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.13.0, 2021-11-22T19:11:20. -->
+<!-- Written by QtCreator 4.13.0, 2021-11-23T14:33:05. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -117,9 +117,9 @@
      </valuemap>
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.2">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
-      <value type="QString" key="ProjectExplorer.ProcessStep.Arguments">%{CurrentProject:Name}.qdocconf</value>
-      <value type="QString" key="ProjectExplorer.ProcessStep.Command">%{CMake:Executable:Path}\qdoc.exe</value>
-      <value type="QString" key="ProjectExplorer.ProcessStep.WorkingDirectory">%{sourceDir}</value>
+      <value type="QString" key="ProjectExplorer.ProcessStep.Arguments">doxyfile</value>
+      <value type="QString" key="ProjectExplorer.ProcessStep.Command">%ProgramFiles%\doxygen\bin\doxygen.exe</value>
+      <value type="QString" key="ProjectExplorer.ProcessStep.WorkingDirectory">%{sourceDir}\docs\doxygen</value>
       <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.ProcessStep</value>
      </valuemap>
      <value type="int" key="ProjectExplorer.BuildStepList.StepsCount">3</value>

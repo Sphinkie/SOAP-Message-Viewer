@@ -1,0 +1,38 @@
+\hypertarget{_body_table_parser_8h_source}{}\doxysection{Body\+Table\+Parser.\+h}
+\label{_body_table_parser_8h_source}\index{E:/source/repos/SOAP-\/Message-\/Viewer/Sources/BodyTableParser.h@{E:/source/repos/SOAP-\/Message-\/Viewer/Sources/BodyTableParser.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef BODYTABLEPARSER\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define BODYTABLEPARSER\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <stack>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <QTreeWidget>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <Expat/include/expat.h>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{class_body_table_parser}{BodyTableParser}}}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10 \textcolor{keyword}{public}:}
+\DoxyCodeLine{11     \textcolor{keyword}{static} \textcolor{keywordtype}{int}  buildTable(std::string blob, \textcolor{keywordtype}{bool} hideNamespaces, QTreeWidget* tree\_root\_item);}
+\DoxyCodeLine{12     \textcolor{keyword}{static} \textcolor{keywordtype}{void} XMLCALL startElementHandler(\textcolor{keywordtype}{void} *userData, \textcolor{keyword}{const} XML\_Char *name, \textcolor{keyword}{const} XML\_Char **attrs);}
+\DoxyCodeLine{13     \textcolor{keyword}{static} \textcolor{keywordtype}{void} XMLCALL endElementHandler(\textcolor{keywordtype}{void} *userData, \textcolor{keyword}{const} XML\_Char *name);}
+\DoxyCodeLine{14     \textcolor{keyword}{static} \textcolor{keywordtype}{void} XMLCALL commentHandler(\textcolor{keywordtype}{void} *userData, \textcolor{keyword}{const} XML\_Char *data);}
+\DoxyCodeLine{15     \textcolor{keyword}{static} \textcolor{keywordtype}{void} XMLCALL dataHandler(\textcolor{keywordtype}{void} *userData, \textcolor{keyword}{const} XML\_Char *content, \textcolor{keywordtype}{int} length);}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{private}:}
+\DoxyCodeLine{18     \textcolor{keyword}{static} \textcolor{keywordtype}{void} free();}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{long}  MAX\_BODY\_SIZE = 1024*512;       }
+\DoxyCodeLine{21     \textcolor{keyword}{static} QTreeWidget* treeWidget;}
+\DoxyCodeLine{22     \textcolor{keyword}{static} QTreeWidgetItem* currentItem;}
+\DoxyCodeLine{23     \textcolor{keyword}{static} std::stack<QTreeWidgetItem*> itemStack;}
+\DoxyCodeLine{24     \textcolor{keyword}{static} \textcolor{keywordtype}{int}          profondeur;}
+\DoxyCodeLine{25     \textcolor{keyword}{static} \textcolor{keywordtype}{bool}         keepNamespaces;}
+\DoxyCodeLine{26     \textcolor{keyword}{static} std::string  errorMessage;}
+\DoxyCodeLine{27     \textcolor{keyword}{static} QFont        FontGras;}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// BODYTABLEPARSER\_H}}
+
+\end{DoxyCode}

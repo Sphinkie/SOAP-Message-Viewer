@@ -1,0 +1,43 @@
+\hypertarget{_file_repair_8h_source}{}\doxysection{File\+Repair.\+h}
+\label{_file_repair_8h_source}\index{E:/source/repos/SOAP-\/Message-\/Viewer/Sources/FileRepair.h@{E:/source/repos/SOAP-\/Message-\/Viewer/Sources/FileRepair.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <cstring>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{class_file_repair}{FileRepair}}}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9 \textcolor{keyword}{public}:}
+\DoxyCodeLine{10     \textcolor{keywordtype}{bool} openSVCfile(std::string filename);}
+\DoxyCodeLine{11     \textcolor{keywordtype}{bool} isSvcLog(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* filename);}
+\DoxyCodeLine{12     \textcolor{keywordtype}{void} repair();}
+\DoxyCodeLine{13     \textcolor{keywordtype}{void} close();}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{private}:}
+\DoxyCodeLine{16     \textcolor{keywordtype}{bool} replaceGtLt(\textcolor{keywordtype}{char} lettre);}
+\DoxyCodeLine{17     \textcolor{keywordtype}{bool} replaceiNil(\textcolor{keywordtype}{char} lettre);}
+\DoxyCodeLine{18     \textcolor{keywordtype}{bool} replaceXsiNil(\textcolor{keywordtype}{char} lettre);}
+\DoxyCodeLine{19     \textcolor{keywordtype}{void} trackOpeningTags();}
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} trackClosingTags();}
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} closeOpenedTags();}
+\DoxyCodeLine{22     \textcolor{keywordtype}{bool} removeBalise(std::string name);}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} removeLastTag();}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     std::ifstream fichierSVC;}
+\DoxyCodeLine{26     std::ofstream fichierXML;}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     \textcolor{keyword}{struct }Balise}
+\DoxyCodeLine{29     \{}
+\DoxyCodeLine{30         std::string  TagName  = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{31         Balise* Previous = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{32     \} ;}
+\DoxyCodeLine{33     Balise* lastBalise = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{34     std::streamoff lastTagPosition = 0;}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \};}
+\DoxyCodeLine{37 }
+
+\end{DoxyCode}

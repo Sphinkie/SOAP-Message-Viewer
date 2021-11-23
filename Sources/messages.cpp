@@ -1,9 +1,9 @@
-/**
+/** ****************************************************************************************
  * @class Messages
  *        Cette classe gére la liste des messages SOAP échangés.
  *        Tous les membres de la classe sont statiques: Pas besoin d'instancier la classe.
- */
-/********************************************************************************/
+ * *****************************************************************************************/
+
 #include "messages.h"
 using namespace std;
 
@@ -104,7 +104,7 @@ void Messages::setMessageSource(std::string source)
  * @brief Cette méthode mémorise le nom du WSDL.
  *        (Présent pour les messages de type REQUEST, uniquement).
  *
- * @param wsdl : URL au format \c "http://00xdsvmam03200.paris.tv5monde.org/VEDA.SOA/Session.svc?wsdl"
+ * @param wsdl : URL du WSDL au format \c "http://00xdsvmam03200.paris.org/VEDA.SOA/Session.svc?wsdl"
  **************************************************************************************** */
 void Messages::setWsdl(std::string wsdl)
 {
@@ -115,7 +115,7 @@ void Messages::setWsdl(std::string wsdl)
 /** ****************************************************************************************
  * @brief Mémorise la position du début du Body.
  *
- * @param position Byte index du début du Body.
+ * @param position Byte index du début du Body dans le fichier SVCLOG.
  **************************************************************************************** */
 void Messages::setCurrentBodyStartPosition(long position)
 {
@@ -126,7 +126,7 @@ void Messages::setCurrentBodyStartPosition(long position)
 /** ****************************************************************************************
  * @brief Mémorise la position de la fin du Body.
  *
- * @param position Byte index de la fin du Body.
+ * @param position Byte index de la fin du Body dans le fichier SVCLOG.
  **************************************************************************************** */
 void Messages::setCurrentBodyEndPosition(long position)
 {
@@ -162,7 +162,8 @@ Messages::Message* Messages::getMessage(long number)
 
 
 /** ****************************************************************************************
- * @brief Cette fonction remplit le champ body dans la liste des messages.
+ * @brief Cette fonction lit le Body du message demandé dans le fichier SVCLOG et le mémorise
+ *        dans la structure du Message de la liste.
  * **************************************************************************************** */
 void Messages::getMessageBody(long number)
 {
@@ -234,7 +235,8 @@ bool Messages::isCurrentMessageRequest()
 }
 
 /** ****************************************************************************************
- * @brief Renvoie \c True si le message courant est de type \b Transport.
+ * @brief Renvoie \c True si le message courant est de type \b Service,
+ *        et \c False s'il est de type \b Transport.
  * **************************************************************************************** */
 bool Messages::isCurrentMessageServiceLevel()
 {

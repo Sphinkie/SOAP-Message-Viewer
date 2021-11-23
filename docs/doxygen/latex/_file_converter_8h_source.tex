@@ -1,0 +1,53 @@
+\hypertarget{_file_converter_8h_source}{}\doxysection{File\+Converter.\+h}
+\label{_file_converter_8h_source}\index{E:/source/repos/SOAP-\/Message-\/Viewer/Sources/FileConverter.h@{E:/source/repos/SOAP-\/Message-\/Viewer/Sources/FileConverter.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef FILECONVERTER\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define FILECONVERTER\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <iostream>}     \textcolor{comment}{// pour cout}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <stack>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <Expat/include/expat.h>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_file_converter}{FileConverter}}}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{public}:}
+\DoxyCodeLine{15     \textcolor{keywordtype}{void} open(std::string filename);}
+\DoxyCodeLine{16     \textcolor{keywordtype}{int}  convert();}
+\DoxyCodeLine{17     \textcolor{keywordtype}{void} close();}
+\DoxyCodeLine{18     \textcolor{keywordtype}{bool} ready() \{\textcolor{keywordflow}{return} isReady;\};}
+\DoxyCodeLine{19     std::string getErrorMessage() \{\textcolor{keywordflow}{return} errorMessage;\};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \textcolor{keyword}{static} \textcolor{keywordtype}{void} XMLCALL startElementHandler(\textcolor{keywordtype}{void} *userData, \textcolor{keyword}{const} XML\_Char *name, \textcolor{keyword}{const} XML\_Char **attrs);}
+\DoxyCodeLine{22     \textcolor{keyword}{static} \textcolor{keywordtype}{void} XMLCALL endElementHandler(\textcolor{keywordtype}{void} *userData, \textcolor{keyword}{const} XML\_Char *name);}
+\DoxyCodeLine{23     \textcolor{keyword}{static} \textcolor{keywordtype}{void} XMLCALL dataHandler(\textcolor{keywordtype}{void} *userData, \textcolor{keyword}{const} XML\_Char *content, \textcolor{keywordtype}{int} length);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{private}:}
+\DoxyCodeLine{26     std::ifstream fichierSVC;}
+\DoxyCodeLine{27     \textcolor{keywordtype}{bool}          isReady=\textcolor{keyword}{false};}
+\DoxyCodeLine{28     std::string   errorMessage;}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{comment}{// userData qui sont passés aux Handlers}}
+\DoxyCodeLine{31     \textcolor{keyword}{struct }UserData}
+\DoxyCodeLine{32     \{}
+\DoxyCodeLine{33         \textcolor{keywordtype}{int}   depth=0;}
+\DoxyCodeLine{34         \textcolor{keywordtype}{bool}  keepSubElements = \textcolor{keyword}{false};}
+\DoxyCodeLine{35         \textcolor{keywordtype}{bool}  isElementClosed = \textcolor{keyword}{false};}
+\DoxyCodeLine{36     \};}
+\DoxyCodeLine{37     UserData userData;}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39     \textcolor{comment}{// Variables statiques utilisées par les membres statiques}}
+\DoxyCodeLine{40     \textcolor{keyword}{static} std::string              contentData;}
+\DoxyCodeLine{41     \textcolor{keyword}{static} std::ofstream            fichierFASTER;}
+\DoxyCodeLine{42     \textcolor{keyword}{static} std::stack<std::string>  baliseStack;}
+\DoxyCodeLine{43     \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{long}               BUFFER\_SIZE = 1024*8;  \textcolor{comment}{// recommandation Expat: doit etre largement en dessous de INT\_MAX soit 32.767.}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// FILECONVERTER\_H}}
+
+\end{DoxyCode}

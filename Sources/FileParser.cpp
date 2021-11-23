@@ -87,7 +87,7 @@ int FileParser::parse(bool useCRLF)
  *    XML_GetCurrentByteIndex(XML_Parser p)
  * @param userData : Structure pour les données à mémoriser.
  * @param name : Nom de la balise.
- * @param attrs : Eventuel tableau des attributs.
+ * @param atts : Eventuel tableau des attributs.
  ******************************************************************************* */
 void XMLCALL FileParser::startElementHandler(void* userData, const XML_Char* name, const XML_Char **atts)
 {
@@ -174,7 +174,7 @@ void XMLCALL FileParser::startElementHandler(void* userData, const XML_Char* nam
  * @brief Ce Handler est appelé à chaque fois qu'il y a un Content.
  *        Le ContentType a été positionné par le Handler StartElement.
  *        Si le Content est à cheval sur 2 buffers, le dataHandler est appelé deux fois, et il faut concaténer.
- * @link https://stackoverflow.com/questions/609376/geting-xml-data-using-xml-parser-expat#609736
+ *        @a https://stackoverflow.com/questions/609376/geting-xml-data-using-xml-parser-expat#609736
  * @param userData : Non utilisé.
  * @param content : le contenu texte de la section.
  * @param length : Le Content n'est pas NULL-terminated: il faut utiliser length.

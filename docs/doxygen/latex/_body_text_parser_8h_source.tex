@@ -1,0 +1,38 @@
+\hypertarget{_body_text_parser_8h_source}{}\doxysection{Body\+Text\+Parser.\+h}
+\label{_body_text_parser_8h_source}\index{E:/source/repos/SOAP-\/Message-\/Viewer/Sources/BodyTextParser.h@{E:/source/repos/SOAP-\/Message-\/Viewer/Sources/BodyTextParser.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef BODYTEXTPARSER\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define BODYTEXTPARSER\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <stdlib.h>}   \textcolor{comment}{// pour strncpy\_s}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <Expat/include/expat.h>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_body_text_parser}{BodyTextParser}}}
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14 \textcolor{keyword}{public}:}
+\DoxyCodeLine{15     \textcolor{keyword}{static} \textcolor{keywordtype}{int}  \mbox{\hyperlink{class_body_text_parser_adcc3530f9b32f59933a3acfd490fa34d}{parse}}(std::string blob, \textcolor{keywordtype}{bool} hideNamespaces);}
+\DoxyCodeLine{16     \textcolor{keyword}{static} \textcolor{keywordtype}{int}  \mbox{\hyperlink{class_body_text_parser_adcc3530f9b32f59933a3acfd490fa34d}{parse}}(\textcolor{keywordtype}{char}* buffer, \textcolor{keywordtype}{bool} hideNamespaces);}
+\DoxyCodeLine{17     \textcolor{keyword}{static} std::string  \mbox{\hyperlink{class_body_text_parser_a10975bc130653d6a9fe2fec5dd833506}{getFormatedBlob}}();}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     \textcolor{comment}{// Methodes du parser}}
+\DoxyCodeLine{20     \textcolor{keyword}{static} \textcolor{keywordtype}{void} XMLCALL \mbox{\hyperlink{class_body_text_parser_ab2bc5a80869e5b9f0d1f3e3b75047a88}{startElementHandler}}(\textcolor{keywordtype}{void} *userData, \textcolor{keyword}{const} XML\_Char *name, \textcolor{keyword}{const} XML\_Char **attrs);}
+\DoxyCodeLine{21     \textcolor{keyword}{static} \textcolor{keywordtype}{void} XMLCALL \mbox{\hyperlink{class_body_text_parser_a0acf62929be64113a0edf1114eb72a6d}{endElementHandler}}(\textcolor{keywordtype}{void} *userData, \textcolor{keyword}{const} XML\_Char *name);}
+\DoxyCodeLine{22     \textcolor{keyword}{static} \textcolor{keywordtype}{void} XMLCALL \mbox{\hyperlink{class_body_text_parser_a406806c5f550ecd1afc4e9b40c0fb83b}{commentHandler}}(\textcolor{keywordtype}{void} *userData, \textcolor{keyword}{const} XML\_Char *data);}
+\DoxyCodeLine{23     \textcolor{keyword}{static} \textcolor{keywordtype}{void} XMLCALL \mbox{\hyperlink{class_body_text_parser_ae7a0e46f2296302bfe68df3c0f7f8093}{dataHandler}}(\textcolor{keywordtype}{void} *userData, \textcolor{keyword}{const} XML\_Char *content, \textcolor{keywordtype}{int} length);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{private}:}
+\DoxyCodeLine{26     \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{long}  MAX\_BODY\_SIZE = 1024*512;       }
+\DoxyCodeLine{27     \textcolor{keyword}{static} \textcolor{keywordtype}{int}         profondeur;}
+\DoxyCodeLine{28     \textcolor{keyword}{static} \textcolor{keywordtype}{bool}        elementClosed;}
+\DoxyCodeLine{29     \textcolor{keyword}{static} \textcolor{keywordtype}{bool}        keepNamespaces;}
+\DoxyCodeLine{30     \textcolor{keyword}{static} std::string formatedBlob;}
+\DoxyCodeLine{31     \textcolor{keyword}{static} std::string errMessage;}
+\DoxyCodeLine{32 \textcolor{comment}{//    bool               userData;      // pour Expat}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// BODYTEXTPARSER\_H}}
+
+\end{DoxyCode}

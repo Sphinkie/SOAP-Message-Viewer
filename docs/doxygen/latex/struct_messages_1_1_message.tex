@@ -1,0 +1,46 @@
+\hypertarget{struct_messages_1_1_message}{}\doxysection{Messages\+::Message Struct Reference}
+\label{struct_messages_1_1_message}\index{Messages::Message@{Messages::Message}}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_messages_1_1_message_a80093f739a4603b0f10f223e7656e1ef}\label{struct_messages_1_1_message_a80093f739a4603b0f10f223e7656e1ef}} 
+std\+::string {\bfseries host}
+\begin{DoxyCompactList}\small\item\em hostname ou adresse IP de l\textquotesingle{}emetteur du message. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_messages_1_1_message_a9621d187b646fb37975d7a0d5dcb81b8}\label{struct_messages_1_1_message_a9621d187b646fb37975d7a0d5dcb81b8}} 
+std\+::string {\bfseries module}
+\begin{DoxyCompactList}\small\item\em module WSDL. Exemple\+: {\ttfamily \char`\"{}\+Session\char`\"{}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_messages_1_1_message_a0bd3cd681cc736d36c89fea06a803ac7}\label{struct_messages_1_1_message_a0bd3cd681cc736d36c89fea06a803ac7}} 
+std\+::string {\bfseries action}
+\begin{DoxyCompactList}\small\item\em action WSDL. Exemple\+: {\ttfamily \char`\"{}\+Open\char`\"{}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_messages_1_1_message_a1709088d211103a5d4087fcbe98e460f}\label{struct_messages_1_1_message_a1709088d211103a5d4087fcbe98e460f}} 
+std\+::string {\bfseries direction}
+\begin{DoxyCompactList}\small\item\em direction du message (sent = \char`\"{}\+S\char`\"{} ou received = \char`\"{}\+R\char`\"{}). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_messages_1_1_message_a9f20ea91968683f11d023ce86b22c7f4}\label{struct_messages_1_1_message_a9f20ea91968683f11d023ce86b22c7f4}} 
+std\+::string {\bfseries activity\+Id}
+\begin{DoxyCompactList}\small\item\em identifiant permettant de relier plusieurs messages entre-\/eux. Exemple\+: {\ttfamily \char`\"{}\{dee19e7b-\/5fba-\/4adc-\/8197-\/2aee3c2e6557\}\char`\"{}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_messages_1_1_message_a4fd889d3ccc97e2abd99f93e5a98189e}\label{struct_messages_1_1_message_a4fd889d3ccc97e2abd99f93e5a98189e}} 
+std\+::string {\bfseries message\+Time}
+\begin{DoxyCompactList}\small\item\em timestamp du message au format {\ttfamily \char`\"{}14\+:31\+:17.\+975\char`\"{}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_messages_1_1_message_a152166d0b5b659d2c83d0ea52aa200e4}\label{struct_messages_1_1_message_a152166d0b5b659d2c83d0ea52aa200e4}} 
+std\+::string {\bfseries wsdl}
+\begin{DoxyCompactList}\small\item\em URL du WSDL du message. exemple\+: {\ttfamily \char`\"{}http\+://00xdsvmam03200.\+paris.\+org/\+VEDA.\+SOA/\+Session.\+svc?wsdl\char`\"{}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_messages_1_1_message_a5850875aca378d32d5fb919709e4cd02}\label{struct_messages_1_1_message_a5850875aca378d32d5fb919709e4cd02}} 
+char $\ast$ {\bfseries body} =nullptr
+\begin{DoxyCompactList}\small\item\em Body du message (renseigné à la demande). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_messages_1_1_message_ad380239cde093f003a39de9ecf39a05a}\label{struct_messages_1_1_message_ad380239cde093f003a39de9ecf39a05a}} 
+long {\bfseries body\+Start\+Position} =NULL
+\begin{DoxyCompactList}\small\item\em Byte index du début du Body dans le fichier SVCLOG. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_messages_1_1_message_a49cb9964faabd11e60073951dabbea31}\label{struct_messages_1_1_message_a49cb9964faabd11e60073951dabbea31}} 
+long {\bfseries body\+End\+Position} =NULL
+\begin{DoxyCompactList}\small\item\em Byte index de la fin du Body dans le fichier SVCLOG. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_messages_1_1_message_a7c0812a203be3dabff1056dcc6154670}\label{struct_messages_1_1_message_a7c0812a203be3dabff1056dcc6154670}} 
+bool {\bfseries is\+Request} =false
+\begin{DoxyCompactList}\small\item\em Indique si le message est de type {\bfseries{Query}} ou non. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_messages_1_1_message_a8c51e9fd449af203146f14c5e97ebeb9}\label{struct_messages_1_1_message_a8c51e9fd449af203146f14c5e97ebeb9}} 
+bool {\bfseries is\+Service\+Level} =false
+\begin{DoxyCompactList}\small\item\em Indique si le message est de type {\bfseries{Service}} ou de type {\bfseries{Transport}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/source/repos/\+SOAP-\/\+Message-\/\+Viewer/\+Sources/messages.\+h\end{DoxyCompactItemize}
