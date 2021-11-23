@@ -1,9 +1,9 @@
 #include "BodyPrintableParser.h"
 
-std::ofstream BodyPrintableParser::fichierBody;
+std::ofstream BodyPrintableParser::fichierBody;     ///< Fichier XML généré.
 
-/**
- * Constructeur: ouvre le fichier XML demandé.
+/** ****************************************************************************
+ * @brief Constructeur: ouvre le fichier XML à écrire.
  * @param filename : Le nom du fichier XML.
  ** *****************************************************************************/
 BodyPrintableParser::BodyPrintableParser(std::string filename)
@@ -13,8 +13,9 @@ BodyPrintableParser::BodyPrintableParser(std::string filename)
 }
 
 
-/**
- * Destructeur: referme le fichier XML.
+/** ****************************************************************************
+ * @brief Destructeur: referme le fichier XML.
+ * @sa BodyPrintableParser::BodyPrintableParser()
  ** **************************************************************************** */
 BodyPrintableParser::~BodyPrintableParser()
 {
@@ -22,8 +23,8 @@ BodyPrintableParser::~BodyPrintableParser()
 }
 
 
-/**
- * Fonction principale pour déclencher le parsing par Expat.
+/** ****************************************************************************
+ * @brief Fonction principale. Parse le flux XML fourni avec Expat, et l'écrit dans un fichier XML.
  * @param blob : le flux XML à parser.
  * @return an error code (0 si tout s'est bien passé)
  ** *************************************************************************** */
@@ -56,9 +57,12 @@ int BodyPrintableParser::saveBody(std::string blob)
 }
 
 
-
-/* ****************************************************************************
- * Handler appelé à chaque balise ouvrante
+/** ***************************************************************************
+ * @brief Handler appelé à chaque balise ouvrante.
+ *        On écrit le nom de la balise et les attributs dans le fichier texte.
+ * @param userData : Pointeur sur les données temporaires.
+ * @param name : Nom de la balise.
+ * @param attrs : Eventuel tableau des attributs.
  * **************************************************************************** */
 void XMLCALL BodyPrintableParser::startElementHandler(void* userData, const XML_Char* name, const XML_Char **attrs)
 {
@@ -77,8 +81,12 @@ void XMLCALL BodyPrintableParser::startElementHandler(void* userData, const XML_
     *pIsElementClosed=false;
 }
 
-/* ****************************************************************************
- * Ce Handler est appelé à chaque balise fermante.
+
+/** ***************************************************************************
+ * @brief Ce Handler est appelé à chaque balise fermante.
+ *        On écrit le nom de la balise dans le fichier texte.
+ * @param userData : Pointeur sur les données temporaires.
+ * @param name : Nom de la balise.
  * **************************************************************************** */
 void XMLCALL BodyPrintableParser::endElementHandler(void *userData, const XML_Char *name)
 {
@@ -96,9 +104,12 @@ void XMLCALL BodyPrintableParser::endElementHandler(void *userData, const XML_Ch
 }
 
 
-/* ****************************************************************************
- * Ce Handler est appelé à chaque fois qu'il y a un Content.
- * Note: Content n'est pas NULL-terminated: il faut utiliser length.
+/** ***************************************************************************
+ * @brief Ce Handler est appelé à chaque fois qu'il y a un contenu textuel.
+ *        On écrit le contenu textuel dans le fichier texte.
+ * @param userData : Non utilisé.
+ * @param content : Contenu textuel de la section XML.
+ * @param length : Le contenu textuel n'étant pas NULL-Terminated: il faut utiliser length.
  * **************************************************************************** */
 void XMLCALL BodyPrintableParser::dataHandler(void *userData, const XML_Char* content, int length)
 {
@@ -106,8 +117,11 @@ void XMLCALL BodyPrintableParser::dataHandler(void *userData, const XML_Char* co
     fichierBody.write(content,length);
 }
 
-/* ****************************************************************************
- * Ce Handler est appelé à chaque fois qu'il y a un Commentaire.
+/** ***************************************************************************
+ * @brief Ce Handler est appelé à chaque fois qu'il y a un Commentaire.
+ *        On écrit le texte du commentaire dans le fichier texte.
+ * @param userData : Non utilisé.
+ * @param data : Le texte du commentaire.
  * **************************************************************************** */
 void XMLCALL BodyPrintableParser::commentHandler(void *userData, const XML_Char *data)
 {

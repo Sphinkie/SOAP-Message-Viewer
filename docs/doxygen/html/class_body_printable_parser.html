@@ -21,10 +21,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="soap.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">SOAP-Message-Viewer
+   <div id="projectname">SOAP-Message-Viewer<span id="projectnumber">&#160;1.3</span>
    </div>
-   <div id="projectbrief">A friendly SOAP messages viewer</div>
+   <div id="projectbrief">A friendly SOAP log messages viewer</div>
   </td>
  </tr>
  </tbody>
@@ -68,32 +69,44 @@ $(document).ready(function(){initNavTree('class_body_printable_parser.html','');
   <div class="headertitle"><div class="title">BodyPrintableParser Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>La classe <a class="el" href="class_body_printable_parser.html" title="La classe BodyPrintableParser parse le flux XML d&#39;un Body, et l&#39;écrit dans un fichier texte.">BodyPrintableParser</a> parse le flux XML d'un Body, et l'écrit dans un fichier texte.  
+ <a href="class_body_printable_parser.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_body_printable_parser_8h_source.html">BodyPrintableParser.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a688e1cef21ccc9518bb83b3ee2f235ae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_body_printable_parser.html#a688e1cef21ccc9518bb83b3ee2f235ae">BodyPrintableParser</a> (std::string filename)</td></tr>
+<tr class="memdesc:a688e1cef21ccc9518bb83b3ee2f235ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur: ouvre le fichier XML à écrire.  <a href="class_body_printable_parser.html#a688e1cef21ccc9518bb83b3ee2f235ae">More...</a><br /></td></tr>
 <tr class="separator:a688e1cef21ccc9518bb83b3ee2f235ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79a43d74b0bd02192bedb93e2e6216b7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_body_printable_parser.html#a79a43d74b0bd02192bedb93e2e6216b7">~BodyPrintableParser</a> ()</td></tr>
+<tr class="memdesc:a79a43d74b0bd02192bedb93e2e6216b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur: referme le fichier XML.  <a href="class_body_printable_parser.html#a79a43d74b0bd02192bedb93e2e6216b7">More...</a><br /></td></tr>
 <tr class="separator:a79a43d74b0bd02192bedb93e2e6216b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d90f1d6204389210d3bbd3037a3dc3a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_body_printable_parser.html#a9d90f1d6204389210d3bbd3037a3dc3a">saveBody</a> (std::string blob)</td></tr>
+<tr class="memdesc:a9d90f1d6204389210d3bbd3037a3dc3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction principale. Parse le flux XML fourni avec Expat, et l'écrit dans un fichier XML.  <a href="class_body_printable_parser.html#a9d90f1d6204389210d3bbd3037a3dc3a">More...</a><br /></td></tr>
 <tr class="separator:a9d90f1d6204389210d3bbd3037a3dc3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a6ed990b1d35fb3a684ab21e9258e151f"><td class="memItemLeft" align="right" valign="top"><a id="a6ed990b1d35fb3a684ab21e9258e151f" name="a6ed990b1d35fb3a684ab21e9258e151f"></a>
-static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><b>startElementHandler</b> (void *userData, const XML_Char *name, const XML_Char **attrs)</td></tr>
+<tr class="memitem:a6ed990b1d35fb3a684ab21e9258e151f"><td class="memItemLeft" align="right" valign="top">static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_body_printable_parser.html#a6ed990b1d35fb3a684ab21e9258e151f">startElementHandler</a> (void *userData, const XML_Char *name, const XML_Char **attrs)</td></tr>
+<tr class="memdesc:a6ed990b1d35fb3a684ab21e9258e151f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handler appelé à chaque balise ouvrante. On écrit le nom de la balise et les attributs dans le fichier texte.  <a href="class_body_printable_parser.html#a6ed990b1d35fb3a684ab21e9258e151f">More...</a><br /></td></tr>
 <tr class="separator:a6ed990b1d35fb3a684ab21e9258e151f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53b372ad75c1fd3a06cd9773cc86a6dc"><td class="memItemLeft" align="right" valign="top"><a id="a53b372ad75c1fd3a06cd9773cc86a6dc" name="a53b372ad75c1fd3a06cd9773cc86a6dc"></a>
-static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><b>endElementHandler</b> (void *userData, const XML_Char *name)</td></tr>
+<tr class="memitem:a53b372ad75c1fd3a06cd9773cc86a6dc"><td class="memItemLeft" align="right" valign="top">static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_body_printable_parser.html#a53b372ad75c1fd3a06cd9773cc86a6dc">endElementHandler</a> (void *userData, const XML_Char *name)</td></tr>
+<tr class="memdesc:a53b372ad75c1fd3a06cd9773cc86a6dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ce Handler est appelé à chaque balise fermante. On écrit le nom de la balise dans le fichier texte.  <a href="class_body_printable_parser.html#a53b372ad75c1fd3a06cd9773cc86a6dc">More...</a><br /></td></tr>
 <tr class="separator:a53b372ad75c1fd3a06cd9773cc86a6dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bd6e5660b26769f67d9bf00c2d42c5a"><td class="memItemLeft" align="right" valign="top"><a id="a8bd6e5660b26769f67d9bf00c2d42c5a" name="a8bd6e5660b26769f67d9bf00c2d42c5a"></a>
-static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><b>commentHandler</b> (void *userData, const XML_Char *data)</td></tr>
+<tr class="memitem:a8bd6e5660b26769f67d9bf00c2d42c5a"><td class="memItemLeft" align="right" valign="top">static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_body_printable_parser.html#a8bd6e5660b26769f67d9bf00c2d42c5a">commentHandler</a> (void *userData, const XML_Char *data)</td></tr>
+<tr class="memdesc:a8bd6e5660b26769f67d9bf00c2d42c5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ce Handler est appelé à chaque fois qu'il y a un Commentaire. On écrit le texte du commentaire dans le fichier texte.  <a href="class_body_printable_parser.html#a8bd6e5660b26769f67d9bf00c2d42c5a">More...</a><br /></td></tr>
 <tr class="separator:a8bd6e5660b26769f67d9bf00c2d42c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32e89c8c61552d66f0b917c78c01808c"><td class="memItemLeft" align="right" valign="top"><a id="a32e89c8c61552d66f0b917c78c01808c" name="a32e89c8c61552d66f0b917c78c01808c"></a>
-static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><b>dataHandler</b> (void *userData, const XML_Char *content, int length)</td></tr>
+<tr class="memitem:a32e89c8c61552d66f0b917c78c01808c"><td class="memItemLeft" align="right" valign="top">static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_body_printable_parser.html#a32e89c8c61552d66f0b917c78c01808c">dataHandler</a> (void *userData, const XML_Char *content, int length)</td></tr>
+<tr class="memdesc:a32e89c8c61552d66f0b917c78c01808c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ce Handler est appelé à chaque fois qu'il y a un contenu textuel. On écrit le contenu textuel dans le fichier texte.  <a href="class_body_printable_parser.html#a32e89c8c61552d66f0b917c78c01808c">More...</a><br /></td></tr>
 <tr class="separator:a32e89c8c61552d66f0b917c78c01808c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >La classe <a class="el" href="class_body_printable_parser.html" title="La classe BodyPrintableParser parse le flux XML d&#39;un Body, et l&#39;écrit dans un fichier texte.">BodyPrintableParser</a> parse le flux XML d'un Body, et l'écrit dans un fichier texte. </p>
+<hr  />
+ <dl class="section author"><dt>Author</dt><dd>David de Lorenzo </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a688e1cef21ccc9518bb83b3ee2f235ae" name="a688e1cef21ccc9518bb83b3ee2f235ae"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a688e1cef21ccc9518bb83b3ee2f235ae">&#9670;&nbsp;</a></span>BodyPrintableParser()</h2>
 
@@ -109,7 +122,10 @@ static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><b>dataHa
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Constructeur: ouvre le fichier XML demandé. </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Constructeur: ouvre le fichier XML à écrire. </p>
+<hr  />
+ <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filename</td><td>: Le nom du fichier XML. </td></tr>
   </table>
@@ -132,11 +148,163 @@ static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><b>dataHa
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Destructeur: referme le fichier XML. </p><hr  />
- 
+
+<p>Destructeur: referme le fichier XML. </p>
+<hr  />
+ <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_body_printable_parser.html#a688e1cef21ccc9518bb83b3ee2f235ae" title="Constructeur: ouvre le fichier XML à écrire.">BodyPrintableParser::BodyPrintableParser()</a> <hr  />
+ </dd></dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8bd6e5660b26769f67d9bf00c2d42c5a" name="a8bd6e5660b26769f67d9bf00c2d42c5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bd6e5660b26769f67d9bf00c2d42c5a">&#9670;&nbsp;</a></span>commentHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XMLCALL BodyPrintableParser::commentHandler </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>userData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const XML_Char *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ce Handler est appelé à chaque fois qu'il y a un Commentaire. On écrit le texte du commentaire dans le fichier texte. </p>
+<hr  />
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userData</td><td>: Non utilisé. </td></tr>
+    <tr><td class="paramname">data</td><td>: Le texte du commentaire. <hr  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a32e89c8c61552d66f0b917c78c01808c" name="a32e89c8c61552d66f0b917c78c01808c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32e89c8c61552d66f0b917c78c01808c">&#9670;&nbsp;</a></span>dataHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XMLCALL BodyPrintableParser::dataHandler </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>userData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const XML_Char *&#160;</td>
+          <td class="paramname"><em>content</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ce Handler est appelé à chaque fois qu'il y a un contenu textuel. On écrit le contenu textuel dans le fichier texte. </p>
+<hr  />
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userData</td><td>: Non utilisé. </td></tr>
+    <tr><td class="paramname">content</td><td>: Contenu textuel de la section XML. </td></tr>
+    <tr><td class="paramname">length</td><td>: Le contenu textuel n'étant pas NULL-Terminated: il faut utiliser length. <hr  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a53b372ad75c1fd3a06cd9773cc86a6dc" name="a53b372ad75c1fd3a06cd9773cc86a6dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53b372ad75c1fd3a06cd9773cc86a6dc">&#9670;&nbsp;</a></span>endElementHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XMLCALL BodyPrintableParser::endElementHandler </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>userData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const XML_Char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ce Handler est appelé à chaque balise fermante. On écrit le nom de la balise dans le fichier texte. </p>
+<hr  />
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userData</td><td>: Pointeur sur les données temporaires. </td></tr>
+    <tr><td class="paramname">name</td><td>: Nom de la balise. <hr  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a9d90f1d6204389210d3bbd3037a3dc3a" name="a9d90f1d6204389210d3bbd3037a3dc3a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9d90f1d6204389210d3bbd3037a3dc3a">&#9670;&nbsp;</a></span>saveBody()</h2>
 
@@ -152,7 +320,10 @@ static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><b>dataHa
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Fonction principale pour déclencher le parsing par Expat. </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Fonction principale. Parse le flux XML fourni avec Expat, et l'écrit dans un fichier XML. </p>
+<hr  />
+ <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">blob</td><td>: le flux XML à parser. </td></tr>
   </table>
@@ -160,6 +331,60 @@ static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><b>dataHa
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>an error code (0 si tout s'est bien passé) <hr  />
  </dd></dl>
+
+</div>
+</div>
+<a id="a6ed990b1d35fb3a684ab21e9258e151f" name="a6ed990b1d35fb3a684ab21e9258e151f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ed990b1d35fb3a684ab21e9258e151f">&#9670;&nbsp;</a></span>startElementHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XMLCALL BodyPrintableParser::startElementHandler </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>userData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const XML_Char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const XML_Char **&#160;</td>
+          <td class="paramname"><em>attrs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handler appelé à chaque balise ouvrante. On écrit le nom de la balise et les attributs dans le fichier texte. </p>
+<hr  />
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userData</td><td>: Pointeur sur les données temporaires. </td></tr>
+    <tr><td class="paramname">name</td><td>: Nom de la balise. </td></tr>
+    <tr><td class="paramname">attrs</td><td>: Eventuel tableau des attributs. <hr  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

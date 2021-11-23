@@ -45,12 +45,12 @@ public:
 
     struct Message
     {
-        std::string host;                     //!< hostname ou adresse IP de l'emetteur du message.
-        std::string module;                   //!< module WSDL. Exemple: \c "Session".
-        std::string action;                   //!< action WSDL. Exemple: \c "Open".
-        std::string direction;                //!< direction du message (sent = "S" ou received = "R").
-        std::string activityId;               //!< identifiant permettant de relier plusieurs messages entre-eux. Exemple: \c "{dee19e7b-5fba-4adc-8197-2aee3c2e6557}".
-        std::string messageTime;              //!< timestamp du message au format \c "14:31:17.975".
+        std::string host;                     //!< Hostname ou adresse IP de l'emetteur du message.
+        std::string module;                   //!< Module WSDL. Exemple: \c "Session".
+        std::string action;                   //!< Action WSDL. Exemple: \c "Open".
+        std::string direction;                //!< Direction du message (sent = "S" ou received = "R").
+        std::string activityId;               //!< Identifiant permettant de relier plusieurs messages entre-eux. Exemple: \c "{dee19e7b-5fba-4adc-8197-2aee3c2e6557}".
+        std::string messageTime;              //!< Timestamp du message au format \c "14:31:17.975".
         std::string wsdl;                     //!< URL du WSDL du message. exemple: \c "http://00xdsvmam03200.paris.org/VEDA.SOA/Session.svc?wsdl".
         char*       body=nullptr;             //!< Body du message (renseigné à la demande).
         long        bodyStartPosition=NULL;   //!< Byte index du début du Body dans le fichier SVCLOG.

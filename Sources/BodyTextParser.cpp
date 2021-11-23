@@ -120,8 +120,8 @@ std::string BodyTextParser::getFormatedBlob()
 
 
 /** ****************************************************************************
- * @brief Ce handler statique est appelé à chaque balise ouvrante. On ajoute le
- *      texte dans formatedBlob.
+ * @brief Ce handler statique est appelé à chaque balise ouvrante.
+ *        On ajoute le texte dans formatedBlob.
  * @param userData : Non utilisé.
  * @param name : Nom de la balise.
  * @param attrs : Eventuel tableau des attributs.
@@ -160,8 +160,8 @@ void XMLCALL BodyTextParser::startElementHandler(void* userData, const XML_Char*
 
 
 /** ****************************************************************************
- * @brief Ce handler statique est appelé à chaque balise fermante. On ajoute le
- *      texte dans formatedBlob.
+ * @brief Ce handler statique est appelé à chaque balise fermante.
+ *        On ajoute le texte dans formatedBlob.
  * @param userData : Non utilisé.
  * @param name : Nom de la balise.
  ******************************************************************************* */
@@ -186,7 +186,7 @@ void XMLCALL BodyTextParser::endElementHandler(void *userData, const XML_Char *n
  * @brief Ce Handler est appelé à chaque fois qu'il y a un Content.
  * @param userData : Non utilisé.
  * @param content : Contenu textuel de la section XML.
- * @param length : Le Content n'est pas NULL-terminated: il faut utiliser length.
+ * @param length : Le contenu textuel n'étant pas NULL-terminated: il faut utiliser length.
  ******************************************************************************* */
 void XMLCALL BodyTextParser::dataHandler(void *userData, const XML_Char* content, int length)
 {

@@ -13,10 +13,10 @@ public:
     void  open(std::string filename);
     void  split();
     void  close();
-    bool  good() {return isGood;};              // Appeler good() après les fonctions pour savoir si tout s'est bien passé
+    bool  good() {return isGood;};                    ///< Appeler good() après les fonctions pour savoir si tout s'est bien passé
     std::string getErrorMessage() {return errorMessage;};
 
-    const unsigned int MAX_NB_MESSAGES = 20000;       // Nb max de messages par fichier découpé (default: 20000)
+    const unsigned int MAX_NB_MESSAGES = 20000;       ///< Nb max de messages par fichier découpé (default: 20000)
 
 private:
     bool calculateScore(char lettre);

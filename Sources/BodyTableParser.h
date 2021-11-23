@@ -5,6 +5,11 @@
 #include <QTreeWidget>
 #include <Expat/include/expat.h>
 
+/** ****************************************************************************
+ * @brief La classe BodyTableParser analyse le Body XML d'un message, pour l'afficher
+ *        sous forme de tableau dans l'onglet "Table View".
+ * @author David de Lorenzo
+ * ***************************************************************************** */
 class BodyTableParser
 {
 public:
@@ -17,7 +22,7 @@ public:
 private:
     static void free();
 
-    static const long  MAX_BODY_SIZE = 1024*512;       /**< 512kB : Taille max des Body (Le buffer de Expat est limité) */
+    static const long  MAX_BODY_SIZE = 1024*512;       ///< 512kB : Taille max des Body (Le buffer de Expat est limité)
     static QTreeWidget* treeWidget;
     static QTreeWidgetItem* currentItem;
     static std::stack<QTreeWidgetItem*> itemStack;

@@ -72,8 +72,8 @@ private:
     QIcon arrowLeftIcon;
     QIcon arrowRightIcon;
     QVector<int> messagesSearchList;
-    bool searchDown = true;     // Sens de la recherche par circleFastSearch (Downwards ou Upwards).
-    int  hiddenCorrelatedItem = NOT_FOUND;  // si un item est caché, on le mémorise pour reprendre la recherche à partir de lui.
+    bool searchDown = true;                 ///< Sens de la recherche par circleFastSearch (Downwards ou Upwards).
+    int  hiddenCorrelatedItem = NOT_FOUND;  ///< Si un item est caché, on le mémorise pour reprendre la recherche à partir de lui.
 
 
 QString explicationRepair  =

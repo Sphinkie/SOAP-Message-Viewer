@@ -605,8 +605,8 @@ void MainWindow::on_actionMark_triggered()
         ui->w_MessageList->currentItem()->setBackground(QColorConstants::Svg::thistle);
 }
 
-/* ************************************************************************************************
- * Enregistre le body du message courant dans un fichier XML
+/** ***********************************************************************************************
+ * @brief Enregistre le Body du message courant dans un fichier XML.
  * ************************************************************************************************ */
 void MainWindow::on_actionSave_triggered()
 {

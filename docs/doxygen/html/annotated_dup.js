@@ -8,7 +8,7 @@ var annotated_dup =
     [ "FileConverter", "class_file_converter.html", null ],
     [ "FileParser", "class_file_parser.html", "class_file_parser" ],
     [ "FileRepair", "class_file_repair.html", null ],
-    [ "FileSplitter", "class_file_splitter.html", null ],
+    [ "FileSplitter", "class_file_splitter.html", "class_file_splitter" ],
     [ "MainWindow", "class_main_window.html", null ],
     [ "Messages", "class_messages.html", "class_messages" ]
 ];

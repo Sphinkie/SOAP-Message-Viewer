@@ -7,7 +7,8 @@
 
 /** ****************************************************************************
  * @brief La classe BodyTextParser analyse le Body XML d'un message, pour l'afficher
- * sous forme de texte simple dans l'onglet "Text view".
+ *        sous forme de texte simple dans l'onglet "Text View".
+ * @author David de Lorenzo
  **************************************************************************** */
 class BodyTextParser
 {
@@ -16,20 +17,19 @@ public:
     static int  parse(char* buffer, bool hideNamespaces);
     static std::string  getFormatedBlob();
 
-    // Methodes du parser
+    // Methodes statiques du Parser
     static void XMLCALL startElementHandler(void *userData, const XML_Char *name, const XML_Char **attrs);
     static void XMLCALL endElementHandler(void *userData, const XML_Char *name);
     static void XMLCALL commentHandler(void *userData, const XML_Char *data);
     static void XMLCALL dataHandler(void *userData, const XML_Char *content, int length);
 
 private:
-    static const long  MAX_BODY_SIZE = 1024*512;       /**< 512kB : Taille max des Body (il y a une limitation dans Expat) */
+    static const long  MAX_BODY_SIZE = 1024*512;       ///< 512kB : Taille max des Body (il y a une limitation dans Expat)
     static int         profondeur;
     static bool        elementClosed;
     static bool        keepNamespaces;
     static std::string formatedBlob;
     static std::string errMessage;
-//    bool               userData;      // pour Expat
 
 };
 

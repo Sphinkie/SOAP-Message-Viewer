@@ -21,10 +21,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="soap.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">SOAP-Message-Viewer
+   <div id="projectname">SOAP-Message-Viewer<span id="projectnumber">&#160;1.3</span>
    </div>
-   <div id="projectbrief">A friendly SOAP messages viewer</div>
+   <div id="projectbrief">A friendly SOAP log messages viewer</div>
   </td>
  </tr>
  </tbody>
@@ -70,7 +71,7 @@ $(document).ready(function(){initNavTree('class_file_parser.html',''); initResiz
 </div><!--header-->
 <div class="contents">
 
-<p>La classe <a class="el" href="class_file_parser.html" title="La classe FileParser parse un fichier .SCVLOG et insère autant de lignes dans la ListView de la fenêt...">FileParser</a> parse un fichier .SCVLOG et insère autant de lignes dans la ListView de la fenêtre qu'il y a de messages SOAP dans le fichier.  
+<p>La classe <a class="el" href="class_file_parser.html" title="La classe FileParser parse un fichier .SCVLOG et insère autant de lignes dans la ListView de la fenêt...">FileParser</a> parse un fichier .SCVLOG et insère autant de lignes dans la ListView de la fenêtre qu'il y a de messages SOAP dans le fichier. La classe utilise le parser XML 'Expat' qui est open-source, très rapide, et SAX (parsing au fil de l'eau). Elle gère les gros fichiers grace à un système de buffer.  
  <a href="class_file_parser.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_file_parser_8h_source.html">FileParser.h</a>&gt;</code></p>
@@ -106,13 +107,15 @@ Static Public Member Functions</h2></td></tr>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:aa4980a70e5b92e69f70d0dcef8ab2522"><td class="memItemLeft" align="right" valign="top"><a id="aa4980a70e5b92e69f70d0dcef8ab2522" name="aa4980a70e5b92e69f70d0dcef8ab2522"></a>
 static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_MESSAGES</b> = 32000</td></tr>
+<tr class="memdesc:aa4980a70e5b92e69f70d0dcef8ab2522"><td class="mdescLeft">&#160;</td><td class="mdescRight">Qt ne peut afficher que 32762 messages dans la ListView. <br /></td></tr>
 <tr class="separator:aa4980a70e5b92e69f70d0dcef8ab2522"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >La classe <a class="el" href="class_file_parser.html" title="La classe FileParser parse un fichier .SCVLOG et insère autant de lignes dans la ListView de la fenêt...">FileParser</a> parse un fichier .SCVLOG et insère autant de lignes dans la ListView de la fenêtre qu'il y a de messages SOAP dans le fichier. </p>
+<div class="textblock"><p >La classe <a class="el" href="class_file_parser.html" title="La classe FileParser parse un fichier .SCVLOG et insère autant de lignes dans la ListView de la fenêt...">FileParser</a> parse un fichier .SCVLOG et insère autant de lignes dans la ListView de la fenêtre qu'il y a de messages SOAP dans le fichier. La classe utilise le parser XML 'Expat' qui est open-source, très rapide, et SAX (parsing au fil de l'eau). Elle gère les gros fichiers grace à un système de buffer. </p>
 <hr  />
-<p >La classe utilise le parser XML 'Expat' qui est open-source, très rapide, et SAX (parsing au fil de l'eau). Elle gère les gros fichiers grace à un système de buffer. </p><hr  />
- </div><h2 class="groupheader">Member Function Documentation</h2>
+ <dl class="section author"><dt>Author</dt><dd>David de Lorenzo <hr  />
+ </dd></dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="afaeb2d28e432115ec845ebe4ff86d8f4" name="afaeb2d28e432115ec845ebe4ff86d8f4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afaeb2d28e432115ec845ebe4ff86d8f4">&#9670;&nbsp;</a></span>close()</h2>
 
