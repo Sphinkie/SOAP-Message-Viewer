@@ -17,9 +17,10 @@ Par contre, on n'utilise pas la fonctionnalité [Qdoc de Qt](https://doc.qt.io/q
   * `@author ...` : Auteur du code (optionnelement pour les classes).
   * `@sa UneClasse` ou `@sa UneFonction()` : Lien de type **See Also**
   * `@ref doc/readme.md` : lien vers un fichier *markdown*
-  * `@todo  ... `  : **compatible Qt ???**
-  * `@warning ...` ou `@attention ...` : Ajout d'un texte mis en évidence dans la description.
-  * `@ingroup` : à voir. Utile semble-t-il.
+  * `@todo  ... ` : **compatible Qt ???**
+  * `@pre  ... ` : Affichage d'un texte concernant les préalables à l'appel d'une fonction.
+  * `@warning ...` ou `@attention ...` ou `@remark ...`: Ajout d'un texte mis en évidence dans la description.
+  * `@ingroup` : à voir. 
 
 
 ### Mise en page
@@ -28,6 +29,7 @@ Par contre, on n'utilise pas la fonctionnalité [Qdoc de Qt](https://doc.qt.io/q
 * `\e word` : le mot est mis en *italique*
 * `\c word` : le mot est mis en police console
 * `\l {http://doc.qt.io/qt-5/} {Qt Documentation}` : ajout d'un lien de type url   **A tester**
+* `\xmlonly .... \endxmlonly` : le flux xml est inclus dans la documentation
  
 
 ## Balises non utilisées
