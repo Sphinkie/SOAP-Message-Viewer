@@ -3,6 +3,10 @@
 
 #include <string>
 
+/** ****************************************************************************
+ * @brief Classe pour des fonctions statiques généralistes.
+ * @author David de Lorenzo
+ * *****************************************************************************/
 class Common
 {
 public:

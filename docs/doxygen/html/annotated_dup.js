@@ -5,7 +5,7 @@ var annotated_dup =
     [ "BodyTextParser", "class_body_text_parser.html", null ],
     [ "BodyTreeParser", "class_body_tree_parser.html", null ],
     [ "Common", "class_common.html", null ],
-    [ "FileConverter", "class_file_converter.html", null ],
+    [ "FileConverter", "class_file_converter.html", "class_file_converter" ],
     [ "FileParser", "class_file_parser.html", "class_file_parser" ],
     [ "FileRepair", "class_file_repair.html", null ],
     [ "FileSplitter", "class_file_splitter.html", "class_file_splitter" ],

@@ -1,5 +1,8 @@
 #include "BodyPrintableParser.h"
 
+/* ******************************************* */
+/* Rappel des variables statiques de la classe */
+/* ******************************************* */
 std::ofstream BodyPrintableParser::fichierBody;     ///< Fichier XML généré.
 
 /** ****************************************************************************
@@ -15,7 +18,7 @@ BodyPrintableParser::BodyPrintableParser(std::string filename)
 
 /** ****************************************************************************
  * @brief Destructeur: referme le fichier XML.
- * @sa BodyPrintableParser::BodyPrintableParser()
+ * @sa BodyPrintableParser()
  ** **************************************************************************** */
 BodyPrintableParser::~BodyPrintableParser()
 {
@@ -62,7 +65,7 @@ int BodyPrintableParser::saveBody(std::string blob)
  *        On écrit le nom de la balise et les attributs dans le fichier texte.
  * @param userData : Pointeur sur les données temporaires.
  * @param name : Nom de la balise.
- * @param attrs : Eventuel tableau des attributs.
+ * @param attrs : Tableau des attributs.
  * **************************************************************************** */
 void XMLCALL BodyPrintableParser::startElementHandler(void* userData, const XML_Char* name, const XML_Char **attrs)
 {
@@ -116,6 +119,7 @@ void XMLCALL BodyPrintableParser::dataHandler(void *userData, const XML_Char* co
     (void)userData; // pour enlever le warning....
     fichierBody.write(content,length);
 }
+
 
 /** ***************************************************************************
  * @brief Ce Handler est appelé à chaque fois qu'il y a un Commentaire.

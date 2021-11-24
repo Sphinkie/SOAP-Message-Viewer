@@ -6,8 +6,8 @@
 #include <Expat/include/expat.h>
 
 /** ****************************************************************************
- * @brief La classe BodyTableParser analyse le Body XML d'un message, pour l'afficher
- *        sous forme de tableau dans l'onglet "Table View".
+ * @brief La classe \b statique BodyTableParser analyse le Body XML d'un message,
+ *        pour l'afficher sous forme de TreeView à deux colonnes dans l'onglet "Table View".
  * @author David de Lorenzo
  * ***************************************************************************** */
 class BodyTableParser

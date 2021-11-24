@@ -6,8 +6,13 @@
 #include <Expat/include/expat.h>
 
 /** ****************************************************************************
- * @brief La classe BodyTextParser analyse le Body XML d'un message, pour l'afficher
- *        sous forme de texte simple dans l'onglet "Text View".
+ * @brief La classe \b statique BodyTextParser analyse le Body XML d'un message,
+ *        pour l'afficher sous forme de texte simple dans l'onglet "Text View".
+ *
+ * Elle sert à convertir un blob XML (typiquement le body d'un message SOAP)
+ * en un XML contenant des balises de coloration syntaxique pour un affichage dans QT.
+ * Le parser SAX est basé sur la librarie EXPAT.
+ *
  * @author David de Lorenzo
  **************************************************************************** */
 class BodyTextParser

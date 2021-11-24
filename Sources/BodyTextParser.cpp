@@ -1,10 +1,3 @@
-/** ****************************************************************************
- * Ce parser SAX est basé sur la librarie EXPAT.
- * Elle sert à convertir un blob XML (typiquement le body d'un messaeg SOAP)
- * en un XML contenant des balises de coloration syntaxiques pour un affichage dans QT.
- *
- * CLASSE STATIQUE
- */
 /*
  * <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
  * <html><head><meta name="qrichtext" content="1" /><style type="text/css"> p, li { white-space: pre-wrap; }
@@ -41,7 +34,9 @@
  * ****************************************************************************/
 #include "BodyTextParser.h"
 
-/* Variables statiques de la Classe */
+/* ******************************************* */
+/* Rappel des variables statiques de la classe */
+/* ******************************************* */
 std::string BodyTextParser::formatedBlob;
 std::string BodyTextParser::errMessage;
 int         BodyTextParser::profondeur;

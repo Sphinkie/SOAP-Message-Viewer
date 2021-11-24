@@ -7,9 +7,9 @@
 #include "messages.h"
 using namespace std;
 
-/* ****************************************************************************
- * Variables statiques
- * **************************************************************************** */
+/* ******************************************* */
+/* Rappel des variables statiques de la classe */
+/* ******************************************* */
 static std::vector <Messages::Message*> messageList;
 static Messages::Message* currentMessage;
 

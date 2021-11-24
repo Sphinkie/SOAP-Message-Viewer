@@ -26,15 +26,34 @@ La fonctionnalité Qdoc de Qt est décrite [ici](https://doc.qt.io/qt-5/qdoc-gui
 
 * Link : `Read the \l {http://doc.qt.io/qt-5/} {Qt Documentation} carefully.`
 
-* 
+  
+
+```ini
+GENERATE_QHP           = YES
+QCH_FILE               = SOAP-Message-Viewer.qch
+QHP_NAMESPACE          = sphinkie.SOAPMessageViewer
+QHP_VIRTUAL_FOLDER     = doc
+QHG_LOCATION           = qhelpgenerator
+```
+
+The name of the *.qch* file can be whatever you choose, as is the QHP namespace. 
+
+An important note is that the *qhelpgenerator* tool has to be on your path. I normally add the following setting to my **$PATH** variable :
+
+```ini
+QT_TOOL_BIN = $HOME/Qt/5.13.1/gcc_64/bin
+export PATH = $PATH:$HOME/.bin:$QT_TOOL_BIN
+```
 
 
 
 ### Mise en page
 
-* Mise en gras : `\b{word}`
+* Mise en gras : `\b word`
+
 * `\c word`: le mot est mis en police console
-* 
+
+  
 
 ## Balises non utilisées
 
@@ -107,3 +126,14 @@ Pour les variables:
 ```c++
 int cpt;    //< compteur
 ```
+
+https://www.doxygen.nl/manual/commands.html
+
+https://www.sinax.be/blog/software-development/display-doxygen-generated-docs-in-qt-creator.html
+
+http://tvaira.free.fr/projets/activites/activite-documentation-doxygen.html
+
+
+
+
+

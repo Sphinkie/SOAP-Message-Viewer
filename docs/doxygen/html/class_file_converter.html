@@ -21,7 +21,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="soap.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="project_logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SOAP-Message-Viewer<span id="projectnumber">&#160;1.3</span>
    </div>
@@ -69,37 +69,314 @@ $(document).ready(function(){initNavTree('class_file_converter.html',''); initRe
   <div class="headertitle"><div class="title">FileConverter Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="class_file_converter.html" title="FileConverter transforme un fichier .SCVLOG en un fichier .FASTER.XML en supprimant des balises inuti...">FileConverter</a> transforme un fichier <code></code>.SCVLOG en un fichier <code></code>.FASTER.XML en supprimant des balises inutiles, ce qui accélère les futurs parsings du fichier.  
+ <a href="class_file_converter.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_file_converter_8h_source.html">FileConverter.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7dd2ffdedaea84f5373d653a0c17a844"><td class="memItemLeft" align="right" valign="top"><a id="a7dd2ffdedaea84f5373d653a0c17a844" name="a7dd2ffdedaea84f5373d653a0c17a844"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>open</b> (std::string filename)</td></tr>
+<tr class="memitem:a7dd2ffdedaea84f5373d653a0c17a844"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_converter.html#a7dd2ffdedaea84f5373d653a0c17a844">open</a> (std::string filename)</td></tr>
+<tr class="memdesc:a7dd2ffdedaea84f5373d653a0c17a844"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ouvre un fichier <code></code>.SVCLOG pour le convertir.  <a href="class_file_converter.html#a7dd2ffdedaea84f5373d653a0c17a844">More...</a><br /></td></tr>
 <tr class="separator:a7dd2ffdedaea84f5373d653a0c17a844"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f8a52d21a65fde924984a31e3bcd4a4"><td class="memItemLeft" align="right" valign="top"><a id="a4f8a52d21a65fde924984a31e3bcd4a4" name="a4f8a52d21a65fde924984a31e3bcd4a4"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>convert</b> ()</td></tr>
+<tr class="memitem:a4f8a52d21a65fde924984a31e3bcd4a4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_converter.html#a4f8a52d21a65fde924984a31e3bcd4a4">convert</a> ()</td></tr>
+<tr class="memdesc:a4f8a52d21a65fde924984a31e3bcd4a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction principale pour déclencher le parsing par Expat.  <a href="class_file_converter.html#a4f8a52d21a65fde924984a31e3bcd4a4">More...</a><br /></td></tr>
 <tr class="separator:a4f8a52d21a65fde924984a31e3bcd4a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a639603c1ff45403ae3dbb5b33d944f8d"><td class="memItemLeft" align="right" valign="top"><a id="a639603c1ff45403ae3dbb5b33d944f8d" name="a639603c1ff45403ae3dbb5b33d944f8d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>close</b> ()</td></tr>
+<tr class="memitem:a639603c1ff45403ae3dbb5b33d944f8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_converter.html#a639603c1ff45403ae3dbb5b33d944f8d">close</a> ()</td></tr>
+<tr class="memdesc:a639603c1ff45403ae3dbb5b33d944f8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ferme les fichiers une fois la conversion terminée.  <a href="class_file_converter.html#a639603c1ff45403ae3dbb5b33d944f8d">More...</a><br /></td></tr>
 <tr class="separator:a639603c1ff45403ae3dbb5b33d944f8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9889f0b8b36d36d2a7dcf090dc6078c2"><td class="memItemLeft" align="right" valign="top"><a id="a9889f0b8b36d36d2a7dcf090dc6078c2" name="a9889f0b8b36d36d2a7dcf090dc6078c2"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>ready</b> ()</td></tr>
+<tr class="memitem:a9889f0b8b36d36d2a7dcf090dc6078c2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_converter.html#a9889f0b8b36d36d2a7dcf090dc6078c2">ready</a> ()</td></tr>
+<tr class="memdesc:a9889f0b8b36d36d2a7dcf090dc6078c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne <code>True</code> si le fichier de sortie est prêt à recevoir des données.  <a href="class_file_converter.html#a9889f0b8b36d36d2a7dcf090dc6078c2">More...</a><br /></td></tr>
 <tr class="separator:a9889f0b8b36d36d2a7dcf090dc6078c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98685cbacec0fa9aa80148c7f46f7a02"><td class="memItemLeft" align="right" valign="top"><a id="a98685cbacec0fa9aa80148c7f46f7a02" name="a98685cbacec0fa9aa80148c7f46f7a02"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getErrorMessage</b> ()</td></tr>
+<tr class="memitem:a98685cbacec0fa9aa80148c7f46f7a02"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_converter.html#a98685cbacec0fa9aa80148c7f46f7a02">getErrorMessage</a> ()</td></tr>
+<tr class="memdesc:a98685cbacec0fa9aa80148c7f46f7a02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne une éventuelle erreur lors de la création du fichier de sortie.  <a href="class_file_converter.html#a98685cbacec0fa9aa80148c7f46f7a02">More...</a><br /></td></tr>
 <tr class="separator:a98685cbacec0fa9aa80148c7f46f7a02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a3f5f9a29e8c9e3331640b14fd1bd2ac4"><td class="memItemLeft" align="right" valign="top"><a id="a3f5f9a29e8c9e3331640b14fd1bd2ac4" name="a3f5f9a29e8c9e3331640b14fd1bd2ac4"></a>
-static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><b>startElementHandler</b> (void *userData, const XML_Char *name, const XML_Char **attrs)</td></tr>
+<tr class="memitem:a3f5f9a29e8c9e3331640b14fd1bd2ac4"><td class="memItemLeft" align="right" valign="top">static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_converter.html#a3f5f9a29e8c9e3331640b14fd1bd2ac4">startElementHandler</a> (void *userData, const XML_Char *name, const XML_Char **attrs)</td></tr>
+<tr class="memdesc:a3f5f9a29e8c9e3331640b14fd1bd2ac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handler appelé à chaque balise ouvrante. On écrit le nom des balises à conserver et leurs attributs dans le fichier de sortie.  <a href="class_file_converter.html#a3f5f9a29e8c9e3331640b14fd1bd2ac4">More...</a><br /></td></tr>
 <tr class="separator:a3f5f9a29e8c9e3331640b14fd1bd2ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44a1a65d6827b5d8d3fa8153db168fbd"><td class="memItemLeft" align="right" valign="top"><a id="a44a1a65d6827b5d8d3fa8153db168fbd" name="a44a1a65d6827b5d8d3fa8153db168fbd"></a>
-static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><b>endElementHandler</b> (void *userData, const XML_Char *name)</td></tr>
+<tr class="memitem:a44a1a65d6827b5d8d3fa8153db168fbd"><td class="memItemLeft" align="right" valign="top">static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_converter.html#a44a1a65d6827b5d8d3fa8153db168fbd">endElementHandler</a> (void *userData, const XML_Char *name)</td></tr>
+<tr class="memdesc:a44a1a65d6827b5d8d3fa8153db168fbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ce Handler est appelé à chaque balise fermante. On écrit la fermeture de la balise dans le fichier de sortie.  <a href="class_file_converter.html#a44a1a65d6827b5d8d3fa8153db168fbd">More...</a><br /></td></tr>
 <tr class="separator:a44a1a65d6827b5d8d3fa8153db168fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0faf186ae12cab744fe43f0794bdb5c2"><td class="memItemLeft" align="right" valign="top"><a id="a0faf186ae12cab744fe43f0794bdb5c2" name="a0faf186ae12cab744fe43f0794bdb5c2"></a>
-static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><b>dataHandler</b> (void *userData, const XML_Char *content, int length)</td></tr>
+<tr class="memitem:a0faf186ae12cab744fe43f0794bdb5c2"><td class="memItemLeft" align="right" valign="top">static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_converter.html#a0faf186ae12cab744fe43f0794bdb5c2">dataHandler</a> (void *userData, const XML_Char *content, int length)</td></tr>
+<tr class="memdesc:a0faf186ae12cab744fe43f0794bdb5c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ce Handler est appelé à chaque fois qu'il y a un contenu textuel. On écrit le contenu textuel dans le fichier de sortie.  <a href="class_file_converter.html#a0faf186ae12cab744fe43f0794bdb5c2">More...</a><br /></td></tr>
 <tr class="separator:a0faf186ae12cab744fe43f0794bdb5c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p ><a class="el" href="class_file_converter.html" title="FileConverter transforme un fichier .SCVLOG en un fichier .FASTER.XML en supprimant des balises inuti...">FileConverter</a> transforme un fichier <code></code>.SCVLOG en un fichier <code></code>.FASTER.XML en supprimant des balises inutiles, ce qui accélère les futurs parsings du fichier. </p>
+<hr  />
+<p >La classe <a class="el" href="class_file_converter.html" title="FileConverter transforme un fichier .SCVLOG en un fichier .FASTER.XML en supprimant des balises inuti...">FileConverter</a> utilise le parser XML <em>Expat</em> qui est open-source, très rapide, et SAX (parsing au fil de l'eau). Elle gère les gros fichiers grace à un système de buffer. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a639603c1ff45403ae3dbb5b33d944f8d" name="a639603c1ff45403ae3dbb5b33d944f8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a639603c1ff45403ae3dbb5b33d944f8d">&#9670;&nbsp;</a></span>close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FileConverter::close </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ferme les fichiers une fois la conversion terminée. </p>
+<hr  />
+ <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_file_converter.html#a7dd2ffdedaea84f5373d653a0c17a844" title="Ouvre un fichier .SVCLOG pour le convertir.">open()</a> </dd></dl>
+
+</div>
+</div>
+<a id="a4f8a52d21a65fde924984a31e3bcd4a4" name="a4f8a52d21a65fde924984a31e3bcd4a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f8a52d21a65fde924984a31e3bcd4a4">&#9670;&nbsp;</a></span>convert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FileConverter::convert </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction principale pour déclencher le parsing par Expat. </p>
+<hr  />
+ <dl class="section return"><dt>Returns</dt><dd>Retourne un code d'erreur (0 si tout s'est bien passé) </dd></dl>
+
+</div>
+</div>
+<a id="a0faf186ae12cab744fe43f0794bdb5c2" name="a0faf186ae12cab744fe43f0794bdb5c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0faf186ae12cab744fe43f0794bdb5c2">&#9670;&nbsp;</a></span>dataHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XMLCALL FileConverter::dataHandler </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>userData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const XML_Char *&#160;</td>
+          <td class="paramname"><em>content</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ce Handler est appelé à chaque fois qu'il y a un contenu textuel. On écrit le contenu textuel dans le fichier de sortie. </p>
+<hr  />
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userData</td><td>: Non utilisé. </td></tr>
+    <tr><td class="paramname">content</td><td>: Contenu textuel de la section XML. </td></tr>
+    <tr><td class="paramname">length</td><td>: Le contenu textuel n'étant pas NULL-Terminated: il faut utiliser length. <hr  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a44a1a65d6827b5d8d3fa8153db168fbd" name="a44a1a65d6827b5d8d3fa8153db168fbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44a1a65d6827b5d8d3fa8153db168fbd">&#9670;&nbsp;</a></span>endElementHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XMLCALL FileConverter::endElementHandler </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>userData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const XML_Char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ce Handler est appelé à chaque balise fermante. On écrit la fermeture de la balise dans le fichier de sortie. </p>
+<hr  />
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userData</td><td>: Pointeur sur les données temporaires. </td></tr>
+    <tr><td class="paramname">name</td><td>: Nom de la balise. <hr  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a98685cbacec0fa9aa80148c7f46f7a02" name="a98685cbacec0fa9aa80148c7f46f7a02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98685cbacec0fa9aa80148c7f46f7a02">&#9670;&nbsp;</a></span>getErrorMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string FileConverter::getErrorMessage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retourne une éventuelle erreur lors de la création du fichier de sortie. </p>
+<hr  />
+ <dl class="section return"><dt>Returns</dt><dd>Retourne un code d'erreur. </dd></dl>
+
+</div>
+</div>
+<a id="a7dd2ffdedaea84f5373d653a0c17a844" name="a7dd2ffdedaea84f5373d653a0c17a844"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dd2ffdedaea84f5373d653a0c17a844">&#9670;&nbsp;</a></span>open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FileConverter::open </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ouvre un fichier <code></code>.SVCLOG pour le convertir. </p>
+<hr  />
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>: Le nom du fichier SVCLOG. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9889f0b8b36d36d2a7dcf090dc6078c2" name="a9889f0b8b36d36d2a7dcf090dc6078c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9889f0b8b36d36d2a7dcf090dc6078c2">&#9670;&nbsp;</a></span>ready()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FileConverter::ready </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retourne <code>True</code> si le fichier de sortie est prêt à recevoir des données. </p>
+<hr  />
+ <dl class="section return"><dt>Returns</dt><dd><code>True</code> si le fichier de sortie est prêt à recevoir des données. </dd></dl>
+
+</div>
+</div>
+<a id="a3f5f9a29e8c9e3331640b14fd1bd2ac4" name="a3f5f9a29e8c9e3331640b14fd1bd2ac4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f5f9a29e8c9e3331640b14fd1bd2ac4">&#9670;&nbsp;</a></span>startElementHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XMLCALL FileConverter::startElementHandler </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>userData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const XML_Char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const XML_Char **&#160;</td>
+          <td class="paramname"><em>attrs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handler appelé à chaque balise ouvrante. On écrit le nom des balises à conserver et leurs attributs dans le fichier de sortie. </p>
+<hr  />
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userData</td><td>: Pointeur sur les données temporaires. </td></tr>
+    <tr><td class="paramname">name</td><td>: Nom de la balise. </td></tr>
+    <tr><td class="paramname">attrs</td><td>: Tableau des attributs. <hr  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>E:/source/repos/SOAP-Message-Viewer/Sources/<a class="el" href="_file_converter_8h_source.html">FileConverter.h</a></li>
 <li>E:/source/repos/SOAP-Message-Viewer/Sources/FileConverter.cpp</li>

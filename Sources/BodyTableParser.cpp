@@ -1,6 +1,8 @@
 #include "BodyTableParser.h"
 
-/* Variables statiques de la Classe */
+/* ******************************************* */
+/* Rappel des variables statiques de la classe */
+/* ******************************************* */
 int          BodyTableParser::profondeur;
 bool         BodyTableParser::keepNamespaces;
 QFont        BodyTableParser::FontGras;
@@ -9,9 +11,13 @@ QTreeWidget* BodyTableParser::treeWidget;
 QTreeWidgetItem* BodyTableParser::currentItem;
 std::stack<QTreeWidgetItem*> BodyTableParser::itemStack;
 
-/* ****************************************************************************
- * Effectue le parsing d'un XML et remplit un TreeView
- * **************************************************************************** */
+
+/** ********************************************************************************
+ * @brief Effectue le parsing d'un body XML et remplit un TreeView à deux colonnes.
+ * @param blob : Le flux XML du Body à analyser.
+ * @param hideNamespaces : Doit-on afficher ou cacher les attributs \c xmlns.
+ * @param treewidget : Le TreeView à remplir.
+ * *********************************************************************************/
 int BodyTableParser::buildTable(std::string blob, bool hideNamespaces, QTreeWidget* treewidget)
 {
     int bufferSize= blob.length()+1;
@@ -53,8 +59,13 @@ int BodyTableParser::buildTable(std::string blob, bool hideNamespaces, QTreeWidg
     return errcode;
 }
 
-/* ****************************************************************************
- * Handler (static) appelé à chaque balise ouvrante
+/** ***************************************************************************
+ * @brief Handler appelé à chaque balise ouvrante.
+ *        Ecrit le nom de la balise et les attributs dans le TreeView, et
+ *        ajoute un niveau.
+ * @param userData : Non utilisé.
+ * @param name : Nom de la balise.
+ * @param attrs : Tableau des attributs.
  * **************************************************************************** */
 void XMLCALL BodyTableParser::startElementHandler(void* userData, const XML_Char* name, const XML_Char **attrs)
 {
@@ -91,8 +102,11 @@ void XMLCALL BodyTableParser::startElementHandler(void* userData, const XML_Char
     profondeur++;
 }
 
-/* ****************************************************************************
- * Ce Handler est appelé à chaque balise fermante.
+/** ***************************************************************************
+ * @brief Ce Handler est appelé à chaque balise fermante.
+ *        On ferme le niveau.
+ * @param userData : Non utilisé.
+ * @param name : Nom de la balise (non utilisé).
  * **************************************************************************** */
 void XMLCALL BodyTableParser::endElementHandler(void *userData, const XML_Char *name)
 {
@@ -104,10 +118,13 @@ void XMLCALL BodyTableParser::endElementHandler(void *userData, const XML_Char *
 }
 
 
-/* ****************************************************************************
- * Ce Handler est appelé à chaque fois qu'il y a un Content.
- * Note: Content n'est pas NULL-terminated: il faut utiliser length.
- * **************************************************************************** */
+/** ***************************************************************************************
+ * @brief Ce Handler est appelé à chaque fois qu'il y a un contenu textuel.
+ *        On écrit le contenu textuel dans la deuxième colonne.
+ * @param userData : Non utilisé.
+ * @param content : Contenu textuel de la section XML.
+ * @param length : Le contenu textuel n'étant pas NULL-Terminated: il faut utiliser length.
+ * ****************************************************************************************/
 void XMLCALL BodyTableParser::dataHandler(void *userData, const XML_Char* content, int length)
 {
     (void)userData; // pour enlever le warning....
@@ -130,8 +147,12 @@ void XMLCALL BodyTableParser::dataHandler(void *userData, const XML_Char* conten
     itemToWrite->setFont(1, FontGras);
 }
 
-/* ****************************************************************************
- * Ce Handler est appelé à chaque fois qu'il y a un Commentaire.
+
+/** ***************************************************************************
+ * @brief Ce Handler est appelé à chaque fois qu'il y a un Commentaire.
+ *        On écrit le texte du commentaire dans la deuxième colonne.
+ * @param userData : Non utilisé.
+ * @param data : Le texte du commentaire.
  * **************************************************************************** */
 void XMLCALL BodyTableParser::commentHandler(void *userData, const XML_Char *data)
 {
@@ -151,9 +172,11 @@ void XMLCALL BodyTableParser::commentHandler(void *userData, const XML_Char *dat
     item->setForeground(1,QColorConstants::Svg::forestgreen);
 }
 
-/* ****************************************************************************
- * Détruit tous les items du Tree
- * **************************************************************************** */
+
+/** ****************************************************************************
+ * @brief Détruit tous les items du TreeView.
+ * @link BodyTableParser::buildTable()
+ * ***************************************************************************** */
 void BodyTableParser::free()
 {
     treeWidget->clear();

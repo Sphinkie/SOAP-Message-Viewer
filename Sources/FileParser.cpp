@@ -3,7 +3,9 @@
 using namespace std;
 
 
-// Initialisation des variables statiques
+/* ******************************************* */
+/* Rappel des variables statiques de la classe */
+/* ******************************************* */
 bool          FileParser::insideBody;
 XML_Parser    FileParser::parser;
 std::string   FileParser::contentData;
@@ -87,7 +89,7 @@ int FileParser::parse(bool useCRLF)
  *    XML_GetCurrentByteIndex(XML_Parser p)
  * @param userData : Structure pour les données à mémoriser.
  * @param name : Nom de la balise.
- * @param atts : Eventuel tableau des attributs.
+ * @param atts : Tableau des attributs.
  ******************************************************************************* */
 void XMLCALL FileParser::startElementHandler(void* userData, const XML_Char* name, const XML_Char **atts)
 {
@@ -176,7 +178,7 @@ void XMLCALL FileParser::startElementHandler(void* userData, const XML_Char* nam
  *        Si le Content est à cheval sur 2 buffers, le dataHandler est appelé deux fois, et il faut concaténer.
  *        @a https://stackoverflow.com/questions/609376/geting-xml-data-using-xml-parser-expat#609736
  * @param userData : Non utilisé.
- * @param content : le contenu texte de la section.
+ * @param content : Le contenu textuel de la section.
  * @param length : Le Content n'est pas NULL-terminated: il faut utiliser length.
  * **************************************************************************** */
 void XMLCALL FileParser::dataHandler(void* userData, const XML_Char* content, int length)
@@ -194,8 +196,8 @@ void XMLCALL FileParser::dataHandler(void* userData, const XML_Char* content, in
 /** ***************************************************************************
  * @brief Ce Handler est appelé à chaque balise fermante.
  *        On traite les informations stockées dans userData.
- * @param userData : pointeur sur les données mémorisées lors de lors de l'ouverture des balises.
- * @param name : le nom de la balise.
+ * @param userData : Pointeur sur les données mémorisées lors de lors de l'ouverture des balises.
+ * @param name : Le nom de la balise.
  * **************************************************************************** */
 void XMLCALL FileParser::endElementHandler(void *userData, const XML_Char *name)
 {
@@ -223,7 +225,7 @@ void XMLCALL FileParser::endElementHandler(void *userData, const XML_Char *name)
 /** ***************************************************************************
  * @brief Mémorise dans le message, les informations contenue dans la variable statique contentData,
  *        en fonction du type mémorisé dans les userData.
- * @param userData : pointeur sur les données mémorisées lors de lors de l'ouverture des balises.
+ * @param userData : Pointeur sur les données mémorisées lors de lors de l'ouverture des balises.
  * **************************************************************************** */
 void FileParser::processContentData(void *userData)
 {
@@ -264,7 +266,8 @@ void FileParser::processContentData(void *userData)
 
 /** ***************************************************************************
  * @brief Ferme le fichier une fois le parsing terminé.
- */
+ * @sa open()
+ ******************************************************************************/
 void FileParser::close(void)
 {
     fichierSVC.close();

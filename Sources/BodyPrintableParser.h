@@ -5,8 +5,8 @@
 #include <Expat/include/expat.h>
 
 /** ****************************************************************************
- * @brief La classe BodyPrintableParser parse le flux XML d'un Body, et l'écrit
- *        dans un fichier texte.
+ * @brief La classe \b statique BodyPrintableParser parse le flux XML d'un Body,
+ *        et l'écrit dans un fichier texte.
  * @author David de Lorenzo
  **************************************************************************** */
 class BodyPrintableParser

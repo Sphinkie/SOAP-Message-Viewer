@@ -21,7 +21,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="soap.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="project_logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SOAP-Message-Viewer<span id="projectnumber">&#160;1.3</span>
    </div>
@@ -68,35 +68,290 @@ $(document).ready(function(){initNavTree('class_body_table_parser.html',''); ini
 </div><!--header-->
 <div class="contents">
 
-<p>La classe <a class="el" href="class_body_table_parser.html" title="La classe BodyTableParser analyse le Body XML d&#39;un message, pour l&#39;afficher sous forme de tableau dan...">BodyTableParser</a> analyse le Body XML d'un message, pour l'afficher sous forme de tableau dans l'onglet "Table View".  
+<p>La classe <b>statique</b> <a class="el" href="class_body_table_parser.html" title="La classe statique BodyTableParser analyse le Body XML d&#39;un message, pour l&#39;afficher sous forme de Tr...">BodyTableParser</a> analyse le Body XML d'un message, pour l'afficher sous forme de TreeView à deux colonnes dans l'onglet "Table View".  
  <a href="class_body_table_parser.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_body_table_parser_8h_source.html">BodyTableParser.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aaa28d023ec2f2ae9675a7d24a1e14121"><td class="memItemLeft" align="right" valign="top"><a id="aaa28d023ec2f2ae9675a7d24a1e14121" name="aaa28d023ec2f2ae9675a7d24a1e14121"></a>
-static int&#160;</td><td class="memItemRight" valign="bottom"><b>buildTable</b> (std::string blob, bool hideNamespaces, QTreeWidget *tree_root_item)</td></tr>
+<tr class="memitem:aaa28d023ec2f2ae9675a7d24a1e14121"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_body_table_parser.html#aaa28d023ec2f2ae9675a7d24a1e14121">buildTable</a> (std::string blob, bool hideNamespaces, QTreeWidget *tree_root_item)</td></tr>
+<tr class="memdesc:aaa28d023ec2f2ae9675a7d24a1e14121"><td class="mdescLeft">&#160;</td><td class="mdescRight">Effectue le parsing d'un body XML et remplit un TreeView à deux colonnes.  <a href="class_body_table_parser.html#aaa28d023ec2f2ae9675a7d24a1e14121">More...</a><br /></td></tr>
 <tr class="separator:aaa28d023ec2f2ae9675a7d24a1e14121"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa1eb95c4f5eef3285a972ed97496516"><td class="memItemLeft" align="right" valign="top"><a id="afa1eb95c4f5eef3285a972ed97496516" name="afa1eb95c4f5eef3285a972ed97496516"></a>
-static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><b>startElementHandler</b> (void *userData, const XML_Char *name, const XML_Char **attrs)</td></tr>
+<tr class="memitem:afa1eb95c4f5eef3285a972ed97496516"><td class="memItemLeft" align="right" valign="top">static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_body_table_parser.html#afa1eb95c4f5eef3285a972ed97496516">startElementHandler</a> (void *userData, const XML_Char *name, const XML_Char **attrs)</td></tr>
+<tr class="memdesc:afa1eb95c4f5eef3285a972ed97496516"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handler appelé à chaque balise ouvrante. Ecrit le nom de la balise et les attributs dans le TreeView, et ajoute un niveau.  <a href="class_body_table_parser.html#afa1eb95c4f5eef3285a972ed97496516">More...</a><br /></td></tr>
 <tr class="separator:afa1eb95c4f5eef3285a972ed97496516"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b1a908daa644641320b8a48477c9df8"><td class="memItemLeft" align="right" valign="top"><a id="a5b1a908daa644641320b8a48477c9df8" name="a5b1a908daa644641320b8a48477c9df8"></a>
-static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><b>endElementHandler</b> (void *userData, const XML_Char *name)</td></tr>
+<tr class="memitem:a5b1a908daa644641320b8a48477c9df8"><td class="memItemLeft" align="right" valign="top">static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_body_table_parser.html#a5b1a908daa644641320b8a48477c9df8">endElementHandler</a> (void *userData, const XML_Char *name)</td></tr>
+<tr class="memdesc:a5b1a908daa644641320b8a48477c9df8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ce Handler est appelé à chaque balise fermante. On ferme le niveau.  <a href="class_body_table_parser.html#a5b1a908daa644641320b8a48477c9df8">More...</a><br /></td></tr>
 <tr class="separator:a5b1a908daa644641320b8a48477c9df8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91b7306949d2348096642aa2a5218ba0"><td class="memItemLeft" align="right" valign="top"><a id="a91b7306949d2348096642aa2a5218ba0" name="a91b7306949d2348096642aa2a5218ba0"></a>
-static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><b>commentHandler</b> (void *userData, const XML_Char *data)</td></tr>
+<tr class="memitem:a91b7306949d2348096642aa2a5218ba0"><td class="memItemLeft" align="right" valign="top">static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_body_table_parser.html#a91b7306949d2348096642aa2a5218ba0">commentHandler</a> (void *userData, const XML_Char *data)</td></tr>
+<tr class="memdesc:a91b7306949d2348096642aa2a5218ba0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ce Handler est appelé à chaque fois qu'il y a un Commentaire. On écrit le texte du commentaire dans la deuxième colonne.  <a href="class_body_table_parser.html#a91b7306949d2348096642aa2a5218ba0">More...</a><br /></td></tr>
 <tr class="separator:a91b7306949d2348096642aa2a5218ba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c439537ab7aa29bf07a470ca6d72197"><td class="memItemLeft" align="right" valign="top"><a id="a6c439537ab7aa29bf07a470ca6d72197" name="a6c439537ab7aa29bf07a470ca6d72197"></a>
-static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><b>dataHandler</b> (void *userData, const XML_Char *content, int length)</td></tr>
+<tr class="memitem:a6c439537ab7aa29bf07a470ca6d72197"><td class="memItemLeft" align="right" valign="top">static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_body_table_parser.html#a6c439537ab7aa29bf07a470ca6d72197">dataHandler</a> (void *userData, const XML_Char *content, int length)</td></tr>
+<tr class="memdesc:a6c439537ab7aa29bf07a470ca6d72197"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ce Handler est appelé à chaque fois qu'il y a un contenu textuel. On écrit le contenu textuel dans la deuxième colonne.  <a href="class_body_table_parser.html#a6c439537ab7aa29bf07a470ca6d72197">More...</a><br /></td></tr>
 <tr class="separator:a6c439537ab7aa29bf07a470ca6d72197"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >La classe <a class="el" href="class_body_table_parser.html" title="La classe BodyTableParser analyse le Body XML d&#39;un message, pour l&#39;afficher sous forme de tableau dan...">BodyTableParser</a> analyse le Body XML d'un message, pour l'afficher sous forme de tableau dans l'onglet "Table View". </p>
+<div class="textblock"><p >La classe <b>statique</b> <a class="el" href="class_body_table_parser.html" title="La classe statique BodyTableParser analyse le Body XML d&#39;un message, pour l&#39;afficher sous forme de Tr...">BodyTableParser</a> analyse le Body XML d'un message, pour l'afficher sous forme de TreeView à deux colonnes dans l'onglet "Table View". </p>
 <hr  />
  <dl class="section author"><dt>Author</dt><dd>David de Lorenzo <hr  />
  </dd></dl>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aaa28d023ec2f2ae9675a7d24a1e14121" name="aaa28d023ec2f2ae9675a7d24a1e14121"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa28d023ec2f2ae9675a7d24a1e14121">&#9670;&nbsp;</a></span>buildTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BodyTableParser::buildTable </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>blob</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>hideNamespaces</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QTreeWidget *&#160;</td>
+          <td class="paramname"><em>treewidget</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Effectue le parsing d'un body XML et remplit un TreeView à deux colonnes. </p>
+<hr  />
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">blob</td><td>: Le flux XML du Body à analyser. </td></tr>
+    <tr><td class="paramname">hideNamespaces</td><td>: Doit-on afficher ou cacher les attributs <code>xmlns</code>. </td></tr>
+    <tr><td class="paramname">treewidget</td><td>: Le TreeView à remplir. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a91b7306949d2348096642aa2a5218ba0" name="a91b7306949d2348096642aa2a5218ba0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91b7306949d2348096642aa2a5218ba0">&#9670;&nbsp;</a></span>commentHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XMLCALL BodyTableParser::commentHandler </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>userData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const XML_Char *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ce Handler est appelé à chaque fois qu'il y a un Commentaire. On écrit le texte du commentaire dans la deuxième colonne. </p>
+<hr  />
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userData</td><td>: Non utilisé. </td></tr>
+    <tr><td class="paramname">data</td><td>: Le texte du commentaire. <hr  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6c439537ab7aa29bf07a470ca6d72197" name="a6c439537ab7aa29bf07a470ca6d72197"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c439537ab7aa29bf07a470ca6d72197">&#9670;&nbsp;</a></span>dataHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XMLCALL BodyTableParser::dataHandler </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>userData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const XML_Char *&#160;</td>
+          <td class="paramname"><em>content</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ce Handler est appelé à chaque fois qu'il y a un contenu textuel. On écrit le contenu textuel dans la deuxième colonne. </p>
+<hr  />
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userData</td><td>: Non utilisé. </td></tr>
+    <tr><td class="paramname">content</td><td>: Contenu textuel de la section XML. </td></tr>
+    <tr><td class="paramname">length</td><td>: Le contenu textuel n'étant pas NULL-Terminated: il faut utiliser length. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5b1a908daa644641320b8a48477c9df8" name="a5b1a908daa644641320b8a48477c9df8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b1a908daa644641320b8a48477c9df8">&#9670;&nbsp;</a></span>endElementHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XMLCALL BodyTableParser::endElementHandler </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>userData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const XML_Char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ce Handler est appelé à chaque balise fermante. On ferme le niveau. </p>
+<hr  />
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userData</td><td>: Non utilisé. </td></tr>
+    <tr><td class="paramname">name</td><td>: Nom de la balise (non utilisé). <hr  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afa1eb95c4f5eef3285a972ed97496516" name="afa1eb95c4f5eef3285a972ed97496516"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa1eb95c4f5eef3285a972ed97496516">&#9670;&nbsp;</a></span>startElementHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XMLCALL BodyTableParser::startElementHandler </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>userData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const XML_Char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const XML_Char **&#160;</td>
+          <td class="paramname"><em>attrs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handler appelé à chaque balise ouvrante. Ecrit le nom de la balise et les attributs dans le TreeView, et ajoute un niveau. </p>
+<hr  />
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userData</td><td>: Non utilisé. </td></tr>
+    <tr><td class="paramname">name</td><td>: Nom de la balise. </td></tr>
+    <tr><td class="paramname">attrs</td><td>: Tableau des attributs. <hr  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>E:/source/repos/SOAP-Message-Viewer/Sources/<a class="el" href="_body_table_parser_8h_source.html">BodyTableParser.h</a></li>
 <li>E:/source/repos/SOAP-Message-Viewer/Sources/BodyTableParser.cpp</li>
 </ul>

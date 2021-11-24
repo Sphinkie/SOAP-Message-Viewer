@@ -1,22 +1,18 @@
-/* ****************************************************************************
- * FileConverter transforme un fichier .SCVLOG en un fichier .FASTER.XML
- * en supprimant des balises inutiles, ce qui accélère les futurs parsings
- * du fichier.
- *
- * Utilise le parser XML 'Expat' qui est open-source, très rapide, et SAX (parsing au fil de l'eau).
- * Elle gère les gros fichiers grace à un système de buffer.
- * **************************************************************************** */
 #include "FileConverter.h"
 using namespace std;
 
-// Initialisation des variables statiques
+/* ******************************************* */
+/* Rappel des variables statiques de la classe */
+/* ******************************************* */
 std::string             FileConverter::contentData;
-std::ofstream           FileConverter::fichierFASTER;
+std::ofstream           FileConverter::fichierFASTER;   //!< Le fichier généré.
 std::stack<std::string> FileConverter::baliseStack;
 
-/* ****************************************************************************
- *   filename: le nom du fichier SVCLOG à convertir.
- * **************************************************************************** */
+
+/** ***************************************************************************
+ * @brief Ouvre un fichier \c .SVCLOG pour le convertir.
+ * @param filename : Le nom du fichier SVCLOG.
+ ******************************************************************************/
 void FileConverter::open(std::string filename)
 {
     std::string filenameOut = filename.substr(0, filename.length()-7);  // on enleve l'extension svclog
@@ -48,10 +44,11 @@ void FileConverter::open(std::string filename)
     }
 }
 
-/* ****************************************************************************
- * Fonction principale pour déclencher le parsing par Expat
- * Retourne un code d'erreur (0 si tout s'est bien passé)
- * **************************************************************************** */
+
+/** ***************************************************************************
+ * @brief Fonction principale pour déclencher le parsing par Expat.
+ * @return Retourne un code d'erreur (0 si tout s'est bien passé)
+ ******************************************************************************/
 int FileConverter::convert()
 {
     char buf[BUFFER_SIZE];
@@ -101,8 +98,13 @@ int FileConverter::convert()
     return XML_ERROR_NONE;
 }
 
-/* ****************************************************************************
- * Handler (statique) appelé à chaque balise ouvrante
+
+/** ***************************************************************************
+ * @brief Handler appelé à chaque balise ouvrante.
+ *        On écrit le nom des balises à conserver et leurs attributs dans le fichier de sortie.
+ * @param userData : Pointeur sur les données temporaires.
+ * @param name : Nom de la balise.
+ * @param attrs : Tableau des attributs.
  * **************************************************************************** */
 void XMLCALL FileConverter::startElementHandler(void* userData, const XML_Char* name, const XML_Char **attrs)
 {
@@ -161,8 +163,13 @@ void XMLCALL FileConverter::startElementHandler(void* userData, const XML_Char* 
     }
 }
 
-/* ****************************************************************************
- * Ce Handler est appelé à chaque fois qu'il y a un Content.
+
+/** ***************************************************************************
+ * @brief Ce Handler est appelé à chaque fois qu'il y a un contenu textuel.
+ *        On écrit le contenu textuel dans le fichier de sortie.
+ * @param userData : Non utilisé.
+ * @param content : Contenu textuel de la section XML.
+ * @param length : Le contenu textuel n'étant pas NULL-Terminated: il faut utiliser length.
  * **************************************************************************** */
 void XMLCALL FileConverter::dataHandler(void* userData, const XML_Char* content, int length)
 {
@@ -174,8 +181,12 @@ void XMLCALL FileConverter::dataHandler(void* userData, const XML_Char* content,
         FileConverter::contentData.append(content,length); // Sinon, on le complete
 }
 
-/* ****************************************************************************
- * Ce Handler est appelé à chaque balise fermante.
+
+/** ***************************************************************************
+ * @brief Ce Handler est appelé à chaque balise fermante.
+ *        On écrit la fermeture de la balise dans le fichier de sortie.
+ * @param userData : Pointeur sur les données temporaires.
+ * @param name : Nom de la balise.
  * **************************************************************************** */
 void XMLCALL FileConverter::endElementHandler(void *userData, const XML_Char *name)
 {
@@ -229,12 +240,28 @@ void XMLCALL FileConverter::endElementHandler(void *userData, const XML_Char *na
     *pIsElementClosed=true;
 }
 
-/* ****************************************************************************
- * Ferme les fichiers une fois la conversion terminée
- * **************************************************************************** */
+
+/** ***************************************************************************
+ * @brief Ferme les fichiers une fois la conversion terminée.
+ * @sa open()
+ ******************************************************************************/
 void FileConverter::close(void)
 {
     isReady=false;
     fichierSVC.close();
     FileConverter::fichierFASTER.close();
 }
+
+
+/** ***************************************************************************
+ * @brief Retourne \c True si le fichier de sortie est prêt à recevoir des données.
+ * @return \c True si le fichier de sortie est prêt à recevoir des données.
+ ******************************************************************************/
+bool FileConverter::ready() {return isReady;}
+
+
+/** ***************************************************************************
+ * @brief Retourne une éventuelle erreur lors de la création du fichier de sortie.
+ * @return Retourne un code d'erreur.
+ ******************************************************************************/
+std::string FileConverter::getErrorMessage() {return errorMessage;}

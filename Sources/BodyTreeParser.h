@@ -5,6 +5,11 @@
 #include <QTreeWidget>
 #include <Expat/include/expat.h>
 
+/** ****************************************************************************
+ * @brief La classe \b statique BodyTreeParser analyse le Body XML d'un message,
+ *        pour l'afficher sous forme de TreeView repliable dans l'onglet "Tree View".
+ * @author David de Lorenzo
+ * ***************************************************************************** */
 class BodyTreeParser
 {
 public:
@@ -17,8 +22,8 @@ public:
 private:
     static void free();
 
-    static const long  MAX_BODY_SIZE = 1024*512;       /**< 512kB : Taille max des Body (il y a une limitation dans Expat) */
-    static QTreeWidget* treeWidget;
+    static const long  MAX_BODY_SIZE = 1024*512;       //!< 512kB : Taille max des Body (il y a une limitation dans Expat)
+    static QTreeWidget* treeWidget;                    //!< Le Treeview à remplir
     static std::string  currentLine;
     static QTreeWidgetItem* currentItem;
     static std::stack<QTreeWidgetItem*> itemStack;
@@ -26,7 +31,6 @@ private:
     static bool         elementClosed;
     static bool         keepNamespaces;
     static std::string  errorMessage;
-//    bool                userData;      // pour Expat
 
 };
 
