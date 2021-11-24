@@ -14,10 +14,12 @@ Le présent outil **SOAP Message Viewer** se focalise sur l'essentiel: le conten
 
 ![Screenshot](docs/images/Capture.png)
 
-## Le programme exécutable
+# Installation
 
 L'exécutable est disponible dans la section "Release" de GitHub dans une version _portable_ (cad sans installeur. Il suffit de dézipper le fichier dans le répertoire de destination).
 Le programme nécessite le runtime C++ de Microsoft 2015-2019 (téléchargeable via le lien fourni).
+
+# Le coin des développeurs
 
 ### Compilation
 
@@ -25,7 +27,7 @@ Pour compiler vous-même ce programme, il faut:
 - QtStudio 4.12 (framework **Qt** 5.15).
 - La librairie externe **Expat**
 
-(Le fichier .pro contient les directives nécessaires à la compilation).
+(Le fichier `.pro` contient les directives nécessaires à la compilation).
 
 ### Link
 
@@ -36,11 +38,16 @@ Certains fichiers doivent être copiés manuellement:
 
 Une méthode simple est de rajouter une étape "déploiement" dans QtStudio pour faire cette opération.
 
-### Présentation de la librairie Expat
+### Sources
+
+Toutes les informations liées au developpement sont dans la [documentation doxygen](https://sphinkie.github.io/SOAP-Message-Viewer/doxygen/html/index.html)..
+
+### La librairie Expat
 
 [**Expat**](https://libexpat.github.io/) est un  parseur XML de type SAX, capable de traiter de gros fichiers rapidement.
 Comme la méthode SAX permet de traiter les données du XML au fur et à mesure de leur lecture, la librairie peut extraire des informations utiles du fichier XML, même si celui est tronqué ou abimé à la fin.
 
+Accès à la [procédure](how_to_install_Expat_Parser.md) pour installer la librairie Expat.
 
 ## Licence
 
