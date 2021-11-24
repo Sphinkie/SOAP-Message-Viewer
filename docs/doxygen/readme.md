@@ -25,12 +25,13 @@ Par contre, on n'utilise pas la fonctionnalité [Qdoc de Qt](https://doc.qt.io/q
 
 ### Mise en page
 
-* `\b word` : le mot est mis en **gras**
+* `\n` : retour à la ligne
 * `\e word` : le mot est mis en *italique*
+* `\b word` : le mot est mis en **gras**
 * `\c word` : le mot est mis en police console
 * `\l {http://doc.qt.io/qt-5/} {Qt Documentation}` : ajout d'un lien de type url   **A tester**
 * `\xmlonly .... \endxmlonly` : le flux xml est inclus dans la documentation
- 
+
 
 ## Balises non utilisées
 
@@ -43,7 +44,7 @@ Pour les fonctions:
 ```c++
 /** **************************************
  * @brief Ma function.
- * @sa Autrefonction() # Pour éviter que la ligne de *** soit affichée par Qt.
+ * @sa Autrefonction()      # Pour éviter que la ligne de *** soit affichée par Qt.
  * *************************************** */ 
 ```
 
@@ -54,10 +55,11 @@ int i1;      ///< index
 int i2;      //!< index
 ```
 
-Pour les classes: on met une section `@brief` dans le fichier **header**. Optionellement, on peut mettre une section `@class` dans le fichier cpp.
+Pour les classes: on met une section `@brief` dans le fichier **header**. Optionnellement, on peut mettre une section `@class` ailleurs, pour compléter les informations.
 ```c++
 /** ***************************************
- * @class Ma classe.
+ * @class MyClass
+ * @details ....
  * ****************************************/ 
 ```
 
@@ -66,4 +68,32 @@ Note: Les balises typiques de Qdoc sont `/*! ... */`  et `//! ...`
 
 ## Balises à rajouter dans doxyfile
 
-A compléter
+### Balises pour compatibilité Qt
+
+```ini
+GENERATE_QHP           = YES
+QCH_FILE               = SOAP-Message-Viewer.qch
+QHP_NAMESPACE          = sphinkie.SOAPMessageViewer
+QHP_VIRTUAL_FOLDER     = doc
+QHG_LOCATION           = qhelpgenerator
+```
+
+The name of the *.qch* file can be whatever you choose, as is the QHP namespace. 
+
+An important note is that the *qhelpgenerator* tool has to be on your path. I normally add the following setting to my **$PATH** variable :
+
+```ini
+QT_TOOL_BIN = $HOME/Qt/5.13.1/gcc_64/bin
+export PATH = $PATH:$HOME/.bin:$QT_TOOL_BIN
+```
+
+https://www.sinax.be/blog/software-development/display-doxygen-generated-docs-in-qt-creator.html
+
+
+
+## Bibliographie
+
+http://tvaira.free.fr/projets/activites/activite-documentation-doxygen.html
+
+
+
