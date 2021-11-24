@@ -12,6 +12,7 @@ std::stack<std::string> FileConverter::baliseStack;
 /** ***************************************************************************
  * @brief Ouvre un fichier \c .SVCLOG pour le convertir.
  * @param filename : Le nom du fichier SVCLOG.
+ * @sa close()
  ******************************************************************************/
 void FileConverter::open(std::string filename)
 {
@@ -48,6 +49,7 @@ void FileConverter::open(std::string filename)
 /** ***************************************************************************
  * @brief Fonction principale pour déclencher le parsing par Expat.
  * @return Retourne un code d'erreur (0 si tout s'est bien passé)
+ * @pre Au préalable, il faut appeler open() et s'assurer que ready() est à VRAI.
  ******************************************************************************/
 int FileConverter::convert()
 {
@@ -254,7 +256,7 @@ void FileConverter::close(void)
 
 
 /** ***************************************************************************
- * @brief Retourne \c True si le fichier de sortie est prêt à recevoir des données.
+ * @brief Indique si le fichier de sortie a été correctement ouvert et est prêt à recevoir des données.
  * @return \c True si le fichier de sortie est prêt à recevoir des données.
  ******************************************************************************/
 bool FileConverter::ready() {return isReady;}

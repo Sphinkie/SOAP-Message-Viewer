@@ -12,7 +12,7 @@ Par contre, on n'utilise pas la fonctionnalité [Qdoc de Qt](https://doc.qt.io/q
 * `@brief` : Brève description de la fonction (fichier `.cpp`) ou de la classe (fichier `.h`).
 * `@param myParam`  ou `@param[in,out] myParam` : Description des paramètres
 * `@return` : Description de la valeur retournée
-* autres:
+* Autres tags:
   * `@retval TRUE Successfuly done` : Explication des valeurs retournées.
   * `@author ...` : Auteur du code (optionnelement pour les classes).
   * `@sa UneClasse` ou `@sa UneFonction()` : Lien de type **See Also**
@@ -29,8 +29,7 @@ Par contre, on n'utilise pas la fonctionnalité [Qdoc de Qt](https://doc.qt.io/q
 * `\e word` : le mot est mis en *italique*
 * `\b word` : le mot est mis en **gras**
 * `\c word` : le mot est mis en police console
-* `\l {http://doc.qt.io/qt-5/} {Qt Documentation}` : ajout d'un lien de type url   **A tester**
-* `\xmlonly .... \endxmlonly` : le flux xml est inclus dans la documentation
+* `\verbatim .... \endverbatim` : le texte est inclus tel quel dans la documentation (voir aussi `\xmlonly`)
 
 
 ## Balises non utilisées
@@ -51,8 +50,8 @@ Pour les fonctions:
 Pour les variables:
 ```c++
 int cpt;    /**< compteur */
-int i1;      ///< index
-int i2;      //!< index
+int i1;     ///< index
+int i2;     //!< index
 ```
 
 Pour les classes: on met une section `@brief` dans le fichier **header**. Optionnellement, on peut mettre une section `@class` ailleurs, pour compléter les informations.
@@ -88,6 +87,14 @@ export PATH = $PATH:$HOME/.bin:$QT_TOOL_BIN
 ```
 
 https://www.sinax.be/blog/software-development/display-doxygen-generated-docs-in-qt-creator.html
+
+
+
+Affichage des fonctions et variables privées dans la documentation:
+
+```ini
+EXTRACT_PRIVATE        = YES
+```
 
 
 

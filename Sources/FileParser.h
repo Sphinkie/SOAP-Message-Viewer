@@ -13,7 +13,8 @@
 /** ****************************************************************************
  * @brief La classe FileParser parse un fichier .SCVLOG et insère autant de lignes
  *        dans la ListView de la fenêtre qu'il y a de messages SOAP dans le fichier.
- *        La classe utilise le parser XML 'Expat' qui est open-source, très rapide, et SAX (parsing au fil de l'eau).
+ *        La classe utilise le parser XML 'Expat' qui est open-source, très rapide,
+ *        et SAX (parsing au fil de l'eau).
  *        Elle gère les gros fichiers grace à un système de buffer.
  * @author David de Lorenzo
  * **************************************************************************** */

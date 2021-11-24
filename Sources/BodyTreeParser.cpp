@@ -179,8 +179,8 @@ void XMLCALL BodyTreeParser::commentHandler(void *userData, const XML_Char *data
 
 /** ****************************************************************************
  * @brief Détruit tous les items du TreeView.
- * @link BodyTableParser::buildTable()
- * ***************************************************************************** */
+ * @see BodyTableParser::buildTable()
+ * *****************************************************************************/
 void BodyTreeParser::free()
 {
     treeWidget->clear();

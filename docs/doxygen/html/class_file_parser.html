@@ -66,6 +66,9 @@ $(document).ready(function(){initNavTree('class_file_parser.html',''); initResiz
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_file_parser-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">FileParser Class Reference</div></div>
 </div><!--header-->
@@ -76,6 +79,11 @@ $(document).ready(function(){initNavTree('class_file_parser.html',''); initResiz
 
 <p><code>#include &lt;<a class="el" href="_file_parser_8h_source.html">FileParser.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_file_parser_1_1_user_data.html">UserData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0841789c9e75d720801c3c4d5a666468"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_parser.html#a0841789c9e75d720801c3c4d5a666468">open</a> (std::string filename, const void *fenetre)</td></tr>
@@ -97,7 +105,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a196aa9b586af505b0921877b88946f09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ce Handler est appelé à chaque balise fermante. On traite les informations stockées dans userData.  <a href="class_file_parser.html#a196aa9b586af505b0921877b88946f09">More...</a><br /></td></tr>
 <tr class="separator:a196aa9b586af505b0921877b88946f09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8287923cca0975333181d528c92d5c35"><td class="memItemLeft" align="right" valign="top">static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_parser.html#a8287923cca0975333181d528c92d5c35">dataHandler</a> (void *userData, const XML_Char *content, int length)</td></tr>
-<tr class="memdesc:a8287923cca0975333181d528c92d5c35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ce Handler est appelé à chaque fois qu'il y a un Content. Le ContentType a été positionné par le Handler StartElement. Si le Content est à cheval sur 2 buffers, le dataHandler est appelé deux fois, et il faut concaténer. <em><a href="https://stackoverflow.com/questions/609376/geting-xml-data-using-xml-parser-expat#609736">https://stackoverflow.com/questions/609376/geting-xml-data-using-xml-parser-expat#609736</a></em>.  <a href="class_file_parser.html#a8287923cca0975333181d528c92d5c35">More...</a><br /></td></tr>
+<tr class="memdesc:a8287923cca0975333181d528c92d5c35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ce Handler est appelé à chaque fois qu'il y a un Content. Le ContentType a été positionné par le Handler StartElement. Si le Content est à cheval sur 2 buffers, le dataHandler est appelé deux fois, et il faut concaténer. <br  />
+ Voir sur <a href="https://stackoverflow.com/questions/609376/geting-xml-data-using-xml-parser-expat#609736">https://stackoverflow.com/questions/609376/geting-xml-data-using-xml-parser-expat#609736</a>.  <a href="class_file_parser.html#a8287923cca0975333181d528c92d5c35">More...</a><br /></td></tr>
 <tr class="separator:a8287923cca0975333181d528c92d5c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0dee4dc1b67b81a26652701754507d1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_parser.html#ac0dee4dc1b67b81a26652701754507d1">processContentData</a> (void *userData)</td></tr>
 <tr class="memdesc:ac0dee4dc1b67b81a26652701754507d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mémorise dans le message, les informations contenue dans la variable statique contentData, en fonction du type mémorisé dans les userData.  <a href="class_file_parser.html#ac0dee4dc1b67b81a26652701754507d1">More...</a><br /></td></tr>
@@ -109,6 +118,51 @@ Static Public Attributes</h2></td></tr>
 static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_MESSAGES</b> = 32000</td></tr>
 <tr class="memdesc:aa4980a70e5b92e69f70d0dcef8ab2522"><td class="mdescLeft">&#160;</td><td class="mdescRight">Qt ne peut afficher que 32762 messages dans la ListView. <br /></td></tr>
 <tr class="separator:aa4980a70e5b92e69f70d0dcef8ab2522"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-types" name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:abc270196c2fa55ecb439c3620d403465"><td class="memItemLeft" align="right" valign="top"><a id="abc270196c2fa55ecb439c3620d403465" name="abc270196c2fa55ecb439c3620d403465"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ContentType</b> { <br />
+&#160;&#160;<b>NONE</b>
+, <b>HOST</b>
+, <b>TO</b>
+, <b>ACTION</b>
+, <br />
+&#160;&#160;<b>COMPUTER</b>
+<br />
+ }</td></tr>
+<tr class="separator:abc270196c2fa55ecb439c3620d403465"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:afafe467d2f0bada3da3f58f81b736985"><td class="memItemLeft" align="right" valign="top"><a id="afafe467d2f0bada3da3f58f81b736985" name="afafe467d2f0bada3da3f58f81b736985"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isReady</b> =false</td></tr>
+<tr class="separator:afafe467d2f0bada3da3f58f81b736985"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8ad085b4af002299d5fef20cb5640ee"><td class="memItemLeft" align="right" valign="top"><a id="aa8ad085b4af002299d5fef20cb5640ee" name="aa8ad085b4af002299d5fef20cb5640ee"></a>
+std::ifstream&#160;</td><td class="memItemRight" valign="bottom"><b>fichierSVC</b></td></tr>
+<tr class="separator:aa8ad085b4af002299d5fef20cb5640ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab11d2c4696107d7ee6d28aa2f4475f44"><td class="memItemLeft" align="right" valign="top"><a id="ab11d2c4696107d7ee6d28aa2f4475f44" name="ab11d2c4696107d7ee6d28aa2f4475f44"></a>
+<a class="el" href="struct_file_parser_1_1_user_data.html">UserData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>userData</b></td></tr>
+<tr class="separator:ab11d2c4696107d7ee6d28aa2f4475f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a94e6689851d6496fa19e5b7b33094ce2"><td class="memItemLeft" align="right" valign="top"><a id="a94e6689851d6496fa19e5b7b33094ce2" name="a94e6689851d6496fa19e5b7b33094ce2"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>insideBody</b></td></tr>
+<tr class="separator:a94e6689851d6496fa19e5b7b33094ce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad25eb1e8d59703cb07d18c381524d028"><td class="memItemLeft" align="right" valign="top"><a id="ad25eb1e8d59703cb07d18c381524d028" name="ad25eb1e8d59703cb07d18c381524d028"></a>
+static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>contentData</b></td></tr>
+<tr class="separator:ad25eb1e8d59703cb07d18c381524d028"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a786d185649b50ffda38557ac99ba2c"><td class="memItemLeft" align="right" valign="top"><a id="a5a786d185649b50ffda38557ac99ba2c" name="a5a786d185649b50ffda38557ac99ba2c"></a>
+static QMainWindow *&#160;</td><td class="memItemRight" valign="bottom"><b>mainWindow</b></td></tr>
+<tr class="separator:a5a786d185649b50ffda38557ac99ba2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c5da0f4a465a13d9e89fe6474fe257a"><td class="memItemLeft" align="right" valign="top"><a id="a6c5da0f4a465a13d9e89fe6474fe257a" name="a6c5da0f4a465a13d9e89fe6474fe257a"></a>
+static XML_Parser&#160;</td><td class="memItemRight" valign="bottom"><b>parser</b></td></tr>
+<tr class="memdesc:a6c5da0f4a465a13d9e89fe6474fe257a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parser Expat. On en a besoin dans les fonctions statiques pour repérer le début et la fin des Body. <br /></td></tr>
+<tr class="separator:a6c5da0f4a465a13d9e89fe6474fe257a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8ea6b5a0bb48fb72d2a905522912771"><td class="memItemLeft" align="right" valign="top"><a id="af8ea6b5a0bb48fb72d2a905522912771" name="af8ea6b5a0bb48fb72d2a905522912771"></a>
+static const long&#160;</td><td class="memItemRight" valign="bottom"><b>BUFFER_SIZE</b> = 1024*8</td></tr>
+<tr class="memdesc:af8ea6b5a0bb48fb72d2a905522912771"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recommandation Expat: doit etre largement en dessous de INT_MAX soit 32.767. <br /></td></tr>
+<tr class="separator:af8ea6b5a0bb48fb72d2a905522912771"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >La classe <a class="el" href="class_file_parser.html" title="La classe FileParser parse un fichier .SCVLOG et insère autant de lignes dans la ListView de la fenêt...">FileParser</a> parse un fichier .SCVLOG et insère autant de lignes dans la ListView de la fenêtre qu'il y a de messages SOAP dans le fichier. La classe utilise le parser XML 'Expat' qui est open-source, très rapide, et SAX (parsing au fil de l'eau). Elle gère les gros fichiers grace à un système de buffer. </p>
@@ -178,7 +232,8 @@ static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>
 </table>
 </div><div class="memdoc">
 
-<p>Ce Handler est appelé à chaque fois qu'il y a un Content. Le ContentType a été positionné par le Handler StartElement. Si le Content est à cheval sur 2 buffers, le dataHandler est appelé deux fois, et il faut concaténer. <em><a href="https://stackoverflow.com/questions/609376/geting-xml-data-using-xml-parser-expat#609736">https://stackoverflow.com/questions/609376/geting-xml-data-using-xml-parser-expat#609736</a></em>. </p>
+<p>Ce Handler est appelé à chaque fois qu'il y a un Content. Le ContentType a été positionné par le Handler StartElement. Si le Content est à cheval sur 2 buffers, le dataHandler est appelé deux fois, et il faut concaténer. <br  />
+ Voir sur <a href="https://stackoverflow.com/questions/609376/geting-xml-data-using-xml-parser-expat#609736">https://stackoverflow.com/questions/609376/geting-xml-data-using-xml-parser-expat#609736</a>. </p>
 <hr  />
  <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

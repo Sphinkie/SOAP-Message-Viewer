@@ -6,18 +6,36 @@
     <filterAttribute>doxygen</filterAttribute>
     <toc>
       <section title="SOAP-Message-Viewer 1.3" ref="index.html">
+        <section title="Documentation intégrée" ref="md__r_e_a_d_m_e.html">
+          <section title="Balises utilisées" ref="md__r_e_a_d_m_e.html#autotoc_md1">
+            <section title="Mise en page" ref="md__r_e_a_d_m_e.html#autotoc_md2" />
+          </section>
+          <section title="Balises non utilisées" ref="md__r_e_a_d_m_e.html#autotoc_md3" />
+          <section title="Sections doxygen" ref="md__r_e_a_d_m_e.html#autotoc_md4" />
+          <section title="Balises à rajouter dans doxyfile" ref="md__r_e_a_d_m_e.html#autotoc_md5">
+            <section title="Balises pour compatibilité Qt" ref="md__r_e_a_d_m_e.html#autotoc_md6" />
+          </section>
+          <section title="Bibliographie" ref="md__r_e_a_d_m_e.html#autotoc_md7" />
+        </section>
         <section title="Classes" ref="annotated.html">
           <section title="Class List" ref="annotated.html">
             <section title="BodyPrintableParser" ref="class_body_printable_parser.html">
+              <section title="UserData" ref="struct_body_printable_parser_1_1_user_data.html">
+                <section title="depth" ref="struct_body_printable_parser_1_1_user_data.html#ae13fc6594cca090a565bba9590d2f9f9" />
+                <section title="isElementClosed" ref="struct_body_printable_parser_1_1_user_data.html#a27c9221224362b884c87b8ec54c22661" />
+              </section>
               <section title="BodyPrintableParser" ref="class_body_printable_parser.html#a688e1cef21ccc9518bb83b3ee2f235ae" />
               <section title="~BodyPrintableParser" ref="class_body_printable_parser.html#a79a43d74b0bd02192bedb93e2e6216b7" />
               <section title="saveBody" ref="class_body_printable_parser.html#a9d90f1d6204389210d3bbd3037a3dc3a" />
+              <section title="isGood" ref="class_body_printable_parser.html#adad1e0459b75c08954ee568b8453241f" />
+              <section title="userData" ref="class_body_printable_parser.html#abfa05292b83d6c7483227602956796aa" />
             </section>
             <section title="BodyTableParser" ref="class_body_table_parser.html" />
             <section title="BodyTextParser" ref="class_body_text_parser.html" />
             <section title="BodyTreeParser" ref="class_body_tree_parser.html" />
             <section title="Common" ref="class_common.html" />
             <section title="FileConverter" ref="class_file_converter.html">
+              <section title="UserData" ref="struct_file_converter_1_1_user_data.html" />
               <section title="close" ref="class_file_converter.html#a639603c1ff45403ae3dbb5b33d944f8d" />
               <section title="convert" ref="class_file_converter.html#a4f8a52d21a65fde924984a31e3bcd4a4" />
               <section title="getErrorMessage" ref="class_file_converter.html#a98685cbacec0fa9aa80148c7f46f7a02" />
@@ -25,16 +43,48 @@
               <section title="ready" ref="class_file_converter.html#a9889f0b8b36d36d2a7dcf090dc6078c2" />
             </section>
             <section title="FileParser" ref="class_file_parser.html">
+              <section title="UserData" ref="struct_file_parser_1_1_user_data.html" />
               <section title="close" ref="class_file_parser.html#afaeb2d28e432115ec845ebe4ff86d8f4" />
               <section title="open" ref="class_file_parser.html#a0841789c9e75d720801c3c4d5a666468" />
               <section title="parse" ref="class_file_parser.html#a09bc46c3ba8e88b76bf697e6a2e42322" />
             </section>
-            <section title="FileRepair" ref="class_file_repair.html" />
+            <section title="FileRepair" ref="class_file_repair.html">
+              <section title="Balise" ref="struct_file_repair_1_1_balise.html" />
+              <section title="close" ref="class_file_repair.html#a064582b19814d82fb8c5137fda1d7094" />
+              <section title="closeOpenedTags" ref="class_file_repair.html#a20377fbaafa5c5ee51de39c50814d46c" />
+              <section title="isSvcLog" ref="class_file_repair.html#a74ae5712f091f566d11c212a44e81950" />
+              <section title="openSVCfile" ref="class_file_repair.html#a5b47bb493dd6badf67ebd399ae13367e" />
+              <section title="removeBalise" ref="class_file_repair.html#adfb4a199a4a638a22a41e98af22041a1" />
+              <section title="removeLastTag" ref="class_file_repair.html#a7cbd4de0b31fc488abf1b530533e0ee9" />
+              <section title="repair" ref="class_file_repair.html#a9e9229df812c8351abbaea0f96f336f0" />
+              <section title="replaceGtLt" ref="class_file_repair.html#a91ecf74a31640bffdd4d308c44105f04" />
+              <section title="replaceiNil" ref="class_file_repair.html#aa1043f0f97c792327377eed7a7c3df0f" />
+              <section title="replaceXsiNil" ref="class_file_repair.html#a8bea06220aa958d844d9c51c705988d2" />
+              <section title="trackClosingTags" ref="class_file_repair.html#accdb1c0f164c503c2f99cff3753121a2" />
+              <section title="trackOpeningTags" ref="class_file_repair.html#a69421bd59321390013c4e8da7cb912e4" />
+            </section>
             <section title="FileSplitter" ref="class_file_splitter.html">
+              <section title="calculateScore" ref="class_file_splitter.html#a795167f87e58457fa84f086ed95f6d85" />
+              <section title="cancel" ref="class_file_splitter.html#ad6452177e28e97c3a2b830087f2c5da7" />
+              <section title="close" ref="class_file_splitter.html#a697e29fca8ea43b9edf8cf5521b893ed" />
               <section title="getErrorMessage" ref="class_file_splitter.html#adf3e560de386a3bceba0e9d2ed2f82fd" />
+              <section title="open" ref="class_file_splitter.html#a2230e92d9245d527ea773558aeddfae8" />
+              <section title="openNewSplittedFile" ref="class_file_splitter.html#acf69a7724556b83f555aadd8467bdf6c" />
+              <section title="split" ref="class_file_splitter.html#acbead9df4e0a0a91fd3cfcaf910396e6" />
+              <section title="fichierSPLITTED" ref="class_file_splitter.html#a117b30dcfaf866559818d0b672bb5751" />
+              <section title="fichierSVC" ref="class_file_splitter.html#a8723c3b6c8e31560108b7070c4166e79" />
+              <section title="filenameSVC" ref="class_file_splitter.html#a3f22d1b7860ebfc6a94367366fc79a11" />
               <section title="MAX_NB_MESSAGES" ref="class_file_splitter.html#aac6b01264d975d410a1de25142cab3f5" />
             </section>
-            <section title="MainWindow" ref="class_main_window.html" />
+            <section title="MainWindow" ref="class_main_window.html">
+              <section title="MainWindow" ref="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" />
+              <section title="addListItem" ref="class_main_window.html#a9f8a8f1f85c4100c527539e49bd8e2bb" />
+              <section title="on_actionSave_triggered" ref="class_main_window.html#ad550c61cfa05c7e528dedc6cf636ed10" />
+              <section title="hiddenCorrelatedItem" ref="class_main_window.html#a834a11bc7aeb1cf33b5853ec2f4b386e" />
+              <section title="NOT_FOUND" ref="class_main_window.html#a4ac1e96cc358f601df15a3b9c2e4a069" />
+              <section title="searchDown" ref="class_main_window.html#a3b9b0e18736ca6501e5db07776f6faa3" />
+              <section title="version" ref="class_main_window.html#ae91df044e00c58c3410e4073e48f7c9e" />
+            </section>
             <section title="Messages" ref="class_messages.html">
               <section title="Message" ref="struct_messages_1_1_message.html">
                 <section title="action" ref="struct_messages_1_1_message.html#a0bd3cd681cc736d36c89fea06a803ac7" />
@@ -54,6 +104,7 @@
           </section>
           <section title="Class Index" ref="classes.html" />
           <section title="Class Hierarchy" ref="hierarchy.html">
+            <section title="FileRepair::Balise" ref="struct_file_repair_1_1_balise.html" />
             <section title="BodyPrintableParser" ref="class_body_printable_parser.html" />
             <section title="BodyTableParser" ref="class_body_table_parser.html" />
             <section title="BodyTextParser" ref="class_body_text_parser.html" />
@@ -68,6 +119,9 @@
             <section title="QMainWindow" ref="">
               <section title="MainWindow" ref="class_main_window.html" />
             </section>
+            <section title="BodyPrintableParser::UserData" ref="struct_body_printable_parser_1_1_user_data.html" />
+            <section title="FileConverter::UserData" ref="struct_file_converter_1_1_user_data.html" />
+            <section title="FileParser::UserData" ref="struct_file_parser_1_1_user_data.html" />
           </section>
           <section title="Class Members" ref="functions.html">
             <section title="All" ref="functions.html" />
@@ -95,6 +149,7 @@
       </section>
     </toc>
     <keywords>
+      <keyword name="Documentation intégrée" id="Documentation intégrée" ref="md__r_e_a_d_m_e.html" />
       <keyword name="BodyPrintableParser" id="BodyPrintableParser" ref="class_body_printable_parser.html" />
       <keyword name="BodyPrintableParser" id="BodyPrintableParser::BodyPrintableParser" ref="class_body_printable_parser.html#a688e1cef21ccc9518bb83b3ee2f235ae" />
       <keyword name="~BodyPrintableParser" id="BodyPrintableParser::~BodyPrintableParser" ref="class_body_printable_parser.html#a79a43d74b0bd02192bedb93e2e6216b7" />
@@ -103,12 +158,28 @@
       <keyword name="endElementHandler" id="BodyPrintableParser::endElementHandler" ref="class_body_printable_parser.html#a53b372ad75c1fd3a06cd9773cc86a6dc" />
       <keyword name="commentHandler" id="BodyPrintableParser::commentHandler" ref="class_body_printable_parser.html#a8bd6e5660b26769f67d9bf00c2d42c5a" />
       <keyword name="dataHandler" id="BodyPrintableParser::dataHandler" ref="class_body_printable_parser.html#a32e89c8c61552d66f0b917c78c01808c" />
+      <keyword name="userData" id="BodyPrintableParser::userData" ref="class_body_printable_parser.html#abfa05292b83d6c7483227602956796aa" />
+      <keyword name="isGood" id="BodyPrintableParser::isGood" ref="class_body_printable_parser.html#adad1e0459b75c08954ee568b8453241f" />
+      <keyword name="fichierBody" id="BodyPrintableParser::fichierBody" ref="class_body_printable_parser.html#ae616f13686078094670a1c88ec8d0fe7" />
+      <keyword name="MAX_BODY_SIZE" id="BodyPrintableParser::MAX_BODY_SIZE" ref="class_body_printable_parser.html#a7d8a26bd47ef58c9285cbb0af220f87b" />
+      <keyword name="BodyPrintableParser::UserData" id="BodyPrintableParser::UserData" ref="struct_body_printable_parser_1_1_user_data.html" />
+      <keyword name="depth" id="BodyPrintableParser::UserData::depth" ref="struct_body_printable_parser_1_1_user_data.html#ae13fc6594cca090a565bba9590d2f9f9" />
+      <keyword name="isElementClosed" id="BodyPrintableParser::UserData::isElementClosed" ref="struct_body_printable_parser_1_1_user_data.html#a27c9221224362b884c87b8ec54c22661" />
       <keyword name="BodyTableParser" id="BodyTableParser" ref="class_body_table_parser.html" />
       <keyword name="buildTable" id="BodyTableParser::buildTable" ref="class_body_table_parser.html#aaa28d023ec2f2ae9675a7d24a1e14121" />
       <keyword name="startElementHandler" id="BodyTableParser::startElementHandler" ref="class_body_table_parser.html#afa1eb95c4f5eef3285a972ed97496516" />
       <keyword name="endElementHandler" id="BodyTableParser::endElementHandler" ref="class_body_table_parser.html#a5b1a908daa644641320b8a48477c9df8" />
       <keyword name="commentHandler" id="BodyTableParser::commentHandler" ref="class_body_table_parser.html#a91b7306949d2348096642aa2a5218ba0" />
       <keyword name="dataHandler" id="BodyTableParser::dataHandler" ref="class_body_table_parser.html#a6c439537ab7aa29bf07a470ca6d72197" />
+      <keyword name="free" id="BodyTableParser::free" ref="class_body_table_parser.html#ad0c0baba8fedcefbc29b6048a8fbb818" />
+      <keyword name="MAX_BODY_SIZE" id="BodyTableParser::MAX_BODY_SIZE" ref="class_body_table_parser.html#abdd21246752299fa40bf3c61cfa4fdba" />
+      <keyword name="treeWidget" id="BodyTableParser::treeWidget" ref="class_body_table_parser.html#a7dd515b8cc2acf25a77133ea40d7525c" />
+      <keyword name="currentItem" id="BodyTableParser::currentItem" ref="class_body_table_parser.html#afd4013d067d3cc759c6efdc87d5958cd" />
+      <keyword name="itemStack" id="BodyTableParser::itemStack" ref="class_body_table_parser.html#aab8c5a5607bf0d92c22741aecce95aac" />
+      <keyword name="profondeur" id="BodyTableParser::profondeur" ref="class_body_table_parser.html#acce094026e413fca834a262c52e463ac" />
+      <keyword name="keepNamespaces" id="BodyTableParser::keepNamespaces" ref="class_body_table_parser.html#af59d0fc3ddb55a281a155df21522e2ae" />
+      <keyword name="errorMessage" id="BodyTableParser::errorMessage" ref="class_body_table_parser.html#a1a474cbcccfe2a228a88a092bb23bb5a" />
+      <keyword name="FontGras" id="BodyTableParser::FontGras" ref="class_body_table_parser.html#a9cce674c555c9de6a3f695e994044a2a" />
       <keyword name="BodyTextParser" id="BodyTextParser" ref="class_body_text_parser.html" />
       <keyword name="parse" id="BodyTextParser::parse" ref="class_body_text_parser.html#adcc3530f9b32f59933a3acfd490fa34d" />
       <keyword name="parse" id="BodyTextParser::parse" ref="class_body_text_parser.html#a8092c8530c4714171324e8de0e60b996" />
@@ -117,12 +188,28 @@
       <keyword name="endElementHandler" id="BodyTextParser::endElementHandler" ref="class_body_text_parser.html#a0acf62929be64113a0edf1114eb72a6d" />
       <keyword name="commentHandler" id="BodyTextParser::commentHandler" ref="class_body_text_parser.html#a406806c5f550ecd1afc4e9b40c0fb83b" />
       <keyword name="dataHandler" id="BodyTextParser::dataHandler" ref="class_body_text_parser.html#ae7a0e46f2296302bfe68df3c0f7f8093" />
+      <keyword name="MAX_BODY_SIZE" id="BodyTextParser::MAX_BODY_SIZE" ref="class_body_text_parser.html#a0d7be366805631ca967e17deb09fa71f" />
+      <keyword name="profondeur" id="BodyTextParser::profondeur" ref="class_body_text_parser.html#a1a958ab572b64f11e7339334e0dd135f" />
+      <keyword name="elementClosed" id="BodyTextParser::elementClosed" ref="class_body_text_parser.html#ac5f7afab164c92f2192c878d99c8fef7" />
+      <keyword name="keepNamespaces" id="BodyTextParser::keepNamespaces" ref="class_body_text_parser.html#aa1876a413d1a4553bc602fbff1cb8dc6" />
+      <keyword name="formatedBlob" id="BodyTextParser::formatedBlob" ref="class_body_text_parser.html#a3214942f896e9b7728def506cc12212f" />
+      <keyword name="errMessage" id="BodyTextParser::errMessage" ref="class_body_text_parser.html#ac053a903381414d7cce49a11540eed9c" />
       <keyword name="BodyTreeParser" id="BodyTreeParser" ref="class_body_tree_parser.html" />
       <keyword name="buildTree" id="BodyTreeParser::buildTree" ref="class_body_tree_parser.html#a9bb0406085554a9b1a40a6948e6ca056" />
       <keyword name="startElementHandler" id="BodyTreeParser::startElementHandler" ref="class_body_tree_parser.html#a31b668744b3118d765c52e5af4845866" />
       <keyword name="endElementHandler" id="BodyTreeParser::endElementHandler" ref="class_body_tree_parser.html#a9b7d5628ea143b040510a142f1ff1176" />
       <keyword name="commentHandler" id="BodyTreeParser::commentHandler" ref="class_body_tree_parser.html#aead66101f771637d57f3445baae4f00d" />
       <keyword name="dataHandler" id="BodyTreeParser::dataHandler" ref="class_body_tree_parser.html#a8fb6fb5cf4dba7f74c0150535804ebb3" />
+      <keyword name="free" id="BodyTreeParser::free" ref="class_body_tree_parser.html#a00eae086b962e5bc277963885c2439b2" />
+      <keyword name="MAX_BODY_SIZE" id="BodyTreeParser::MAX_BODY_SIZE" ref="class_body_tree_parser.html#afab38c0103e2b8085546ccf6c564c1bc" />
+      <keyword name="treeWidget" id="BodyTreeParser::treeWidget" ref="class_body_tree_parser.html#ac4c692ed8ae9c980c54748642fd594fb" />
+      <keyword name="currentLine" id="BodyTreeParser::currentLine" ref="class_body_tree_parser.html#a7b5106f6f0129b00237d24038e400bb7" />
+      <keyword name="currentItem" id="BodyTreeParser::currentItem" ref="class_body_tree_parser.html#a56c484740ef6f44c4f511483808a7b2a" />
+      <keyword name="itemStack" id="BodyTreeParser::itemStack" ref="class_body_tree_parser.html#ab0dd065411fcd2e6499e8d17348529cd" />
+      <keyword name="profondeur" id="BodyTreeParser::profondeur" ref="class_body_tree_parser.html#aabfb6e8feb2ddaadce2789e97be7c78a" />
+      <keyword name="elementClosed" id="BodyTreeParser::elementClosed" ref="class_body_tree_parser.html#ab75fe616612b3d23931d5b45f4896f58" />
+      <keyword name="keepNamespaces" id="BodyTreeParser::keepNamespaces" ref="class_body_tree_parser.html#a0f6235680b09b720463709168d7140ab" />
+      <keyword name="errorMessage" id="BodyTreeParser::errorMessage" ref="class_body_tree_parser.html#a32bb5b5cd49031805b39c7e0023b398d" />
       <keyword name="Common" id="Common" ref="class_common.html" />
       <keyword name="endsWith" id="Common::endsWith" ref="class_common.html#a01f5f1ae18d01eaa9169cf6d96473cef" />
       <keyword name="FileConverter" id="FileConverter" ref="class_file_converter.html" />
@@ -134,6 +221,18 @@
       <keyword name="startElementHandler" id="FileConverter::startElementHandler" ref="class_file_converter.html#a3f5f9a29e8c9e3331640b14fd1bd2ac4" />
       <keyword name="endElementHandler" id="FileConverter::endElementHandler" ref="class_file_converter.html#a44a1a65d6827b5d8d3fa8153db168fbd" />
       <keyword name="dataHandler" id="FileConverter::dataHandler" ref="class_file_converter.html#a0faf186ae12cab744fe43f0794bdb5c2" />
+      <keyword name="fichierSVC" id="FileConverter::fichierSVC" ref="class_file_converter.html#a15bbd71e3ad46282d552fd1f87f51a32" />
+      <keyword name="isReady" id="FileConverter::isReady" ref="class_file_converter.html#a2ee5ffcd497ff08e9455cd9970c9d79e" />
+      <keyword name="errorMessage" id="FileConverter::errorMessage" ref="class_file_converter.html#ad124cfbe126e39fd42d518d1329ed1fd" />
+      <keyword name="userData" id="FileConverter::userData" ref="class_file_converter.html#a2ae3e5cac4c753a1dc64ad079526bd61" />
+      <keyword name="contentData" id="FileConverter::contentData" ref="class_file_converter.html#a5f9716e656e82bbfb8fa26becdfe9ea8" />
+      <keyword name="fichierFASTER" id="FileConverter::fichierFASTER" ref="class_file_converter.html#acbc20cd4c1d493b184e31c30c4832edf" />
+      <keyword name="baliseStack" id="FileConverter::baliseStack" ref="class_file_converter.html#a428b222489db582448db610c260130b3" />
+      <keyword name="BUFFER_SIZE" id="FileConverter::BUFFER_SIZE" ref="class_file_converter.html#a21b7738e61e2c3128ddf738bf7c5b297" />
+      <keyword name="FileConverter::UserData" id="FileConverter::UserData" ref="struct_file_converter_1_1_user_data.html" />
+      <keyword name="depth" id="FileConverter::UserData::depth" ref="struct_file_converter_1_1_user_data.html#a3514ca048fe3d674e1c69ee4bba79706" />
+      <keyword name="keepSubElements" id="FileConverter::UserData::keepSubElements" ref="struct_file_converter_1_1_user_data.html#a7bd00873dff55ece33e592d928dc7e56" />
+      <keyword name="isElementClosed" id="FileConverter::UserData::isElementClosed" ref="struct_file_converter_1_1_user_data.html#a22f317b527c9294ab6e75d9b5131e11d" />
       <keyword name="FileParser" id="FileParser" ref="class_file_parser.html" />
       <keyword name="open" id="FileParser::open" ref="class_file_parser.html#a0841789c9e75d720801c3c4d5a666468" />
       <keyword name="parse" id="FileParser::parse" ref="class_file_parser.html#a09bc46c3ba8e88b76bf697e6a2e42322" />
@@ -143,11 +242,40 @@
       <keyword name="dataHandler" id="FileParser::dataHandler" ref="class_file_parser.html#a8287923cca0975333181d528c92d5c35" />
       <keyword name="processContentData" id="FileParser::processContentData" ref="class_file_parser.html#ac0dee4dc1b67b81a26652701754507d1" />
       <keyword name="MAX_MESSAGES" id="FileParser::MAX_MESSAGES" ref="class_file_parser.html#aa4980a70e5b92e69f70d0dcef8ab2522" />
+      <keyword name="isReady" id="FileParser::isReady" ref="class_file_parser.html#afafe467d2f0bada3da3f58f81b736985" />
+      <keyword name="fichierSVC" id="FileParser::fichierSVC" ref="class_file_parser.html#aa8ad085b4af002299d5fef20cb5640ee" />
+      <keyword name="userData" id="FileParser::userData" ref="class_file_parser.html#ab11d2c4696107d7ee6d28aa2f4475f44" />
+      <keyword name="insideBody" id="FileParser::insideBody" ref="class_file_parser.html#a94e6689851d6496fa19e5b7b33094ce2" />
+      <keyword name="contentData" id="FileParser::contentData" ref="class_file_parser.html#ad25eb1e8d59703cb07d18c381524d028" />
+      <keyword name="mainWindow" id="FileParser::mainWindow" ref="class_file_parser.html#a5a786d185649b50ffda38557ac99ba2c" />
+      <keyword name="parser" id="FileParser::parser" ref="class_file_parser.html#a6c5da0f4a465a13d9e89fe6474fe257a" />
+      <keyword name="BUFFER_SIZE" id="FileParser::BUFFER_SIZE" ref="class_file_parser.html#af8ea6b5a0bb48fb72d2a905522912771" />
+      <keyword name="FileParser::UserData" id="FileParser::UserData" ref="struct_file_parser_1_1_user_data.html" />
+      <keyword name="contentType" id="FileParser::UserData::contentType" ref="struct_file_parser_1_1_user_data.html#a8759bd57aff6a489e16fe84eb1d94df0" />
+      <keyword name="isTimeKnown" id="FileParser::UserData::isTimeKnown" ref="struct_file_parser_1_1_user_data.html#ae0fd99f79b41f149cf79996a3c8f47a6" />
+      <keyword name="isComputerKnown" id="FileParser::UserData::isComputerKnown" ref="struct_file_parser_1_1_user_data.html#a1288c9146aa265ca48ff13f81bbdc866" />
+      <keyword name="containsCRLF" id="FileParser::UserData::containsCRLF" ref="struct_file_parser_1_1_user_data.html#a1529de2a13c79954c28a95712221beaa" />
+      <keyword name="messageNb" id="FileParser::UserData::messageNb" ref="struct_file_parser_1_1_user_data.html#a184c15fd2f0545cf88851e75c3570e1a" />
       <keyword name="FileRepair" id="FileRepair" ref="class_file_repair.html" />
       <keyword name="openSVCfile" id="FileRepair::openSVCfile" ref="class_file_repair.html#a5b47bb493dd6badf67ebd399ae13367e" />
       <keyword name="isSvcLog" id="FileRepair::isSvcLog" ref="class_file_repair.html#a74ae5712f091f566d11c212a44e81950" />
       <keyword name="repair" id="FileRepair::repair" ref="class_file_repair.html#a9e9229df812c8351abbaea0f96f336f0" />
       <keyword name="close" id="FileRepair::close" ref="class_file_repair.html#a064582b19814d82fb8c5137fda1d7094" />
+      <keyword name="replaceGtLt" id="FileRepair::replaceGtLt" ref="class_file_repair.html#a91ecf74a31640bffdd4d308c44105f04" />
+      <keyword name="replaceiNil" id="FileRepair::replaceiNil" ref="class_file_repair.html#aa1043f0f97c792327377eed7a7c3df0f" />
+      <keyword name="replaceXsiNil" id="FileRepair::replaceXsiNil" ref="class_file_repair.html#a8bea06220aa958d844d9c51c705988d2" />
+      <keyword name="trackOpeningTags" id="FileRepair::trackOpeningTags" ref="class_file_repair.html#a69421bd59321390013c4e8da7cb912e4" />
+      <keyword name="trackClosingTags" id="FileRepair::trackClosingTags" ref="class_file_repair.html#accdb1c0f164c503c2f99cff3753121a2" />
+      <keyword name="closeOpenedTags" id="FileRepair::closeOpenedTags" ref="class_file_repair.html#a20377fbaafa5c5ee51de39c50814d46c" />
+      <keyword name="removeBalise" id="FileRepair::removeBalise" ref="class_file_repair.html#adfb4a199a4a638a22a41e98af22041a1" />
+      <keyword name="removeLastTag" id="FileRepair::removeLastTag" ref="class_file_repair.html#a7cbd4de0b31fc488abf1b530533e0ee9" />
+      <keyword name="fichierSVC" id="FileRepair::fichierSVC" ref="class_file_repair.html#a3ac6bde08e9452bafa0363fed5b928f3" />
+      <keyword name="fichierXML" id="FileRepair::fichierXML" ref="class_file_repair.html#a384f732442bbc7363673770be77a569b" />
+      <keyword name="lastBalise" id="FileRepair::lastBalise" ref="class_file_repair.html#a4fbae94babf6e3b3af8fdedda1b6add3" />
+      <keyword name="lastTagPosition" id="FileRepair::lastTagPosition" ref="class_file_repair.html#abea86db05af1181bd0f8d354c69aeb36" />
+      <keyword name="FileRepair::Balise" id="FileRepair::Balise" ref="struct_file_repair_1_1_balise.html" />
+      <keyword name="TagName" id="FileRepair::Balise::TagName" ref="struct_file_repair_1_1_balise.html#a1a3ab766d928d64a3c190078841e4f1f" />
+      <keyword name="Previous" id="FileRepair::Balise::Previous" ref="struct_file_repair_1_1_balise.html#a67031a9c1181faf526371bae9e414000" />
       <keyword name="FileSplitter" id="FileSplitter" ref="class_file_splitter.html" />
       <keyword name="open" id="FileSplitter::open" ref="class_file_splitter.html#a2230e92d9245d527ea773558aeddfae8" />
       <keyword name="split" id="FileSplitter::split" ref="class_file_splitter.html#acbead9df4e0a0a91fd3cfcaf910396e6" />
@@ -155,11 +283,61 @@
       <keyword name="good" id="FileSplitter::good" ref="class_file_splitter.html#a367cf7d6ecbceb29b2745a34e6792032" />
       <keyword name="getErrorMessage" id="FileSplitter::getErrorMessage" ref="class_file_splitter.html#adf3e560de386a3bceba0e9d2ed2f82fd" />
       <keyword name="MAX_NB_MESSAGES" id="FileSplitter::MAX_NB_MESSAGES" ref="class_file_splitter.html#aac6b01264d975d410a1de25142cab3f5" />
+      <keyword name="calculateScore" id="FileSplitter::calculateScore" ref="class_file_splitter.html#a795167f87e58457fa84f086ed95f6d85" />
+      <keyword name="openNewSplittedFile" id="FileSplitter::openNewSplittedFile" ref="class_file_splitter.html#acf69a7724556b83f555aadd8467bdf6c" />
+      <keyword name="cancel" id="FileSplitter::cancel" ref="class_file_splitter.html#ad6452177e28e97c3a2b830087f2c5da7" />
+      <keyword name="fichierSVC" id="FileSplitter::fichierSVC" ref="class_file_splitter.html#a8723c3b6c8e31560108b7070c4166e79" />
+      <keyword name="fichierSPLITTED" id="FileSplitter::fichierSPLITTED" ref="class_file_splitter.html#a117b30dcfaf866559818d0b672bb5751" />
+      <keyword name="filenameSVC" id="FileSplitter::filenameSVC" ref="class_file_splitter.html#a3f22d1b7860ebfc6a94367366fc79a11" />
+      <keyword name="errorMessage" id="FileSplitter::errorMessage" ref="class_file_splitter.html#a21ca032741b428a7a7dafb05639c7f79" />
+      <keyword name="isGood" id="FileSplitter::isGood" ref="class_file_splitter.html#af96c1db1178b684867510da7158d9c96" />
+      <keyword name="splitNumber" id="FileSplitter::splitNumber" ref="class_file_splitter.html#ae1928c38ce0f77abf29b755e6478e541" />
+      <keyword name="score" id="FileSplitter::score" ref="class_file_splitter.html#acb7bbbb834f105bfe6e57511e58ea774" />
+      <keyword name="nbMessages" id="FileSplitter::nbMessages" ref="class_file_splitter.html#ac71b46f846ce85c0163158051727c72d" />
+      <keyword name="TERMINATOR" id="FileSplitter::TERMINATOR" ref="class_file_splitter.html#accf784e0d06a1015adcc8b2599ae9735" />
       <keyword name="MainWindow" id="MainWindow" ref="class_main_window.html" />
       <keyword name="MainWindow" id="MainWindow::MainWindow" ref="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" />
       <keyword name="addListItem" id="MainWindow::addListItem" ref="class_main_window.html#a9f8a8f1f85c4100c527539e49bd8e2bb" />
       <keyword name="version" id="MainWindow::version" ref="class_main_window.html#ae91df044e00c58c3410e4073e48f7c9e" />
       <keyword name="NOT_FOUND" id="MainWindow::NOT_FOUND" ref="class_main_window.html#a4ac1e96cc358f601df15a3b9c2e4a069" />
+      <keyword name="on_actionOpen_triggered" id="MainWindow::on_actionOpen_triggered" ref="class_main_window.html#a48ed0a16f674e38e0e2a24274852a9af" />
+      <keyword name="on_actionImport_triggered" id="MainWindow::on_actionImport_triggered" ref="class_main_window.html#a73be2df93057d846aa541dffb00e7144" />
+      <keyword name="on_actionSave_triggered" id="MainWindow::on_actionSave_triggered" ref="class_main_window.html#ad550c61cfa05c7e528dedc6cf636ed10" />
+      <keyword name="on_actionMark_triggered" id="MainWindow::on_actionMark_triggered" ref="class_main_window.html#a4b44d95fb024f0b0f574c606c56c375e" />
+      <keyword name="on_actionSplit_triggered" id="MainWindow::on_actionSplit_triggered" ref="class_main_window.html#aa3b06df49adb920be4c87d5f52c7f56a" />
+      <keyword name="on_actionRepair_triggered" id="MainWindow::on_actionRepair_triggered" ref="class_main_window.html#a134bc3e78b17d1ccd5c57f75d2ca1a55" />
+      <keyword name="on_actionConvert_triggered" id="MainWindow::on_actionConvert_triggered" ref="class_main_window.html#a25363f4ead93879e2a2478398638ab3c" />
+      <keyword name="on_actionQuit_triggered" id="MainWindow::on_actionQuit_triggered" ref="class_main_window.html#aa68eba140c2cf5c1cd2b4bd81337fa83" />
+      <keyword name="on_actionInfos_triggered" id="MainWindow::on_actionInfos_triggered" ref="class_main_window.html#aa3640d310882f19b03bd6a0bb04e3954" />
+      <keyword name="on_actionAbout_triggered" id="MainWindow::on_actionAbout_triggered" ref="class_main_window.html#a4f3ebda1ba39e0ef4d678b44893c9c7f" />
+      <keyword name="on_actionHideService_triggered" id="MainWindow::on_actionHideService_triggered" ref="class_main_window.html#a7b11ffb4d4c01ecd531564ade922a74a" />
+      <keyword name="on_actionHideNS_triggered" id="MainWindow::on_actionHideNS_triggered" ref="class_main_window.html#ab7e1de2ed0835a2903a558eadbcafb95" />
+      <keyword name="on_w_JumpButton_clicked" id="MainWindow::on_w_JumpButton_clicked" ref="class_main_window.html#ae843056ec799adfcae1b488d1048abd9" />
+      <keyword name="on_w_SearchNextButton_clicked" id="MainWindow::on_w_SearchNextButton_clicked" ref="class_main_window.html#a9ed6dbf50db94b3816ff35502e10749d" />
+      <keyword name="on_w_SearchActionButton_clicked" id="MainWindow::on_w_SearchActionButton_clicked" ref="class_main_window.html#ab1324511ab6cb5444634514ea3be7e04" />
+      <keyword name="on_w_SearchBodyButton_clicked" id="MainWindow::on_w_SearchBodyButton_clicked" ref="class_main_window.html#ad0d721f37cfda81fef313bc2a801c5ca" />
+      <keyword name="on_w_ResetFilterButton_clicked" id="MainWindow::on_w_ResetFilterButton_clicked" ref="class_main_window.html#a64c729f7aee3fee5b043a005c58cf908" />
+      <keyword name="on_w_MessageList_itemSelectionChanged" id="MainWindow::on_w_MessageList_itemSelectionChanged" ref="class_main_window.html#aed1660fad32477d0dac42cd5d090a827" />
+      <keyword name="on_w_MessageList_itemDoubleClicked" id="MainWindow::on_w_MessageList_itemDoubleClicked" ref="class_main_window.html#ab2f4429214c121795d9e1d3542adfc79" />
+      <keyword name="on_tabWidget_currentChanged" id="MainWindow::on_tabWidget_currentChanged" ref="class_main_window.html#ab5ec4a06e4e38781eb7b913fed92733e" />
+      <keyword name="displayMessageHeader" id="MainWindow::displayMessageHeader" ref="class_main_window.html#a75de6bae38816736eadc8a9be89db0db" />
+      <keyword name="displayMessageBody" id="MainWindow::displayMessageBody" ref="class_main_window.html#a6579cdd3589885b23cd695600e5b1e48" />
+      <keyword name="circleFastCorrelatedJump" id="MainWindow::circleFastCorrelatedJump" ref="class_main_window.html#a799f205b2de69d2bd60af9d52fb19d4f" />
+      <keyword name="circleGlobalCorrelatedJump" id="MainWindow::circleGlobalCorrelatedJump" ref="class_main_window.html#a581763e80cb102d1b94e12526717f3df" />
+      <keyword name="ui" id="MainWindow::ui" ref="class_main_window.html#a35466a70ed47252a0191168126a352a5" />
+      <keyword name="m_boutonDialogue" id="MainWindow::m_boutonDialogue" ref="class_main_window.html#afd162d3846d38162abdbacc1fb02a00b" />
+      <keyword name="FontItal" id="MainWindow::FontItal" ref="class_main_window.html#acfa7033fd3dd8b04c1090c782293e86e" />
+      <keyword name="FontGras" id="MainWindow::FontGras" ref="class_main_window.html#a8e01ed40386b91fa995beb5a8860560e" />
+      <keyword name="arrowLeftIcon" id="MainWindow::arrowLeftIcon" ref="class_main_window.html#a60943ef659abf1f80691e92c09603dc1" />
+      <keyword name="arrowRightIcon" id="MainWindow::arrowRightIcon" ref="class_main_window.html#a4bed4f474211434f55b1ee222b17e02c" />
+      <keyword name="messagesSearchList" id="MainWindow::messagesSearchList" ref="class_main_window.html#a1cd06857c0bf0eb9dfb144b5f62bf821" />
+      <keyword name="searchDown" id="MainWindow::searchDown" ref="class_main_window.html#a3b9b0e18736ca6501e5db07776f6faa3" />
+      <keyword name="hiddenCorrelatedItem" id="MainWindow::hiddenCorrelatedItem" ref="class_main_window.html#a834a11bc7aeb1cf33b5853ec2f4b386e" />
+      <keyword name="explicationRepair" id="MainWindow::explicationRepair" ref="class_main_window.html#adbed5c470da083952ee65e57b183f964" />
+      <keyword name="explicationConvert" id="MainWindow::explicationConvert" ref="class_main_window.html#aa9f66a73a55f1a2eb6bfeee437a7a01c" />
+      <keyword name="explicationSplitting" id="MainWindow::explicationSplitting" ref="class_main_window.html#aa8f8952ca4a3beac51083cb7baed694e" />
+      <keyword name="messageInfos" id="MainWindow::messageInfos" ref="class_main_window.html#ac22f517fcf7440dc39afb857d7bcbe31" />
+      <keyword name="messageAbout" id="MainWindow::messageAbout" ref="class_main_window.html#afa891518665f357015fd1d5134219808" />
       <keyword name="Messages" id="Messages" ref="class_messages.html" />
       <keyword name="init" id="Messages::init" ref="class_messages.html#ac3346f22599c2742e0f9341141327ea8" />
       <keyword name="append" id="Messages::append" ref="class_messages.html#a7cec798e24d43830ffc8292ff55c67a7" />
@@ -187,6 +365,9 @@
       <keyword name="getComputerName" id="Messages::getComputerName" ref="class_messages.html#ada3c0b10c28afee914611ed299b8ac32" />
       <keyword name="getLogDate" id="Messages::getLogDate" ref="class_messages.html#afedbfcf3a65fab1b72216b65b6eddfcc" />
       <keyword name="containsMessageBody" id="Messages::containsMessageBody" ref="class_messages.html#a26d4c4c2c0f72997f52bd951364245fa" />
+      <keyword name="computerName" id="Messages::computerName" ref="class_messages.html#a34a415b69fb08bc9b633aee151f8fbb1" />
+      <keyword name="logDate" id="Messages::logDate" ref="class_messages.html#a0e2e11aa4ee2d29f3bd4b544ba499aa6" />
+      <keyword name="fileName" id="Messages::fileName" ref="class_messages.html#a97c62c10d94939ae448eda5a2183d475" />
       <keyword name="Messages::Message" id="Messages::Message" ref="struct_messages_1_1_message.html" />
       <keyword name="host" id="Messages::Message::host" ref="struct_messages_1_1_message.html#a80093f739a4603b0f10f223e7656e1ef" />
       <keyword name="module" id="Messages::Message::module" ref="struct_messages_1_1_message.html#a9621d187b646fb37975d7a0d5dcb81b8" />
@@ -229,8 +410,11 @@
       <file>_file_splitter_8h_source.html</file>
       <file>mainwindow_8h_source.html</file>
       <file>messages_8h_source.html</file>
+      <file>md__r_e_a_d_m_e.html</file>
       <file>class_body_printable_parser.html</file>
       <file>class_body_printable_parser-members.html</file>
+      <file>struct_body_printable_parser_1_1_user_data.html</file>
+      <file>struct_body_printable_parser_1_1_user_data-members.html</file>
       <file>class_body_table_parser.html</file>
       <file>class_body_table_parser-members.html</file>
       <file>class_body_text_parser.html</file>
@@ -241,10 +425,16 @@
       <file>class_common-members.html</file>
       <file>class_file_converter.html</file>
       <file>class_file_converter-members.html</file>
+      <file>struct_file_converter_1_1_user_data.html</file>
+      <file>struct_file_converter_1_1_user_data-members.html</file>
       <file>class_file_parser.html</file>
       <file>class_file_parser-members.html</file>
+      <file>struct_file_parser_1_1_user_data.html</file>
+      <file>struct_file_parser_1_1_user_data-members.html</file>
       <file>class_file_repair.html</file>
       <file>class_file_repair-members.html</file>
+      <file>struct_file_repair_1_1_balise.html</file>
+      <file>struct_file_repair_1_1_balise-members.html</file>
       <file>class_file_splitter.html</file>
       <file>class_file_splitter-members.html</file>
       <file>class_main_window.html</file>
@@ -256,6 +446,7 @@
       <file>struct_messages_1_1_message-members.html</file>
       <file>dir_937900b87e0c7a5fa01190c395fb83f7.html</file>
       <file>index.html</file>
+      <file>pages.html</file>
       <file>annotated.html</file>
       <file>classes.html</file>
       <file>hierarchy.html</file>
@@ -274,6 +465,11 @@
       <file>functions.html</file>
       <file>functions.html</file>
       <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
       <file>functions_func.html</file>
       <file>functions_func.html</file>
       <file>functions_func.html</file>
@@ -286,6 +482,16 @@
       <file>functions_func.html</file>
       <file>functions_func.html</file>
       <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_vars.html</file>
+      <file>functions_vars.html</file>
+      <file>functions_vars.html</file>
+      <file>functions_vars.html</file>
+      <file>functions_vars.html</file>
+      <file>functions_vars.html</file>
+      <file>functions_vars.html</file>
       <file>functions_vars.html</file>
       <file>functions_vars.html</file>
       <file>functions_vars.html</file>

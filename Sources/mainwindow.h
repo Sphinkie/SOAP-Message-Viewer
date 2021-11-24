@@ -21,6 +21,10 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
+/** *******************************************************************************
+ * @brief La classe MainWindow gère la fenêtre principale de l'application.
+ * @author David de Lorenzo
+ **********************************************************************************/
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -30,8 +34,8 @@ public:
     ~MainWindow();
     void addListItem(std::string texte);
 
-    QVersionNumber version = QVersionNumber::fromString("1.3.0");   // A mettre aussi à jour dans le fichier .pro  /
-    const int NOT_FOUND = -1;
+    QVersionNumber version = QVersionNumber::fromString("1.3.0");   //!< Numéro de version logiciel. A mettre aussi à jour dans le fichier .pro et Doxyfile
+    const int NOT_FOUND = -1;                                       //!< Constante
 
 
 private slots:

@@ -1,15 +1,11 @@
-/* ****************************************************************************
- * FileSplitter découpe un fichier .SCVLOG en plusieurs fichiers de 20.000
- * messages SOAP chacun.
- *
- * Cette classe lit le fichier SVCLOG caractère-par-caractère et n'utilise PAS de parser XML.
- * **************************************************************************** */
 #include "FileSplitter.h"
 using namespace std;
 
-/* ****************************************************************************
- * Ouverture des fichiers SVCLOG (input) et SPLITTED (output)
- * **************************************************************************** */
+/** *******************************************************************************
+ * @brief Ouverture des fichiers SVCLOG (input) et SPLITTED (output)
+ * @param filename : Le nom du fichier à ouvrir
+ * @sa close()
+ **********************************************************************************/
 void FileSplitter::open(std::string filename)
 {
     filenameSVC = filename;
@@ -30,10 +26,10 @@ void FileSplitter::open(std::string filename)
 }
 
 
-/* ************************************************************************************************
- *
- *
- * ************************************************************************************************ */
+/** *******************************************************************************
+ * @brief Fonction principale de découpage.
+ * @pre La fonction open() doit être appelée au prélable.
+ **********************************************************************************/
 void FileSplitter::split()
 {
 
@@ -71,18 +67,23 @@ void FileSplitter::split()
     }
 }
 
-/* ************************************************************************************************
- * Referme les fichiers
- * ************************************************************************************************ */
+
+/** *******************************************************************************
+ * @brief Fermeture des fichiers SVCLOG (input) et SPLITTED (output)
+ * @sa open()
+ **********************************************************************************/
 void FileSplitter::close()
 {
     fichierSVC.close();
     fichierSPLITTED.close();
 }
 
-/* ************************************************************************************************
- * le score atteint son maximum lorsque l'on a détecté une séquence terminatrice "</E2TraceEvent>"
- * ************************************************************************************************ */
+
+/** *******************************************************************************
+ * @brief Le score atteint son maximum lorsque l'on a détecté une séquence terminatrice "</E2TraceEvent>"
+ * @param lettre : Un caractère du fichier \e source à analyser.
+ * @return Retourne \c True si on a atteint la fin d'un message SOAP
+ **********************************************************************************/
 bool FileSplitter::calculateScore(char lettre)
 {
     // si le score est à 0, on attend la première lettre.
@@ -100,9 +101,11 @@ bool FileSplitter::calculateScore(char lettre)
     return false;
 }
 
-/* ************************************************************************************************
- * Ferme un fichier Splitted et ouvre le suivant
- * ************************************************************************************************ */
+
+/** *******************************************************************************
+ * @brief Ferme un fichier Splitted et ouvre le suivant.
+ * @sa open()
+ **********************************************************************************/
 void FileSplitter::openNewSplittedFile()
 {
     if (this->splitNumber==0)
@@ -136,6 +139,12 @@ void FileSplitter::openNewSplittedFile()
 }
 
 
+/** *******************************************************************************
+ * @brief On positionne un flag qui fait que le découpage va s'arrêter.
+ *        L'utilisateur peut utiliser cette commande s'il considère que le
+ *        découpage dure trop longtemps.
+ * @sa split()
+ **********************************************************************************/
 void FileSplitter::cancel()
 {
     this->isGood=false;

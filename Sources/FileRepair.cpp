@@ -1,16 +1,14 @@
-/* ****************************************************************************
- * Trasnsformation d'un fichier SVCLOG en un fichier XML
- *   Cette classe lit le fichier SVCLOG caractère-par-caractère
- *   et n'utilise PAS de parser XML.
- * **************************************************************************** */
-
 #include "FileRepair.h"
 
 using namespace std;
 
-/* ****************************************************************************
- * Ouverture des fichiers SVCLOG (input) et XML (output)
- * **************************************************************************** */
+
+/** ****************************************************************************
+ * @brief Ouverture des fichiers SVCLOG (input) et XML (output).
+ * @param filename : Le nom du fichier
+ * @return \c True si l'ouverture des fichiers est OK.
+ * @sa close()
+ *******************************************************************************/
 bool FileRepair::openSVCfile(std::string filename)
 {
     std::string filenameOut = filename.substr(0, filename.length()-7);  // on enleve l'extension svclog
@@ -30,9 +28,12 @@ bool FileRepair::openSVCfile(std::string filename)
 	return true;
 }
 
-/* ****************************************************************************
- * Verification de l'extension du fichier
- * **************************************************************************** */
+
+/** ****************************************************************************
+ * @brief Verifie si l'extension du fichier est bien \c .svclog
+ * @param filename : Le nom du fichier
+ * @return  \c True il s'agit bien d'un fichier SVCLOG.
+ *******************************************************************************/
 bool FileRepair::isSvcLog(const char* filename)
 {
     char extension[8];
@@ -44,10 +45,12 @@ bool FileRepair::isSvcLog(const char* filename)
     return (!strcmp(extension, ".svclog"));  // renvoie 0 s égalité
 }
 
-/* ************************************************************************************************
- * Parcourt le fichier SVCLOG et effectue les remplacements nécessaires pour le transformer
- * en un fichier XML lisible.
- * ************************************************************************************************ */
+
+/** ****************************************************************************
+ * @brief Parcourt le fichier SVCLOG et effectue les remplacements nécessaires
+ *        pour le transformer en un fichier XML lisible.
+ * @pre Le fichier SVCLOG doit avoir été ouvert avec openSVCfile().
+ *******************************************************************************/
 void FileRepair::repair()
 {
     fichierXML << "<!-- Repaired WCF log file -->\n";
@@ -100,9 +103,11 @@ void FileRepair::repair()
 	fichierXML << "\n</root>";
 }
 
-/* ************************************************************************************************
- * Referme les fichiers
- * ************************************************************************************************ */
+
+/** ****************************************************************************
+ * @brief Referme les fichiers.
+ * @sa openSVCfile()
+ *******************************************************************************/
 void FileRepair::close()
 {
 	fichierSVC.close();
@@ -110,11 +115,13 @@ void FileRepair::close()
 }
 
 
-/* ************************************************************************************************
- * Ajoute un saut de ligne entre > (GreaterThan) et < (LesserThan).
- * Si c'est un ">", on regarde si le suivant est "<", si oui, on écrit ">\n<"
- * On renvoie True si la lettre a été ecrite dans le XML
- * ************************************************************************************************ */
+/** ****************************************************************************
+ * @brief Traitement particulier pour les caractères < et >.
+ *        Ajoute un saut de ligne entre > (GreaterThan) et < (LesserThan).
+ *        Si c'est un ">", on regarde si le suivant est "<", si oui, on écrit ">\n<"
+ * @param lettre : Un caractère à analyser.
+ * @return Retourne \c True si la lettre a été recopiée dans le fichier de sortie XML
+ *******************************************************************************/
 bool FileRepair::replaceGtLt(char lettre)
 {
 	char suivante;
@@ -142,11 +149,13 @@ bool FileRepair::replaceGtLt(char lettre)
 }
 
 
-/* ************************************************************************************************
- * On enleve les attributs  i:nil="true"
- * Ces attributs posent des problèmes aux parsers XML, et ne servent à rien (?).
- * On renvoie True si la lettre a été ecrite dans le XML
- * ************************************************************************************************ */
+/** ****************************************************************************
+ * @brief Traitement des attributs \c i:nil="true"
+ *        Ces attributs posent des problèmes aux parsers XML, et ne servent à rien.
+ *        On les enlève.
+ * @param lettre : Un caractère à analyser.
+ * @return Retourne \c True si la lettre a été recopiée dans le fichier de sortie XML
+ *******************************************************************************/
 bool FileRepair::replaceiNil(char lettre)
 {
     char suivantes[16];
@@ -179,10 +188,14 @@ bool FileRepair::replaceiNil(char lettre)
         return false;
 }
 
-/* ************************************************************************************************
- * On enleve les attributs  xsi:nil="true"
- * Ces attributs posent des problèmes aux parsers XML, et ne servent à rien (?).
- * ************************************************************************************************ */
+
+/** ****************************************************************************
+ * @brief Traitement des attributs \c xsi:nil="true"
+ *        Ces attributs posent des problèmes aux parsers XML, et ne servent à rien.
+ *        On les enlève.
+ * @param lettre : Un caractère à analyser.
+ * @return Retourne \c True si la lettre a été recopiée dans le fichier de sortie XML
+ *******************************************************************************/
 bool FileRepair::replaceXsiNil(char lettre)
 {
     char suivantes[16];
@@ -213,9 +226,12 @@ bool FileRepair::replaceXsiNil(char lettre)
         return false;
 }
 
-/* ************************************************************************************************
- * Recherche une Balise dans la liste chainée, et la supprime.
- * ************************************************************************************************ */
+
+/** ****************************************************************************
+ * @brief Recherche et suppression d'une Balise donnée dans la liste chainée.
+ * @param name : Le nom de la balise
+ * @return Retourne \c True si la balise a été trouuvée et supprimée. \c False si non trouvée.
+ *******************************************************************************/
 bool  FileRepair::removeBalise(string name)
 {
 	// on parcourt la liste des balises
@@ -245,9 +261,11 @@ bool  FileRepair::removeBalise(string name)
 	return true;
 }
 
-/* ************************************************************************************************
- * Supprime la dernière balise de la liste chainée.
- * ************************************************************************************************ */
+
+/** ****************************************************************************
+ * @brief Supprime la dernière balise de la liste chainée (supposément tronquée).
+ * @sa removeBalise()
+ *******************************************************************************/
 void  FileRepair::removeLastTag()
 {
     Balise* parentBalise = lastBalise->Previous;
@@ -257,10 +275,12 @@ void  FileRepair::removeLastTag()
 	fichierXML << "<!-- Skipped truncated last line -->";
 }
 
-/* ************************************************************************************************
- * On vient de lire '<'
- * On teste si c'est "<balise>" ou "</balise>" ou "<balise/>" ou "<balise attributes"
- * ************************************************************************************************ */
+
+/** ****************************************************************************
+ * @brief Après la lecture d'un caractère '<', on teste si c'est "<balise>"
+ *        ou "</balise>" ou "<balise/>" ou "<balise attributes".
+ * @sa trackClosingTags()
+ *******************************************************************************/
 void  FileRepair::trackOpeningTags()
 {
     string  buffer = "";
@@ -299,10 +319,13 @@ void  FileRepair::trackOpeningTags()
 		}
 }
 
-/* ************************************************************************************************
- * On vient de lire '/'.
- * Si la suivante est "/>", alors on a trouvé une balise fermante, et on peut l'enlever de la liste.
- * ************************************************************************************************ */
+
+/** ****************************************************************************
+ * @brief Après la lecture d'un caractère '/', on lit le caractère suivant.
+ *        Si la suivante est "/>", alors on a trouvé une balise fermante, et on
+ *        peut l'enlever de la liste.
+ * @sa trackOpeningTags()
+ *******************************************************************************/
 void  FileRepair::trackClosingTags()
 {
 	string  buffer = "";
@@ -320,9 +343,12 @@ void  FileRepair::trackClosingTags()
 	}
 }
 
-/* ************************************************************************************************
- * On ferme les balises qui ne seraient pas fermées.
- * ************************************************************************************************ */
+
+/** ****************************************************************************
+ * @brief On ferme les balises qui ne seraient pas fermées.
+ * @sa trackOpeningTags()
+ * @sa trackClosingTags()
+ *******************************************************************************/
 void  FileRepair::closeOpenedTags()
 {
     Balise* currentBalise = lastBalise;

@@ -1,37 +1,3 @@
-/*
- * <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
- * <html><head><meta name="qrichtext" content="1" /><style type="text/css"> p, li { white-space: pre-wrap; }
- * </style></head>
- * <body style=" font-family:'Courier New'; font-size:9pt; font-weight:400; font-style:normal;">
- * <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">
- * <span style=" color:#0000ff;">&lt;soap:Body&gt;</span></p>
- * <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">
- *   <span style=" color:#0000ff;">   &lt;OpenOrReuse </span>
- *   <span style=" color:#ff0000;">xmlns</span>
- *   <span style=" color:#0000ff;">=</span>
- *   <span style=" color:#aa00ff;">&quot;http://www.sgt.eu/VEDA.SOA/Session.v1&quot; </span>
- * </p>
- * <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">
- *   <span style=" color:#0000ff;">      &lt;ClientLogin&gt;</span>
- * </p>
- * <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">
- *   <span style=" color:#0000ff;">         &lt;HostName&gt;</span>
- *   <span style=" font-weight:600; color:#000000;">00XDSVMAM03200</span>
- *   <span style=" color:#0000ff;">&lt;/HostName&gt;</span>
- * </p>
- * <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">
- *   <span style=" color:#0000ff;">      &lt;/ClientLogin&gt;</span>
- * </p>
- * <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">
- *   <span style=" color:#0000ff;">   &lt;/OpenOrReuse&gt;</span>
- * </p>
- * <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">
- *   <span style=" color:#0000ff;">&lt;/soap:Body&gt;</span>
- * </p>
- * </body>
- * </html>
- *
- * ****************************************************************************/
 #include "BodyTextParser.h"
 
 /* ******************************************* */
@@ -64,7 +30,7 @@ int BodyTextParser::parse(std::string blob, bool hideNamespaces)
 
 
 /** ****************************************************************************
- * @brief Cette méthode effectue le parsing d'un message XML sour forme de char*.
+ * @brief Cette méthode effectue le parsing d'un message XML sous forme de char*.
  * @param buffer Buffer de N char contenant le Body XML à afficher.
  * @param hideNamespaces Si True, on n'affichera pas les namespace.
  * @return le code d'erreur rencontré (XML_ERROR_NONE si aucun).

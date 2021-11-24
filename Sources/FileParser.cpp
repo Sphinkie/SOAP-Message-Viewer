@@ -176,7 +176,7 @@ void XMLCALL FileParser::startElementHandler(void* userData, const XML_Char* nam
  * @brief Ce Handler est appelé à chaque fois qu'il y a un Content.
  *        Le ContentType a été positionné par le Handler StartElement.
  *        Si le Content est à cheval sur 2 buffers, le dataHandler est appelé deux fois, et il faut concaténer.
- *        @a https://stackoverflow.com/questions/609376/geting-xml-data-using-xml-parser-expat#609736
+ *        \n Voir sur https://stackoverflow.com/questions/609376/geting-xml-data-using-xml-parser-expat#609736
  * @param userData : Non utilisé.
  * @param content : Le contenu textuel de la section.
  * @param length : Le Content n'est pas NULL-terminated: il faut utiliser length.

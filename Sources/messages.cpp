@@ -1,9 +1,3 @@
-/** ****************************************************************************************
- * @class Messages
- *        Cette classe gére la liste des messages SOAP échangés.
- *        Tous les membres de la classe sont statiques: Pas besoin d'instancier la classe.
- * *****************************************************************************************/
-
 #include "messages.h"
 using namespace std;
 

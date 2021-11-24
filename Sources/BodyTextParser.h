@@ -10,7 +10,7 @@
  *        pour l'afficher sous forme de texte simple dans l'onglet "Text View".
  *
  * Elle sert à convertir un blob XML (typiquement le body d'un message SOAP)
- * en un XML contenant des balises de coloration syntaxique pour un affichage dans QT.
+ * en une string formatée, contenant des balises de coloration syntaxique, pour un affichage dans QT.
  * Le parser SAX est basé sur la librarie EXPAT.
  *
  * @author David de Lorenzo
@@ -33,9 +33,54 @@ private:
     static int         profondeur;
     static bool        elementClosed;
     static bool        keepNamespaces;
-    static std::string formatedBlob;
+    static std::string formatedBlob;                   ///< Le texte à afficher, avec indentation et coloration syntaxique.
     static std::string errMessage;
 
 };
 
 #endif // BODYTEXTPARSER_H
+
+
+/** ****************************************************************************
+ * @class BodyTextParser
+ * @details Exemple de formatedBlob:
+ *
+ \verbatim
+ <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+ <html>
+    <head>
+      <meta name="qrichtext" content="1" />
+      <style type="text/css"> p, li { white-space: pre-wrap; }</style>
+    </head>
+    <body style=" font-family:'Courier New'; font-size:9pt; font-weight:400; font-style:normal;">
+       <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">
+          <span style=" color:#0000ff;">&lt;soap:Body&gt;</span>
+       </p>
+       <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">
+          <span style=" color:#0000ff;">   &lt;OpenOrReuse </span>
+          <span style=" color:#ff0000;">xmlns</span>
+          <span style=" color:#0000ff;">=</span>
+          <span style=" color:#aa00ff;">&quot;http://www.sgt.eu/VEDA.SOA/Session.v1&quot; </span>
+       </p>
+       <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">
+          <span style=" color:#0000ff;">      &lt;ClientLogin&gt;</span>
+       </p>
+       <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">
+          <span style=" color:#0000ff;">         &lt;HostName&gt;</span>
+          <span style=" font-weight:600; color:#000000;">00XDSVMAM03200</span>
+          <span style=" color:#0000ff;">&lt;/HostName&gt;</span>
+       </p>
+       <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">
+          <span style=" color:#0000ff;">      &lt;/ClientLogin&gt;</span>
+       </p>
+       <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">
+          <span style=" color:#0000ff;">   &lt;/OpenOrReuse&gt;</span>
+       </p>
+       <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">
+          <span style=" color:#0000ff;">&lt;/soap:Body&gt;</span>
+       </p>
+    </body>
+ </html>
+
+ \endverbatim
+ * ****************************************************************************/

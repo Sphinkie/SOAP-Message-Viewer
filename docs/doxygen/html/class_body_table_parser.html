@@ -63,6 +63,8 @@ $(document).ready(function(){initNavTree('class_body_table_parser.html',''); ini
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_body_table_parser-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">BodyTableParser Class Reference</div></div>
 </div><!--header-->
@@ -90,6 +92,40 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a6c439537ab7aa29bf07a470ca6d72197"><td class="memItemLeft" align="right" valign="top">static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_body_table_parser.html#a6c439537ab7aa29bf07a470ca6d72197">dataHandler</a> (void *userData, const XML_Char *content, int length)</td></tr>
 <tr class="memdesc:a6c439537ab7aa29bf07a470ca6d72197"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ce Handler est appelé à chaque fois qu'il y a un contenu textuel. On écrit le contenu textuel dans la deuxième colonne.  <a href="class_body_table_parser.html#a6c439537ab7aa29bf07a470ca6d72197">More...</a><br /></td></tr>
 <tr class="separator:a6c439537ab7aa29bf07a470ca6d72197"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:ad0c0baba8fedcefbc29b6048a8fbb818"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_body_table_parser.html#ad0c0baba8fedcefbc29b6048a8fbb818">free</a> ()</td></tr>
+<tr class="memdesc:ad0c0baba8fedcefbc29b6048a8fbb818"><td class="mdescLeft">&#160;</td><td class="mdescRight">Détruit tous les items du TreeView.  <a href="class_body_table_parser.html#ad0c0baba8fedcefbc29b6048a8fbb818">More...</a><br /></td></tr>
+<tr class="separator:ad0c0baba8fedcefbc29b6048a8fbb818"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:abdd21246752299fa40bf3c61cfa4fdba"><td class="memItemLeft" align="right" valign="top"><a id="abdd21246752299fa40bf3c61cfa4fdba" name="abdd21246752299fa40bf3c61cfa4fdba"></a>
+static const long&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_BODY_SIZE</b> = 1024*512</td></tr>
+<tr class="memdesc:abdd21246752299fa40bf3c61cfa4fdba"><td class="mdescLeft">&#160;</td><td class="mdescRight">512kB : Taille max des Body (Le buffer de Expat est limité) <br /></td></tr>
+<tr class="separator:abdd21246752299fa40bf3c61cfa4fdba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dd515b8cc2acf25a77133ea40d7525c"><td class="memItemLeft" align="right" valign="top"><a id="a7dd515b8cc2acf25a77133ea40d7525c" name="a7dd515b8cc2acf25a77133ea40d7525c"></a>
+static QTreeWidget *&#160;</td><td class="memItemRight" valign="bottom"><b>treeWidget</b></td></tr>
+<tr class="separator:a7dd515b8cc2acf25a77133ea40d7525c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd4013d067d3cc759c6efdc87d5958cd"><td class="memItemLeft" align="right" valign="top"><a id="afd4013d067d3cc759c6efdc87d5958cd" name="afd4013d067d3cc759c6efdc87d5958cd"></a>
+static QTreeWidgetItem *&#160;</td><td class="memItemRight" valign="bottom"><b>currentItem</b></td></tr>
+<tr class="separator:afd4013d067d3cc759c6efdc87d5958cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab8c5a5607bf0d92c22741aecce95aac"><td class="memItemLeft" align="right" valign="top"><a id="aab8c5a5607bf0d92c22741aecce95aac" name="aab8c5a5607bf0d92c22741aecce95aac"></a>
+static std::stack&lt; QTreeWidgetItem * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>itemStack</b></td></tr>
+<tr class="separator:aab8c5a5607bf0d92c22741aecce95aac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acce094026e413fca834a262c52e463ac"><td class="memItemLeft" align="right" valign="top"><a id="acce094026e413fca834a262c52e463ac" name="acce094026e413fca834a262c52e463ac"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>profondeur</b></td></tr>
+<tr class="separator:acce094026e413fca834a262c52e463ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af59d0fc3ddb55a281a155df21522e2ae"><td class="memItemLeft" align="right" valign="top"><a id="af59d0fc3ddb55a281a155df21522e2ae" name="af59d0fc3ddb55a281a155df21522e2ae"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>keepNamespaces</b></td></tr>
+<tr class="separator:af59d0fc3ddb55a281a155df21522e2ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a474cbcccfe2a228a88a092bb23bb5a"><td class="memItemLeft" align="right" valign="top"><a id="a1a474cbcccfe2a228a88a092bb23bb5a" name="a1a474cbcccfe2a228a88a092bb23bb5a"></a>
+static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>errorMessage</b></td></tr>
+<tr class="separator:a1a474cbcccfe2a228a88a092bb23bb5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cce674c555c9de6a3f695e994044a2a"><td class="memItemLeft" align="right" valign="top"><a id="a9cce674c555c9de6a3f695e994044a2a" name="a9cce674c555c9de6a3f695e994044a2a"></a>
+static QFont&#160;</td><td class="memItemRight" valign="bottom"><b>FontGras</b></td></tr>
+<tr class="separator:a9cce674c555c9de6a3f695e994044a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >La classe <b>statique</b> <a class="el" href="class_body_table_parser.html" title="La classe statique BodyTableParser analyse le Body XML d&#39;un message, pour l&#39;afficher sous forme de Tr...">BodyTableParser</a> analyse le Body XML d'un message, pour l'afficher sous forme de TreeView à deux colonnes dans l'onglet "Table View". </p>
@@ -294,6 +330,35 @@ Static Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ad0c0baba8fedcefbc29b6048a8fbb818" name="ad0c0baba8fedcefbc29b6048a8fbb818"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0c0baba8fedcefbc29b6048a8fbb818">&#9670;&nbsp;</a></span>free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BodyTableParser::free </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Détruit tous les items du TreeView. </p>
+<hr  />
+ <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_body_table_parser.html#aaa28d023ec2f2ae9675a7d24a1e14121" title="Effectue le parsing d&#39;un body XML et remplit un TreeView à deux colonnes.">BodyTableParser::buildTable()</a> </dd></dl>
 
 </div>
 </div>

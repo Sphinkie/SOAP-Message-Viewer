@@ -4,6 +4,12 @@
 #include <QStyleFactory>
 #include <QVersionNumber>
 
+/** ************************************************************************************************
+ * @brief main() est la fonction principale.
+ * @param argc : Le nombre d'arguments
+ * @param argv : Le tableau des arguments
+ * @return Retourne le code d'erreur
+ * *************************************************************************************************/
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);

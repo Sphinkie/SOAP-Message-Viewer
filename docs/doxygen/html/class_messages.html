@@ -64,10 +64,16 @@ $(document).ready(function(){initNavTree('class_messages.html',''); initResizabl
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_messages-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Messages Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>La classe /b statique <a class="el" href="class_messages.html" title="La classe /b statique Messages gère la liste des messages SOAP échangés. Tous les membres de la class...">Messages</a> gère la liste des messages SOAP échangés. Tous les membres de la classe sont statiques: Pas besoin d'instancier la classe.  
+ <a href="class_messages.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="messages_8h_source.html">messages.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -154,11 +160,78 @@ static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getLogD
 <tr class="memitem:a26d4c4c2c0f72997f52bd951364245fa"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_messages.html#a26d4c4c2c0f72997f52bd951364245fa">containsMessageBody</a> (int index, std::string substring)</td></tr>
 <tr class="memdesc:a26d4c4c2c0f72997f52bd951364245fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">On regarde si le Body demandé contient la substring.  <a href="class_messages.html#a26d4c4c2c0f72997f52bd951364245fa">More...</a><br /></td></tr>
 <tr class="separator:a26d4c4c2c0f72997f52bd951364245fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a34a415b69fb08bc9b633aee151f8fbb1"><td class="memItemLeft" align="right" valign="top"><a id="a34a415b69fb08bc9b633aee151f8fbb1" name="a34a415b69fb08bc9b633aee151f8fbb1"></a>
+static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>computerName</b></td></tr>
+<tr class="separator:a34a415b69fb08bc9b633aee151f8fbb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e2e11aa4ee2d29f3bd4b544ba499aa6"><td class="memItemLeft" align="right" valign="top"><a id="a0e2e11aa4ee2d29f3bd4b544ba499aa6" name="a0e2e11aa4ee2d29f3bd4b544ba499aa6"></a>
+static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>logDate</b></td></tr>
+<tr class="separator:a0e2e11aa4ee2d29f3bd4b544ba499aa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97c62c10d94939ae448eda5a2183d475"><td class="memItemLeft" align="right" valign="top"><a id="a97c62c10d94939ae448eda5a2183d475" name="a97c62c10d94939ae448eda5a2183d475"></a>
+static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>fileName</b></td></tr>
+<tr class="separator:a97c62c10d94939ae448eda5a2183d475"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><hr  />
-<p >Cette classe gére la liste des messages SOAP échangés. Tous les membres de la classe sont statiques: Pas besoin d'instancier la classe. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><p >La classe /b statique <a class="el" href="class_messages.html" title="La classe /b statique Messages gère la liste des messages SOAP échangés. Tous les membres de la class...">Messages</a> gère la liste des messages SOAP échangés. Tous les membres de la classe sont statiques: Pas besoin d'instancier la classe. </p>
+<hr  />
+ <dl class="section author"><dt>Author</dt><dd>David de Lorenzo</dd></dl>
+<hr  />
+<p >Pour les messages de type QUERY, on a des informations dans les balises:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Balise   </th><th class="markdownTableHeadNone">Query   </th><th class="markdownTableHeadNone">Response   </th><th class="markdownTableHeadNone">Utilisé    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone" colspan="4"><b>System</b> contains:    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&lt;TimeCreated SystemTime="2020-06-22T14:31:17.9755137Z" /&gt;   </td><td class="markdownTableBodyNone">x   </td><td class="markdownTableBodyNone">x   </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&lt;Correlation ActivityID="{dee19e7b-5fba-4adc-8197-2aee3c2e6557}" /&gt;   </td><td class="markdownTableBodyNone">x   </td><td class="markdownTableBodyNone">x   </td><td class="markdownTableBodyNone">x    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&lt;Computer&gt; 00XDSVMAM03200 &lt;/Computer&gt;   </td><td class="markdownTableBodyNone">x   </td><td class="markdownTableBodyNone">x   </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone" colspan="4"><b>HttpRequest</b> contains:    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&lt;Host&gt; 172.18.146.32 &lt;/Host&gt;   </td><td class="markdownTableBodyNone">x   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">x    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone" colspan="4"><b>MessageLogTraceRecord</b> contains:    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&lt;MessageLogTraceRecord Time="2020-06-22T14:31:17.9755137+00:00" &gt;   </td><td class="markdownTableBodyNone">x   </td><td class="markdownTableBodyNone">x   </td><td class="markdownTableBodyNone">x    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&lt;MessageLogTraceRecord Source="TransportReceive" &gt;   </td><td class="markdownTableBodyNone">x   </td><td class="markdownTableBodyNone">x   </td><td class="markdownTableBodyNone">x    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&lt;To&gt; <a href="http://00xdsvmam03200.paris.tv5monde.org/VEDA.SOA/Session.svc?wsdl">http://00xdsvmam03200.paris.tv5monde.org/VEDA.SOA/Session.svc?wsdl</a> &lt;/To&gt;   </td><td class="markdownTableBodyNone">x   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">x    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&lt;Action&gt; <a href="http://www.sgt.eu/VEDA.SOA/Session.v1/Session/OpenOrReuse">http://www.sgt.eu/VEDA.SOA/Session.v1/Session/OpenOrReuse</a> &lt;/Action&gt;   </td><td class="markdownTableBodyNone">x   </td><td class="markdownTableBodyNone">x   </td><td class="markdownTableBodyNone">x    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&lt;SOAPAction&gt; "http://www.sgt.eu/VEDA.SOA/Session.v1/Session/OpenOrReuse" &lt;/SOAPAction&gt;   </td><td class="markdownTableBodyNone">x   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td></tr>
+</table>
+<p >Pour les messages de type RESPONSE, on a des informations dans les balises:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Balise   </th><th class="markdownTableHeadNone">Query   </th><th class="markdownTableHeadNone">Response   </th><th class="markdownTableHeadNone">Utilisé    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone" colspan="4"><b>System</b> contains:    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&lt;TimeCreated SystemTime="2020-06-22T14:31:17.9755137Z" /&gt;   </td><td class="markdownTableBodyNone">x   </td><td class="markdownTableBodyNone">x   </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&lt;Correlation ActivityID="{dee19e7b-5fba-4adc-8197-2aee3c2e6557}" /&gt;   </td><td class="markdownTableBodyNone">x   </td><td class="markdownTableBodyNone">x   </td><td class="markdownTableBodyNone">x    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&lt;Computer&gt; 00XDSVMAM03200 &lt;/Computer&gt;   </td><td class="markdownTableBodyNone">x   </td><td class="markdownTableBodyNone">x   </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone" colspan="4"><b>MessageLogTraceRecord</b> contains:    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&lt;MessageLogTraceRecord Time="2020-06-22T14:31:17.9755137+00:00"&gt;   </td><td class="markdownTableBodyNone">x   </td><td class="markdownTableBodyNone">x   </td><td class="markdownTableBodyNone">x    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&lt;MessageLogTraceRecord Source="TransportSend" &gt;   </td><td class="markdownTableBodyNone">x   </td><td class="markdownTableBodyNone">x   </td><td class="markdownTableBodyNone">x    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&lt;Action&gt; <a href="http://www.sgt.eu/VEDA.SOA/Session.v1/Session/OpenOrReuseResponse">http://www.sgt.eu/VEDA.SOA/Session.v1/Session/OpenOrReuseResponse</a> &lt;/Action&gt;   </td><td class="markdownTableBodyNone">x   </td><td class="markdownTableBodyNone">x   </td><td class="markdownTableBodyNone">x    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&lt;ActivityId&gt; dee19e7b-5fba-4adc-8197-2aee3c2e6557 &lt;/ActivityId&gt;   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">x   </td><td class="markdownTableBodyNone"></td></tr>
+</table>
+<hr  />
+ </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a7cec798e24d43830ffc8292ff55c67a7" name="a7cec798e24d43830ffc8292ff55c67a7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7cec798e24d43830ffc8292ff55c67a7">&#9670;&nbsp;</a></span>append()</h2>
 

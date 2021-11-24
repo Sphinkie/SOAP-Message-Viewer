@@ -25,6 +25,17 @@
 var NAVTREE =
 [
   [ "SOAP-Message-Viewer", "index.html", [
+    [ "Documentation intégrée", "md__r_e_a_d_m_e.html", [
+      [ "Balises utilisées", "md__r_e_a_d_m_e.html#autotoc_md1", [
+        [ "Mise en page", "md__r_e_a_d_m_e.html#autotoc_md2", null ]
+      ] ],
+      [ "Balises non utilisées", "md__r_e_a_d_m_e.html#autotoc_md3", null ],
+      [ "Sections doxygen", "md__r_e_a_d_m_e.html#autotoc_md4", null ],
+      [ "Balises à rajouter dans doxyfile", "md__r_e_a_d_m_e.html#autotoc_md5", [
+        [ "Balises pour compatibilité Qt", "md__r_e_a_d_m_e.html#autotoc_md6", null ]
+      ] ],
+      [ "Bibliographie", "md__r_e_a_d_m_e.html#autotoc_md7", null ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

@@ -70,38 +70,52 @@ $(document).ready(function(){initNavTree('_file_repair_8h_source.html',''); init
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;cstring&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_file_repair.html">    7</a></span><span class="keyword">class </span><a class="code hl_class" href="class_file_repair.html">FileRepair</a></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keywordtype">bool</span> openSVCfile(std::string filename);</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordtype">bool</span> isSvcLog(<span class="keyword">const</span> <span class="keywordtype">char</span>* filename);</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">void</span> repair();</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">void</span> close();</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">bool</span> replaceGtLt(<span class="keywordtype">char</span> lettre);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">bool</span> replaceiNil(<span class="keywordtype">char</span> lettre);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">bool</span> replaceXsiNil(<span class="keywordtype">char</span> lettre);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">void</span> trackOpeningTags();</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">void</span> trackClosingTags();</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">void</span> closeOpenedTags();</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">bool</span> removeBalise(std::string name);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> removeLastTag();</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    std::ifstream fichierSVC;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    std::ofstream fichierXML;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">struct </span>Balise</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        std::string  TagName  = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        Balise* Previous = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    } ;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    Balise* lastBalise = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    std::streamoff lastTagPosition = 0;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>};</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="ttc" id="aclass_file_repair_html"><div class="ttname"><a href="class_file_repair.html">FileRepair</a></div><div class="ttdef"><b>Definition:</b> FileRepair.h:8</div></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_file_repair.html">   19</a></span><span class="keyword">class </span><a class="code hl_class" href="class_file_repair.html">FileRepair</a></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_file_repair.html#a5b47bb493dd6badf67ebd399ae13367e">openSVCfile</a>(std::string filename);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_file_repair.html#a74ae5712f091f566d11c212a44e81950">isSvcLog</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filename);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_file_repair.html#a9e9229df812c8351abbaea0f96f336f0">repair</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_file_repair.html#a064582b19814d82fb8c5137fda1d7094">close</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_file_repair.html#a91ecf74a31640bffdd4d308c44105f04">replaceGtLt</a>(<span class="keywordtype">char</span> lettre);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_file_repair.html#aa1043f0f97c792327377eed7a7c3df0f">replaceiNil</a>(<span class="keywordtype">char</span> lettre);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_file_repair.html#a8bea06220aa958d844d9c51c705988d2">replaceXsiNil</a>(<span class="keywordtype">char</span> lettre);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_file_repair.html#a69421bd59321390013c4e8da7cb912e4">trackOpeningTags</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_file_repair.html#accdb1c0f164c503c2f99cff3753121a2">trackClosingTags</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_file_repair.html#a20377fbaafa5c5ee51de39c50814d46c">closeOpenedTags</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_file_repair.html#adfb4a199a4a638a22a41e98af22041a1">removeBalise</a>(std::string name);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_file_repair.html#a7cbd4de0b31fc488abf1b530533e0ee9">removeLastTag</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    std::ifstream fichierSVC;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    std::ofstream fichierXML;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="struct_file_repair_1_1_balise.html">   40</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_file_repair_1_1_balise.html">Balise</a></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        std::string  TagName  = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <a class="code hl_struct" href="struct_file_repair_1_1_balise.html">Balise</a>* Previous = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    } ;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_struct" href="struct_file_repair_1_1_balise.html">Balise</a>* lastBalise = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    std::streamoff lastTagPosition = 0;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>};</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="ttc" id="aclass_file_repair_html"><div class="ttname"><a href="class_file_repair.html">FileRepair</a></div><div class="ttdoc">La classe FileRepair ouvre un fichier .SCVLOG dont des messages sont tronqués au début ou à la fin,...</div><div class="ttdef"><b>Definition:</b> FileRepair.h:20</div></div>
+<div class="ttc" id="aclass_file_repair_html_a064582b19814d82fb8c5137fda1d7094"><div class="ttname"><a href="class_file_repair.html#a064582b19814d82fb8c5137fda1d7094">FileRepair::close</a></div><div class="ttdeci">void close()</div><div class="ttdoc">Referme les fichiers.</div><div class="ttdef"><b>Definition:</b> FileRepair.cpp:111</div></div>
+<div class="ttc" id="aclass_file_repair_html_a20377fbaafa5c5ee51de39c50814d46c"><div class="ttname"><a href="class_file_repair.html#a20377fbaafa5c5ee51de39c50814d46c">FileRepair::closeOpenedTags</a></div><div class="ttdeci">void closeOpenedTags()</div><div class="ttdoc">On ferme les balises qui ne seraient pas fermées.</div><div class="ttdef"><b>Definition:</b> FileRepair.cpp:352</div></div>
+<div class="ttc" id="aclass_file_repair_html_a5b47bb493dd6badf67ebd399ae13367e"><div class="ttname"><a href="class_file_repair.html#a5b47bb493dd6badf67ebd399ae13367e">FileRepair::openSVCfile</a></div><div class="ttdeci">bool openSVCfile(std::string filename)</div><div class="ttdoc">Ouverture des fichiers SVCLOG (input) et XML (output).</div><div class="ttdef"><b>Definition:</b> FileRepair.cpp:12</div></div>
+<div class="ttc" id="aclass_file_repair_html_a69421bd59321390013c4e8da7cb912e4"><div class="ttname"><a href="class_file_repair.html#a69421bd59321390013c4e8da7cb912e4">FileRepair::trackOpeningTags</a></div><div class="ttdeci">void trackOpeningTags()</div><div class="ttdoc">Après la lecture d'un caractère '&lt;', on teste si c'est &quot;&lt;balise&gt;&quot; ou &quot;&lt;/balise&gt;&quot; ou &quot;&lt;balise/&gt;&quot; ou &quot;&lt;...</div><div class="ttdef"><b>Definition:</b> FileRepair.cpp:284</div></div>
+<div class="ttc" id="aclass_file_repair_html_a74ae5712f091f566d11c212a44e81950"><div class="ttname"><a href="class_file_repair.html#a74ae5712f091f566d11c212a44e81950">FileRepair::isSvcLog</a></div><div class="ttdeci">bool isSvcLog(const char *filename)</div><div class="ttdoc">Verifie si l'extension du fichier est bien .svclog.</div><div class="ttdef"><b>Definition:</b> FileRepair.cpp:37</div></div>
+<div class="ttc" id="aclass_file_repair_html_a7cbd4de0b31fc488abf1b530533e0ee9"><div class="ttname"><a href="class_file_repair.html#a7cbd4de0b31fc488abf1b530533e0ee9">FileRepair::removeLastTag</a></div><div class="ttdeci">void removeLastTag()</div><div class="ttdoc">Supprime la dernière balise de la liste chainée (supposément tronquée).</div><div class="ttdef"><b>Definition:</b> FileRepair.cpp:269</div></div>
+<div class="ttc" id="aclass_file_repair_html_a8bea06220aa958d844d9c51c705988d2"><div class="ttname"><a href="class_file_repair.html#a8bea06220aa958d844d9c51c705988d2">FileRepair::replaceXsiNil</a></div><div class="ttdeci">bool replaceXsiNil(char lettre)</div><div class="ttdoc">Traitement des attributs xsi:nil=&quot;true&quot; Ces attributs posent des problèmes aux parsers XML,...</div><div class="ttdef"><b>Definition:</b> FileRepair.cpp:199</div></div>
+<div class="ttc" id="aclass_file_repair_html_a91ecf74a31640bffdd4d308c44105f04"><div class="ttname"><a href="class_file_repair.html#a91ecf74a31640bffdd4d308c44105f04">FileRepair::replaceGtLt</a></div><div class="ttdeci">bool replaceGtLt(char lettre)</div><div class="ttdoc">Traitement particulier pour les caractères &lt; et &gt;. Ajoute un saut de ligne entre &gt; (GreaterThan) et &lt;...</div><div class="ttdef"><b>Definition:</b> FileRepair.cpp:125</div></div>
+<div class="ttc" id="aclass_file_repair_html_a9e9229df812c8351abbaea0f96f336f0"><div class="ttname"><a href="class_file_repair.html#a9e9229df812c8351abbaea0f96f336f0">FileRepair::repair</a></div><div class="ttdeci">void repair()</div><div class="ttdoc">Parcourt le fichier SVCLOG et effectue les remplacements nécessaires pour le transformer en un fichie...</div><div class="ttdef"><b>Definition:</b> FileRepair.cpp:54</div></div>
+<div class="ttc" id="aclass_file_repair_html_aa1043f0f97c792327377eed7a7c3df0f"><div class="ttname"><a href="class_file_repair.html#aa1043f0f97c792327377eed7a7c3df0f">FileRepair::replaceiNil</a></div><div class="ttdeci">bool replaceiNil(char lettre)</div><div class="ttdoc">Traitement des attributs i:nil=&quot;true&quot; Ces attributs posent des problèmes aux parsers XML,...</div><div class="ttdef"><b>Definition:</b> FileRepair.cpp:159</div></div>
+<div class="ttc" id="aclass_file_repair_html_accdb1c0f164c503c2f99cff3753121a2"><div class="ttname"><a href="class_file_repair.html#accdb1c0f164c503c2f99cff3753121a2">FileRepair::trackClosingTags</a></div><div class="ttdeci">void trackClosingTags()</div><div class="ttdoc">Après la lecture d'un caractère '/', on lit le caractère suivant. Si la suivante est &quot;/&gt;&quot;,...</div><div class="ttdef"><b>Definition:</b> FileRepair.cpp:329</div></div>
+<div class="ttc" id="aclass_file_repair_html_adfb4a199a4a638a22a41e98af22041a1"><div class="ttname"><a href="class_file_repair.html#adfb4a199a4a638a22a41e98af22041a1">FileRepair::removeBalise</a></div><div class="ttdeci">bool removeBalise(std::string name)</div><div class="ttdoc">Recherche et suppression d'une Balise donnée dans la liste chainée.</div><div class="ttdef"><b>Definition:</b> FileRepair.cpp:235</div></div>
+<div class="ttc" id="astruct_file_repair_1_1_balise_html"><div class="ttname"><a href="struct_file_repair_1_1_balise.html">FileRepair::Balise</a></div><div class="ttdef"><b>Definition:</b> FileRepair.h:41</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

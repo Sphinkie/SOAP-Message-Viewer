@@ -1,13 +1,14 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-/* ************************************************************************************************
- * Fenetre principale
- * ************************************************************************************************ */
+
+/** ************************************************************************************************
+ * @brief Cette fonction définit la fenêtre principale.
+ * @param parent
+ * *************************************************************************************************/
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
     // ui->verticalLayout_1->setSizeConstraint(1200);
     // QObject::connect(m_boutonDialogue, SIGNAL(clicked()), this, SLOT(addListItem()));
     // QFont FontRegular("Candara", 10, QFont::Medium);
@@ -18,9 +19,11 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     ui->w_MessageTable->setColumnWidth(0,160);   // on élargit la colonne "tag"
 }
 
-/* ************************************************************************************************
- * Ajoute un item à la liste des messages.
- * ************************************************************************************************ */
+
+/** ************************************************************************************************
+ * @brief Ajoute un item à la liste des messages.
+ * @param texte
+ * *************************************************************************************************/
 void MainWindow::addListItem(std::string texte)
 {
     // Ajoute le texte à la liste
@@ -44,8 +47,8 @@ void MainWindow::addListItem(std::string texte)
         w->setIcon(arrowRightIcon);
     else
         w->setIcon(arrowLeftIcon);
-
 }
+
 
 /* ************************************************************************************************
  * Menu: OPEN SVCLOG FILE

@@ -7,6 +7,11 @@
 #include <fstream>
 #include <stdlib.h>     // pour strcpy_s
 
+/** ****************************************************************************************
+ * @brief  La classe /b statique Messages gère la liste des messages SOAP échangés.
+ *         Tous les membres de la classe sont statiques: Pas besoin d'instancier la classe.
+ * @author David de Lorenzo
+ * *****************************************************************************************/
 class Messages
 {
 public:
@@ -43,6 +48,7 @@ public:
     // recherches
     static bool        containsMessageBody(int index, std::string substring);
 
+    /** Structure descriptive d'un Message SOAP extrait du fichier SVCLOG. */
     struct Message
     {
         std::string host;                     //!< Hostname ou adresse IP de l'emetteur du message.
@@ -69,38 +75,40 @@ private:
 #endif // MESSAGES_H
 
 
-/* *********************************************************************************
+/** ****************************************************************************************
+ * @class Messages
  *
- * (RR: Balise présente dans Request+Response)
- * (**: les balises utilisées)
+ * @details
  *
- * Pour les messages de type REQUEST, on a des informations dans les balises:
+ * Pour les messages de type QUERY, on a des informations dans les balises:
  *
- * <System> contient:
- * RR     <TimeCreated SystemTime="2020-06-22T14:31:17.9755137Z" />
- * RR **  <Correlation ActivityID="{dee19e7b-5fba-4adc-8197-2aee3c2e6557}" />
- * RR     <Computer> 00XDSVMAM03200 </Computer>
- * <HttpRequest> contient:
- * R- **  <Host>172.18.146.32</Host>
- * <MessageLogTraceRecord> contient:
- * RR **  <MessageLogTraceRecord Time="2020-06-22T14:31:17.9755137+00:00" >
- * RR **  <MessageLogTraceRecord Source="TransportReceive" >
- * R- **  <To> http://00xdsvmam03200.paris.tv5monde.org/VEDA.SOA/Session.svc?wsdl </To>
- * RR **  <Action> http://www.sgt.eu/VEDA.SOA/Session.v1/Session/OpenOrReuse </Action>
- * <Non utilisé>:
- * R-     <SOAPAction> "http://www.sgt.eu/VEDA.SOA/Session.v1/Session/OpenOrReuse" </SOAPAction>
+ * | Balise | Query | Response | Utilisé |
+ * | ------ | ----- | -------- | ------- |
+ * |\b System contains: ||||
+ * |\<TimeCreated SystemTime="2020-06-22T14:31:17.9755137Z" />|x|x| |
+ * |\<Correlation ActivityID="{dee19e7b-5fba-4adc-8197-2aee3c2e6557}" />|x|x|x|
+ * |\<Computer> 00XDSVMAM03200 \</Computer>|x|x| |
+ * |\b HttpRequest contains: ||||
+ * |\<Host> 172.18.146.32 \</Host>|x| |x|
+ * |\b MessageLogTraceRecord contains: ||||
+ * |\<MessageLogTraceRecord Time="2020-06-22T14:31:17.9755137+00:00" >|x|x|x|
+ * |\<MessageLogTraceRecord Source="TransportReceive" >|x|x|x|
+ * |\<To> http://00xdsvmam03200.paris.tv5monde.org/VEDA.SOA/Session.svc?wsdl \</To>|x| |x|
+ * |\<Action> http://www.sgt.eu/VEDA.SOA/Session.v1/Session/OpenOrReuse \</Action>|x|x|x|
+ * |\<SOAPAction> "http://www.sgt.eu/VEDA.SOA/Session.v1/Session/OpenOrReuse" \</SOAPAction>|x| | |
  *
- * Pour les messages de type RESPONSE:
+ * Pour les messages de type RESPONSE, on a des informations dans les balises:
  *
- * <System> contient:
- * RR     <TimeCreated SystemTime="2020-06-22T14:31:17.9755137Z" />
- * RR **  <Correlation ActivityID="{dee19e7b-5fba-4adc-8197-2aee3c2e6557}" />
- * RR     <Computer> 00XDSVMAM03200 </Computer>
- * <MessageLogTraceRecord> contient:
- * RR **  <MessageLogTraceRecord Time="2020-06-22T14:31:17.9755137+00:00">
- * RR **  <MessageLogTraceRecord Source="TransportSend" >
- * RR **  <Action> http://www.sgt.eu/VEDA.SOA/Session.v1/Session/OpenOrReuseResponse </Action>
- * <Non utilisé>:
- * -R     <ActivityId> dee19e7b-5fba-4adc-8197-2aee3c2e6557 </ActivityId>
+ * | Balise | Query | Response | Utilisé |
+ * | ------ | ----- | -------- | ------- |
+ * |\b System contains: ||||
+ * |\<TimeCreated SystemTime="2020-06-22T14:31:17.9755137Z" />|x|x| |
+ * |\<Correlation ActivityID="{dee19e7b-5fba-4adc-8197-2aee3c2e6557}" />|x|x|x|
+ * |\<Computer> 00XDSVMAM03200 \</Computer>|x|x| |
+ * |\b MessageLogTraceRecord contains: ||||
+ * |\<MessageLogTraceRecord Time="2020-06-22T14:31:17.9755137+00:00">|x|x|x|
+ * |\<MessageLogTraceRecord Source="TransportSend" >|x|x|x|
+ * |\<Action> http://www.sgt.eu/VEDA.SOA/Session.v1/Session/OpenOrReuseResponse \</Action>|x|x|x|
+ * |\<ActivityId> dee19e7b-5fba-4adc-8197-2aee3c2e6557 \</ActivityId>| |x| |
  *
  * *************************************************************************************** */
