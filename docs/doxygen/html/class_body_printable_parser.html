@@ -65,8 +65,6 @@ $(document).ready(function(){initNavTree('class_body_printable_parser.html','');
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_body_printable_parser-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">BodyPrintableParser Class Reference</div></div>
 </div><!--header-->
@@ -77,11 +75,6 @@ $(document).ready(function(){initNavTree('class_body_printable_parser.html','');
 
 <p><code>#include &lt;<a class="el" href="_body_printable_parser_8h_source.html">BodyPrintableParser.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_body_printable_parser_1_1_user_data.html">UserData</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a688e1cef21ccc9518bb83b3ee2f235ae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_body_printable_parser.html#a688e1cef21ccc9518bb83b3ee2f235ae">BodyPrintableParser</a> (std::string filename)</td></tr>
@@ -96,39 +89,18 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a6ed990b1d35fb3a684ab21e9258e151f"><td class="memItemLeft" align="right" valign="top">static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_body_printable_parser.html#a6ed990b1d35fb3a684ab21e9258e151f">startElementHandler</a> (void *<a class="el" href="class_body_printable_parser.html#abfa05292b83d6c7483227602956796aa">userData</a>, const XML_Char *name, const XML_Char **attrs)</td></tr>
+<tr class="memitem:a6ed990b1d35fb3a684ab21e9258e151f"><td class="memItemLeft" align="right" valign="top">static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_body_printable_parser.html#a6ed990b1d35fb3a684ab21e9258e151f">startElementHandler</a> (void *userData, const XML_Char *name, const XML_Char **attrs)</td></tr>
 <tr class="memdesc:a6ed990b1d35fb3a684ab21e9258e151f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handler appelé à chaque balise ouvrante. On écrit le nom de la balise et les attributs dans le fichier texte.  <a href="class_body_printable_parser.html#a6ed990b1d35fb3a684ab21e9258e151f">More...</a><br /></td></tr>
 <tr class="separator:a6ed990b1d35fb3a684ab21e9258e151f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53b372ad75c1fd3a06cd9773cc86a6dc"><td class="memItemLeft" align="right" valign="top">static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_body_printable_parser.html#a53b372ad75c1fd3a06cd9773cc86a6dc">endElementHandler</a> (void *<a class="el" href="class_body_printable_parser.html#abfa05292b83d6c7483227602956796aa">userData</a>, const XML_Char *name)</td></tr>
+<tr class="memitem:a53b372ad75c1fd3a06cd9773cc86a6dc"><td class="memItemLeft" align="right" valign="top">static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_body_printable_parser.html#a53b372ad75c1fd3a06cd9773cc86a6dc">endElementHandler</a> (void *userData, const XML_Char *name)</td></tr>
 <tr class="memdesc:a53b372ad75c1fd3a06cd9773cc86a6dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ce Handler est appelé à chaque balise fermante. On écrit le nom de la balise dans le fichier texte.  <a href="class_body_printable_parser.html#a53b372ad75c1fd3a06cd9773cc86a6dc">More...</a><br /></td></tr>
 <tr class="separator:a53b372ad75c1fd3a06cd9773cc86a6dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bd6e5660b26769f67d9bf00c2d42c5a"><td class="memItemLeft" align="right" valign="top">static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_body_printable_parser.html#a8bd6e5660b26769f67d9bf00c2d42c5a">commentHandler</a> (void *<a class="el" href="class_body_printable_parser.html#abfa05292b83d6c7483227602956796aa">userData</a>, const XML_Char *data)</td></tr>
+<tr class="memitem:a8bd6e5660b26769f67d9bf00c2d42c5a"><td class="memItemLeft" align="right" valign="top">static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_body_printable_parser.html#a8bd6e5660b26769f67d9bf00c2d42c5a">commentHandler</a> (void *userData, const XML_Char *data)</td></tr>
 <tr class="memdesc:a8bd6e5660b26769f67d9bf00c2d42c5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ce Handler est appelé à chaque fois qu'il y a un Commentaire. On écrit le texte du commentaire dans le fichier texte.  <a href="class_body_printable_parser.html#a8bd6e5660b26769f67d9bf00c2d42c5a">More...</a><br /></td></tr>
 <tr class="separator:a8bd6e5660b26769f67d9bf00c2d42c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32e89c8c61552d66f0b917c78c01808c"><td class="memItemLeft" align="right" valign="top">static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_body_printable_parser.html#a32e89c8c61552d66f0b917c78c01808c">dataHandler</a> (void *<a class="el" href="class_body_printable_parser.html#abfa05292b83d6c7483227602956796aa">userData</a>, const XML_Char *content, int length)</td></tr>
+<tr class="memitem:a32e89c8c61552d66f0b917c78c01808c"><td class="memItemLeft" align="right" valign="top">static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_body_printable_parser.html#a32e89c8c61552d66f0b917c78c01808c">dataHandler</a> (void *userData, const XML_Char *content, int length)</td></tr>
 <tr class="memdesc:a32e89c8c61552d66f0b917c78c01808c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ce Handler est appelé à chaque fois qu'il y a un contenu textuel. On écrit le contenu textuel dans le fichier texte.  <a href="class_body_printable_parser.html#a32e89c8c61552d66f0b917c78c01808c">More...</a><br /></td></tr>
 <tr class="separator:a32e89c8c61552d66f0b917c78c01808c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:abfa05292b83d6c7483227602956796aa"><td class="memItemLeft" align="right" valign="top"><a id="abfa05292b83d6c7483227602956796aa" name="abfa05292b83d6c7483227602956796aa"></a>
-<a class="el" href="struct_body_printable_parser_1_1_user_data.html">UserData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>userData</b></td></tr>
-<tr class="memdesc:abfa05292b83d6c7483227602956796aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Données temporaire d'analyse du flux. <br /></td></tr>
-<tr class="separator:abfa05292b83d6c7483227602956796aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adad1e0459b75c08954ee568b8453241f"><td class="memItemLeft" align="right" valign="top"><a id="adad1e0459b75c08954ee568b8453241f" name="adad1e0459b75c08954ee568b8453241f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isGood</b> = true</td></tr>
-<tr class="memdesc:adad1e0459b75c08954ee568b8453241f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indique si le fichier a bien pu être ouvert. <br /></td></tr>
-<tr class="separator:adad1e0459b75c08954ee568b8453241f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
-Static Private Attributes</h2></td></tr>
-<tr class="memitem:ae616f13686078094670a1c88ec8d0fe7"><td class="memItemLeft" align="right" valign="top">static std::ofstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_body_printable_parser.html#ae616f13686078094670a1c88ec8d0fe7">fichierBody</a></td></tr>
-<tr class="memdesc:ae616f13686078094670a1c88ec8d0fe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le fichier à écrire.  <a href="class_body_printable_parser.html#ae616f13686078094670a1c88ec8d0fe7">More...</a><br /></td></tr>
-<tr class="separator:ae616f13686078094670a1c88ec8d0fe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d8a26bd47ef58c9285cbb0af220f87b"><td class="memItemLeft" align="right" valign="top"><a id="a7d8a26bd47ef58c9285cbb0af220f87b" name="a7d8a26bd47ef58c9285cbb0af220f87b"></a>
-static const long&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_BODY_SIZE</b> = 1024*512</td></tr>
-<tr class="memdesc:a7d8a26bd47ef58c9285cbb0af220f87b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le buffer de Expat v2.2 était limité à 32kB. Avec Expat v2.4, cela semble fonctionner avec 512kB... <br /></td></tr>
-<tr class="separator:a7d8a26bd47ef58c9285cbb0af220f87b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >La classe <b>statique</b> <a class="el" href="class_body_printable_parser.html" title="La classe statique BodyPrintableParser parse le flux XML d&#39;un Body, et l&#39;écrit dans un fichier texte.">BodyPrintableParser</a> parse le flux XML d'un Body, et l'écrit dans un fichier texte. </p>
@@ -413,32 +385,6 @@ static const long&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_BODY
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="ae616f13686078094670a1c88ec8d0fe7" name="ae616f13686078094670a1c88ec8d0fe7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae616f13686078094670a1c88ec8d0fe7">&#9670;&nbsp;</a></span>fichierBody</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ofstream BodyPrintableParser::fichierBody</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Le fichier à écrire. </p>
-<p >Fichier XML généré. </p>
 
 </div>
 </div>

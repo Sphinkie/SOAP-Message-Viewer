@@ -65,8 +65,6 @@ $(document).ready(function(){initNavTree('class_file_converter.html',''); initRe
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_file_converter-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">FileConverter Class Reference</div></div>
 </div><!--header-->
@@ -77,11 +75,6 @@ $(document).ready(function(){initNavTree('class_file_converter.html',''); initRe
 
 <p><code>#include &lt;<a class="el" href="_file_converter_8h_source.html">FileConverter.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_file_converter_1_1_user_data.html">UserData</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7dd2ffdedaea84f5373d653a0c17a844"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_converter.html#a7dd2ffdedaea84f5373d653a0c17a844">open</a> (std::string filename)</td></tr>
@@ -111,38 +104,6 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a0faf186ae12cab744fe43f0794bdb5c2"><td class="memItemLeft" align="right" valign="top">static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_converter.html#a0faf186ae12cab744fe43f0794bdb5c2">dataHandler</a> (void *userData, const XML_Char *content, int length)</td></tr>
 <tr class="memdesc:a0faf186ae12cab744fe43f0794bdb5c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ce Handler est appelé à chaque fois qu'il y a un contenu textuel. On écrit le contenu textuel dans le fichier de sortie.  <a href="class_file_converter.html#a0faf186ae12cab744fe43f0794bdb5c2">More...</a><br /></td></tr>
 <tr class="separator:a0faf186ae12cab744fe43f0794bdb5c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a15bbd71e3ad46282d552fd1f87f51a32"><td class="memItemLeft" align="right" valign="top"><a id="a15bbd71e3ad46282d552fd1f87f51a32" name="a15bbd71e3ad46282d552fd1f87f51a32"></a>
-std::ifstream&#160;</td><td class="memItemRight" valign="bottom"><b>fichierSVC</b></td></tr>
-<tr class="separator:a15bbd71e3ad46282d552fd1f87f51a32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ee5ffcd497ff08e9455cd9970c9d79e"><td class="memItemLeft" align="right" valign="top"><a id="a2ee5ffcd497ff08e9455cd9970c9d79e" name="a2ee5ffcd497ff08e9455cd9970c9d79e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isReady</b> =false</td></tr>
-<tr class="separator:a2ee5ffcd497ff08e9455cd9970c9d79e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad124cfbe126e39fd42d518d1329ed1fd"><td class="memItemLeft" align="right" valign="top"><a id="ad124cfbe126e39fd42d518d1329ed1fd" name="ad124cfbe126e39fd42d518d1329ed1fd"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>errorMessage</b></td></tr>
-<tr class="separator:ad124cfbe126e39fd42d518d1329ed1fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ae3e5cac4c753a1dc64ad079526bd61"><td class="memItemLeft" align="right" valign="top"><a id="a2ae3e5cac4c753a1dc64ad079526bd61" name="a2ae3e5cac4c753a1dc64ad079526bd61"></a>
-<a class="el" href="struct_file_converter_1_1_user_data.html">UserData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>userData</b></td></tr>
-<tr class="separator:a2ae3e5cac4c753a1dc64ad079526bd61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
-Static Private Attributes</h2></td></tr>
-<tr class="memitem:a5f9716e656e82bbfb8fa26becdfe9ea8"><td class="memItemLeft" align="right" valign="top"><a id="a5f9716e656e82bbfb8fa26becdfe9ea8" name="a5f9716e656e82bbfb8fa26becdfe9ea8"></a>
-static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>contentData</b></td></tr>
-<tr class="separator:a5f9716e656e82bbfb8fa26becdfe9ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbc20cd4c1d493b184e31c30c4832edf"><td class="memItemLeft" align="right" valign="top"><a id="acbc20cd4c1d493b184e31c30c4832edf" name="acbc20cd4c1d493b184e31c30c4832edf"></a>
-static std::ofstream&#160;</td><td class="memItemRight" valign="bottom"><b>fichierFASTER</b></td></tr>
-<tr class="memdesc:acbc20cd4c1d493b184e31c30c4832edf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le fichier généré. <br /></td></tr>
-<tr class="separator:acbc20cd4c1d493b184e31c30c4832edf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a428b222489db582448db610c260130b3"><td class="memItemLeft" align="right" valign="top"><a id="a428b222489db582448db610c260130b3" name="a428b222489db582448db610c260130b3"></a>
-static std::stack&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>baliseStack</b></td></tr>
-<tr class="separator:a428b222489db582448db610c260130b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21b7738e61e2c3128ddf738bf7c5b297"><td class="memItemLeft" align="right" valign="top"><a id="a21b7738e61e2c3128ddf738bf7c5b297" name="a21b7738e61e2c3128ddf738bf7c5b297"></a>
-static const long&#160;</td><td class="memItemRight" valign="bottom"><b>BUFFER_SIZE</b> = 1024*8</td></tr>
-<tr class="memdesc:a21b7738e61e2c3128ddf738bf7c5b297"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recommandation Expat: doit etre largement en dessous de INT_MAX soit 32.767. <br /></td></tr>
-<tr class="separator:a21b7738e61e2c3128ddf738bf7c5b297"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p ><a class="el" href="class_file_converter.html" title="FileConverter transforme un fichier .SCVLOG en un fichier .FASTER.XML en supprimant des balises inuti...">FileConverter</a> transforme un fichier <code></code>.SCVLOG en un fichier <code></code>.FASTER.XML en supprimant des balises inutiles, ce qui accélère les futurs parsings du fichier. </p>

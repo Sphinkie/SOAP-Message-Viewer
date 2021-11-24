@@ -29,7 +29,7 @@ Par contre, on n'utilise pas la fonctionnalité [Qdoc de Qt](https://doc.qt.io/q
 * `\e word` : le mot est mis en *italique*
 * `\b word` : le mot est mis en **gras**
 * `\c word` : le mot est mis en police console
-* `\verbatim .... \endverbatim` : le texte est inclus tel quel dans la documentation (voir aussi `\xmlonly`)
+* `\verbatim .... \endverbatim` : le texte est inclus tel quel dans la documentation 
 
 
 ## Balises non utilisées
@@ -77,18 +77,15 @@ QHP_VIRTUAL_FOLDER     = doc
 QHG_LOCATION           = qhelpgenerator
 ```
 
-The name of the *.qch* file can be whatever you choose, as is the QHP namespace. 
+Le nom du fichier *.qch* et du namespace peuvent être choisis librement. 
 
-An important note is that the *qhelpgenerator* tool has to be on your path. I normally add the following setting to my **$PATH** variable :
+Note importante : l'outil *qhelpgenerator* doit être dans le PATH.
 
 ```ini
 QT_TOOL_BIN = $HOME/Qt/5.13.1/gcc_64/bin
 export PATH = $PATH:$HOME/.bin:$QT_TOOL_BIN
 ```
-
-https://www.sinax.be/blog/software-development/display-doxygen-generated-docs-in-qt-creator.html
-
-
+Voir à ce sujet, le site de [synax](https://www.sinax.be/blog/software-development/display-doxygen-generated-docs-in-qt-creator.html).
 
 Affichage des fonctions et variables privées dans la documentation:
 

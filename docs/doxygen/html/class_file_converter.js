@@ -1,6 +1,5 @@
 var class_file_converter =
 [
-    [ "UserData", "struct_file_converter_1_1_user_data.html", null ],
     [ "close", "class_file_converter.html#a639603c1ff45403ae3dbb5b33d944f8d", null ],
     [ "convert", "class_file_converter.html#a4f8a52d21a65fde924984a31e3bcd4a4", null ],
     [ "getErrorMessage", "class_file_converter.html#a98685cbacec0fa9aa80148c7f46f7a02", null ],

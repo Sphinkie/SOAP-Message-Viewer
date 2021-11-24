@@ -1,6 +1,5 @@
 var hierarchy =
 [
-    [ "FileRepair::Balise", "struct_file_repair_1_1_balise.html", null ],
     [ "BodyPrintableParser", "class_body_printable_parser.html", null ],
     [ "BodyTableParser", "class_body_table_parser.html", null ],
     [ "BodyTextParser", "class_body_text_parser.html", null ],
@@ -14,8 +13,5 @@ var hierarchy =
     [ "Messages", "class_messages.html", null ],
     [ "QMainWindow", null, [
       [ "MainWindow", "class_main_window.html", null ]
-    ] ],
-    [ "BodyPrintableParser::UserData", "struct_body_printable_parser_1_1_user_data.html", null ],
-    [ "FileConverter::UserData", "struct_file_converter_1_1_user_data.html", null ],
-    [ "FileParser::UserData", "struct_file_parser_1_1_user_data.html", null ]
+    ] ]
 ];

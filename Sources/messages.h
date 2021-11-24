@@ -8,7 +8,7 @@
 #include <stdlib.h>     // pour strcpy_s
 
 /** ****************************************************************************************
- * @brief  La classe /b statique Messages gère la liste des messages SOAP échangés.
+ * @brief  La classe \b statique Messages gère la liste des messages SOAP échangés.
  *         Tous les membres de la classe sont statiques: Pas besoin d'instancier la classe.
  * @author David de Lorenzo
  * *****************************************************************************************/

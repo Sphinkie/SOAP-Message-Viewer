@@ -63,7 +63,6 @@ $(document).ready(function(){initNavTree('class_body_text_parser.html',''); init
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_body_text_parser-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">BodyTextParser Class Reference</div></div>
 </div><!--header-->
@@ -97,29 +96,6 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ae7a0e46f2296302bfe68df3c0f7f8093"><td class="memItemLeft" align="right" valign="top">static void XMLCALL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_body_text_parser.html#ae7a0e46f2296302bfe68df3c0f7f8093">dataHandler</a> (void *userData, const XML_Char *content, int length)</td></tr>
 <tr class="memdesc:ae7a0e46f2296302bfe68df3c0f7f8093"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ce Handler est appelé à chaque fois qu'il y a un Content.  <a href="class_body_text_parser.html#ae7a0e46f2296302bfe68df3c0f7f8093">More...</a><br /></td></tr>
 <tr class="separator:ae7a0e46f2296302bfe68df3c0f7f8093"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
-Static Private Attributes</h2></td></tr>
-<tr class="memitem:a0d7be366805631ca967e17deb09fa71f"><td class="memItemLeft" align="right" valign="top"><a id="a0d7be366805631ca967e17deb09fa71f" name="a0d7be366805631ca967e17deb09fa71f"></a>
-static const long&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_BODY_SIZE</b> = 1024*512</td></tr>
-<tr class="memdesc:a0d7be366805631ca967e17deb09fa71f"><td class="mdescLeft">&#160;</td><td class="mdescRight">512kB : Taille max des Body (il y a une limitation dans Expat) <br /></td></tr>
-<tr class="separator:a0d7be366805631ca967e17deb09fa71f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a958ab572b64f11e7339334e0dd135f"><td class="memItemLeft" align="right" valign="top"><a id="a1a958ab572b64f11e7339334e0dd135f" name="a1a958ab572b64f11e7339334e0dd135f"></a>
-static int&#160;</td><td class="memItemRight" valign="bottom"><b>profondeur</b></td></tr>
-<tr class="separator:a1a958ab572b64f11e7339334e0dd135f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5f7afab164c92f2192c878d99c8fef7"><td class="memItemLeft" align="right" valign="top"><a id="ac5f7afab164c92f2192c878d99c8fef7" name="ac5f7afab164c92f2192c878d99c8fef7"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>elementClosed</b></td></tr>
-<tr class="separator:ac5f7afab164c92f2192c878d99c8fef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1876a413d1a4553bc602fbff1cb8dc6"><td class="memItemLeft" align="right" valign="top"><a id="aa1876a413d1a4553bc602fbff1cb8dc6" name="aa1876a413d1a4553bc602fbff1cb8dc6"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>keepNamespaces</b></td></tr>
-<tr class="separator:aa1876a413d1a4553bc602fbff1cb8dc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3214942f896e9b7728def506cc12212f"><td class="memItemLeft" align="right" valign="top"><a id="a3214942f896e9b7728def506cc12212f" name="a3214942f896e9b7728def506cc12212f"></a>
-static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>formatedBlob</b></td></tr>
-<tr class="memdesc:a3214942f896e9b7728def506cc12212f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le texte à afficher, avec indentation et coloration syntaxique. <br /></td></tr>
-<tr class="separator:a3214942f896e9b7728def506cc12212f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac053a903381414d7cce49a11540eed9c"><td class="memItemLeft" align="right" valign="top"><a id="ac053a903381414d7cce49a11540eed9c" name="ac053a903381414d7cce49a11540eed9c"></a>
-static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>errMessage</b></td></tr>
-<tr class="separator:ac053a903381414d7cce49a11540eed9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >La classe <b>statique</b> <a class="el" href="class_body_text_parser.html" title="La classe statique BodyTextParser analyse le Body XML d&#39;un message, pour l&#39;afficher sous forme de tex...">BodyTextParser</a> analyse le Body XML d'un message, pour l'afficher sous forme de texte simple dans l'onglet "Text View". </p>
@@ -129,7 +105,7 @@ static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>errMess
 <hr  />
 <p >Exemple de formatedBlob:</p>
 <pre class="fragment">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"&gt;
- &lt;html&gt;
+&lt;html&gt;
    &lt;head&gt;
      &lt;meta name="qrichtext" content="1" /&gt;
      &lt;style type="text/css"&gt; p, li { white-space: pre-wrap; }&lt;/style&gt;
@@ -162,7 +138,7 @@ static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>errMess
          &lt;span style=" color:#0000ff;"&gt;&amp;lt;/soap:Body&amp;gt;&lt;/span&gt;
       &lt;/p&gt;
    &lt;/body&gt;
- &lt;/html&gt;</pre> </div><h2 class="groupheader">Member Function Documentation</h2>
+&lt;/html&gt;</pre> </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a406806c5f550ecd1afc4e9b40c0fb83b" name="a406806c5f550ecd1afc4e9b40c0fb83b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a406806c5f550ecd1afc4e9b40c0fb83b">&#9670;&nbsp;</a></span>commentHandler()</h2>
 
