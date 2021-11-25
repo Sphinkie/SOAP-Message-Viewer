@@ -14,6 +14,7 @@ std::string Messages::fileName;
 
 /** ****************************************************************************************
  * @brief Ajout d'un nouveau message à la liste.
+ * @see Message
  **************************************************************************************** */
 void Messages::append()
 {
@@ -46,8 +47,7 @@ void Messages::setAction(std::string* action)
 /** ****************************************************************************************
  * @brief Mémorise le nom de l'ordinateur émetteur du message.
  *
- * @param host
- *      Contient un hostname ou une adresse IP.
+ * @param host : Contient un hostname ou une adresse IP.
  **************************************************************************************** */
 void Messages::setHost(std::string host)
 {
@@ -59,7 +59,7 @@ void Messages::setHost(std::string host)
  * @brief Mémorise l'ID de l'activité. L'activité peut regrouper plusieurs messages,
  *        par exemple une query et sa réponse.
  *
- * @param id L'ActivityID est généralement un UUID du type \c "{dee19e7b-5fba-4adc-8197-2aee3c2e6557}"
+ * @param id : L'ActivityID est généralement un UUID du type \c "{dee19e7b-5fba-4adc-8197-2aee3c2e6557}"
  **************************************************************************************** */
 void Messages::setActivityID(std::string id)
 {
@@ -69,7 +69,8 @@ void Messages::setActivityID(std::string id)
 
 /** ****************************************************************************************
 * @brief Stocke l'heure du message au format \c "14:31:17.975".
-* @param messagetime Un timestamp au format \c "2020-06-22T14:31:17.9755137+00:00".
+* @param messagetime : Un timestamp au format \c "2020-06-22T14:31:17.9755137+00:00".
+* @sa getCurrentMessageTime()
 **************************************************************************************** */
 void Messages::setMessageTime(std::string messagetime)
 {
@@ -109,7 +110,7 @@ void Messages::setWsdl(std::string wsdl)
 /** ****************************************************************************************
  * @brief Mémorise la position du début du Body.
  *
- * @param position Byte index du début du Body dans le fichier SVCLOG.
+ * @param position : Byte index du début du Body dans le fichier SVCLOG.
  **************************************************************************************** */
 void Messages::setCurrentBodyStartPosition(long position)
 {
@@ -120,7 +121,7 @@ void Messages::setCurrentBodyStartPosition(long position)
 /** ****************************************************************************************
  * @brief Mémorise la position de la fin du Body.
  *
- * @param position Byte index de la fin du Body dans le fichier SVCLOG.
+ * @param position : Byte index de la fin du Body dans le fichier SVCLOG.
  **************************************************************************************** */
 void Messages::setCurrentBodyEndPosition(long position)
 {
@@ -130,6 +131,8 @@ void Messages::setCurrentBodyEndPosition(long position)
 
 /** ****************************************************************************************
  * @brief Retourne le numéro du message courant dans la liste.
+ *        (C'est le dernier message de la liste).
+ * @see Message
  **************************************************************************************** */
 std::string Messages::getCurrentMessageIndex()
 {
@@ -139,6 +142,8 @@ std::string Messages::getCurrentMessageIndex()
 
 /** ****************************************************************************************
  * @brief Retourne le message de la liste portant le numéro demandé.
+ * @param number : Le numéro du message.
+ * @see Message
  * **************************************************************************************** */
 Messages::Message* Messages::getMessage(std::string number)
 {
@@ -146,8 +151,11 @@ Messages::Message* Messages::getMessage(std::string number)
     return messageList[num];
 }
 
+
 /** ****************************************************************************************
  * @brief Retourne le message de la liste portant le numéro demandé.
+ * @param number : Le numéro du message.
+ * @see Message
  * **************************************************************************************** */
 Messages::Message* Messages::getMessage(long number)
 {
@@ -158,6 +166,7 @@ Messages::Message* Messages::getMessage(long number)
 /** ****************************************************************************************
  * @brief Cette fonction lit le Body du message demandé dans le fichier SVCLOG et le mémorise
  *        dans la structure du Message de la liste.
+ * @param number : Le numéro du message dont on veut lire le Body.
  * **************************************************************************************** */
 void Messages::getMessageBody(long number)
 {
@@ -195,9 +204,9 @@ void Messages::getMessageBody(long number)
 
 /** ****************************************************************************************
  * @brief On regarde si le Body demandé contient la substring.
- * @param index : Numéro du message.
+ * @param index : Le numéro du message.
  * @param substring : La string à rechercher.
- * @returns \c TRUE si le Body contient la substring.
+ * @return Retourne \c TRUE si le Body contient la substring.
  * **************************************************************************************** */
 bool Messages::containsMessageBody(int index, string substring)
 {
@@ -213,7 +222,9 @@ bool Messages::containsMessageBody(int index, string substring)
 }
 
 /** ****************************************************************************************
- * @brief Renvoie \c True si le message courant est de type \b Session.
+ * @brief Indique si le Message est une demande d'ouverture ou de fermeture de session.
+ *        Il sera alors grisé dans l'IHM car moins intéressant.
+ * @return Retourne \c TRUE si le Message courant est de type \b Session.
  * **************************************************************************************** */
 bool Messages::isSession()
 {
@@ -221,7 +232,8 @@ bool Messages::isSession()
 }
 
 /** ****************************************************************************************
- * @brief Renvoie \c True si le message courant est de type \b Request.
+ * @brief Indique si le Message est une \b Query ou une \b Response.
+ * @return Renvoie \c True si le Message courant est de type \b Request.
  * **************************************************************************************** */
 bool Messages::isCurrentMessageRequest()
 {
@@ -229,16 +241,18 @@ bool Messages::isCurrentMessageRequest()
 }
 
 /** ****************************************************************************************
- * @brief Renvoie \c True si le message courant est de type \b Service,
- *        et \c False s'il est de type \b Transport.
+ * @brief Indique si le Message courant est un message SOAP de niveau \b Service.
+ * @retval TRUE si le message courant est de type \b Service,
+ * @retval FALSE si le message courant est de type \b Transport.
  * **************************************************************************************** */
 bool Messages::isCurrentMessageServiceLevel()
 {
     return(currentMessage->isServiceLevel);
 }
 
-/** ***************************************************************************
- * @brief Renvoie \c True si le message courant se termine par \c Fault ou \c fault.
+/** ***************************************************************************************
+ * @brief Indique si le Message courant est un message d'erreur SOAP.
+ * @return Renvoie \c True si le message courant se termine par \c Fault ou par \c fault.
  * **************************************************************************************** */
 bool Messages::isCurrentMessageFaulty()
 {
@@ -252,6 +266,8 @@ bool Messages::isCurrentMessageFaulty()
 
 /** ***************************************************************************
  * @brief Renvoie le timestamp du message courant.
+ * @return Retourne le timestamp du message courant au format \c "14:31:17.975"
+ * @see setMessagetime()
  * **************************************************************************** */
 std::string Messages::getCurrentMessageTime()
 {
@@ -263,7 +279,8 @@ std::string Messages::getCurrentMessageTime()
  * @param startingIndex : Index (non-inclus) de début de la recherche. Mettre -1 pour inclure la ligne 0.
  * @param id : ActivityId à rechercher.
  * @param endingIndex : Index de fin de la recherche (-1=last).
- * @returns Index du prochain Message ayant cet ActivityId, ou -1 si pas trouvé.
+ * @return Retourne l'index du prochain Message ayant cet ActivityId, ou -1 si pas trouvé.
+ * @see getPreviousCorrelatedMessageIndex()
  * **************************************************************************** */
 int Messages::getNextCorrelatedMessageIndex(int startingIndex, std::string id, int endingIndex)
 {
@@ -284,7 +301,10 @@ int Messages::getNextCorrelatedMessageIndex(int startingIndex, std::string id, i
 
 /** ***************************************************************************
  * @brief Renvoie l'index d'un précédent Message ayant cet ActivityId,
- *        ou -1 si pas trouvé.
+ * @param index : Index où débuter la recherche (recherche en arrière).
+ * @param id : ActivityId à rechercher.
+ * @return Retourne l'index du message, ou -1 si pas trouvé.
+ * @see getNextCorrelatedMessageIndex()
  * **************************************************************************** */
 int Messages::getPreviousCorrelatedMessageIndex(int index, std::string id)
 {
@@ -314,4 +334,40 @@ void Messages::init(std::string filename)
     computerName="";
     logDate="";
 }
+
+
+/** ***************************************************************************
+ * @brief Renvoie le hostname du poste ayant émis le message.
+ * @return Retourne l'émetteur du Message
+ * @see setComputerName()
+ ******************************************************************************/
+std::string Messages::getComputerName()
+{return computerName;}
+
+
+/** ***************************************************************************
+ * @brief Renvoie la date à laquelle le message a été enregistré dans la trace.
+ * @return Retourne la date du message, au format \c "2020-06-22".
+ * @see setLogDate()
+ ******************************************************************************/
+std::string Messages::getLogDate()
+{return logDate;}
+
+
+/** ***************************************************************************
+ * @brief Mémorise le hostname du poste ayant émis le message.
+ * @param name : Le nom de l'émetteur du Message
+ * @see getComputerName()
+ ******************************************************************************/
+void Messages::setComputerName(std::string name)
+{computerName=name;}
+
+
+/** ***************************************************************************
+ * @brief Mémorise la date à laquelle le message a été enregistré dans la trace.
+ * @param date : Le date-heure du message dans la trace, au format \c "2020-06-22T14:31:17.9755137+00:00".
+ * @see getLogDate()
+ ******************************************************************************/
+void Messages::setLogDate(std::string date)
+{logDate.assign(date,0,10);}
 

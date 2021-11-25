@@ -2,7 +2,7 @@
 using namespace std;
 
 /** *******************************************************************************
- * @brief Ouverture des fichiers SVCLOG (input) et SPLITTED (output)
+ * @brief Ouverture du fichier d'entrée SVCLOG.
  * @param filename : Le nom du fichier à ouvrir
  * @sa close()
  **********************************************************************************/
@@ -28,7 +28,8 @@ void FileSplitter::open(std::string filename)
 
 /** *******************************************************************************
  * @brief Fonction principale de découpage.
- * @pre La fonction open() doit être appelée au prélable.
+ * @pre La fonction open() doit être appelée au préalable.
+ * @post La fonction good() indique si le splitting s'est bien déroulé.
  **********************************************************************************/
 void FileSplitter::split()
 {
@@ -78,12 +79,28 @@ void FileSplitter::close()
     fichierSPLITTED.close();
 }
 
+/** ***************************************************************************************
+ * @brief Fonction à appeler après open() et split(), pour savoir si tout s'est bien passé.
+ * @return \c True si le fichier a pu être découpé sans incident.
+ ******************************************************************************************/
+bool FileSplitter::good()
+{return isGood;}
 
-/** *******************************************************************************
+
+/** ***************************************************************************************
+ * @brief Permet de connaitre l'erreur éventuellement rencontrée lors des opérations sur
+ *        les fichiers.
+ * @return Le message d'erreur.
+ ****************************************************************************************** */
+std::string FileSplitter::getErrorMessage()
+{return errorMessage;}
+
+
+/** ***************************************************************************************
  * @brief Le score atteint son maximum lorsque l'on a détecté une séquence terminatrice "</E2TraceEvent>"
  * @param lettre : Un caractère du fichier \e source à analyser.
  * @return Retourne \c True si on a atteint la fin d'un message SOAP
- **********************************************************************************/
+ ****************************************************************************************** */
 bool FileSplitter::calculateScore(char lettre)
 {
     // si le score est à 0, on attend la première lettre.

@@ -8,10 +8,10 @@
 
 /** *******************************************************************************
  * @brief La classe FileSplitter ouvre un fichier .SCVLOG et le découpe en morceaux
- *        plus petits de 20.000 messages SOAP chacun.
+ *        plus petits de 20.000 messages SOAP chacun (avec un maximum de 10 fichiers).
  *        Ceci est utile quand le fichier SVCLOG est tellement gros qu'il ne peut
  *        pas être ouvert par les outils d'analyse.
- *        Les nouveaux fichierx XML sont nommés ???.
+ *        Les nouveaux fichierx XML sont nommés: \c xxx.n.svclog
  *
  * La classe transforme un fichier SVCLOG en un fichier XML.
  * Elle lit le fichier SVCLOG caractère-par-caractère et n'utilise PAS de parser XML.
@@ -25,8 +25,8 @@ public:
     void  open(std::string filename);
     void  split();
     void  close();
-    bool  good() {return isGood;};                    ///< Appeler good() après les fonctions pour savoir si tout s'est bien passé
-    std::string getErrorMessage() {return errorMessage;};
+    bool  good();
+    std::string getErrorMessage();
 
     const unsigned int MAX_NB_MESSAGES = 20000;       ///< Nb max de messages par fichier découpé (default: 20000)
 

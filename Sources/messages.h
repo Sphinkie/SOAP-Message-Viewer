@@ -28,8 +28,8 @@ public:
     static void   setMessageSource(std::string source);
     static void   setCurrentBodyStartPosition(long position);
     static void   setCurrentBodyEndPosition(long position);
-    static void   setComputerName(std::string name) {computerName=name;};
-    static void   setLogDate(std::string date)      {logDate.assign(date,0,10);};
+    static void   setComputerName(std::string name);
+    static void   setLogDate(std::string date);
     // Recupération des infos d'un message
     static Message*    getMessage(std::string number);
     static Message*    getMessage(long number);
@@ -43,8 +43,8 @@ public:
     static int         getNextCorrelatedMessageIndex(int startingIndex, std::string id, int endingIndex=-1);
     static int         getPreviousCorrelatedMessageIndex(int index, std::string id);
     // informations globales
-    static std::string getComputerName() {return computerName;};
-    static std::string getLogDate()      {return logDate;};
+    static std::string getComputerName();
+    static std::string getLogDate();
     // recherches
     static bool        containsMessageBody(int index, std::string substring);
 

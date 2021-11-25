@@ -1,3 +1,5 @@
 
 *.svclog
 *.xml
+*.user
+*.pro.user

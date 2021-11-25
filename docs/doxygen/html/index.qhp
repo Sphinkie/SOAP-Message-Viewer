@@ -49,6 +49,7 @@
             <section title="FileSplitter" ref="class_file_splitter.html">
               <section title="close" ref="class_file_splitter.html#a697e29fca8ea43b9edf8cf5521b893ed" />
               <section title="getErrorMessage" ref="class_file_splitter.html#adf3e560de386a3bceba0e9d2ed2f82fd" />
+              <section title="good" ref="class_file_splitter.html#a367cf7d6ecbceb29b2745a34e6792032" />
               <section title="open" ref="class_file_splitter.html#a2230e92d9245d527ea773558aeddfae8" />
               <section title="split" ref="class_file_splitter.html#acbead9df4e0a0a91fd3cfcaf910396e6" />
               <section title="MAX_NB_MESSAGES" ref="class_file_splitter.html#aac6b01264d975d410a1de25142cab3f5" />
@@ -196,8 +197,8 @@
       <keyword name="setMessageSource" id="Messages::setMessageSource" ref="class_messages.html#a378f32ea2b1d388fb428280fea248807" />
       <keyword name="setCurrentBodyStartPosition" id="Messages::setCurrentBodyStartPosition" ref="class_messages.html#ae42b2419adf794b9caaecec5fa9b277f" />
       <keyword name="setCurrentBodyEndPosition" id="Messages::setCurrentBodyEndPosition" ref="class_messages.html#a8c0eaa9681f16bd89c5ac451d4bb93ff" />
-      <keyword name="setComputerName" id="Messages::setComputerName" ref="class_messages.html#a4573225469a289fde2a49dad285b4642" />
-      <keyword name="setLogDate" id="Messages::setLogDate" ref="class_messages.html#a459bad693708e12b89ea8e2335e4cd71" />
+      <keyword name="setComputerName" id="Messages::setComputerName" ref="class_messages.html#ad4f8ee4262037fa7d61c165f721c51d8" />
+      <keyword name="setLogDate" id="Messages::setLogDate" ref="class_messages.html#a237aa4f298747bb96f9559e4bb4c0051" />
       <keyword name="getMessage" id="Messages::getMessage" ref="class_messages.html#a1bb0fef029b88fd190f72f821ad88f93" />
       <keyword name="getMessage" id="Messages::getMessage" ref="class_messages.html#a3935c59da59c514b1b820cad7c403259" />
       <keyword name="getMessageBody" id="Messages::getMessageBody" ref="class_messages.html#a331397e8f595c25cac8d834bd329fbac" />
@@ -209,8 +210,8 @@
       <keyword name="getCurrentMessageIndex" id="Messages::getCurrentMessageIndex" ref="class_messages.html#ac68de96d8e955b14baf16bea91593b9d" />
       <keyword name="getNextCorrelatedMessageIndex" id="Messages::getNextCorrelatedMessageIndex" ref="class_messages.html#ae8dda50e67c3688e70122ca10e72c073" />
       <keyword name="getPreviousCorrelatedMessageIndex" id="Messages::getPreviousCorrelatedMessageIndex" ref="class_messages.html#a574163ba1a9b8d6fb40784228d21c4aa" />
-      <keyword name="getComputerName" id="Messages::getComputerName" ref="class_messages.html#ada3c0b10c28afee914611ed299b8ac32" />
-      <keyword name="getLogDate" id="Messages::getLogDate" ref="class_messages.html#afedbfcf3a65fab1b72216b65b6eddfcc" />
+      <keyword name="getComputerName" id="Messages::getComputerName" ref="class_messages.html#ac6a290fae0a6f1b503be29b69e95da92" />
+      <keyword name="getLogDate" id="Messages::getLogDate" ref="class_messages.html#a32f5ffc9c907341c2d40b3b26d5d1ca1" />
       <keyword name="containsMessageBody" id="Messages::containsMessageBody" ref="class_messages.html#a26d4c4c2c0f72997f52bd951364245fa" />
       <keyword name="Messages::Message" id="Messages::Message" ref="struct_messages_1_1_message.html" />
       <keyword name="host" id="Messages::Message::host" ref="struct_messages_1_1_message.html#a80093f739a4603b0f10f223e7656e1ef" />

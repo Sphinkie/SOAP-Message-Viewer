@@ -69,7 +69,7 @@ $(document).ready(function(){initNavTree('class_file_splitter.html',''); initRes
 </div><!--header-->
 <div class="contents">
 
-<p>La classe <a class="el" href="class_file_splitter.html" title="La classe FileSplitter ouvre un fichier .SCVLOG et le découpe en morceaux plus petits de 20....">FileSplitter</a> ouvre un fichier .SCVLOG et le découpe en morceaux plus petits de 20.000 messages SOAP chacun. Ceci est utile quand le fichier SVCLOG est tellement gros qu'il ne peut pas être ouvert par les outils d'analyse. Les nouveaux fichierx XML sont nommés ???.  
+<p>La classe <a class="el" href="class_file_splitter.html" title="La classe FileSplitter ouvre un fichier .SCVLOG et le découpe en morceaux plus petits de 20....">FileSplitter</a> ouvre un fichier .SCVLOG et le découpe en morceaux plus petits de 20.000 messages SOAP chacun (avec un maximum de 10 fichiers). Ceci est utile quand le fichier SVCLOG est tellement gros qu'il ne peut pas être ouvert par les outils d'analyse. Les nouveaux fichierx XML sont nommés: <code>xxx.n.svclog</code>.  
  <a href="class_file_splitter.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_file_splitter_8h_source.html">FileSplitter.h</a>&gt;</code></p>
@@ -77,7 +77,7 @@ $(document).ready(function(){initNavTree('class_file_splitter.html',''); initRes
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2230e92d9245d527ea773558aeddfae8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_splitter.html#a2230e92d9245d527ea773558aeddfae8">open</a> (std::string filename)</td></tr>
-<tr class="memdesc:a2230e92d9245d527ea773558aeddfae8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ouverture des fichiers SVCLOG (input) et SPLITTED (output)  <a href="class_file_splitter.html#a2230e92d9245d527ea773558aeddfae8">More...</a><br /></td></tr>
+<tr class="memdesc:a2230e92d9245d527ea773558aeddfae8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ouverture du fichier d'entrée SVCLOG.  <a href="class_file_splitter.html#a2230e92d9245d527ea773558aeddfae8">More...</a><br /></td></tr>
 <tr class="separator:a2230e92d9245d527ea773558aeddfae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbead9df4e0a0a91fd3cfcaf910396e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_splitter.html#acbead9df4e0a0a91fd3cfcaf910396e6">split</a> ()</td></tr>
 <tr class="memdesc:acbead9df4e0a0a91fd3cfcaf910396e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction principale de découpage.  <a href="class_file_splitter.html#acbead9df4e0a0a91fd3cfcaf910396e6">More...</a><br /></td></tr>
@@ -85,12 +85,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a697e29fca8ea43b9edf8cf5521b893ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_splitter.html#a697e29fca8ea43b9edf8cf5521b893ed">close</a> ()</td></tr>
 <tr class="memdesc:a697e29fca8ea43b9edf8cf5521b893ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fermeture des fichiers SVCLOG (input) et SPLITTED (output)  <a href="class_file_splitter.html#a697e29fca8ea43b9edf8cf5521b893ed">More...</a><br /></td></tr>
 <tr class="separator:a697e29fca8ea43b9edf8cf5521b893ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a367cf7d6ecbceb29b2745a34e6792032"><td class="memItemLeft" align="right" valign="top"><a id="a367cf7d6ecbceb29b2745a34e6792032" name="a367cf7d6ecbceb29b2745a34e6792032"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>good</b> ()</td></tr>
+<tr class="memitem:a367cf7d6ecbceb29b2745a34e6792032"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_splitter.html#a367cf7d6ecbceb29b2745a34e6792032">good</a> ()</td></tr>
+<tr class="memdesc:a367cf7d6ecbceb29b2745a34e6792032"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction à appeler après <a class="el" href="class_file_splitter.html#a2230e92d9245d527ea773558aeddfae8" title="Ouverture du fichier d&#39;entrée SVCLOG.">open()</a> et <a class="el" href="class_file_splitter.html#acbead9df4e0a0a91fd3cfcaf910396e6" title="Fonction principale de découpage.">split()</a>, pour savoir si tout s'est bien passé.  <a href="class_file_splitter.html#a367cf7d6ecbceb29b2745a34e6792032">More...</a><br /></td></tr>
 <tr class="separator:a367cf7d6ecbceb29b2745a34e6792032"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf3e560de386a3bceba0e9d2ed2f82fd"><td class="memItemLeft" align="right" valign="top"><a id="adf3e560de386a3bceba0e9d2ed2f82fd" name="adf3e560de386a3bceba0e9d2ed2f82fd"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getErrorMessage</b> ()</td></tr>
-<tr class="memdesc:adf3e560de386a3bceba0e9d2ed2f82fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appeler good() après les fonctions pour savoir si tout s'est bien passé <br /></td></tr>
+<tr class="memitem:adf3e560de386a3bceba0e9d2ed2f82fd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_splitter.html#adf3e560de386a3bceba0e9d2ed2f82fd">getErrorMessage</a> ()</td></tr>
+<tr class="memdesc:adf3e560de386a3bceba0e9d2ed2f82fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de connaitre l'erreur éventuellement rencontrée lors des opérations sur les fichiers.  <a href="class_file_splitter.html#adf3e560de386a3bceba0e9d2ed2f82fd">More...</a><br /></td></tr>
 <tr class="separator:adf3e560de386a3bceba0e9d2ed2f82fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -101,7 +100,7 @@ const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_NB_
 <tr class="separator:aac6b01264d975d410a1de25142cab3f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >La classe <a class="el" href="class_file_splitter.html" title="La classe FileSplitter ouvre un fichier .SCVLOG et le découpe en morceaux plus petits de 20....">FileSplitter</a> ouvre un fichier .SCVLOG et le découpe en morceaux plus petits de 20.000 messages SOAP chacun. Ceci est utile quand le fichier SVCLOG est tellement gros qu'il ne peut pas être ouvert par les outils d'analyse. Les nouveaux fichierx XML sont nommés ???. </p>
+<div class="textblock"><p >La classe <a class="el" href="class_file_splitter.html" title="La classe FileSplitter ouvre un fichier .SCVLOG et le découpe en morceaux plus petits de 20....">FileSplitter</a> ouvre un fichier .SCVLOG et le découpe en morceaux plus petits de 20.000 messages SOAP chacun (avec un maximum de 10 fichiers). Ceci est utile quand le fichier SVCLOG est tellement gros qu'il ne peut pas être ouvert par les outils d'analyse. Les nouveaux fichierx XML sont nommés: <code>xxx.n.svclog</code>. </p>
 <hr  />
 <p >La classe transforme un fichier SVCLOG en un fichier XML. Elle lit le fichier SVCLOG caractère-par-caractère et n'utilise PAS de parser XML.</p>
 <dl class="section author"><dt>Author</dt><dd>David de Lorenzo </dd></dl>
@@ -124,7 +123,49 @@ const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_NB_
 
 <p>Fermeture des fichiers SVCLOG (input) et SPLITTED (output) </p>
 <hr  />
- <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_file_splitter.html#a2230e92d9245d527ea773558aeddfae8" title="Ouverture des fichiers SVCLOG (input) et SPLITTED (output)">open()</a> </dd></dl>
+ <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_file_splitter.html#a2230e92d9245d527ea773558aeddfae8" title="Ouverture du fichier d&#39;entrée SVCLOG.">open()</a> </dd></dl>
+
+</div>
+</div>
+<a id="adf3e560de386a3bceba0e9d2ed2f82fd" name="adf3e560de386a3bceba0e9d2ed2f82fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf3e560de386a3bceba0e9d2ed2f82fd">&#9670;&nbsp;</a></span>getErrorMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string FileSplitter::getErrorMessage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Permet de connaitre l'erreur éventuellement rencontrée lors des opérations sur les fichiers. </p>
+<hr  />
+ <dl class="section return"><dt>Returns</dt><dd>Le message d'erreur. </dd></dl>
+
+</div>
+</div>
+<a id="a367cf7d6ecbceb29b2745a34e6792032" name="a367cf7d6ecbceb29b2745a34e6792032"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a367cf7d6ecbceb29b2745a34e6792032">&#9670;&nbsp;</a></span>good()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FileSplitter::good </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction à appeler après <a class="el" href="class_file_splitter.html#a2230e92d9245d527ea773558aeddfae8" title="Ouverture du fichier d&#39;entrée SVCLOG.">open()</a> et <a class="el" href="class_file_splitter.html#acbead9df4e0a0a91fd3cfcaf910396e6" title="Fonction principale de découpage.">split()</a>, pour savoir si tout s'est bien passé. </p>
+<hr  />
+ <dl class="section return"><dt>Returns</dt><dd><code>True</code> si le fichier a pu être découpé sans incident. </dd></dl>
 
 </div>
 </div>
@@ -144,7 +185,7 @@ const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_NB_
       </table>
 </div><div class="memdoc">
 
-<p>Ouverture des fichiers SVCLOG (input) et SPLITTED (output) </p>
+<p>Ouverture du fichier d'entrée SVCLOG. </p>
 <hr  />
  <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -173,7 +214,8 @@ const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_NB_
 
 <p>Fonction principale de découpage. </p>
 <hr  />
- <dl class="section pre"><dt>Precondition</dt><dd>La fonction <a class="el" href="class_file_splitter.html#a2230e92d9245d527ea773558aeddfae8" title="Ouverture des fichiers SVCLOG (input) et SPLITTED (output)">open()</a> doit être appelée au prélable. </dd></dl>
+ <dl class="section pre"><dt>Precondition</dt><dd>La fonction <a class="el" href="class_file_splitter.html#a2230e92d9245d527ea773558aeddfae8" title="Ouverture du fichier d&#39;entrée SVCLOG.">open()</a> doit être appelée au préalable. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>La fonction <a class="el" href="class_file_splitter.html#a367cf7d6ecbceb29b2745a34e6792032" title="Fonction à appeler après open() et split(), pour savoir si tout s&#39;est bien passé.">good()</a> indique si le splitting s'est bien déroulé. </dd></dl>
 
 </div>
 </div>
