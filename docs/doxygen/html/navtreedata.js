@@ -25,16 +25,36 @@
 var NAVTREE =
 [
   [ "SOAP-Message-Viewer", "index.html", [
+    [ "SOAP Message Viewer", "index.html", [
+      [ "Présentation", "index.html#autotoc_md1", null ],
+      [ "Installation", "index.html#autotoc_md2", null ],
+      [ "Le coin des développeurs", "index.html#autotoc_md3", [
+        [ "Licence", "index.html#autotoc_md8", null ]
+      ] ]
+    ] ],
+    [ "How to install Expat parser", "md__e__source_repos__s_o_a_p__message__viewer_docs_how_to_install__expat__parser.html", [
+      [ "Installation Expat", "md__e__source_repos__s_o_a_p__message__viewer_docs_how_to_install__expat__parser.html#autotoc_md10", [
+        [ "Installation avec le fichier EXE", "md__e__source_repos__s_o_a_p__message__viewer_docs_how_to_install__expat__parser.html#autotoc_md11", null ],
+        [ "Installation avec le fichier ZIP", "md__e__source_repos__s_o_a_p__message__viewer_docs_how_to_install__expat__parser.html#autotoc_md12", null ]
+      ] ],
+      [ "Installation dans un projet Qt", "md__e__source_repos__s_o_a_p__message__viewer_docs_how_to_install__expat__parser.html#autotoc_md13", [
+        [ "Configuration du Compilateur", "md__e__source_repos__s_o_a_p__message__viewer_docs_how_to_install__expat__parser.html#autotoc_md14", null ]
+      ] ],
+      [ "Utilisation", "md__e__source_repos__s_o_a_p__message__viewer_docs_how_to_install__expat__parser.html#autotoc_md15", [
+        [ "Notes", "md__e__source_repos__s_o_a_p__message__viewer_docs_how_to_install__expat__parser.html#autotoc_md16", null ]
+      ] ]
+    ] ],
     [ "Documentation intégrée", "md__r_e_a_d_m_e.html", [
-      [ "Balises utilisées", "md__r_e_a_d_m_e.html#autotoc_md1", [
-        [ "Mise en page", "md__r_e_a_d_m_e.html#autotoc_md2", null ]
+      [ "Balises utilisées", "md__r_e_a_d_m_e.html#autotoc_md18", [
+        [ "Mise en page", "md__r_e_a_d_m_e.html#autotoc_md19", null ]
       ] ],
-      [ "Balises non utilisées", "md__r_e_a_d_m_e.html#autotoc_md3", null ],
-      [ "Sections doxygen", "md__r_e_a_d_m_e.html#autotoc_md4", null ],
-      [ "Balises à rajouter dans doxyfile", "md__r_e_a_d_m_e.html#autotoc_md5", [
-        [ "Balises pour compatibilité Qt", "md__r_e_a_d_m_e.html#autotoc_md6", null ]
+      [ "Balises non utilisées", "md__r_e_a_d_m_e.html#autotoc_md20", null ],
+      [ "Sections doxygen", "md__r_e_a_d_m_e.html#autotoc_md21", null ],
+      [ "Balises à rajouter dans doxyfile", "md__r_e_a_d_m_e.html#autotoc_md22", [
+        [ "Balises pour compatibilité Qt", "md__r_e_a_d_m_e.html#autotoc_md23", null ],
+        [ "Autres balises", "md__r_e_a_d_m_e.html#autotoc_md24", null ]
       ] ],
-      [ "Bibliographie", "md__r_e_a_d_m_e.html#autotoc_md7", null ]
+      [ "Bibliographie", "md__r_e_a_d_m_e.html#autotoc_md25", null ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],

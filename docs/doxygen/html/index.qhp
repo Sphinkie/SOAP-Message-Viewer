@@ -1,125 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QtHelpProject version="1.0">
-  <namespace>sphinkie.SOAPMessageViewer</namespace>
+  <namespace>sphinkie.SoapMessageViewer</namespace>
   <virtualFolder>doc</virtualFolder>
   <filterSection>
     <filterAttribute>doxygen</filterAttribute>
     <toc>
       <section title="SOAP-Message-Viewer 1.3" ref="index.html">
-        <section title="Documentation intégrée" ref="md__r_e_a_d_m_e.html">
-          <section title="Balises utilisées" ref="md__r_e_a_d_m_e.html#autotoc_md1">
-            <section title="Mise en page" ref="md__r_e_a_d_m_e.html#autotoc_md2" />
+        <section title="SOAP Message Viewer" ref="index.html">
+          <section title="Présentation" ref="index.html#autotoc_md1" />
+          <section title="Installation" ref="index.html#autotoc_md2" />
+          <section title="Le coin des développeurs" ref="index.html#autotoc_md3">
+            <section title="Compilation" ref="index.html#autotoc_md4" />
+            <section title="Link" ref="index.html#autotoc_md5" />
+            <section title="Sources" ref="index.html#autotoc_md6" />
+            <section title="La librairie Expat" ref="index.html#autotoc_md7" />
           </section>
-          <section title="Balises non utilisées" ref="md__r_e_a_d_m_e.html#autotoc_md3" />
-          <section title="Sections doxygen" ref="md__r_e_a_d_m_e.html#autotoc_md4" />
-          <section title="Balises à rajouter dans doxyfile" ref="md__r_e_a_d_m_e.html#autotoc_md5">
-            <section title="Balises pour compatibilité Qt" ref="md__r_e_a_d_m_e.html#autotoc_md6" />
-          </section>
-          <section title="Bibliographie" ref="md__r_e_a_d_m_e.html#autotoc_md7" />
+          <section title="Licence" ref="index.html#autotoc_md8" />
         </section>
-        <section title="Classes" ref="annotated.html">
-          <section title="Class List" ref="annotated.html">
-            <section title="BodyPrintableParser" ref="class_body_printable_parser.html">
-              <section title="BodyPrintableParser" ref="class_body_printable_parser.html#a688e1cef21ccc9518bb83b3ee2f235ae" />
-              <section title="~BodyPrintableParser" ref="class_body_printable_parser.html#a79a43d74b0bd02192bedb93e2e6216b7" />
-              <section title="saveBody" ref="class_body_printable_parser.html#a9d90f1d6204389210d3bbd3037a3dc3a" />
-            </section>
-            <section title="BodyTableParser" ref="class_body_table_parser.html" />
-            <section title="BodyTextParser" ref="class_body_text_parser.html" />
-            <section title="BodyTreeParser" ref="class_body_tree_parser.html" />
-            <section title="Common" ref="class_common.html" />
-            <section title="FileConverter" ref="class_file_converter.html">
-              <section title="close" ref="class_file_converter.html#a639603c1ff45403ae3dbb5b33d944f8d" />
-              <section title="convert" ref="class_file_converter.html#a4f8a52d21a65fde924984a31e3bcd4a4" />
-              <section title="getErrorMessage" ref="class_file_converter.html#a98685cbacec0fa9aa80148c7f46f7a02" />
-              <section title="open" ref="class_file_converter.html#a7dd2ffdedaea84f5373d653a0c17a844" />
-              <section title="ready" ref="class_file_converter.html#a9889f0b8b36d36d2a7dcf090dc6078c2" />
-            </section>
-            <section title="FileParser" ref="class_file_parser.html">
-              <section title="close" ref="class_file_parser.html#afaeb2d28e432115ec845ebe4ff86d8f4" />
-              <section title="open" ref="class_file_parser.html#a0841789c9e75d720801c3c4d5a666468" />
-              <section title="parse" ref="class_file_parser.html#a09bc46c3ba8e88b76bf697e6a2e42322" />
-            </section>
-            <section title="FileRepair" ref="class_file_repair.html">
-              <section title="close" ref="class_file_repair.html#a064582b19814d82fb8c5137fda1d7094" />
-              <section title="isSvcLog" ref="class_file_repair.html#a74ae5712f091f566d11c212a44e81950" />
-              <section title="openSVCfile" ref="class_file_repair.html#a5b47bb493dd6badf67ebd399ae13367e" />
-              <section title="repair" ref="class_file_repair.html#a9e9229df812c8351abbaea0f96f336f0" />
-            </section>
-            <section title="FileSplitter" ref="class_file_splitter.html">
-              <section title="close" ref="class_file_splitter.html#a697e29fca8ea43b9edf8cf5521b893ed" />
-              <section title="getErrorMessage" ref="class_file_splitter.html#adf3e560de386a3bceba0e9d2ed2f82fd" />
-              <section title="good" ref="class_file_splitter.html#a367cf7d6ecbceb29b2745a34e6792032" />
-              <section title="open" ref="class_file_splitter.html#a2230e92d9245d527ea773558aeddfae8" />
-              <section title="split" ref="class_file_splitter.html#acbead9df4e0a0a91fd3cfcaf910396e6" />
-              <section title="MAX_NB_MESSAGES" ref="class_file_splitter.html#aac6b01264d975d410a1de25142cab3f5" />
-            </section>
-            <section title="MainWindow" ref="class_main_window.html">
-              <section title="MainWindow" ref="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" />
-              <section title="addListItem" ref="class_main_window.html#a9f8a8f1f85c4100c527539e49bd8e2bb" />
-              <section title="NOT_FOUND" ref="class_main_window.html#a4ac1e96cc358f601df15a3b9c2e4a069" />
-              <section title="version" ref="class_main_window.html#ae91df044e00c58c3410e4073e48f7c9e" />
-            </section>
-            <section title="Messages" ref="class_messages.html">
-              <section title="Message" ref="struct_messages_1_1_message.html">
-                <section title="action" ref="struct_messages_1_1_message.html#a0bd3cd681cc736d36c89fea06a803ac7" />
-                <section title="activityId" ref="struct_messages_1_1_message.html#a9f20ea91968683f11d023ce86b22c7f4" />
-                <section title="body" ref="struct_messages_1_1_message.html#a5850875aca378d32d5fb919709e4cd02" />
-                <section title="bodyEndPosition" ref="struct_messages_1_1_message.html#a49cb9964faabd11e60073951dabbea31" />
-                <section title="bodyStartPosition" ref="struct_messages_1_1_message.html#ad380239cde093f003a39de9ecf39a05a" />
-                <section title="direction" ref="struct_messages_1_1_message.html#a1709088d211103a5d4087fcbe98e460f" />
-                <section title="host" ref="struct_messages_1_1_message.html#a80093f739a4603b0f10f223e7656e1ef" />
-                <section title="isRequest" ref="struct_messages_1_1_message.html#a7c0812a203be3dabff1056dcc6154670" />
-                <section title="isServiceLevel" ref="struct_messages_1_1_message.html#a8c51e9fd449af203146f14c5e97ebeb9" />
-                <section title="messageTime" ref="struct_messages_1_1_message.html#a4fd889d3ccc97e2abd99f93e5a98189e" />
-                <section title="module" ref="struct_messages_1_1_message.html#a9621d187b646fb37975d7a0d5dcb81b8" />
-                <section title="wsdl" ref="struct_messages_1_1_message.html#a152166d0b5b659d2c83d0ea52aa200e4" />
-              </section>
-            </section>
+      </section>
+      <section title="How to install Expat parser" ref="md__e__source_repos__s_o_a_p__message__viewer_docs_how_to_install__expat__parser.html">
+        <section title="Installation Expat" ref="md__e__source_repos__s_o_a_p__message__viewer_docs_how_to_install__expat__parser.html#autotoc_md10">
+          <section title="Installation avec le fichier EXE" ref="md__e__source_repos__s_o_a_p__message__viewer_docs_how_to_install__expat__parser.html#autotoc_md11" />
+          <section title="Installation avec le fichier ZIP" ref="md__e__source_repos__s_o_a_p__message__viewer_docs_how_to_install__expat__parser.html#autotoc_md12" />
+        </section>
+        <section title="Installation dans un projet Qt" ref="md__e__source_repos__s_o_a_p__message__viewer_docs_how_to_install__expat__parser.html#autotoc_md13">
+          <section title="Configuration du Compilateur" ref="md__e__source_repos__s_o_a_p__message__viewer_docs_how_to_install__expat__parser.html#autotoc_md14" />
+        </section>
+        <section title="Utilisation" ref="md__e__source_repos__s_o_a_p__message__viewer_docs_how_to_install__expat__parser.html#autotoc_md15">
+          <section title="Notes" ref="md__e__source_repos__s_o_a_p__message__viewer_docs_how_to_install__expat__parser.html#autotoc_md16" />
+        </section>
+      </section>
+      <section title="Documentation intégrée" ref="md__r_e_a_d_m_e.html">
+        <section title="Balises utilisées" ref="md__r_e_a_d_m_e.html#autotoc_md18">
+          <section title="Mise en page" ref="md__r_e_a_d_m_e.html#autotoc_md19" />
+        </section>
+        <section title="Balises non utilisées" ref="md__r_e_a_d_m_e.html#autotoc_md20" />
+        <section title="Sections doxygen" ref="md__r_e_a_d_m_e.html#autotoc_md21" />
+        <section title="Balises à rajouter dans doxyfile" ref="md__r_e_a_d_m_e.html#autotoc_md22">
+          <section title="Balises pour compatibilité Qt" ref="md__r_e_a_d_m_e.html#autotoc_md23" />
+          <section title="Autres balises" ref="md__r_e_a_d_m_e.html#autotoc_md24" />
+        </section>
+        <section title="Bibliographie" ref="md__r_e_a_d_m_e.html#autotoc_md25" />
+      </section>
+      <section title="Classes" ref="annotated.html">
+        <section title="Class List" ref="annotated.html">
+          <section title="BodyPrintableParser" ref="class_body_printable_parser.html">
+            <section title="BodyPrintableParser" ref="class_body_printable_parser.html#a688e1cef21ccc9518bb83b3ee2f235ae" />
+            <section title="~BodyPrintableParser" ref="class_body_printable_parser.html#a79a43d74b0bd02192bedb93e2e6216b7" />
+            <section title="saveBody" ref="class_body_printable_parser.html#a9d90f1d6204389210d3bbd3037a3dc3a" />
           </section>
-          <section title="Class Index" ref="classes.html" />
-          <section title="Class Hierarchy" ref="hierarchy.html">
-            <section title="BodyPrintableParser" ref="class_body_printable_parser.html" />
-            <section title="BodyTableParser" ref="class_body_table_parser.html" />
-            <section title="BodyTextParser" ref="class_body_text_parser.html" />
-            <section title="BodyTreeParser" ref="class_body_tree_parser.html" />
-            <section title="Common" ref="class_common.html" />
-            <section title="FileConverter" ref="class_file_converter.html" />
-            <section title="FileParser" ref="class_file_parser.html" />
-            <section title="FileRepair" ref="class_file_repair.html" />
-            <section title="FileSplitter" ref="class_file_splitter.html" />
-            <section title="Messages::Message" ref="struct_messages_1_1_message.html" />
-            <section title="Messages" ref="class_messages.html" />
-            <section title="QMainWindow" ref="">
-              <section title="MainWindow" ref="class_main_window.html" />
-            </section>
+          <section title="BodyTableParser" ref="class_body_table_parser.html" />
+          <section title="BodyTextParser" ref="class_body_text_parser.html" />
+          <section title="BodyTreeParser" ref="class_body_tree_parser.html" />
+          <section title="Common" ref="class_common.html" />
+          <section title="FileConverter" ref="class_file_converter.html">
+            <section title="close" ref="class_file_converter.html#a639603c1ff45403ae3dbb5b33d944f8d" />
+            <section title="convert" ref="class_file_converter.html#a4f8a52d21a65fde924984a31e3bcd4a4" />
+            <section title="getErrorMessage" ref="class_file_converter.html#a98685cbacec0fa9aa80148c7f46f7a02" />
+            <section title="open" ref="class_file_converter.html#a7dd2ffdedaea84f5373d653a0c17a844" />
+            <section title="ready" ref="class_file_converter.html#a9889f0b8b36d36d2a7dcf090dc6078c2" />
           </section>
-          <section title="Class Members" ref="functions.html">
-            <section title="All" ref="functions.html" />
-            <section title="Functions" ref="functions_func.html" />
-            <section title="Variables" ref="functions_vars.html" />
+          <section title="FileParser" ref="class_file_parser.html">
+            <section title="close" ref="class_file_parser.html#afaeb2d28e432115ec845ebe4ff86d8f4" />
+            <section title="open" ref="class_file_parser.html#a0841789c9e75d720801c3c4d5a666468" />
+            <section title="parse" ref="class_file_parser.html#a09bc46c3ba8e88b76bf697e6a2e42322" />
+          </section>
+          <section title="FileRepair" ref="class_file_repair.html">
+            <section title="close" ref="class_file_repair.html#a064582b19814d82fb8c5137fda1d7094" />
+            <section title="isSvcLog" ref="class_file_repair.html#a74ae5712f091f566d11c212a44e81950" />
+            <section title="openSVCfile" ref="class_file_repair.html#a5b47bb493dd6badf67ebd399ae13367e" />
+            <section title="repair" ref="class_file_repair.html#a9e9229df812c8351abbaea0f96f336f0" />
+          </section>
+          <section title="FileSplitter" ref="class_file_splitter.html">
+            <section title="close" ref="class_file_splitter.html#a697e29fca8ea43b9edf8cf5521b893ed" />
+            <section title="getErrorMessage" ref="class_file_splitter.html#adf3e560de386a3bceba0e9d2ed2f82fd" />
+            <section title="good" ref="class_file_splitter.html#a367cf7d6ecbceb29b2745a34e6792032" />
+            <section title="open" ref="class_file_splitter.html#a2230e92d9245d527ea773558aeddfae8" />
+            <section title="split" ref="class_file_splitter.html#acbead9df4e0a0a91fd3cfcaf910396e6" />
+            <section title="MAX_NB_MESSAGES" ref="class_file_splitter.html#aac6b01264d975d410a1de25142cab3f5" />
+          </section>
+          <section title="MainWindow" ref="class_main_window.html">
+            <section title="MainWindow" ref="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" />
+            <section title="addListItem" ref="class_main_window.html#a9f8a8f1f85c4100c527539e49bd8e2bb" />
+            <section title="NOT_FOUND" ref="class_main_window.html#a4ac1e96cc358f601df15a3b9c2e4a069" />
+            <section title="version" ref="class_main_window.html#ae91df044e00c58c3410e4073e48f7c9e" />
+          </section>
+          <section title="Messages" ref="class_messages.html">
+            <section title="Message" ref="struct_messages_1_1_message.html">
+              <section title="action" ref="struct_messages_1_1_message.html#a0bd3cd681cc736d36c89fea06a803ac7" />
+              <section title="activityId" ref="struct_messages_1_1_message.html#a9f20ea91968683f11d023ce86b22c7f4" />
+              <section title="body" ref="struct_messages_1_1_message.html#a5850875aca378d32d5fb919709e4cd02" />
+              <section title="bodyEndPosition" ref="struct_messages_1_1_message.html#a49cb9964faabd11e60073951dabbea31" />
+              <section title="bodyStartPosition" ref="struct_messages_1_1_message.html#ad380239cde093f003a39de9ecf39a05a" />
+              <section title="direction" ref="struct_messages_1_1_message.html#a1709088d211103a5d4087fcbe98e460f" />
+              <section title="host" ref="struct_messages_1_1_message.html#a80093f739a4603b0f10f223e7656e1ef" />
+              <section title="isRequest" ref="struct_messages_1_1_message.html#a7c0812a203be3dabff1056dcc6154670" />
+              <section title="isServiceLevel" ref="struct_messages_1_1_message.html#a8c51e9fd449af203146f14c5e97ebeb9" />
+              <section title="messageTime" ref="struct_messages_1_1_message.html#a4fd889d3ccc97e2abd99f93e5a98189e" />
+              <section title="module" ref="struct_messages_1_1_message.html#a9621d187b646fb37975d7a0d5dcb81b8" />
+              <section title="wsdl" ref="struct_messages_1_1_message.html#a152166d0b5b659d2c83d0ea52aa200e4" />
+            </section>
           </section>
         </section>
-        <section title="Files" ref="files.html">
-          <section title="File List" ref="files.html">
-            <section title="Sources" ref="dir_937900b87e0c7a5fa01190c395fb83f7.html">
-              <section title="BodyPrintableParser.h" ref="_body_printable_parser_8h_source.html" />
-              <section title="BodyTableParser.h" ref="_body_table_parser_8h_source.html" />
-              <section title="BodyTextParser.h" ref="_body_text_parser_8h_source.html" />
-              <section title="BodyTreeParser.h" ref="_body_tree_parser_8h_source.html" />
-              <section title="Common.h" ref="_common_8h_source.html" />
-              <section title="FileConverter.h" ref="_file_converter_8h_source.html" />
-              <section title="FileParser.h" ref="_file_parser_8h_source.html" />
-              <section title="FileRepair.h" ref="_file_repair_8h_source.html" />
-              <section title="FileSplitter.h" ref="_file_splitter_8h_source.html" />
-              <section title="mainwindow.h" ref="mainwindow_8h_source.html" />
-              <section title="messages.h" ref="messages_8h_source.html" />
-            </section>
+        <section title="Class Index" ref="classes.html" />
+        <section title="Class Hierarchy" ref="hierarchy.html">
+          <section title="BodyPrintableParser" ref="class_body_printable_parser.html" />
+          <section title="BodyTableParser" ref="class_body_table_parser.html" />
+          <section title="BodyTextParser" ref="class_body_text_parser.html" />
+          <section title="BodyTreeParser" ref="class_body_tree_parser.html" />
+          <section title="Common" ref="class_common.html" />
+          <section title="FileConverter" ref="class_file_converter.html" />
+          <section title="FileParser" ref="class_file_parser.html" />
+          <section title="FileRepair" ref="class_file_repair.html" />
+          <section title="FileSplitter" ref="class_file_splitter.html" />
+          <section title="Messages::Message" ref="struct_messages_1_1_message.html" />
+          <section title="Messages" ref="class_messages.html" />
+          <section title="QMainWindow" ref="">
+            <section title="MainWindow" ref="class_main_window.html" />
+          </section>
+        </section>
+        <section title="Class Members" ref="functions.html">
+          <section title="All" ref="functions.html" />
+          <section title="Functions" ref="functions_func.html" />
+          <section title="Variables" ref="functions_vars.html" />
+        </section>
+      </section>
+      <section title="Files" ref="files.html">
+        <section title="File List" ref="files.html">
+          <section title="Sources" ref="dir_937900b87e0c7a5fa01190c395fb83f7.html">
+            <section title="BodyPrintableParser.h" ref="_body_printable_parser_8h_source.html" />
+            <section title="BodyTableParser.h" ref="_body_table_parser_8h_source.html" />
+            <section title="BodyTextParser.h" ref="_body_text_parser_8h_source.html" />
+            <section title="BodyTreeParser.h" ref="_body_tree_parser_8h_source.html" />
+            <section title="Common.h" ref="_common_8h_source.html" />
+            <section title="FileConverter.h" ref="_file_converter_8h_source.html" />
+            <section title="FileParser.h" ref="_file_parser_8h_source.html" />
+            <section title="FileRepair.h" ref="_file_repair_8h_source.html" />
+            <section title="FileSplitter.h" ref="_file_splitter_8h_source.html" />
+            <section title="mainwindow.h" ref="mainwindow_8h_source.html" />
+            <section title="messages.h" ref="messages_8h_source.html" />
           </section>
         </section>
       </section>
-    </toc>
+    </section>
+  </toc>
     <keywords>
+      <keyword name="How to install Expat parser" id="How to install Expat parser" ref="md__e__source_repos__s_o_a_p__message__viewer_docs_how_to_install__expat__parser.html" />
       <keyword name="Documentation intégrée" id="Documentation intégrée" ref="md__r_e_a_d_m_e.html" />
       <keyword name="BodyPrintableParser" id="BodyPrintableParser" ref="class_body_printable_parser.html" />
       <keyword name="BodyPrintableParser" id="BodyPrintableParser::BodyPrintableParser" ref="class_body_printable_parser.html#a688e1cef21ccc9518bb83b3ee2f235ae" />
@@ -255,6 +281,7 @@
       <file>_file_splitter_8h_source.html</file>
       <file>mainwindow_8h_source.html</file>
       <file>messages_8h_source.html</file>
+      <file>md__e__source_repos__s_o_a_p__message__viewer_docs_how_to_install__expat__parser.html</file>
       <file>md__r_e_a_d_m_e.html</file>
       <file>class_body_printable_parser.html</file>
       <file>class_body_printable_parser-members.html</file>
@@ -283,6 +310,8 @@
       <file>struct_messages_1_1_message-members.html</file>
       <file>dir_937900b87e0c7a5fa01190c395fb83f7.html</file>
       <file>index.html</file>
+      <file>Capture.png</file>
+      <file>Capture.png</file>
       <file>pages.html</file>
       <file>annotated.html</file>
       <file>classes.html</file>

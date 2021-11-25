@@ -15,9 +15,8 @@ Par contre, on n'utilise pas la fonctionnalité [Qdoc de Qt](https://doc.qt.io/q
 * Autres tags:
   * `@retval TRUE Successfuly done` : Explication des valeurs retournées.
   * `@author ...` : Auteur du code (optionnelement pour les classes).
-  * `@sa UneClasse` ou `@sa UneFonction()` : Lien de type **See Also**
+  * `@sa UneClasse` ou `@sa UneFonction()` : Lien de type **See also**
   * `@ref doc/readme.md` : lien vers un fichier *markdown*
-  * `@todo  ... ` : **compatible Qt ???**
   * `@pre  ... ` : Affichage d'un texte concernant les préalables à l'appel d'une fonction.
   * `@warning ...` ou `@attention ...` ou `@remark ...`: Ajout d'un texte mis en évidence dans la description.
   * `@ingroup` : à voir. 
@@ -94,17 +93,19 @@ Voir aussi à ce sujet, le site de [Synax](https://www.sinax.be/blog/software-de
 
 ### Autres balises
 
-Affichage des fonctions et variables privées dans la documentation:
-
 ```ini
-EXTRACT_PRIVATE        = YES
+EXTRACT_PRIVATE        = YES                   # Affichage des fonctions et variables privées dans la documentation
+USE_MDFILE_AS_MAINPAGE = ../../README.md       # Chemin de la main page
+INPUT                 += ../../README.md       # fichier MD à utiliser dans la doc ("related pages")
+INPUT                 += ../Expat_Parser.md    # fichier MD à utiliser dans la doc ("related pages")
+IMAGE_PATH             = ../images             # Chemin des images pour la doc
 ```
 
 
 
 ## Bibliographie
 
-http://tvaira.free.fr/projets/activites/activite-documentation-doxygen.html
+Tutoriel doxygen de [T Vaira]( http://tvaira.free.fr/projets/activites/activite-documentation-doxygen.html)
 
 
 
