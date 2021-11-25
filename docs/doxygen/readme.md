@@ -69,6 +69,8 @@ Note: Les balises typiques de Qdoc sont `/*! ... */`  et `//! ...`
 
 ### Balises pour compatibilité Qt
 
+Pour générer un fichier QCH, il faut positionner les tags suivants:
+
 ```ini
 GENERATE_QHP           = YES
 QCH_FILE               = SOAP-Message-Viewer.qch
@@ -77,14 +79,20 @@ QHP_VIRTUAL_FOLDER     = doc
 QHG_LOCATION           = qhelpgenerator
 ```
 
-Le nom du fichier *.qch* et du *namespace* peuvent être choisis librement. 
-
-Note importante : l'outil *qhelpgenerator* doit être dans le PATH.
+Le nom du fichier *.qch* et du *namespace* peuvent être choisis librement, et l'outil *qhelpgenerator* doit être dans le PATH.
 
 ```
 C:\Qt\5.15.0\msvc2019_64\bin
 ```
-Voir à ce sujet, le site de [synax](https://www.sinax.be/blog/software-development/display-doxygen-generated-docs-in-qt-creator.html).
+Il faut aussi indiquer à **QtCreator** qu'il peut utiliser ce fichier QCH. La touche **F1** permettra alors d'afficher l'aide pour l'entité sous le curseur, même si c'est une fonction ou une variable du projet !
+
+```
+Outils → Options... → Aide → Documenation → Ajouter le fichier QCH
+```
+
+Voir aussi à ce sujet, le site de [Synax](https://www.sinax.be/blog/software-development/display-doxygen-generated-docs-in-qt-creator.html).
+
+### Autres balises
 
 Affichage des fonctions et variables privées dans la documentation:
 
