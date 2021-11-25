@@ -1506,16 +1506,16 @@ QCH_FILE               = SOAP-Message-Viewer.qch
 # The QHP_NAMESPACE tag specifies the namespace to use when generating Qt Help
 # Project output. For more information please see Qt Help Project / Namespace
 # (see:
-# https://doc.qt.io/archives/qt-4.8/qthelpproject.html#namespace).
+# https://doc.qt.io/qt-5/qthelpproject.html
 # The default value is: org.doxygen.Project.
 # This tag requires that the tag GENERATE_QHP is set to YES.
 
-QHP_NAMESPACE          = sphinkie.SOAPMessageViewer
+QHP_NAMESPACE          = sphinkie.SoapMessageViewer
 
 # The QHP_VIRTUAL_FOLDER tag specifies the namespace to use when generating Qt
 # Help Project output. For more information please see Qt Help Project / Virtual
 # Folders (see:
-# https://doc.qt.io/archives/qt-4.8/qthelpproject.html#virtual-folders).
+# https://doc.qt.io/qt-5/qthelpproject.html
 # The default value is: doc.
 # This tag requires that the tag GENERATE_QHP is set to YES.
 
@@ -1524,7 +1524,7 @@ QHP_VIRTUAL_FOLDER     = doc
 # If the QHP_CUST_FILTER_NAME tag is set, it specifies the name of a custom
 # filter to add. For more information please see Qt Help Project / Custom
 # Filters (see:
-# https://doc.qt.io/archives/qt-4.8/qthelpproject.html#custom-filters).
+# https://doc.qt.io/qt-5/qthelpproject.html
 # This tag requires that the tag GENERATE_QHP is set to YES.
 
 QHP_CUST_FILTER_NAME   =
@@ -1532,7 +1532,7 @@ QHP_CUST_FILTER_NAME   =
 # The QHP_CUST_FILTER_ATTRS tag specifies the list of the attributes of the
 # custom filter to add. For more information please see Qt Help Project / Custom
 # Filters (see:
-# https://doc.qt.io/archives/qt-4.8/qthelpproject.html#custom-filters).
+# https://doc.qt.io/qt-5/qthelpproject.html
 # This tag requires that the tag GENERATE_QHP is set to YES.
 
 QHP_CUST_FILTER_ATTRS  =

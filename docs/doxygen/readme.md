@@ -72,18 +72,17 @@ Note: Les balises typiques de Qdoc sont `/*! ... */`  et `//! ...`
 ```ini
 GENERATE_QHP           = YES
 QCH_FILE               = SOAP-Message-Viewer.qch
-QHP_NAMESPACE          = sphinkie.SOAPMessageViewer
+QHP_NAMESPACE          = sphinkie.SoapMessageViewer
 QHP_VIRTUAL_FOLDER     = doc
 QHG_LOCATION           = qhelpgenerator
 ```
 
-Le nom du fichier *.qch* et du namespace peuvent être choisis librement. 
+Le nom du fichier *.qch* et du *namespace* peuvent être choisis librement. 
 
 Note importante : l'outil *qhelpgenerator* doit être dans le PATH.
 
-```ini
-QT_TOOL_BIN = $HOME/Qt/5.13.1/gcc_64/bin
-export PATH = $PATH:$HOME/.bin:$QT_TOOL_BIN
+```
+C:\Qt\5.15.0\msvc2019_64\bin
 ```
 Voir à ce sujet, le site de [synax](https://www.sinax.be/blog/software-development/display-doxygen-generated-docs-in-qt-creator.html).
 

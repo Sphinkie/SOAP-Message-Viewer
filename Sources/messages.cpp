@@ -46,7 +46,6 @@ void Messages::setAction(std::string* action)
 
 /** ****************************************************************************************
  * @brief Mémorise le nom de l'ordinateur émetteur du message.
- *
  * @param host : Contient un hostname ou une adresse IP.
  **************************************************************************************** */
 void Messages::setHost(std::string host)

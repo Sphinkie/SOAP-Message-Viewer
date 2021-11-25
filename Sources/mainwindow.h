@@ -22,12 +22,13 @@ namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
 /** *******************************************************************************
- * @brief La classe MainWindow gère la fenêtre principale de l'application.
+ * @brief La classe MainWindow gère la fenêtre principale de l'IHM de l'application.
  * @author David de Lorenzo
- **********************************************************************************/
+  **********************************************************************************/
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
+
 
 public:
     MainWindow(QWidget *parent = nullptr);

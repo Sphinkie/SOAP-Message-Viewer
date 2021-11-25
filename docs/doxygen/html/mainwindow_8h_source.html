@@ -91,114 +91,115 @@ $(document).ready(function(){initNavTree('mainwindow_8h_source.html',''); initRe
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>{</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    Q_OBJECT</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_function" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d">MainWindow</a>(QWidget *parent = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_class" href="class_main_window.html">~MainWindow</a>();</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_main_window.html#a9f8a8f1f85c4100c527539e49bd8e2bb">addListItem</a>(std::string texte);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_main_window.html#ae91df044e00c58c3410e4073e48f7c9e">   37</a></span>    QVersionNumber <a class="code hl_variable" href="class_main_window.html#ae91df044e00c58c3410e4073e48f7c9e">version</a> = QVersionNumber::fromString(<span class="stringliteral">&quot;1.3.0&quot;</span>);   </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_main_window.html#a4ac1e96cc358f601df15a3b9c2e4a069">   38</a></span>    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_main_window.html#a4ac1e96cc358f601df15a3b9c2e4a069">NOT_FOUND</a> = -1;                                       </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_function" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d">MainWindow</a>(QWidget *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_class" href="class_main_window.html">~MainWindow</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_main_window.html#a9f8a8f1f85c4100c527539e49bd8e2bb">addListItem</a>(std::string texte);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_main_window.html#ae91df044e00c58c3410e4073e48f7c9e">   38</a></span>    QVersionNumber <a class="code hl_variable" href="class_main_window.html#ae91df044e00c58c3410e4073e48f7c9e">version</a> = QVersionNumber::fromString(<span class="stringliteral">&quot;1.3.0&quot;</span>);   </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_main_window.html#a4ac1e96cc358f601df15a3b9c2e4a069">   39</a></span>    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_main_window.html#a4ac1e96cc358f601df15a3b9c2e4a069">NOT_FOUND</a> = -1;                                       </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">private</span> slots:</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment">// Barre de menu</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">void</span> on_actionOpen_triggered();</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> on_actionImport_triggered();</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> on_actionSave_triggered();</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> on_actionMark_triggered();</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> on_actionSplit_triggered();</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> on_actionRepair_triggered();</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> on_actionConvert_triggered();</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> on_actionQuit_triggered();</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> on_actionInfos_triggered();</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">void</span> on_actionAbout_triggered();</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">void</span> on_actionHideService_triggered();</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> on_actionHideNS_triggered();</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">void</span> on_w_JumpButton_clicked();</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">void</span> on_w_SearchNextButton_clicked();</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> on_w_SearchActionButton_clicked();</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">void</span> on_w_SearchBodyButton_clicked();</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">void</span> on_w_ResetFilterButton_clicked();</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">void</span> on_w_MessageList_itemSelectionChanged();</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">void</span> on_w_MessageList_itemDoubleClicked(QListWidgetItem *item);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">void</span> on_tabWidget_currentChanged(<span class="keywordtype">int</span> index);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">void</span> displayMessageHeader(<span class="keywordtype">bool</span> isRequest);</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">void</span> displayMessageBody(<span class="keywordtype">char</span>* body, <span class="keywordtype">int</span> tabIndex);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">int</span> circleFastCorrelatedJump(<span class="keywordtype">int</span> startingPoint, <a class="code hl_struct" href="struct_messages_1_1_message.html">Messages::Message</a>* msg);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">int</span> circleGlobalCorrelatedJump(<span class="keywordtype">int</span> startingPoint, <a class="code hl_struct" href="struct_messages_1_1_message.html">Messages::Message</a>* msg);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">private</span> slots:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="comment">// Barre de menu</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> on_actionOpen_triggered();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> on_actionImport_triggered();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> on_actionSave_triggered();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> on_actionMark_triggered();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> on_actionSplit_triggered();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> on_actionRepair_triggered();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> on_actionConvert_triggered();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> on_actionQuit_triggered();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">void</span> on_actionInfos_triggered();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">void</span> on_actionAbout_triggered();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> on_actionHideService_triggered();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">void</span> on_actionHideNS_triggered();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">void</span> on_w_JumpButton_clicked();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> on_w_SearchNextButton_clicked();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">void</span> on_w_SearchActionButton_clicked();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">void</span> on_w_SearchBodyButton_clicked();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">void</span> on_w_ResetFilterButton_clicked();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">void</span> on_w_MessageList_itemSelectionChanged();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">void</span> on_w_MessageList_itemDoubleClicked(QListWidgetItem *item);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">void</span> on_tabWidget_currentChanged(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">void</span> displayMessageHeader(<span class="keywordtype">bool</span> isRequest);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">void</span> displayMessageBody(<span class="keywordtype">char</span>* body, <span class="keywordtype">int</span> tabIndex);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">int</span> circleFastCorrelatedJump(<span class="keywordtype">int</span> startingPoint, <a class="code hl_struct" href="struct_messages_1_1_message.html">Messages::Message</a>* msg);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">int</span> circleGlobalCorrelatedJump(<span class="keywordtype">int</span> startingPoint, <a class="code hl_struct" href="struct_messages_1_1_message.html">Messages::Message</a>* msg);</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    Ui::MainWindow *ui;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    QPushButton    *m_boutonDialogue;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    QFont FontItal;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    QFont FontGras;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    QIcon arrowLeftIcon;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    QIcon arrowRightIcon;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    QVector&lt;int&gt; messagesSearchList;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">bool</span> searchDown = <span class="keyword">true</span>;                 </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">int</span>  hiddenCorrelatedItem = <a class="code hl_variable" href="class_main_window.html#a4ac1e96cc358f601df15a3b9c2e4a069">NOT_FOUND</a>;  </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    Ui::MainWindow *ui;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    QPushButton    *m_boutonDialogue;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    QFont FontItal;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    QFont FontGras;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    QIcon arrowLeftIcon;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    QIcon arrowRightIcon;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    QVector&lt;int&gt; messagesSearchList;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">bool</span> searchDown = <span class="keyword">true</span>;                 </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordtype">int</span>  hiddenCorrelatedItem = <a class="code hl_variable" href="class_main_window.html#a4ac1e96cc358f601df15a3b9c2e4a069">NOT_FOUND</a>;  </div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>QString explicationRepair  =</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="stringliteral">&quot;Lors de l&#39;enregistrement des traces SOAP avec l&#39;activation des diagnostics, \</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="stringliteral">    il arrive fréquemment que le fichier &lt;b&gt;web_messages.svclog&lt;/b&gt; soit tronqué à la fin au milieu d&#39;une section. \</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="stringliteral">    &lt;br/&gt; La syntaxe XML n\&#39;est alors pas respectée, et le fichier ne peut pas être ouvert via un éditeur XML standard. \</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="stringliteral">    &lt;br/&gt; &lt;b&gt;WCF Repair&lt;/b&gt; supprime la ligne tronquée, et referme les balises XML qui restaient pendantes. \</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="stringliteral">    Il encapsule aussi l&#39;ensemble dans une section &amp;lt;root&amp;gt;. \</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="stringliteral">    &lt;br/&gt; Le fichier réparé &lt;b&gt;web_messages.repaired.xml&lt;/b&gt; est alors facilement manipulable et éditable.&quot;</span>;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>QString explicationConvert  =</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="stringliteral">&quot;&lt;h3&gt;Conversion to faster XML format&lt;/h3&gt; \</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="stringliteral">    &lt;p&gt;Le traitement des fichiers SVCLOG est parfois long, car ces fichiers sont verbeux. &lt;/p&gt;\</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="stringliteral">    &lt;p&gt;Les fichiers au format &lt;b&gt;faster&lt;/b&gt; (&lt;i&gt;web_messages.faster.xml&lt;/i&gt;) contiennent uniquement les informations utiles des messages SOA. \</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="stringliteral">    Ils sont compatibles avec la présente application, et présentent de meilleurs performances. \</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="stringliteral">    &lt;br/&gt; Ils restent éditables dans un éditeur XML standard. &lt;/p&gt;&quot;</span>;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>QString explicationSplitting  =</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="stringliteral">&quot;&lt;h3&gt;Splitting an SVCLOG file&lt;/h3&gt; \</span></div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="stringliteral">    &lt;p&gt;SVCLOG files can be very huge...&lt;/p&gt;\</span></div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="stringliteral">    &lt;p&gt;If they contain more than 30.000 messages, the application will not be able to display all the messages. &lt;br/&gt; \</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="stringliteral">    In that case, we recommand to use the &lt;i&gt;Splitting&lt;/i&gt; functionnality, which will split the SVCLOG file into several files \</span></div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="stringliteral">    of 20.000 messages each. &lt;/p&gt;&quot;</span>;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>QString messageInfos =</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="stringliteral">&quot;&lt;h2&gt;SOAP Message Viewer&lt;/h2&gt; \</span></div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="stringliteral">    &lt;h3&gt;Usage&lt;/h3&gt; \</span></div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="stringliteral">    &lt;p&gt;&lt;b&gt;SOAP Message Viewer&lt;/b&gt; allows you to open a SOAP trace file (usually: &lt;i&gt;web_messages.svclog&lt;/i&gt;) \</span></div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="stringliteral">    and see the content of the recorded messages, in a fast and convenient way.&lt;/p&gt; \</span></div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="stringliteral">    &lt;h3&gt;Convert and Repair&lt;/h3&gt; \</span></div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="stringliteral">    &lt;p&gt;&lt;b&gt;Convert&lt;/b&gt; and &lt;b&gt;Repair&lt;/b&gt; are two similar functionalities: &lt;br/&gt;&lt;br/&gt; \</span></div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="stringliteral">       &lt;b&gt;Convert&lt;/b&gt; will generate an XML with lesser tags, and faster to process. &lt;br/&gt;&lt;br/&gt; \</span></div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="stringliteral">       &lt;b&gt;Repair&lt;/b&gt; is a binary process that will attempt to produce an XML, compatible with usual standards, \</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="stringliteral">       by discarding truncated elements, removing i:nil and xsi:nil tags, and appending missing tag endings. &lt;br/&gt; \</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="stringliteral">    &lt;/p&gt; \</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="stringliteral">    &lt;h3&gt;LF and CRLF&lt;/h3&gt; \</span></div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="stringliteral">      &lt;p&gt;The &lt;b&gt;svclog&lt;/b&gt; file is supposed to contain 1 line, and eventualy LF [0x0A] byte, if a &lt;b&gt;LineFeed&lt;/b&gt; is present. &lt;br/&gt;\</span></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="stringliteral">      The &lt;b&gt;XML&lt;/b&gt; files may contain CR-LF [0x0D 0x0A] bytes, which is the standard CarriageReturn-LineFeed sequence for Windows.&lt;br/&gt; \</span></div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="stringliteral">      Your file may not contain &lt;b&gt;both LF and CRLF&lt;/b&gt; delimiters, otherwise the application will not be able to parse the XML messages sucessfully.&lt;/p&gt;&quot;</span>;</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>QString messageAbout =</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>      <span class="stringliteral">&quot;&lt;h2&gt;SOAP Message Viewer v&quot;</span> + <a class="code hl_variable" href="class_main_window.html#ae91df044e00c58c3410e4073e48f7c9e">version</a>.toString() + <span class="stringliteral">&quot;&lt;/h2&gt;&quot;</span> +</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>      <span class="stringliteral">&quot;&lt;p&gt;&lt;b&gt;SOAP Message Viewer&lt;/b&gt; allows you to open a SOAP trace file &lt;br/&gt; \</span></div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="stringliteral">       (usually: &lt;i&gt;web_messages.svclog&lt;/i&gt;) and to see the content of &lt;br/&gt; \</span></div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="stringliteral">       the recorded messages, in a fast and convenient way.&lt;/p&gt; \</span></div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="stringliteral">      &lt;p&gt; Written by David de Lorenzo (2020). &lt;/p&gt; \</span></div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="stringliteral">      &lt;p&gt; &lt;a href=&#39;http://www.sgt.eu&#39;&gt;http://www.sgt.eu&lt;/a&gt;&lt;/p&gt;  \</span></div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="stringliteral">      &lt;p&gt; This software uses Qt 5.15 (LGPL licence) &lt;br/&gt; and the Expat Library (MIT licence). &lt;/p&gt;&quot;</span>;</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>QString explicationRepair  =</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="stringliteral">&quot;Lors de l&#39;enregistrement des traces SOAP avec l&#39;activation des diagnostics, \</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="stringliteral">    il arrive fréquemment que le fichier &lt;b&gt;web_messages.svclog&lt;/b&gt; soit tronqué à la fin au milieu d&#39;une section. \</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="stringliteral">    &lt;br/&gt; La syntaxe XML n\&#39;est alors pas respectée, et le fichier ne peut pas être ouvert via un éditeur XML standard. \</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="stringliteral">    &lt;br/&gt; &lt;b&gt;WCF Repair&lt;/b&gt; supprime la ligne tronquée, et referme les balises XML qui restaient pendantes. \</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="stringliteral">    Il encapsule aussi l&#39;ensemble dans une section &amp;lt;root&amp;gt;. \</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="stringliteral">    &lt;br/&gt; Le fichier réparé &lt;b&gt;web_messages.repaired.xml&lt;/b&gt; est alors facilement manipulable et éditable.&quot;</span>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>QString explicationConvert  =</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="stringliteral">&quot;&lt;h3&gt;Conversion to faster XML format&lt;/h3&gt; \</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="stringliteral">    &lt;p&gt;Le traitement des fichiers SVCLOG est parfois long, car ces fichiers sont verbeux. &lt;/p&gt;\</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="stringliteral">    &lt;p&gt;Les fichiers au format &lt;b&gt;faster&lt;/b&gt; (&lt;i&gt;web_messages.faster.xml&lt;/i&gt;) contiennent uniquement les informations utiles des messages SOA. \</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="stringliteral">    Ils sont compatibles avec la présente application, et présentent de meilleurs performances. \</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="stringliteral">    &lt;br/&gt; Ils restent éditables dans un éditeur XML standard. &lt;/p&gt;&quot;</span>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>QString explicationSplitting  =</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="stringliteral">&quot;&lt;h3&gt;Splitting an SVCLOG file&lt;/h3&gt; \</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="stringliteral">    &lt;p&gt;SVCLOG files can be very huge...&lt;/p&gt;\</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="stringliteral">    &lt;p&gt;If they contain more than 30.000 messages, the application will not be able to display all the messages. &lt;br/&gt; \</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="stringliteral">    In that case, we recommand to use the &lt;i&gt;Splitting&lt;/i&gt; functionnality, which will split the SVCLOG file into several files \</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="stringliteral">    of 20.000 messages each. &lt;/p&gt;&quot;</span>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>QString messageInfos =</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="stringliteral">&quot;&lt;h2&gt;SOAP Message Viewer&lt;/h2&gt; \</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="stringliteral">    &lt;h3&gt;Usage&lt;/h3&gt; \</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="stringliteral">    &lt;p&gt;&lt;b&gt;SOAP Message Viewer&lt;/b&gt; allows you to open a SOAP trace file (usually: &lt;i&gt;web_messages.svclog&lt;/i&gt;) \</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="stringliteral">    and see the content of the recorded messages, in a fast and convenient way.&lt;/p&gt; \</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="stringliteral">    &lt;h3&gt;Convert and Repair&lt;/h3&gt; \</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="stringliteral">    &lt;p&gt;&lt;b&gt;Convert&lt;/b&gt; and &lt;b&gt;Repair&lt;/b&gt; are two similar functionalities: &lt;br/&gt;&lt;br/&gt; \</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="stringliteral">       &lt;b&gt;Convert&lt;/b&gt; will generate an XML with lesser tags, and faster to process. &lt;br/&gt;&lt;br/&gt; \</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="stringliteral">       &lt;b&gt;Repair&lt;/b&gt; is a binary process that will attempt to produce an XML, compatible with usual standards, \</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="stringliteral">       by discarding truncated elements, removing i:nil and xsi:nil tags, and appending missing tag endings. &lt;br/&gt; \</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="stringliteral">    &lt;/p&gt; \</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="stringliteral">    &lt;h3&gt;LF and CRLF&lt;/h3&gt; \</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="stringliteral">      &lt;p&gt;The &lt;b&gt;svclog&lt;/b&gt; file is supposed to contain 1 line, and eventualy LF [0x0A] byte, if a &lt;b&gt;LineFeed&lt;/b&gt; is present. &lt;br/&gt;\</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="stringliteral">      The &lt;b&gt;XML&lt;/b&gt; files may contain CR-LF [0x0D 0x0A] bytes, which is the standard CarriageReturn-LineFeed sequence for Windows.&lt;br/&gt; \</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="stringliteral">      Your file may not contain &lt;b&gt;both LF and CRLF&lt;/b&gt; delimiters, otherwise the application will not be able to parse the XML messages sucessfully.&lt;/p&gt;&quot;</span>;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>QString messageAbout =</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>      <span class="stringliteral">&quot;&lt;h2&gt;SOAP Message Viewer v&quot;</span> + <a class="code hl_variable" href="class_main_window.html#ae91df044e00c58c3410e4073e48f7c9e">version</a>.toString() + <span class="stringliteral">&quot;&lt;/h2&gt;&quot;</span> +</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>      <span class="stringliteral">&quot;&lt;p&gt;&lt;b&gt;SOAP Message Viewer&lt;/b&gt; allows you to open a SOAP trace file &lt;br/&gt; \</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="stringliteral">       (usually: &lt;i&gt;web_messages.svclog&lt;/i&gt;) and to see the content of &lt;br/&gt; \</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="stringliteral">       the recorded messages, in a fast and convenient way.&lt;/p&gt; \</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="stringliteral">      &lt;p&gt; Written by David de Lorenzo (2020). &lt;/p&gt; \</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="stringliteral">      &lt;p&gt; &lt;a href=&#39;http://www.sgt.eu&#39;&gt;http://www.sgt.eu&lt;/a&gt;&lt;/p&gt;  \</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="stringliteral">      &lt;p&gt; This software uses Qt 5.15 (LGPL licence) &lt;br/&gt; and the Expat Library (MIT licence). &lt;/p&gt;&quot;</span>;</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>};</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="preprocessor">#endif </span><span class="comment">// MAINWINDOW_H</span></div>
-<div class="ttc" id="aclass_main_window_html"><div class="ttname"><a href="class_main_window.html">MainWindow</a></div><div class="ttdoc">La classe MainWindow gère la fenêtre principale de l'application.</div><div class="ttdef"><b>Definition:</b> mainwindow.h:29</div></div>
-<div class="ttc" id="aclass_main_window_html_a4ac1e96cc358f601df15a3b9c2e4a069"><div class="ttname"><a href="class_main_window.html#a4ac1e96cc358f601df15a3b9c2e4a069">MainWindow::NOT_FOUND</a></div><div class="ttdeci">const int NOT_FOUND</div><div class="ttdoc">Constante.</div><div class="ttdef"><b>Definition:</b> mainwindow.h:38</div></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>};</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="preprocessor">#endif </span><span class="comment">// MAINWINDOW_H</span></div>
+<div class="ttc" id="aclass_main_window_html"><div class="ttname"><a href="class_main_window.html">MainWindow</a></div><div class="ttdoc">La classe MainWindow gère la fenêtre principale de l'IHM de l'application.</div><div class="ttdef"><b>Definition:</b> mainwindow.h:29</div></div>
+<div class="ttc" id="aclass_main_window_html_a4ac1e96cc358f601df15a3b9c2e4a069"><div class="ttname"><a href="class_main_window.html#a4ac1e96cc358f601df15a3b9c2e4a069">MainWindow::NOT_FOUND</a></div><div class="ttdeci">const int NOT_FOUND</div><div class="ttdoc">Constante.</div><div class="ttdef"><b>Definition:</b> mainwindow.h:39</div></div>
 <div class="ttc" id="aclass_main_window_html_a996c5a2b6f77944776856f08ec30858d"><div class="ttname"><a href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d">MainWindow::MainWindow</a></div><div class="ttdeci">MainWindow(QWidget *parent=nullptr)</div><div class="ttdoc">Cette fonction définit la fenêtre principale.</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:9</div></div>
 <div class="ttc" id="aclass_main_window_html_a9f8a8f1f85c4100c527539e49bd8e2bb"><div class="ttname"><a href="class_main_window.html#a9f8a8f1f85c4100c527539e49bd8e2bb">MainWindow::addListItem</a></div><div class="ttdeci">void addListItem(std::string texte)</div><div class="ttdoc">Ajoute un item à la liste des messages.</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:27</div></div>
-<div class="ttc" id="aclass_main_window_html_ae91df044e00c58c3410e4073e48f7c9e"><div class="ttname"><a href="class_main_window.html#ae91df044e00c58c3410e4073e48f7c9e">MainWindow::version</a></div><div class="ttdeci">QVersionNumber version</div><div class="ttdoc">Numéro de version logiciel. A mettre aussi à jour dans le fichier .pro et Doxyfile.</div><div class="ttdef"><b>Definition:</b> mainwindow.h:37</div></div>
-<div class="ttc" id="astruct_messages_1_1_message_html"><div class="ttname"><a href="struct_messages_1_1_message.html">Messages::Message</a></div><div class="ttdef"><b>Definition:</b> messages.h:53</div></div>
+<div class="ttc" id="aclass_main_window_html_ae91df044e00c58c3410e4073e48f7c9e"><div class="ttname"><a href="class_main_window.html#ae91df044e00c58c3410e4073e48f7c9e">MainWindow::version</a></div><div class="ttdeci">QVersionNumber version</div><div class="ttdoc">Numéro de version logiciel. A mettre aussi à jour dans le fichier .pro et Doxyfile.</div><div class="ttdef"><b>Definition:</b> mainwindow.h:38</div></div>
+<div class="ttc" id="astruct_messages_1_1_message_html"><div class="ttname"><a href="struct_messages_1_1_message.html">Messages::Message</a></div><div class="ttdoc">Structure descriptive d'un Message SOAP extrait du fichier SVCLOG.</div><div class="ttdef"><b>Definition:</b> messages.h:53</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

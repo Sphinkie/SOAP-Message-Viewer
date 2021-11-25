@@ -48,7 +48,7 @@ public:
     // recherches
     static bool        containsMessageBody(int index, std::string substring);
 
-    /** Structure descriptive d'un Message SOAP extrait du fichier SVCLOG. */
+    /** @brief Structure descriptive d'un Message SOAP extrait du fichier SVCLOG. */
     struct Message
     {
         std::string host;                     //!< Hostname ou adresse IP de l'emetteur du message.
