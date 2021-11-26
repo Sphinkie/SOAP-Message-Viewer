@@ -81,12 +81,12 @@ QHG_LOCATION           = qhelpgenerator
 Le nom du fichier *.qch* et du *namespace* peuvent être choisis librement, et l'outil *qhelpgenerator* doit être dans le PATH.
 
 ```
-C:\Qt\5.15.0\msvc2019_64\bin
+set PATH=%PATH%;C:\Qt\5.15.0\msvc2019_64\bin
 ```
 Il faut aussi indiquer à **QtCreator** qu'il peut utiliser ce fichier QCH. La touche **F1** permettra alors d'afficher l'aide pour l'entité sous le curseur, même si c'est une fonction ou une variable du projet !
 
 ```
-Outils → Options... → Aide → Documenation → Ajouter le fichier QCH
+Outils → Options... → Aide → Documentation → Ajouter le fichier QCH
 ```
 
 Voir aussi à ce sujet, le site de [Synax](https://www.sinax.be/blog/software-development/display-doxygen-generated-docs-in-qt-creator.html).
@@ -100,7 +100,7 @@ INPUT                 += ../../README.md       # fichier MD à utiliser dans la 
 INPUT                 += ../Expat_Parser.md    # fichier MD à utiliser dans la doc ("related pages")
 IMAGE_PATH             = ../images             # Chemin des images pour la doc
 
-MULTILINE_CPP_IS_BRIEF = YES                   # ""//! xxx" est considéré comme brief description (au lieu de detailled)
+MULTILINE_CPP_IS_BRIEF = YES                   # "//! xxx" est considéré comme brief description (au lieu de detailled)
 QT_AUTOBRIEF           = YES                   # La première phrase est considérée comme brief description (inutile de mettre la balise @brief).
 ```
 
@@ -108,7 +108,7 @@ QT_AUTOBRIEF           = YES                   # La première phrase est consid�
 
 ## Bibliographie
 
-Tutoriel doxygen de [T Vaira]( http://tvaira.free.fr/projets/activites/activite-documentation-doxygen.html)
+Tutoriel doxygen de [T.Vaira]( http://tvaira.free.fr/projets/activites/activite-documentation-doxygen.html)
 
 
 

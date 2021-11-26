@@ -47,7 +47,7 @@ Toutes les informations utiles au développement sont dans la [documentation dox
 [**Expat**](https://libexpat.github.io/) est un  parseur XML de type SAX, capable de traiter de gros fichiers rapidement.
 Comme la méthode SAX permet de traiter les données du XML au fur et à mesure de leur lecture, la librairie peut extraire des informations utiles du fichier XML, même si celui est tronqué ou abimé à la fin.
 
-Accès à la [procédure](docs/how_to_install_Expat_Parser.md) pour installer la librairie Expat.
+Voir la [procédure](docs/expat/readme.md) pour installer la librairie Expat.
 
 ## Licence
 

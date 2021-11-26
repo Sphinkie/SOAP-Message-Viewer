@@ -64,7 +64,55 @@ $(document).ready(function(){initNavTree('md__e__source_repos__s_o_a_p__message_
   <div class="headertitle"><div class="title">Librairie Expat </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p >Access to <a href="../../expat/reference.html">The Expart XML Parser reference manual</a>. </p>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md10"></a>
+Présentation</h1>
+<p >Access to <a href="../../expat/reference.html">The Expart XML Parser reference manual</a>.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md12"></a>
+Installation Expat XML Parser</h1>
+<p >Les utilisateurs Windows doivent télécharger le <a href="https://sourceforge.net/projects/expat/files/expat_win32/"><code>package expat_win32</code></a>, qui inclut à la fois les librairies précompilées, les exécutables, et le code source.</p>
+<p >Le <a href="https://libexpat.github.io/">site Github de Expat</a> présente la liste des dernières release de la librairie.</p>
+<h2><a class="anchor" id="autotoc_md13"></a>
+Installation avec le fichier EXE</h2>
+<p >Télécharger le fichier "expat-win32bin-2.2.9.exe" depuis <a href="https://github.com/libexpat/libexpat/releases">https://github.com/libexpat/libexpat/releases</a></p>
+<p >Par défaut, cela installe la librairie dans <code>C:\Program Files (x86)\Expat 2.2.9</code></p>
+<h2><a class="anchor" id="autotoc_md14"></a>
+Installation avec le fichier ZIP</h2>
+<p >Télécharger le fichier "expat-win32bin-2.2.9.zip" depuis <a href="https://github.com/libexpat/libexpat/releases">https://github.com/libexpat/libexpat/releases</a></p>
+<p >L'archive contient le même dossier.</p>
+<h1><a class="anchor" id="autotoc_md15"></a>
+Installation dans un projet Qt</h1>
+<p >Copier les fichiers dans le répertoire du projet:</p>
+<ul>
+<li><code>/Expat/bin</code> : copier les fichiers <b>DLL</b>: <code>libexpat.dll</code> et <code>libexpatw.dll</code> depuis <code>/Bin</code>.</li>
+<li><code>/Expat/include</code> : copier les fichiers <code>.h</code> et <code>.def</code> depuis <code>/source/lib</code>.</li>
+<li><code>/Expat/lib</code> : copier les fichiers <code>.lib</code> depuis <code>/Bin</code>.</li>
+<li><code>/Expat/src</code> : copier les fichiers <code>.c</code> depuis <code>/source/lib</code>.</li>
+<li><code>/docs/expat</code> : En y copiant les fichiers de documentation html de <code>/Expat/Doc</code> , on les rend acessibles depuis github et doxygen.</li>
+</ul>
+<p >Dans les répertoires de <b>build</b> du projet <code>/Release</code> et <code>/Debug</code> : copier les deux fichiers <b>dll</b>.</p>
+<h2><a class="anchor" id="autotoc_md16"></a>
+Configuration du Compilateur</h2>
+<p >Dans la config du binder, ajouter la librairie /expad/lib</p>
+<ul>
+<li><b>Projet</b> Clic-droit<ul>
+<li>Sélectioner <b>add library</b></li>
+<li>Sélectioner <b>external library</b></li>
+<li><b>Fichier de bibliothèque</b> : <code>libexpat</code></li>
+<li><b>Include Path</b> : <code>Expat/include</code></li>
+<li>Décocher: <code>Mac</code>, <code>Linux</code> et <code>Use "d" suffix for debug</code></li>
+</ul>
+</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md17"></a>
+Utilisation</h1>
+<p >Dans les fichiers header qui vont utiliser cette librairie (par exemple <em>MyProject_FileParser.h</em>), inclure la ligne: </p><div class="fragment"><div class="line"> {c++}</div>
+<div class="line">#include &lt;expat/include/expat.h&gt;</div>
+</div><!-- fragment --><p >Explications sur l'utilisation des méthodes de la librairie : voir <a href="https://www.xml.com/pub/1999/09/expat/index.html">https://www.xml.com/pub/1999/09/expat/index.html</a></p>
+<p >On utilise <a href="https://doc.qt.io/qt-5/windows-deployment.html#the-windows-deployment-too">l'outil de déploiement Qt</a> pour avoir automatiquement toutes les DLL nécessaires dans le répertoire build.</p>
+<h2><a class="anchor" id="autotoc_md18"></a>
+Notes</h2>
+<p >Il existe un wrapper c++ pour Expat : <a href="https://github.com/ckane/expatmm">https://github.com/ckane/expatmm</a> </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
