@@ -99,6 +99,9 @@ USE_MDFILE_AS_MAINPAGE = ../../README.md       # Chemin de la main page
 INPUT                 += ../../README.md       # fichier MD à utiliser dans la doc ("related pages")
 INPUT                 += ../Expat_Parser.md    # fichier MD à utiliser dans la doc ("related pages")
 IMAGE_PATH             = ../images             # Chemin des images pour la doc
+
+MULTILINE_CPP_IS_BRIEF = YES                   # ""//! xxx" est considéré comme brief description (au lieu de detailled)
+QT_AUTOBRIEF           = YES                   # La première phrase est considérée comme brief description (inutile de mettre la balise @brief).
 ```
 
 

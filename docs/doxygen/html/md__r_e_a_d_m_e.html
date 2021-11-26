@@ -67,7 +67,7 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 <div class="textblock"><p >L'application de documentation utilisée est <a href="https://www.doxygen.nl">doxygen</a>.</p>
 <p >Voir la page officielle des <a href="https://www.doxygen.nl/manual/index.html">commandes doxygen ici</a></p>
 <p >On utilise des balises compatibles avec Qt, pour avoir la description brève qui apparait dans l'IDE lorsque l'on survole une fonction. Par contre, on n'utilise pas la fonctionnalité <a href="https://doc.qt.io/qt-5/qdoc-guide-writing.html">Qdoc de Qt</a> dont le rendu visuel n'est pas aussi bien que doxygen.</p>
-<h1><a class="anchor" id="autotoc_md18"></a>
+<h1><a class="anchor" id="autotoc_md19"></a>
 Balises utilisées</h1>
 <ul>
 <li><code>@brief</code> : Brève description de la fonction (fichier <code>.cpp</code>) ou de la classe (fichier <code>.h</code>).</li>
@@ -84,7 +84,7 @@ Balises utilisées</h1>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md19"></a>
+<h2><a class="anchor" id="autotoc_md20"></a>
 Mise en page</h2>
 <ul>
 <li><code>\n</code> : retour à la ligne</li>
@@ -93,12 +93,12 @@ Mise en page</h2>
 <li><code>\c word</code> : le mot est mis en police console</li>
 <li><code>\verbatim .... \endverbatim</code> : le texte est inclus tel quel dans la documentation</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md20"></a>
+<h1><a class="anchor" id="autotoc_md21"></a>
 Balises non utilisées</h1>
 <ul>
 <li><code>@var</code>, <code>@function</code>, <code>@file</code>, <code>@details</code></li>
 </ul>
-<h1><a class="anchor" id="autotoc_md21"></a>
+<h1><a class="anchor" id="autotoc_md22"></a>
 Sections doxygen</h1>
 <p >Pour les fonctions: </p><div class="fragment"><div class="line"> {c++}</div>
 <div class="line">/** **************************************</div>
@@ -115,9 +115,9 @@ Sections doxygen</h1>
 <div class="line"> * @details ....</div>
 <div class="line"> * ****************************************/ </div>
 </div><!-- fragment --><p >Note: Les balises typiques de Qdoc sont <code>/*! ... */</code> et <code>//! ...</code></p>
-<h1><a class="anchor" id="autotoc_md22"></a>
+<h1><a class="anchor" id="autotoc_md23"></a>
 Balises à rajouter dans doxyfile</h1>
-<h2><a class="anchor" id="autotoc_md23"></a>
+<h2><a class="anchor" id="autotoc_md24"></a>
 Balises pour compatibilité Qt</h2>
 <p >Pour générer un fichier QCH, il faut positionner les tags suivants:</p>
 <div class="fragment"><div class="line">GENERATE_QHP           = YES</div>
@@ -130,14 +130,17 @@ Balises pour compatibilité Qt</h2>
 </div><!-- fragment --><p> Il faut aussi indiquer à <b>QtCreator</b> qu'il peut utiliser ce fichier QCH. La touche <b>F1</b> permettra alors d'afficher l'aide pour l'entité sous le curseur, même si c'est une fonction ou une variable du projet !</p>
 <div class="fragment"><div class="line">Outils → Options... → Aide → Documenation → Ajouter le fichier QCH</div>
 </div><!-- fragment --><p >Voir aussi à ce sujet, le site de <a href="https://www.sinax.be/blog/software-development/display-doxygen-generated-docs-in-qt-creator.html">Synax</a>.</p>
-<h2><a class="anchor" id="autotoc_md24"></a>
+<h2><a class="anchor" id="autotoc_md25"></a>
 Autres balises</h2>
 <div class="fragment"><div class="line">EXTRACT_PRIVATE        = YES                   # Affichage des fonctions et variables privées dans la documentation</div>
 <div class="line">USE_MDFILE_AS_MAINPAGE = ../../README.md       # Chemin de la main page</div>
 <div class="line">INPUT                 += ../../README.md       # fichier MD à utiliser dans la doc (&quot;related pages&quot;)</div>
 <div class="line">INPUT                 += ../Expat_Parser.md    # fichier MD à utiliser dans la doc (&quot;related pages&quot;)</div>
 <div class="line">IMAGE_PATH             = ../images             # Chemin des images pour la doc</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md25"></a>
+<div class="line"> </div>
+<div class="line">MULTILINE_CPP_IS_BRIEF = YES                   # &quot;&quot;//! xxx&quot; est considéré comme brief description (au lieu de detailled)</div>
+<div class="line">QT_AUTOBRIEF           = YES                   # La première phrase est considérée comme brief description (inutile de mettre la balise @brief).</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md26"></a>
 Bibliographie</h1>
 <p >Tutoriel doxygen de <a href="http://tvaira.free.fr/projets/activites/activite-documentation-doxygen.html">T Vaira</a> </p>
 </div></div><!-- contents -->

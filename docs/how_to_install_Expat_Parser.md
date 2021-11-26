@@ -1,9 +1,9 @@
 
-# How to install Expat parser
+# Installation de la librairie Expat
 
-## Installation Expat
+## Installation Expat XML Parser
 
-Windows users should use the [`expat_win32` package](https://sourceforge.net/projects/expat/files/expat_win32/), which includes both precompiled libraries and executables, and source code for developers.
+Les utilisateurs Windows doivent télécharger le [`package expat_win32` ](https://sourceforge.net/projects/expat/files/expat_win32/), qui inclut à la fois les librairies précompilées, les exécutables, et le code source.
 
 Le [site Github de Expat](https://libexpat.github.io/) présente la liste des dernières release de la librairie.
 
@@ -26,12 +26,17 @@ L'archive contient le même dossier.
 Copier les fichiers dans le répertoire du projet:
 
 * `/Expat/bin` :  copier les fichiers **DLL**: `libexpat.dll` et `libexpatw.dll` depuis `/Bin`.
-* `/Expat/Doc` : copier les fichiers de la documentation html.
+
 * `/Expat/include` : copier les fichiers `.h` et `.def` depuis `/source/lib`.
+
 * `/Expat/lib` : copier les fichiers `.lib` depuis `/Bin`.
+
 * `/Expat/src` : copier les fichiers `.c` depuis `/source/lib`.
 
-Dans les répertoires de **buid** du projet `/Release` et `/Debug` : copier les deux fichiers **dll**.
+* `/docs/expat` : En y copiant les fichiers de documentation html de `/Expat/Doc` , on les rend acessibles depuis github et doxygen.
+
+
+Dans les répertoires de **build** du projet `/Release` et `/Debug` : copier les deux fichiers **dll**.
 
 ### Configuration du Compilateur
 

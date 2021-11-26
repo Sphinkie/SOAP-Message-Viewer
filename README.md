@@ -40,7 +40,7 @@ Une méthode simple est de rajouter une étape "déploiement" dans QtStudio pour
 
 ### Sources
 
-Toutes les informations liées au développement sont dans la [documentation doxygen](https://sphinkie.github.io/SOAP-Message-Viewer/doxygen/html/index.html)..
+Toutes les informations utiles au développement sont dans la [documentation doxygen](https://sphinkie.github.io/SOAP-Message-Viewer/doxygen/html/index.html) et dans la [documentation Expat](https://sphinkie.github.io/SOAP-Message-Viewer/expat/reference.html).
 
 ### La librairie Expat
 

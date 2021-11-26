@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SOAP-Message-Viewer: How to install Expat parser</title>
+<title>SOAP-Message-Viewer: Installation de la librairie Expat</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,12 +61,12 @@ $(document).ready(function(){initNavTree('md__e__source_repos__s_o_a_p__message_
 </script>
 <div id="doc-content">
 <div><div class="header">
-  <div class="headertitle"><div class="title">How to install Expat parser </div></div>
+  <div class="headertitle"><div class="title">Installation de la librairie Expat </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="autotoc_md10"></a>
-Installation Expat</h1>
-<p >Windows users should use the <a href="https://sourceforge.net/projects/expat/files/expat_win32/"><code>expat_win32</code> package</a>, which includes both precompiled libraries and executables, and source code for developers.</p>
+Installation Expat XML Parser</h1>
+<p >Les utilisateurs Windows doivent télécharger le <a href="https://sourceforge.net/projects/expat/files/expat_win32/"><code>package expat_win32</code></a>, qui inclut à la fois les librairies précompilées, les exécutables, et le code source.</p>
 <p >Le <a href="https://libexpat.github.io/">site Github de Expat</a> présente la liste des dernières release de la librairie.</p>
 <h2><a class="anchor" id="autotoc_md11"></a>
 Installation avec le fichier EXE</h2>
@@ -81,12 +81,12 @@ Installation dans un projet Qt</h1>
 <p >Copier les fichiers dans le répertoire du projet:</p>
 <ul>
 <li><code>/Expat/bin</code> : copier les fichiers <b>DLL</b>: <code>libexpat.dll</code> et <code>libexpatw.dll</code> depuis <code>/Bin</code>.</li>
-<li><code>/Expat/Doc</code> : copier les fichiers de la documentation html.</li>
 <li><code>/Expat/include</code> : copier les fichiers <code>.h</code> et <code>.def</code> depuis <code>/source/lib</code>.</li>
 <li><code>/Expat/lib</code> : copier les fichiers <code>.lib</code> depuis <code>/Bin</code>.</li>
 <li><code>/Expat/src</code> : copier les fichiers <code>.c</code> depuis <code>/source/lib</code>.</li>
+<li><code>/docs/expat</code> : En y copiant les fichiers de documentation html de <code>/Expat/Doc</code> , on les rend acessibles depuis github et doxygen.</li>
 </ul>
-<p >Dans les répertoires de <b>buid</b> du projet <code>/Release</code> et <code>/Debug</code> : copier les deux fichiers <b>dll</b>.</p>
+<p >Dans les répertoires de <b>build</b> du projet <code>/Release</code> et <code>/Debug</code> : copier les deux fichiers <b>dll</b>.</p>
 <h2><a class="anchor" id="autotoc_md14"></a>
 Configuration du Compilateur</h2>
 <p >Dans la config du binder, ajouter la librairie /expad/lib</p>
