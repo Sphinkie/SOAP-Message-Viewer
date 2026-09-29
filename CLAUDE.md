@@ -38,7 +38,7 @@ All sources are in `Sources/`. Every parser uses **Expat** in SAX mode, with sta
 - `BodyPrintableParser`: writes the marked messages to a file ("Save").
 All of them accept a `hideNamespaces` flag, driven by the `actionHideNS` menu toggle.
 
-**UI**: `mainwindow.ui` (Qt Designer) plus `MainWindow`. Slots are auto-connected through the `on_<object>_<signal>` naming convention, so renaming a widget in the `.ui` silently breaks its slot. Icons are in `resources/` and listed in `resources.qrc`.
+**UI**: `Sources/mainwindow.ui` (Qt Designer) plus `MainWindow`. Slots are auto-connected through the `on_<object>_<signal>` naming convention, so renaming a widget in the `.ui` silently breaks its slot. Icons are in `resources/` and listed in `resources/resources.qrc`, under the `/resources` prefix. The code loads them as `":/resources/<file>"`, so a new icon must be added to the `.qrc` as a bare filename.
 
 ## Notes
 

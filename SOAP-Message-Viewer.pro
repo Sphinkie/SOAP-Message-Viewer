@@ -45,7 +45,7 @@ HEADERS += \
     Sources/messages.h
 
 FORMS += \
-    mainwindow.ui
+    Sources/mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -69,4 +69,4 @@ DISTFILES += \
     SOAP-Message-Viewer.qdocconf
 
 RESOURCES += \
-    resources.qrc
+    resources/resources.qrc

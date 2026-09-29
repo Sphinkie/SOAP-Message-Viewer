@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/resources">
+        <file>arrowRight-40.png</file>
+        <file>arrowLeft-40.png</file>
+        <file>soapOutlined.ico</file>
+        <file>soapPastel.ico</file>
+    </qresource>
+</RCC>
