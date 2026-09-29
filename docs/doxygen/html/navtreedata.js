@@ -25,37 +25,18 @@
 var NAVTREE =
 [
   [ "SOAP-Message-Viewer", "index.html", [
-    [ "SOAP Message Viewer", "index.html", [
-      [ "Présentation", "index.html#autotoc_md1", null ],
-      [ "Installation", "index.html#autotoc_md2", null ],
-      [ "Le coin des développeurs", "index.html#autotoc_md3", [
-        [ "Licence", "index.html#autotoc_md8", null ]
-      ] ]
-    ] ],
-    [ "Librairie Expat", "md__e__source_repos__s_o_a_p__message__viewer_docs_expat_readme.html", [
-      [ "Présentation", "md__e__source_repos__s_o_a_p__message__viewer_docs_expat_readme.html#autotoc_md10", null ],
-      [ "Installation Expat XML Parser", "md__e__source_repos__s_o_a_p__message__viewer_docs_expat_readme.html#autotoc_md12", [
-        [ "Installation avec le fichier EXE", "md__e__source_repos__s_o_a_p__message__viewer_docs_expat_readme.html#autotoc_md13", null ],
-        [ "Installation avec le fichier ZIP", "md__e__source_repos__s_o_a_p__message__viewer_docs_expat_readme.html#autotoc_md14", null ]
-      ] ],
-      [ "Installation dans un projet Qt", "md__e__source_repos__s_o_a_p__message__viewer_docs_expat_readme.html#autotoc_md15", [
-        [ "Configuration du Compilateur", "md__e__source_repos__s_o_a_p__message__viewer_docs_expat_readme.html#autotoc_md16", null ]
-      ] ],
-      [ "Utilisation", "md__e__source_repos__s_o_a_p__message__viewer_docs_expat_readme.html#autotoc_md17", [
-        [ "Notes", "md__e__source_repos__s_o_a_p__message__viewer_docs_expat_readme.html#autotoc_md18", null ]
-      ] ]
-    ] ],
+    [ "SOAP Message Viewer", "index.html", "index" ],
     [ "Documentation intégrée", "md__r_e_a_d_m_e.html", [
-      [ "Balises utilisées", "md__r_e_a_d_m_e.html#autotoc_md20", [
-        [ "Mise en page", "md__r_e_a_d_m_e.html#autotoc_md21", null ]
+      [ "Balises utilisées", "md__r_e_a_d_m_e.html#autotoc_md19", [
+        [ "Mise en page", "md__r_e_a_d_m_e.html#autotoc_md20", null ]
       ] ],
-      [ "Balises non utilisées", "md__r_e_a_d_m_e.html#autotoc_md22", null ],
-      [ "Sections doxygen", "md__r_e_a_d_m_e.html#autotoc_md23", null ],
-      [ "Balises à rajouter dans doxyfile", "md__r_e_a_d_m_e.html#autotoc_md24", [
-        [ "Balises pour compatibilité Qt", "md__r_e_a_d_m_e.html#autotoc_md25", null ],
-        [ "Autres balises", "md__r_e_a_d_m_e.html#autotoc_md26", null ]
+      [ "Balises non utilisées", "md__r_e_a_d_m_e.html#autotoc_md21", null ],
+      [ "Sections doxygen", "md__r_e_a_d_m_e.html#autotoc_md22", null ],
+      [ "Balises à rajouter dans doxyfile", "md__r_e_a_d_m_e.html#autotoc_md23", [
+        [ "Balises pour compatibilité Qt", "md__r_e_a_d_m_e.html#autotoc_md24", null ],
+        [ "Autres balises", "md__r_e_a_d_m_e.html#autotoc_md25", null ]
       ] ],
-      [ "Bibliographie", "md__r_e_a_d_m_e.html#autotoc_md27", null ]
+      [ "Bibliographie", "md__r_e_a_d_m_e.html#autotoc_md26", null ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -78,5 +59,6 @@ var NAVTREEINDEX =
 "_body_printable_parser_8h_source.html"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronisation';
-var SYNCOFFMSG = 'click to enable panel synchronisation';
+var SYNCONMSG = 'click to disable panel synchronization';
+var SYNCOFFMSG = 'click to enable panel synchronization';
+var LISTOFALLMEMBERS = 'List of all members';
