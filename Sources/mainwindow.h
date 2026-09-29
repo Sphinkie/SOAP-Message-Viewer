@@ -35,7 +35,7 @@ public:
     ~MainWindow();
     void addListItem(std::string texte);
 
-    QVersionNumber version = QVersionNumber::fromString("1.3.0");   //!< Numéro de version logiciel. A mettre aussi à jour dans le fichier .pro et Doxyfile
+    QVersionNumber version = QVersionNumber::fromString("1.4.0");   //!< Numéro de version logiciel. A mettre aussi à jour dans le fichier .pro et Doxyfile
     const int NOT_FOUND = -1;                                       //!< Constante
 
 
