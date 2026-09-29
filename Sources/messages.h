@@ -5,7 +5,7 @@
 #include <string>
 #include <vector>
 #include <fstream>
-#include <stdlib.h>     // pour strcpy_s
+#include <cstring>      // pour memcpy
 
 /** ****************************************************************************************
  * @brief  La classe \b statique Messages gère la liste des messages SOAP échangés.
@@ -59,8 +59,8 @@ public:
         std::string messageTime;              //!< Timestamp du message au format \c "14:31:17.975".
         std::string wsdl;                     //!< URL du WSDL du message. exemple: \c "http://00xdsvmam03200.paris.org/VEDA.SOA/Session.svc?wsdl".
         char*       body=nullptr;             //!< Body du message (renseigné à la demande).
-        long        bodyStartPosition=NULL;   //!< Byte index du début du Body dans le fichier SVCLOG.
-        long        bodyEndPosition=NULL;     //!< Byte index de la fin du Body dans le fichier SVCLOG.
+        long        bodyStartPosition=0;      //!< Byte index du début du Body dans le fichier SVCLOG.
+        long        bodyEndPosition=0;        //!< Byte index de la fin du Body dans le fichier SVCLOG.
         bool        isRequest=false;          //!< Indique si le message est de type \b Query ou non.
         bool        isServiceLevel=false;     //!< Indique si le message est de type \b Service ou de type \b Transport.
     };

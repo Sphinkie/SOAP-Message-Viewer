@@ -2,7 +2,7 @@
 #define BODYTEXTPARSER_H
 
 #include <string>
-#include <stdlib.h>   // pour strncpy_s
+#include <cstring>    // pour memcpy, strlen
 #include <Expat/include/expat.h>
 
 /** ****************************************************************************

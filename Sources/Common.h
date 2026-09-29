@@ -2,6 +2,7 @@
 #define COMMON_H
 
 #include <string>
+#include <cstring>      // pour strlen
 
 /** ****************************************************************************
  * @brief Classe pour des fonctions statiques généralistes.

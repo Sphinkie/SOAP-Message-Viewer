@@ -185,7 +185,7 @@ void Messages::getMessageBody(long number)
         if (startpos==endpos)
         {
             char message[] ="<!-- The body of this message is incomplete -->";
-            strcpy_s(buffer,50,message);
+            memcpy(buffer, message, sizeof(message));
         }
         else
         {

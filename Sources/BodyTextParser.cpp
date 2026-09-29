@@ -21,7 +21,7 @@ int BodyTextParser::parse(std::string blob, bool hideNamespaces)
     int blobSize= blob.length()+1;
     char* buffer = new char [blobSize];
 
-    strcpy_s(buffer,blobSize, blob.c_str());
+    memcpy(buffer, blob.c_str(), blobSize);
     int errcode = parse(buffer, !hideNamespaces);
 
     delete[] buffer;

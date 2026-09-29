@@ -2,80 +2,65 @@
 
 ## Présentation
 
-Access to [The Expart XML Parser reference manual](../../expat/reference.html).
+Access to [The Expat XML Parser reference manual](../../expat/reference.html).
+
+Le projet utilise **Expat 2.4.1**. La librairie n'est pas liée sous forme de DLL : ses sources sont compilées directement avec le projet (lien statique).
+Cela évite toute dépendance au compilateur (MinGW ou MSVC) et à l'architecture (32 ou 64 bits), et il n'y a aucune DLL Expat à déployer.
 
 ---
 
-## Installation Expat XML Parser
+## Organisation dans le projet
 
-Les utilisateurs Windows doivent télécharger le [`package expat_win32` ](https://sourceforge.net/projects/expat/files/expat_win32/), qui inclut à la fois les librairies précompilées, les exécutables, et le code source.
+| Dossier / fichier | Contenu |
+| ----------------- | ------- |
+| `Expat/src` | Les fichiers `.c` d'Expat (`xmlparse.c`, `xmlrole.c`, `xmltok.c`, `xmltok_impl.c`, `xmltok_ns.c`). |
+| `Expat/include` | Les fichiers `.h` d'Expat (publics et internes). |
+| `Expat/include/expat_config.h` | Configuration de compilation. **Propre au projet** : ce fichier n'est pas fourni par Expat (il est normalement généré par CMake). À conserver lors d'une mise à jour. |
+| `docs/expat` | La documentation html d'Expat, accessible depuis github et doxygen. |
+
+Dans le fichier `.pro`, la compilation d'Expat se fait avec :
+
+```
+SOURCES += \
+    Expat/src/xmlparse.c \
+    Expat/src/xmlrole.c \
+    Expat/src/xmltok.c
+DEFINES += XML_STATIC
+
+INCLUDEPATH += $$PWD/Expat/include
+```
+
+`xmltok_impl.c` et `xmltok_ns.c` ne sont pas compilés séparément : ils sont inclus par `xmltok.c`.
+
+Aucun binaire précompilé d'Expat (DLL ou `.lib`) n'est nécessaire.
+
+---
+
+## Mise à jour d'Expat
 
 Le [site Github de Expat](https://libexpat.github.io/) présente la liste des dernières release de la librairie.
 
-### Installation avec le fichier EXE
+1. Télécharger l'archive des sources (`expat-x.y.z.tar.gz` ou `.zip`) depuis https://github.com/libexpat/libexpat/releases
+2. Copier les fichiers `.c` du dossier `lib/` de l'archive dans `Expat/src`.
+3. Copier les fichiers `.h` du dossier `lib/` de l'archive dans `Expat/include` (sans écraser `expat_config.h`).
+4. Optionnel : copier la documentation html (`doc/`) dans `docs/expat`.
+5. Recompiler. Si le compilateur signale une macro de configuration manquante, la reporter dans `expat_config.h`
+   (voir le fichier `expat_config.h.cmake` de l'archive pour la liste des options).
 
-Télécharger le fichier "expat-win32bin-2.2.9.exe" depuis  https://github.com/libexpat/libexpat/releases
-
-Par défaut, cela installe la librairie dans `C:\Program Files (x86)\Expat 2.2.9`
-
-### Installation avec le fichier ZIP
-
-Télécharger le fichier "expat-win32bin-2.2.9.zip" depuis https://github.com/libexpat/libexpat/releases
-
-L'archive contient le même dossier.
-
-## Installation dans un projet Qt
-
-Copier les fichiers dans le répertoire du projet:
-
-* `/Expat/bin` :  copier les fichiers **DLL**: `libexpat.dll` et `libexpatw.dll` depuis `/Bin`.
-
-* `/Expat/include` : copier les fichiers `.h` et `.def` depuis `/source/lib`.
-
-* `/Expat/lib` : copier les fichiers `.lib` depuis `/Bin`.
-
-* `/Expat/src` : copier les fichiers `.c` depuis `/source/lib`.
-
-* `/docs/expat` : En y copiant les fichiers de documentation html de `/Expat/Doc` , on les rend acessibles depuis github et doxygen.
-
-
-Dans les répertoires de **build** du projet `/Release` et `/Debug` : copier les deux fichiers **dll**.
-
-### Configuration du Compilateur
-
-Dans la config du binder, ajouter la librairie /expad/lib
-
-* **Projet** Clic-droit
-  * Sélectioner **add library**
-  * Sélectioner **external library**
-  * **Fichier de bibliothèque** : `libexpat`
-  * **Include Path** : `Expat/include`
-  * Décocher: `Mac`, `Linux` et `Use "d" suffix for debug`
-
-
+---
 
 ## Utilisation
 
-Dans les fichiers header qui vont utiliser cette librairie (par exemple *MyProject_FileParser.h*), inclure la ligne:
+Dans les fichiers header qui vont utiliser cette librairie (par exemple *FileParser.h*), inclure la ligne :
+
 ```c++
-#include <expat/include/expat.h>
+#include <Expat/include/expat.h>
 ```
 
 Explications sur l'utilisation des méthodes de la librairie : voir https://www.xml.com/pub/1999/09/expat/index.html
 
-On utilise  [l'outil de déploiement Qt](https://doc.qt.io/qt-5/windows-deployment.html#the-windows-deployment-too) pour avoir automatiquement toutes les DLL nécessaires dans le répertoire build.
-
-
+On utilise [l'outil de déploiement Qt](https://doc.qt.io/qt-6/windows-deployment.html) (`windeployqt`) pour avoir automatiquement toutes les DLL Qt nécessaires dans le répertoire build.
 
 ### Notes
 
 Il existe un wrapper c++ pour Expat : https://github.com/ckane/expatmm
-
-
-
-
-
-
-
-
-

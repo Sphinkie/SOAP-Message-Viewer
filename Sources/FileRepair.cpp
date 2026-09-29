@@ -36,13 +36,9 @@ bool FileRepair::openSVCfile(std::string filename)
  *******************************************************************************/
 bool FileRepair::isSvcLog(const char* filename)
 {
-    char extension[8];
-
-    int lg = strlen(filename);
-    int ext_position = lg-7;
-    strncpy_s(extension, filename+ext_position,8);
-    extension[7]=0;
-    return (!strcmp(extension, ".svclog"));  // renvoie 0 s égalité
+    size_t lg = strlen(filename);
+    if (lg < 7) return false;
+    return (!strcmp(filename+lg-7, ".svclog"));  // renvoie 0 si égalité
 }
 
 

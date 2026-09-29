@@ -27,8 +27,6 @@ SOURCES += \
     Sources/FileParser.cpp \
     Sources/FileRepair.cpp \
     Sources/FileSplitter.cpp \
-    Sources/BodyPrintableParser.cpp \
-    Sources/BodyTableParser.cpp \
     Sources/main.cpp \
     Sources/mainwindow.cpp \
     Sources/messages.cpp
@@ -43,7 +41,6 @@ HEADERS += \
     Sources/FileParser.h \
     Sources/FileRepair.h \
     Sources/FileSplitter.h \
-    Sources/BodyPrintableParser.h \
     Sources/mainwindow.h \
     Sources/messages.h
 
@@ -56,7 +53,13 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 
-win32: LIBS += -L$$PWD/Expat/lib/ -llibexpat
+# Expat est compilé directement avec le projet (lien statique): indépendant du compilateur et de l'architecture.
+SOURCES += \
+    Expat/src/xmlparse.c \
+    Expat/src/xmlrole.c \
+    Expat/src/xmltok.c
+DEFINES += XML_STATIC
+
 win32: RC_ICONS += $$PWD/resources/soapOutlined.ico
 
 INCLUDEPATH += $$PWD/Expat/include

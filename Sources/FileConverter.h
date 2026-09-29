@@ -2,6 +2,7 @@
 #define FILECONVERTER_H
 
 #include <string>
+#include <cstring>      // pour strcmp
 #include <iostream>     // pour cout
 #include <fstream>
 #include <stack>

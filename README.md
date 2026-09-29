@@ -17,26 +17,34 @@ Le présent outil **SOAP Message Viewer** se focalise sur l'essentiel: le conten
 # Installation
 
 L'exécutable est disponible dans la section "Release" de GitHub dans une version _portable_ (cad sans installeur. Il suffit de dézipper le fichier dans le répertoire de destination).
-Le programme nécessite le runtime C++ de Microsoft 2015-2019 (téléchargeable via le lien fourni).
+Les versions compilées avec MSVC nécessitent le runtime C++ de Microsoft 2015-2019 (téléchargeable via le lien fourni). Les versions compilées avec MinGW incluent directement leurs DLL runtime.
 
 # Le coin des développeurs
 
 ### Compilation
 
-Pour compiler vous-même ce programme, il faut:
-- QtStudio 4.12 (framework **Qt** 5.15).
-- La librairie externe **Expat**
+Pour compiler vous-même ce programme, il faut **Qt Creator** avec le framework **Qt 6** (testé avec le kit *Qt 6.11.1 MinGW 64-bit*).
+Le code reste compatible avec le compilateur MSVC.
 
-(Le fichier `.pro` contient les directives nécessaires à la compilation).
+Le fichier `.pro` contient les directives nécessaires à la compilation.
+La librairie **Expat** n'a pas besoin d'être installée : ses sources (`Expat/src`) sont compilées directement avec le projet (lien statique), quels que soient le compilateur et l'architecture.
 
-### Link
+En ligne de commande (depuis un shell où Qt et MinGW sont dans le `PATH`) :
 
-Certains fichiers doivent être copiés manuellement:
+```
+qmake SOAP-Message-Viewer.pro CONFIG+=release
+mingw32-make
+```
 
-- **version Debug**: copier les fichiers **libexpat.dll** et **libexpatw.dll** de Expat/lib dans le répertoire où le fichier **exe** de debug a été généré par le compilateur.
-- **version Release**: copier les fichiers **libexpat.dll** et **libexpatw.dll** de Expat/lib dans le répertoire où le fichier **exe** de release a été généré par le compilateur, et ajouter les DLL du Framework Qt grâce à l'outil **winQtDeploy.exe**.
+### Déploiement
 
-Une méthode simple est de rajouter une étape "déploiement" dans QtStudio pour faire cette opération.
+Aucune DLL Expat n'est à copier. Pour la version Release, il suffit d'ajouter les DLL du framework Qt à côté du fichier **exe** avec l'outil **windeployqt.exe** :
+
+```
+windeployqt release/SOAP-Message-Viewer.exe
+```
+
+Une méthode simple est de rajouter une étape "déploiement" dans Qt Creator pour faire cette opération.
 
 ### Sources
 
@@ -47,7 +55,7 @@ Toutes les informations utiles au développement sont dans la [documentation dox
 [**Expat**](https://libexpat.github.io/) est un  parseur XML de type SAX, capable de traiter de gros fichiers rapidement.
 Comme la méthode SAX permet de traiter les données du XML au fur et à mesure de leur lecture, la librairie peut extraire des informations utiles du fichier XML, même si celui est tronqué ou abimé à la fin.
 
-Voir la [procédure](docs/expat/readme.md) pour installer la librairie Expat.
+Voir la [procédure](docs/expat/readme.md) pour mettre à jour la librairie Expat. Le projet ne contient que les sources d'Expat (`Expat/src` et `Expat/include`). Le fichier `Expat/include/expat_config.h` n'est pas fourni par Expat : il est propre au projet et doit être conservé.
 
 ## Licence
 
