@@ -124,9 +124,9 @@ QString messageAbout =
       "<p><b>SOAP Message Viewer</b> allows you to open a SOAP trace file <br/> \
        (usually: <i>web_messages.svclog</i>) and to see the content of <br/> \
        the recorded messages, in a fast and convenient way.</p> \
-      <p> Written by David de Lorenzo (2020). </p> \
+      <p> Written by David de Lorenzo (2020-2026). </p> \
       <p> <a href='http://www.sgt.eu'>http://www.sgt.eu</a></p>  \
-      <p> This software uses Qt 5.15 (LGPL licence) <br/> and the Expat Library (MIT licence). </p>";
+      <p> This software uses Qt 6 (LGPL licence) <br/> and the Expat Library (MIT licence). </p>";
 
 
 };
