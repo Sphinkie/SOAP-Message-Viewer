@@ -28,7 +28,7 @@ xcopy %SourceDir%\%AppName%.exe %TargetDir% /Y
 @echo Deploiment des librairies pour MINGV LLVM
 @echo --------------------------------------------------
 REM Si QML, ajouter:  --qmldir .\Sources\Qml
-windeployqt --no-translations %TargetDir%
+windeployqt --no-translations --no-opengl-sw --no-network --skip-plugin-types tls,networkinformation %TargetDir%
 
 @echo -------------------------------------------------
 @echo Done
