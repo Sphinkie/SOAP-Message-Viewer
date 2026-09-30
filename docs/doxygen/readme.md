@@ -72,8 +72,8 @@ Pour générer un fichier QCH, il faut positionner les tags suivants:
 
 ```ini
 GENERATE_QHP           = YES
-QCH_FILE               = SOAP-Message-Viewer.qch
-QHP_NAMESPACE          = sphinkie.SoapMessageViewer
+QCH_FILE               = SOAP-SVCLOG-Viewer.qch
+QHP_NAMESPACE          = sphinkie.SoapSvclogViewer
 QHP_VIRTUAL_FOLDER     = doc
 QHG_LOCATION           = qhelpgenerator
 ```

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QtHelpProject version="1.0">
-<namespace>sphinkie.SoapMessageViewer</namespace>
+<namespace>sphinkie.SoapSvclogViewer</namespace>
 <virtualFolder>doc</virtualFolder>
 <filterSection>
 <filterAttribute>doxygen</filterAttribute>
 <toc>
-<section title="SOAP-Message-Viewer 1.4" ref="index.html">
-<section title="SOAP Message Viewer" ref="index.html">
+<section title="SOAP-SVCLOG-Viewer 1.4" ref="index.html">
+<section title="SOAP SVCLOG Viewer" ref="index.html">
 <section title="Présentation" ref="index.html#autotoc_md1"/>
 <section title="Installation" ref="index.html#autotoc_md2"/>
 <section title="Le coin des développeurs" ref="index.html#autotoc_md3">
@@ -151,7 +151,7 @@
 <keyword name="Messages::Message" id="Messages::Message_" ref="struct_messages_1_1_message.html"/>
 <keyword name="Messages" id="Messages_" ref="class_messages.html"/>
 <keyword name="Documentation intégrée" id="Documentation intégrée_" ref="md__r_e_a_d_m_e.html"/>
-<keyword name="SOAP Message Viewer" id="SOAP Message Viewer_" ref="index.html"/>
+<keyword name="SOAP SVCLOG Viewer" id="SOAP SVCLOG Viewer_" ref="index.html"/>
 <keyword name="action" id="Messages::Message::action_a0bd3cd681cc736d36c89fea06a803ac7" ref="struct_messages_1_1_message.html#a0bd3cd681cc736d36c89fea06a803ac7"/>
 <keyword name="activityId" id="Messages::Message::activityId_a9f20ea91968683f11d023ce86b22c7f4" ref="struct_messages_1_1_message.html#a9f20ea91968683f11d023ce86b22c7f4"/>
 <keyword name="addListItem(std::string texte)" id="MainWindow::addListItem_a9f8a8f1f85c4100c527539e49bd8e2bb" ref="class_main_window.html#a9f8a8f1f85c4100c527539e49bd8e2bb"/>

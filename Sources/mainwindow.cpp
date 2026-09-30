@@ -76,17 +76,17 @@ void MainWindow::on_actionOpen_triggered()
     case XML_ERROR_ABORTED:
         {
         QString nombre = QString::number(FileParser::MAX_MESSAGES);
-        QMessageBox::warning(this, "SOAP Message Viewer", "The SVCLOG file contains more than "+nombre+" messages.<br/> Please consider splitting the file.");
+        QMessageBox::warning(this, "SOAP SVCLOG Viewer", "The SVCLOG file contains more than "+nombre+" messages.<br/> Please consider splitting the file.");
         ui->statusbar->showMessage("Only the first "+nombre+" messages are displayed.");
         break;
         }
     case XML_ERROR_NO_ELEMENTS:
-        QMessageBox::warning(this, "SOAP Message Viewer", "The parsing of the file has failed !");
+        QMessageBox::warning(this, "SOAP SVCLOG Viewer", "The parsing of the file has failed !");
         ui->statusbar->showMessage("");
         break;
     case XML_ERROR_NONE:
     default:
-        QMessageBox::information(this, "SOAP Message Viewer", "File successfully parsed.");
+        QMessageBox::information(this, "SOAP SVCLOG Viewer", "File successfully parsed.");
         ui->w_JumpButton->setEnabled(true);
         // On se positionne sur le dernier élément
         if (ui->w_MessageList->count()>0) ui->w_MessageList->setCurrentRow(0);
@@ -117,10 +117,10 @@ void MainWindow::on_actionImport_triggered()
     // Parsing
     int result = xparser.parse(true);  // les fichiers XML contiennent des CR-LF
     if (result == XML_ERROR_NO_ELEMENTS)
-        QMessageBox::warning(this, "SOAP Message Viewer", "The parsing of the file has failed !");
+        QMessageBox::warning(this, "SOAP SVCLOG Viewer", "The parsing of the file has failed !");
     else
     {
-        QMessageBox::information(this, "SOAP Message Viewer", "File successfully parsed.");
+        QMessageBox::information(this, "SOAP SVCLOG Viewer", "File successfully parsed.");
         ui->w_JumpButton->setEnabled(true);
         // On se positionne sur le dernier élément
         if (ui->w_MessageList->count()>0) ui->w_MessageList->setCurrentRow(0);
@@ -223,12 +223,12 @@ void MainWindow::on_w_JumpButton_clicked()
 
     if (foundIndex == NOT_FOUND)
     {
-        QMessageBox::warning(this, "SOAP Message Viewer", "No correlated message found");
+        QMessageBox::warning(this, "SOAP SVCLOG Viewer", "No correlated message found");
         this->hiddenCorrelatedItem=NOT_FOUND;
     }
     else if (ui->w_MessageList->item(foundIndex)->isHidden())
     {
-        QMessageBox::warning(this, "SOAP Message Viewer", "The next correlated message is filtered.");
+        QMessageBox::warning(this, "SOAP SVCLOG Viewer", "The next correlated message is filtered.");
         this->hiddenCorrelatedItem=foundIndex;
     }
     else
@@ -387,18 +387,18 @@ void MainWindow::on_w_SearchBodyButton_clicked()
  * ************************************************************************************************ */
 void MainWindow::on_actionRepair_triggered()
 {
-    QMessageBox::information(this, "SOAP Message Viewer", explicationRepair);
+    QMessageBox::information(this, "SOAP SVCLOG Viewer", explicationRepair);
     QString fichier = QFileDialog::getOpenFileName(this, "Select the file to repair", QString(), "SVC logs (*.svclog)");
     if (fichier.isEmpty())
     {
-        QMessageBox::warning(this, "SOAP Message Viewer", "Repair cancelled.");
+        QMessageBox::warning(this, "SOAP SVCLOG Viewer", "Repair cancelled.");
         return;
     }
 
-    int reponse = QMessageBox::question(this, "SOAP Message Viewer", "Ready to start repairing the file? \n\nThis can be LONG (2-3 minutes...)\n", QMessageBox::Yes|QMessageBox::No);
+    int reponse = QMessageBox::question(this, "SOAP SVCLOG Viewer", "Ready to start repairing the file? \n\nThis can be LONG (2-3 minutes...)\n", QMessageBox::Yes|QMessageBox::No);
     if (reponse == QMessageBox::No)
     {
-        QMessageBox::warning(this, "SOAP Message Viewer", "Repair cancelled.");
+        QMessageBox::warning(this, "SOAP SVCLOG Viewer", "Repair cancelled.");
     }
     else
     {
@@ -425,12 +425,12 @@ void MainWindow::on_actionRepair_triggered()
 void MainWindow::on_actionConvert_triggered()
 {
     int errcode;
-    QMessageBox::information(this, "SOAP Message Viewer", explicationConvert);
+    QMessageBox::information(this, "SOAP SVCLOG Viewer", explicationConvert);
     QString fichier = QFileDialog::getOpenFileName(this, "Select the file to convert", QString(), "SVC logs (*.svclog)");
 
     if (fichier.isEmpty())
     {
-        QMessageBox::warning(this, "SOAP Message Viewer", "Conversion cancelled.");
+        QMessageBox::warning(this, "SOAP SVCLOG Viewer", "Conversion cancelled.");
         return;
     }
 
@@ -465,7 +465,7 @@ void MainWindow::on_actionQuit_triggered()
  * ************************************************************************************************ */
 void MainWindow::on_actionAbout_triggered()
 {
-    QMessageBox::about(this, "SOAP Message Viewer", messageAbout);
+    QMessageBox::about(this, "SOAP SVCLOG Viewer", messageAbout);
 }
 
 /* ************************************************************************************************
@@ -473,7 +473,7 @@ void MainWindow::on_actionAbout_triggered()
  * ************************************************************************************************ */
 void MainWindow::on_actionInfos_triggered()
 {
-    QMessageBox::about(this, "SOAP Message Viewer", messageInfos);
+    QMessageBox::about(this, "SOAP SVCLOG Viewer", messageInfos);
 }
 
 
@@ -576,12 +576,12 @@ void MainWindow::displayMessageBody(char* body, int tabIndex)
  * ************************************************************************************************ */
 void MainWindow::on_actionSplit_triggered()
 {
-    QMessageBox::information(this, "SOAP Message Viewer", explicationSplitting);
+    QMessageBox::information(this, "SOAP SVCLOG Viewer", explicationSplitting);
     QString fichier = QFileDialog::getOpenFileName(this, "Select the file to split", QString(), "SVC logs (*.svclog)");
 
     if (fichier.isEmpty())
     {
-        QMessageBox::warning(this, "SOAP Message Viewer", "File splitting cancelled.");
+        QMessageBox::warning(this, "SOAP SVCLOG Viewer", "File splitting cancelled.");
         return;
     }
 
@@ -623,6 +623,6 @@ void MainWindow::on_actionSave_triggered()
         filename.assign(msg->module + "_" + msg->action + "_" + std::to_string(index+1) + ".xml");
         BodyPrintableParser bodySaver(filename);
         bodySaver.saveBody(msg->body);
-        QMessageBox::information(this, "SOAP Message Viewer", "Body saved as: "+QString::fromStdString(filename));
+        QMessageBox::information(this, "SOAP SVCLOG Viewer", "Body saved as: "+QString::fromStdString(filename));
     }
 }

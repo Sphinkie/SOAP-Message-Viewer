@@ -1,4 +1,4 @@
-# SOAP Message Viewer
+# SOAP SVCLOG Viewer
 
 ## Présentation
 
@@ -10,7 +10,7 @@ On obtient alors deux fichiers XML:
 
 L'outil habituel pour visualiser ces logs est *SvcTraceViewer.exe* (*Microsoft Service Trace Viewer*), qui présente l'inconvénient d'être lent, complexe, de nécessiter les deux fichiers avec des horaires concordants.
 
-Le présent outil **SOAP Message Viewer** se focalise sur l'essentiel: le contenu des messages échangés. Il est rapide, simple, et ne nécessite que le fichier **web_messages.svclog**.
+Le présent outil **SOAP SVCLOG Viewer** se focalise sur l'essentiel: le contenu des messages échangés. Il est rapide, simple, et ne nécessite que le fichier **web_messages.svclog**.
 
 ![Screenshot](docs/images/Capture.png)
 
@@ -32,7 +32,7 @@ La librairie **Expat** n'a pas besoin d'être installée : ses sources (`Expat/s
 En ligne de commande (depuis un shell où Qt et MinGW sont dans le `PATH`) :
 
 ```
-qmake SOAP-Message-Viewer.pro CONFIG+=release
+qmake SOAP-SVCLOG-Viewer.pro CONFIG+=release
 mingw32-make
 ```
 
@@ -41,7 +41,7 @@ mingw32-make
 Aucune DLL Expat n'est à copier. Pour la version Release, il suffit d'ajouter les DLL du framework Qt à côté du fichier **exe** avec l'outil **windeployqt.exe** :
 
 ```
-windeployqt release/SOAP-Message-Viewer.exe
+windeployqt release/SOAP-SVCLOG-Viewer.exe
 ```
 
 Une méthode simple est de rajouter une étape "déploiement" dans Qt Creator pour faire cette opération.

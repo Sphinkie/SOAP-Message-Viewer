@@ -4,7 +4,7 @@
 @echo --------------------------------------------------
 
 setlocal 
-set "AppName=SOAP-Message-Viewer"
+set "AppName=SOAP-SVCLOG-Viewer"
 set "SourceDir=.\build\Desktop_Qt_6_11_1_MinGW_64_bit_Release\release"
 REM set "TargetDir=.\Installeur\packages\sphinkie.%AppName%\data\"
 set TargetDir=.\dist\%AppName%\

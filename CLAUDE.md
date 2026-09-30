@@ -4,12 +4,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-SOAP Message Viewer is a Qt Widgets desktop app (Windows) that opens WCF trace files (`web_messages.svclog`, produced by the `<Diagnostics>` section of a `web.config`) and displays the SOAP messages they contain. It is a fast, simpler alternative to Microsoft's SvcTraceViewer and needs only the messages file, not the trace file. Code comments, Doxygen docs and the README are in French; UI strings are mostly in English.
+SOAP SVCLOG Viewer is a Qt Widgets desktop app (Windows) that opens WCF trace files (`web_messages.svclog`, produced by the `<Diagnostics>` section of a `web.config`) and displays the SOAP messages they contain. It is a fast, simpler alternative to Microsoft's SvcTraceViewer and needs only the messages file, not the trace file. Code comments, Doxygen docs and the README are in French; UI strings are mostly in English.
 
 ## Build
 
-- qmake project: `SOAP-Message-Viewer.pro`, normally built from Qt Creator. Current kit: Qt 6.11.1 MinGW 64-bit (the project originally targeted Qt 5.15 with MSVC).
-- Command line: `export PATH="/c/Qt/6.11.1/mingw_64/bin:/c/Qt/Tools/mingw1310_64/bin:$PATH"`, then `qmake SOAP-Message-Viewer.pro CONFIG+=debug` and `mingw32-make -j8`. Build out-of-source.
+- qmake project: `SOAP-SVCLOG-Viewer.pro`, normally built from Qt Creator. Current kit: Qt 6.11.1 MinGW 64-bit (the project originally targeted Qt 5.15 with MSVC).
+- Command line: `export PATH="/c/Qt/6.11.1/mingw_64/bin:/c/Qt/Tools/mingw1310_64/bin:$PATH"`, then `qmake SOAP-SVCLOG-Viewer.pro CONFIG+=debug` and `mingw32-make -j8`. Build out-of-source.
 - Expat is compiled into the app from `Expat/src/*.c` as a static build (`XML_STATIC`), using the hand-written `Expat/include/expat_config.h`. There are no prebuilt Expat binaries; don't reintroduce a DLL or `.lib` dependency. The only deployment step is `windeployqt` on the exe.
 - Keep the code portable between MinGW and MSVC: don't use MSVC-only CRT `_s` functions, and include `<cstring>` explicitly (MSVC includes it implicitly, MinGW doesn't).
 - There are no automated tests and no linter.

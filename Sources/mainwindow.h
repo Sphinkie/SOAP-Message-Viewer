@@ -104,9 +104,9 @@ QString explicationSplitting  =
     of 20.000 messages each. </p>";
 
 QString messageInfos =
-    "<h2>SOAP Message Viewer</h2> \
+    "<h2>SOAP SVCLOG Viewer</h2> \
     <h3>Usage</h3> \
-    <p><b>SOAP Message Viewer</b> allows you to open a SOAP trace file (usually: <i>web_messages.svclog</i>) \
+    <p><b>SOAP SVCLOG Viewer</b> allows you to open a SOAP trace file (usually: <i>web_messages.svclog</i>) \
     and see the content of the recorded messages, in a fast and convenient way.</p> \
     <h3>Convert and Repair</h3> \
     <p><b>Convert</b> and <b>Repair</b> are two similar functionalities: <br/><br/> \
@@ -120,8 +120,8 @@ QString messageInfos =
       Your file may not contain <b>both LF and CRLF</b> delimiters, otherwise the application will not be able to parse the XML messages sucessfully.</p>";
 
 QString messageAbout =
-      "<h2>SOAP Message Viewer v" + version.toString() + "</h2>" +
-      "<p><b>SOAP Message Viewer</b> allows you to open a SOAP trace file <br/> \
+      "<h2>SOAP SVCLOG Viewer v" + version.toString() + "</h2>" +
+      "<p><b>SOAP SVCLOG Viewer</b> allows you to open a SOAP trace file <br/> \
        (usually: <i>web_messages.svclog</i>) and to see the content of <br/> \
        the recorded messages, in a fast and convenient way.</p> \
       <p> Written by David de Lorenzo (2020-2026). </p> \

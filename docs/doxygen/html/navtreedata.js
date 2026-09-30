@@ -24,8 +24,8 @@
 */
 var NAVTREE =
 [
-  [ "SOAP-Message-Viewer", "index.html", [
-    [ "SOAP Message Viewer", "index.html", "index" ],
+  [ "SOAP-SVCLOG-Viewer", "index.html", [
+    [ "SOAP SVCLOG Viewer", "index.html", "index" ],
     [ "Documentation intégrée", "md__r_e_a_d_m_e.html", [
       [ "Balises utilisées", "md__r_e_a_d_m_e.html#autotoc_md19", [
         [ "Mise en page", "md__r_e_a_d_m_e.html#autotoc_md20", null ]

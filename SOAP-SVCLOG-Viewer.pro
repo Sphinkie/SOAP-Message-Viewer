@@ -66,7 +66,7 @@ INCLUDEPATH += $$PWD/Expat/include
 DEPENDPATH += $$PWD/Expat/include
 
 DISTFILES += \
-    SOAP-Message-Viewer.qdocconf
+    SOAP-SVCLOG-Viewer.qdocconf
 
 RESOURCES += \
     resources/resources.qrc

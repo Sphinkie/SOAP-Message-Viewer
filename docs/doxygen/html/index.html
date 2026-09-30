@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SOAP-Message-Viewer: SOAP Message Viewer</title>
+<title>SOAP-SVCLOG-Viewer: SOAP SVCLOG Viewer</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">SOAP-Message-Viewer<span id="projectnumber">&#160;1.4</span>
+   <div id="projectname">SOAP-SVCLOG-Viewer<span id="projectnumber">&#160;1.4</span>
    </div>
    <div id="projectbrief">A friendly SOAP log messages viewer</div>
   </td>
@@ -61,7 +61,7 @@ $(function(){initNavTree('index.html','',''); });
 <div id="container">
 <div id="doc-content">
 <div><div class="header">
-  <div class="headertitle"><div class="title">SOAP Message Viewer </div></div>
+  <div class="headertitle"><div class="title">SOAP SVCLOG Viewer </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md__e_1_2_sources_2_repositories_2_v_o_r_2_t_o_o_l_s_2_s_o_a_p-_message-_viewer_2_r_e_a_d_m_e"></a></p>
@@ -73,7 +73,7 @@ Présentation</h1>
 <li>web_trace.svclog</li>
 </ul>
 <p>L'outil habituel pour visualiser ces logs est <em>SvcTraceViewer.exe</em> (<em>Microsoft Service Trace Viewer</em>), qui présente l'inconvénient d'être lent, complexe, de nécessiter les deux fichiers avec des horaires concordants.</p>
-<p>Le présent outil <b>SOAP Message Viewer</b> se focalise sur l'essentiel: le contenu des messages échangés. Il est rapide, simple, et ne nécessite que le fichier <b>web_messages.svclog</b>.</p>
+<p>Le présent outil <b>SOAP SVCLOG Viewer</b> se focalise sur l'essentiel: le contenu des messages échangés. Il est rapide, simple, et ne nécessite que le fichier <b>web_messages.svclog</b>.</p>
 <div class="image">
 <img src="Capture.png" alt=""/>
 <div class="caption">
@@ -88,12 +88,12 @@ Compilation</h3>
 <p>Pour compiler vous-même ce programme, il faut <b>Qt Creator</b> avec le framework <b>Qt 6</b> (testé avec le kit <em>Qt 6.11.1 MinGW 64-bit</em>). Le code reste compatible avec le compilateur MSVC.</p>
 <p>Le fichier <span class="tt">.pro</span> contient les directives nécessaires à la compilation. La librairie <b>Expat</b> n'a pas besoin d'être installée : ses sources (<span class="tt">Expat/src</span>) sont compilées directement avec le projet (lien statique), quels que soient le compilateur et l'architecture.</p>
 <p>En ligne de commande (depuis un shell où Qt et MinGW sont dans le <span class="tt">PATH</span>) :</p>
-<div class="fragment"><div class="line">qmake SOAP-Message-Viewer.pro CONFIG+=release</div>
+<div class="fragment"><div class="line">qmake SOAP-SVCLOG-Viewer.pro CONFIG+=release</div>
 <div class="line">mingw32-make</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
 Déploiement</h3>
 <p>Aucune DLL Expat n'est à copier. Pour la version Release, il suffit d'ajouter les DLL du framework Qt à côté du fichier <b>exe</b> avec l'outil <b>windeployqt.exe</b> :</p>
-<div class="fragment"><div class="line">windeployqt release/SOAP-Message-Viewer.exe</div>
+<div class="fragment"><div class="line">windeployqt release/SOAP-SVCLOG-Viewer.exe</div>
 </div><!-- fragment --><p>Une méthode simple est de rajouter une étape "déploiement" dans Qt Creator pour faire cette opération.</p>
 <h3 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
 Sources</h3>
